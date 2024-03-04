@@ -1,0 +1,3 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;5692715;IPERFRUTTA;02923080754;02923080754;11/11/2014;PT011;N;Nuovo effetto sull'azienda;04/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;5692715;IPERFRUTTA;02923080754;02923080754;11/11/2014;PT011;N;Nuovo effetto sull'azienda;04/01/2015;11/11/2015

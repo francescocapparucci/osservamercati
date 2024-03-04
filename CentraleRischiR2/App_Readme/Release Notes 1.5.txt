@@ -1,0 +1,9 @@
+The WURFL API 1.5 introduces the following changes that affect the public API:
+
+1) Virtual capabilities. See http://www.scientiamobile.com/wurflCapability
+2) Filters on capabilities to be retrieved
+
+In addition, API 1.5 adds 
+	
+1) Bug fixes
+2) Improved matchers for a more accurate detection of WP8, MSIE11, Google Glass, Firefox OS. 

@@ -1,0 +1,2 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;7608614;ROMANO PIETRO;RMNPTR74M09D708D;01949040594;12/11/2014;PT043;N;Nuovo effetto su esponente;11/01/2015;12/11/2015

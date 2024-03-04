@@ -1,0 +1,14 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;6664602;CORO & BIO UN'ARMONIA DI SAPORI CON DENOMINAZIONE ABBREVIAT A CORO & BIO;03025760921;03025760921;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;09/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;6664602;CORO & BIO UN'ARMONIA DI SAPORI CON DENOMINAZIONE ABBREVIAT A CORO & BIO;03025760921;03025760921;05/08/2014;GL001;P;Variazione positiva del fido automatico;09/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;6664602;CORO & BIO UN'ARMONIA DI SAPORI CON DENOMINAZIONE ABBREVIAT A CORO & BIO;03025760921;03025760921;15/10/2014;BL001;U;Nuovo Bilancio Aziendale;09/01/2015;15/10/2015
+Documento acquistato per valutazione CDS;6664602;CORO & BIO UN'ARMONIA DI SAPORI CON DENOMINAZIONE ABBREVIAT A CORO & BIO;03025760921;03025760921;15/10/2014;GL001;P;Variazione positiva del fido automatico;09/01/2015;15/10/2015
+Documento acquistato per valutazione CDS;6675814;L'ORTOLANA DI PESCE GERARDO & C.;02421580263;02421580263;11/11/2014;MC010;A;Nuova movimentazione su azienda;09/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;11265689;MARIOTTI;01951310687;01951310687;12/11/2014;PT011;N;Nuovo effetto sull'azienda;09/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;6664602;CORO & BIO UN'ARMONIA DI SAPORI CON DENOMINAZIONE ABBREVIAT A CORO & BIO;03025760921;03025760921;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;09/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;6664602;CORO & BIO UN'ARMONIA DI SAPORI CON DENOMINAZIONE ABBREVIAT A CORO & BIO;03025760921;03025760921;13/11/2014;GL001;P;Variazione positiva del fido automatico;09/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;12060197;FRUTTA 3 EFFE;04895100875;04895100875;13/11/2014;GL001;P;Variazione positiva del fido automatico;09/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;7711;MI.NO.TER.;00303050926;00303050926;13/11/2014;MC010;A;Nuova movimentazione su azienda;09/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;7711;MI.NO.TER.;00303050926;00303050926;13/11/2014;MC010;A;Nuova movimentazione su azienda;09/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;5513209;ENZO MEROLLA SOCIETA' AGRICOLA;03020030619;03020030619;30/12/2014;PC050;N;Nuovo pregiudizievole su socio;09/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;5513209;ENZO MEROLLA SOCIETA' AGRICOLA;03020030619;03020030619;30/12/2014;PC060;N;Nuovo pregiudizievole su esponente/socio;09/01/2015;30/12/2015

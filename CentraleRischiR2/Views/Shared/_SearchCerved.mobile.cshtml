@@ -1,0 +1,41 @@
+﻿@model CentraleRischiR2.Models.Search
+@{
+    ViewBag.Title = "_SearchCerved.mobile";
+}
+
+@using (Html.BeginForm("SearchMobile", "Cerved", FormMethod.Post))
+{
+<div data-role="collapsible" data-theme="d">
+        <h3>Ricerca Anagrafica</h3>
+        @Html.LabelFor(model => model.RagioneSociale, new { @class = "ui-hidden-accessible" })
+        @Html.TextBoxFor(model => model.RagioneSociale, new {placeholder="Ragione Sociale:",@type="search" })        
+        <br /><br />
+        @Html.LabelFor(model => model.PartitaIva, new { @class = "ui-hidden-accessible" })
+        @Html.TextBoxFor(model => model.PartitaIva, new {placeholder="Partita Iva:",@type="search" })        
+        <br /><br />
+        @Html.LabelFor(model => model.Provincia, new { @class = "ui-hidden-accessible" })                
+        @Html.DropDownListFor(m => m.Provincia, (SelectList)ViewBag.ProvinceItaliane, "Selezionare Provincia")                      	
+        <br /><br />
+        <button data-theme="b" type="submit" data-inline="true" data-icon="search">Cerca</button>  
+        <a id='lnkDialog' href="#myDialog" data-rel="dialog" data-transition="pop" style="display:none">ciao</a>
+        
+</div>
+}
+<script type="text/javascript">
+    $(function () {
+        $("#RagioneSociale").click(function () {
+            $("#PartitaIva").val("");
+        });
+        $("#PartitaIva").click(function () {
+            $("#RagioneSociale").val("");
+        });
+
+        $("form").first().submit(function () {
+            if ($.trim($("#RagioneSociale").val()) == "" && $.trim($("#PartitaIva").val()) == "") {
+                $("#lnkDialog").click();
+                return false;
+            }            
+        });
+    });
+</script>
+

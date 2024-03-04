@@ -1,0 +1,5 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;8452561;F.A.M.M. DI SCANO FABRIZIO & C.;03119670929;03119670929;10/10/2014;RI010;A;Variazione ragione sociale ufficiale;28/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;8452561;F.A.M.M. DI SCANO FABRIZIO & C.;03119670929;03119670929;10/10/2014;FL001;N;Apertura Procedura Concorsuale;28/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;8452561;F.A.M.M. DI SCANO FABRIZIO & C.;03119670929;03119670929;10/10/2014;SA003;N;Variazione stato azienda - cessazione;28/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;2796472;COLANFRUTTA;00472250588;00901911008;12/11/2014;PT012;P;Cancellazione protesto su azienda;28/11/2014;12/11/2015

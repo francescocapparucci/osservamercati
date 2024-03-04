@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sectionTitle{
+	<h1>Home</h1>	
+    <a href="#" data-icon="gear" class="ui-btn-left">Impostazioni</a>    
+    <a href="~/Home/Logout" data-icon="exit" class="ui-btn-right">Uscita</a>    
+}
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+@section searchForm {
+
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,710 @@
+﻿@{
+    ViewBag.Title = "Andamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts {
+<script src="~/scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="~/js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+<!--<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>      -->
+<script src="~/js/i18n/grid.locale-it.js" type="text/javascript"></script>
+<script src="~/js/knockout-2.2.1.js"></script>
+<script src="~/js/globalize.min.js"></script>
+<script src="~/js/dx.chartjs.js"></script>  
+<script src="~/js/i18n/grid.locale-it.js" type="text/javascript"></script>
+<script src="~/js/jquery.jqGrid.min.js" type="text/javascript"></script>      
+<script type="text/javascript">
+    function mercato() {
+        $.post("./GetReportMercato",
+        { ragioneSociale: "", partitaIva: $('#piva').val(), idMercato: $('#IdMercato').val() },
+        function (data) {
+            $("#mercatoGraph").dxChart({
+                commonPaneSettings: {
+                   backgroundColor:'#f0f0f0',
+                   font: {
+                        color: 'black',
+                        weight: 700
+                    }
+                },
+                commonAxisSettings: {
+                    backgroundColor: '#f0f0f0',
+
+                    label: {
+                        format: "currency",
+                        font: {
+                            color: 'black',
+                            weight: 700
+                        },
+                        customizeText: function (value) {
+                            return value.valueText.replace('$', '').replace(',', '.').replace(',', '.');
+                        }
+                    }
+                },
+                dataSource: data.valueOf(),
+                tooltip: {
+                    enabled: true,
+                    format: "currency",
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText: function (value) {
+                        return value.valueText.replace('$', '€').replace(',', '.').replace(',', '.');
+                    }
+                },
+                commonSeriesSettings: {
+                    argumentField: "Mensilita",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    label: {
+                        visible: false,
+                        format: "fixedPoint",
+                        precision: 0
+                    }
+                },
+                series: [
+                    { valueField: "Vendite", name: "Vendite @if (ViewBag.Ambiente != "MONOAZIENDALE") {<text>Mercato</text>}", color: "rgb(255,255,0)" },
+                    { valueField: "Saldi", name: "Esposizione @if (ViewBag.Ambiente != "MONOAZIENDALE") {<text>Mercato</text>}", color: "rgb(255,0,0)" },
+                    { valueField: "Incassi", name: "Incassi @if (ViewBag.Ambiente != "MONOAZIENDALE") {<text>Mercato</text>}", color: "rgb(135,245,80)" },
+        ],
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center",
+                    backgroundColor:"#f0f0f0",
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    }
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+        });
+
+}
+
+
+function azienda() {
+        $.post("./GetReportAzienda",
+        { ragioneSociale: "", partitaIva: $('#piva').val() },
+            function (data) {
+                $("#mercatoGraph").dxChart({
+                    commonPaneSettings: {
+                        backgroundColor: '#f0f0f0',
+                        font: {
+                            color: 'black',
+                            weight: 700
+                        }
+                    },
+                    commonAxisSettings: {
+                        backgroundColor: '#f0f0f0',
+
+                        label: {
+                            format: "currency",
+                            font: {
+                                color: 'black',
+                                weight: 700
+                            },
+                            customizeText: function (value) {
+                                return value.valueText.replace('$', '').replace(',', '.').replace(',', '.');
+                            }
+                        }
+                    },
+                    dataSource: data.valueOf(),
+                tooltip: {
+                    enabled: true,
+                    format: "currency",
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText: function (value) {
+                        return value.valueText.replace('$', '€').replace(',', '.').replace(',', '.');
+                    }
+                },
+                commonSeriesSettings: {
+                    argumentField: "Mensilita",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    label: {
+                        visible: false,
+                        format: "fixedPoint",
+                        precision: 0
+                    }
+                },
+                series: [
+                    { valueField: "Vendite", name: "Vendite @if (ViewBag.Ambiente != "MONOAZIENDALE") {<text>Azienda</text>}", color: "rgb(255,255,0)" },
+                    { valueField: "Saldi", name: "Esposizione @if (ViewBag.Ambiente != "MONOAZIENDALE") {<text>Azienda</text>}", color: "rgb(255,0,0)" },
+                    { valueField: "Incassi", name: "Incassi @if (ViewBag.Ambiente != "MONOAZIENDALE") {<text>Azienda</text>}", color: "rgb(135,245,80)" },
+
+
+        ],
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center",
+                    backgroundColor:"#f0f0f0",
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    }
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+        });
+
+}
+
+function nazione() {
+        $.post("./GetReportNazione",
+        { ragioneSociale: "", partitaIva: $('#piva').val() },
+        function (data) {
+            $("#mercatoGraph").dxChart({
+                commonPaneSettings: {
+                    backgroundColor: '#ffffff'
+                },
+                commonAxisSettings: {
+                    backgroundColor: '#f0f0f0',
+
+                    label: {
+                        format: "currency",
+                        font: {
+                            color: 'black',
+                            weight: 700
+                        },
+                        customizeText:function(value)
+                        {
+                            return value.valueText.replace('$','').replace(',','.').replace(',','.');
+                        }
+                    }
+                },
+            dataSource: data.valueOf(),
+            tooltip: {
+                    enabled: true,
+                    format: "currency",
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText:function(value)
+                    {
+                        return value.valueText.replace('$','€').replace(',','.').replace(',','.');
+                    }
+                },
+            commonSeriesSettings: {
+                argumentField: "Mensilita",
+                type: "bar",
+                hoverMode: "allArgumentPoints",
+                selectionMode: "allArgumentPoints",
+                label: {
+                    visible: false,
+                    argumentFormat: "currency",
+                    precision: 0
+                }
+            },
+            series: [
+        { valueField: "Vendite", name: "Vendite @if (ViewBag.Ambiente != "MONOAZIENDALE") {<text>Nazione</text>}", color: "rgb(255,255,0)" },
+                { valueField: "Saldi", name: "Esposizione @if (ViewBag.Ambiente != "MONOAZIENDALE") {<text>Nazione</text>}", color: "rgb(255,0,0)" },
+                { valueField: "Incassi", name: "Incassi @if (ViewBag.Ambiente != "MONOAZIENDALE") {<text>Nazione</text>}", color: "rgb(135,245,80)" }
+    ],
+            legend: {
+                verticalAlignment: "bottom",
+                horizontalAlignment: "center",
+                backgroundColor: "#f0f0f0",
+                font: {
+                    color: 'black',
+                    weight: 700
+                }
+            },
+            pointClick: function (point) {
+                this.select();
+            }
+        });
+    });
+
+}
+
+
+    $(function () {
+
+        @if (ViewBag.IdRuolo != 0 || ViewBag.Andamento == "nazione")
+        {
+            <text>
+            $("span#MercatoSelection").hide();
+            </text>
+        }
+        else
+        {
+            <text>
+            $("span#MercatoSelection").show();
+            </text>
+        }
+       
+            @if (ViewBag.Andamento == "mercato")
+            {<text>mercato();</text>}
+            @if (ViewBag.Andamento == "nazione")
+            {<text>nazione();</text>}
+            @if (ViewBag.Andamento == "azienda")
+            {<text>azienda();</text>}
+ 
+       $('#pva').autocomplete({
+source: function (request, response) {
+            $.ajax({
+        url: './GetAnagraficaPivaOsservatorioAC',
+                data: { query: request.term },
+                dataType: 'json',
+                type: 'POST',
+                success: function (data) {
+                response($.map(data, function (item) {
+                    return {
+                    label: item.PartitaIva,
+                            value: item.RagioneSociale
+                        }
+                }));
+                }
+            })
+        },
+        select: function (event, ui) {
+            $('#pva').val(ui.item.label);
+            $('#ragsoc').val(ui.item.value);
+            return false;
+        },
+        minLength: 3
+    });
+
+     $('#ragsoc').autocomplete({
+        source: function (request, response) {
+            $.ajax({
+                url: './GetAnagraficaRagSocOsservatorioAC',
+                data: { query: request.term },
+                dataType: 'json',
+                type: 'POST',
+                success: function (data) {
+                        response($.map(data, function (item) {
+                            return {
+                            label: item.RagioneSociale,
+                            value: item.PartitaIva
+                            }
+                        }));
+                    }
+                })
+        },
+        select: function (event, ui) {
+            $('#pva').val(ui.item.value);
+            $('#ragsoc').val(ui.item.label);
+                return false;
+            },
+        minLength: 3
+    });
+
+    $('#ragsoc').click(function(){
+        $('#ragsoc').val('');
+        $('#pva').val('');
+        }
+    );
+
+
+
+    $('select#TipoAmbiente').change(function(){
+            if($('select#TipoAmbiente').val() == "mercato" && @ViewBag.IdRuolo == 0){
+            $('span#MercatoSelection').show();
+            $('#IdMercato').val("0");
+            }
+        else{
+            $('span#MercatoSelection').hide();
+            $('#IdMercato').val("0");
+            }
+        }
+    );
+
+    $('#pva').click(function(){
+        $('#ragsoc').val('');
+        $('#pva').val('');
+        }
+    );
+
+
+
+       $('#btnSearchAndamento').click(function(){
+           
+               var urlAndamento = "./Andamento?andamento=" + $('select#TipoAmbiente').val();
+               if ($('#pva').val() != "")
+                   urlAndamento += "&piva=" + $('#pva').val();
+               $('#frmSearchAndamento').attr('action', urlAndamento);
+               location.href = urlAndamento;
+           
+        });
+    });
+
+</script>
+
+}
+@section sectionTitle{
+<div id="title">
+ </div>
+}
+@section additionalCss {
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/redmond/jquery-ui-1.8.2.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/ui.jqgrid.css" />
+}
+
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+@section searchForm {
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+@section breadCrumb {
+    @RenderPage("~/Views/Shared/_BreadCrumb.cshtml")
+}
+<div id="searchAndamento">
+  <form action="" method="post"" name="frmSearchAndamento" id="frmSearchAndamento">
+  <span id="selezioneAmbiente">
+  <label for="TipoAmbiente">@if (ViewBag.Ambiente == "MONOAZIENDALE")
+  {<text>Tipo Andamento:</text>}
+  else {<text>Mercato:</text> }</label>  
+  <select id="TipoAmbiente" name="TipoAmbiente">
+      @if (ViewBag.IdRuolo == 2)
+      {
+          <option value="mercato" @if (ViewBag.Andamento == "mercato") { <text> selected</text>}>
+              @if (ViewBag.Ambiente == "MONOAZIENDALE")
+              {<text>Italia</text>}
+          else
+          {<text>Centro</text>}
+          </option>
+          <option value="nazione" @if (ViewBag.Andamento == "nazione") { <text> selected</text>}>
+              @if (ViewBag.Ambiente == "MONOAZIENDALE")
+              {<text>Estero</text>}
+          else
+          {<text>Nazione</text>}
+          </option>
+          <option value="azienda" @if (ViewBag.Andamento == "azienda") { <text> selected</text>}>
+              @if (ViewBag.Ambiente == "MONOAZIENDALE")
+              {<text>Estero</text>}
+          else
+          {<text>Azienda</text>}
+          </option>
+      }
+      else
+      {
+          <option value="mercato" @if (ViewBag.Andamento == "mercato") { <text> selected</text>}>
+              @if (ViewBag.Ambiente == "MONOAZIENDALE")
+              {<text>Italia</text>}
+          else
+          {<text>Centro</text>}
+          </option>
+          <option value="nazione" @if (ViewBag.Andamento == "nazione") { <text> selected</text>}>
+              @if (ViewBag.Ambiente == "MONOAZIENDALE")
+              {<text>Estero</text>}
+          else
+          {<text>Nazione</text>}
+          </option>
+      }
+
+  </select>
+      <span id="MercatoSelection" @if (ViewBag.Ambiente == "MONOAZIENDALE")
+      {<text>style="display:none"</text>}>
+      <label id="lblMercato" for="IdMercato" @if (ViewBag.Ambiente == "MONOAZIENDALE")
+      {<text>style="display:none"</text>}>Centro: </label>
+      <select id="IdMercato" name="IdMercato" @if (ViewBag.Ambiente == "MONOAZIENDALE")
+      {<text>style="display:none"</text>}>                               
+        <option value="0">Seleziona centro</option>
+		<option @if (ViewBag.IdMercato == "1")
+        {<text>selected</text>} value="1">Brescia</option>
+		<option @if (ViewBag.IdMercato == "2")
+        {<text>selected</text>} value="2">Trieste e Udine</option>
+		<option @if (ViewBag.IdMercato == "3")
+        {<text>selected</text>} value="3">Treviso</option>
+		<option @if (ViewBag.IdMercato == "4")
+        {<text>selected</text>} value="4">Padova</option>
+		<option @if (ViewBag.IdMercato == "6")
+        {<text>selected</text>} value="6">Bergamo</option>
+		<option @if (ViewBag.IdMercato == "7")
+        {<text>selected</text>} value="7">Bologna</option>
+		<option @if (ViewBag.IdMercato == "8")
+        {<text>selected</text>} value="8">Fondi</option>
+		<option @if (ViewBag.IdMercato == "9")
+        {<text>selected</text>} value="9">Roma</option>
+		<option @if (ViewBag.IdMercato == "10")
+        {<text>selected</text>} value="10">Pescara</option>
+		<option @if (ViewBag.IdMercato == "11")
+        {<text>selected</text>} value="11">Udine</option>
+		<option @if (ViewBag.IdMercato == "12")
+        {<text>selected</text>} value="12">Torino</option>
+		<option @if (ViewBag.IdMercato == "13")
+        {<text>selected</text>} value="13">Genova</option>
+		<option @if (ViewBag.IdMercato == "14")
+        {<text>selected</text>} value="14">Cagliari</option>
+		<option @if (ViewBag.IdMercato == "15")
+        {<text>selected</text>} value="15">Verona</option>
+      </select>
+      </span>         
+  </span>   
+  <label for="pva">Partita Iva: </label>
+  <input id="pva" type="search" value="@ViewBag.PartitaIva" />
+  <label for="ragsoc">Ragione Sociale: </label>
+  <input id="ragsoc" type="search" value="@ViewBag.RagioneSociale" />   
+  <input type="submit" id="btnSearchAndamento" value="Andamento">  
+  </form>
+   <!-- @if (ViewBag.PartitaIva == "01600480303")
+    {<text>
+    <br />
+    <span style='color:red;'><b>-- Verifica su aggironamento dati in corso --</b></span>
+    <br />
+    </text> 
+    }-->
+</div>
+<br />
+<div id="tabsMercato">
+
+<div id="mercatoWrap">
+    <h3 class="mercato">
+        @{
+            if (ViewBag.Andamento == "mercato")
+            {
+                if (ViewBag.Ambiente != "MONOAZIENDALE")
+                {
+                    <text>Andamento Centro</text>
+                }
+                else
+                {
+                    <text>Andamento Italia</text>
+                }
+                if (ViewBag.PartitaIva != "")
+                {<text> - </text>@ViewBag.PartitaIva;<text>&nbsp;</text>@ViewBag.RagioneSociale;
+                }
+            }
+            else
+            {
+                if (ViewBag.Andamento == "nazione")
+                {
+                    if (ViewBag.Ambiente != "MONOAZIENDALE")
+                    {
+                    <text>Andamento Nazione</text>
+                    }
+                    else
+                    {
+                    <text>Andamento Estero</text>
+                    }
+                    if (ViewBag.PartitaIva != "")
+                    {
+                    <text> - </text>@ViewBag.PartitaIva;<text>&nbsp;</text>@ViewBag.RagioneSociale;
+                    }
+                }
+                else
+                {
+                    <text>Andamento Azienda</text>
+                    if (ViewBag.PartitaIva != "")
+                    {<text> - </text>@ViewBag.PartitaIva;<text>&nbsp;</text>@ViewBag.RagioneSociale;
+                    }
+                }
+            }
+                    }
+                </h3>    
+    <table id="tab-actual" align="center">
+    <tr>
+        <td colspan="6" style="text-align:center;">
+            <b>MESE IN CORSO @String.Format("{0:yyyy}-{0:MM}", DateTime.Now)</b>
+        </td>
+    </tr>
+    <tr>
+      
+                <td>
+                    <b>RATING</b>
+                </td>
+           
+
+        <td>
+            <b>REPORT</b>
+        </td>
+        <td>
+            <b>VENDITE</b>
+        </td>
+        <td>
+            <b>ESPOSIZIONE</b>
+        </td>
+        <td>
+            <b>INCASSI</b>
+        </td>
+        <td>
+            <b>GIORNI</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @{if (ViewBag.ActualRating >100)
+                {
+                    <text>
+                        
+                    </text>
+                }
+            }
+            @{if (ViewBag.ActualRating < 29)
+                {
+                    <text>
+                        <img src='../Content/images/sfera_rossa.gif' alt='Rossa' title='Rossa' />
+                    </text>
+                }
+            }
+            @{ if (ViewBag.ActualRating >= 29 && ViewBag.ActualRating < 51)
+                {
+                    <text>
+                        <img src='../content/images/sfera_gialla.gif' alt='Gialla' title='Gialla' />
+                    </text>
+                }
+            }
+            @{ if (ViewBag.ActualRating >= 51 && ViewBag.ActualRating <101)
+                {
+                    <text>
+                        <img src='../content/images/sfera_verde.gif' alt='Gialla' title='Gialla' />
+                    </text>
+                }
+            }
+        </td>
+        <td>
+            
+            @{ if (ViewBag.ActualReport != "")
+                {
+                    <text>
+                        <a href="@Url.Action("Check", "PDF")/@ViewBag.ActualReport" target="_blank">
+                            <img src='../content/images/pdf.gif' style='height:26px;width:25px' alt='Report PDF Cerved' name='Report PDF Cerved' />
+                        </a>
+                    </text>
+                }
+                else
+                {
+                    <text>
+                       
+                    </text>
+                }
+            }
+        </td>
+        <td style="color:rgb(226,231,88);">
+            @String.Format("{0:#,0}", ViewBag.ActualVendite)            
+        </td>   
+        <td style="color:white;">
+            @String.Format("{0:#,0}", ViewBag.ActualSaldi)            
+        </td>
+        <td style="color:rgb(135,245,80);">
+            @String.Format("{0:#,0}", ViewBag.ActualIncassi)            
+        </td>
+        <td>
+            @ViewBag.ActualGiorni
+        </td>
+    </tr>
+    </table>
+    <br />
+    <div id="mercatoGraph" class="chartContainer"></div>    
+    <table id="tab-naz" align="center">
+        <tr>
+            <td><b>MESE</b></td>
+            @foreach (var elemento in ViewBag.ElementiTabella)
+            {
+                <td style="width:90px;height:20px;white-space:nowrap">
+                    <b>@(new HtmlString(elemento.Mensilita))</b>
+                </td>
+
+            }
+        </tr>
+        <tr style="@if (ViewBag.PartitaIva == "")
+               {<text>display:none</text>};">
+
+            <td><b>RATING</b></td>
+            @foreach (var elementoMercato in ViewBag.ElementiTabella)
+            {
+                if (elementoMercato.RatingInt > 100)
+                {
+                    <text>
+            <td></td>
+                    </text>
+                }
+                if (elementoMercato.RatingInt < 29)
+                {
+                    <text>
+                        <td><img src='../Content/images/sfera_rossa.gif' alt='Rossa' title='Rossa' /></td>
+                    </text>
+                }
+                if (elementoMercato.RatingInt >= 29 && elementoMercato.RatingInt < 51)
+                {
+                    <text>
+                        <td><img src='../content/images/sfera_gialla.gif' alt='Gialla' title='Gialla' /></td>
+                    </text>
+                }
+                if (elementoMercato.RatingInt >= 51 && elementoMercato.RatingInt < 101)
+                {
+                    <text>
+                        <td><img src='../content/images/sfera_verde.gif' alt='Verde' title='Verde' /></td>
+                    </text>
+                }
+
+            }
+<tr>
+            <td><b>VENDITE</b></td>
+            @foreach (var elementoMercato in ViewBag.ElementiTabella)
+            {
+
+                <td style="width:90px;height:20px;color:rgb(255,255,0)">
+                    @String.Format("{0:#,0}", elementoMercato.Vendite)
+                </td>
+            }
+        </tr>
+        <tr>
+            <td><b>ESPOSIZIONE</b></td>
+            @foreach (var elementoMercato in ViewBag.ElementiTabella)
+            {
+
+                <td style="width:90px;height:20px;color:white">
+                    @String.Format("{0:#,0}", elementoMercato.Saldi)
+                </td>
+            }
+        </tr>
+        <tr>
+            <td><b>INCASSI1</b></td>
+            @foreach (var elementoMercato in ViewBag.ElementiTabella)
+            {
+
+                <td style="width:90px;height:20px;color:rgb(135,245,80)">
+                    @String.Format("{0:#,0}", elementoMercato.Incassi)
+                </td>
+            }
+        </tr>
+        <tr>
+            <td><b>GIORNI</b></td>
+            @foreach (var elementoMercato in ViewBag.ElementiTabella)
+            {
+
+                <td style="width:90px;height:20px">
+                    @elementoMercato.Giorni
+                </td>
+            }
+        </tr>
+            </table>
+    </div>
+    <br />
+        </div>
+
+   
+    <input type="hidden" id="piva" value="@ViewBag.PartitaIva"  />
+        <input type="hidden" id="ragioneSociale" value="@ViewBag.RagioneSociale" />
+    <input type="hidden" id="andamento" value="@ViewBag.Andamento"  />
+
+
+    <div id="dialogRicerca" title="Ricerca Andamento" style="display:none">
+        Inserire la Partita Iva o la Ragione Sociale della posizione di cui si vuole visualizzare l'andamento.
+    </div>
+   
+    @{if (ViewBag.Ambiente == "MONOAZIENDALE")
+      {
+    <text>
+    <script type="text/javascript">
+        $("h4#meta-info").html('Siete in:&nbsp;<a href="/CentraleRischiR2/Mercato/Andamento">Andamento</a>');
+    </script>
+    </text>
+      }
+    }

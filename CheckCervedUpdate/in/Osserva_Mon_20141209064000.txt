@@ -1,0 +1,17 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;10/10/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;15/10/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;9352534;MISTOFRUTTA DI TITONE VITO;TTNVTI86P11F061H;02295070813;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;6788499;NUOVA FRUTTA;07656851008;07656851008;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;360229434;ALIFRUT;01503040535;01503040535;12/11/2014;GL006;N;Variazione negativa del fido automatico 2;09/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;5550838;PUNTO DI RISTORO SA ROCCA DE SANTU BISSENTI DI MARGIOTTA SANDRO E C.;02447250925;02447250925;13/11/2014;GL001;P;Variazione positiva del fido automatico;09/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;360229434;ALIFRUT;01503040535;01503040535;01/12/2014;GL006;N;Variazione negativa del fido automatico 2;09/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;363713473;OGLIASTRA DISTRIBUZIONE;01426010912;01426010912;01/12/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;363713473;OGLIASTRA DISTRIBUZIONE;01426010912;01426010912;01/12/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;363713473;OGLIASTRA DISTRIBUZIONE;01426010912;01426010912;01/12/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;363713473;OGLIASTRA DISTRIBUZIONE;01426010912;01426010912;01/12/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;365387713;GORGERINO ROSANNA;GRGRNN57M51L219W;03521640924;01/12/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;366528505;AZIENDA AGRICOLA BOASSA ANTONIO;BSSNTN84C05B354D;03554580922;01/12/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;363713473;OGLIASTRA DISTRIBUZIONE;01426010912;01426010912;01/12/2014;GL002;C;Variazione cautelativa del fido automatico;09/12/2014;01/12/2015

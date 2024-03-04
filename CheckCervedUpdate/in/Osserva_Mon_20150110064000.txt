@@ -1,0 +1,4 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;5692657;EUROTRANS DI PUDDU ROSANNA;PDDRNN57C51B354L;02643540921;10/10/2014;GL006;N;Variazione negativa del fido automatico 2;10/01/2015;10/10/2015
+Documento acquistato per valutazione CDS;1801937;COOPERATIVA FRUTTICOLTORI KURMARK UNIFRUT SOCIETA' AGRICOLA;00125760215;00125760215;10/11/2014;NW003;A;Aggiornamento News;10/01/2015;10/11/2015
+Documento acquistato per valutazione CDS;362791824;ORTOFRUTTICOLA ELBANA;01752720498;01752720498;12/11/2014;BL001;U;Nuovo Bilancio Aziendale;10/01/2015;12/11/2015

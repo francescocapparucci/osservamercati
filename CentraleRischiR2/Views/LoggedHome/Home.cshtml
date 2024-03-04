@@ -1,0 +1,676 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts {
+<script src="~/scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="~/js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+<script src="~/js/i18n/grid.locale-it.js" type="text/javascript"></script>
+<script src="~/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+
+
+        var nascondiRating = @{if(ViewBag.Ambiente == "MONOAZIENDALE"){<text>true</text>}else{<text>false</text>}};
+
+        // Here we set the altRows option globally
+        jQuery.extend(jQuery.jgrid.defaults, { altRows: true, emptyrecords: "Nessun risultato", pgtext: "Pagina {0} di {1}", recordtext: "Visualizza {0} - {1} di {2}", autowidth: true });
+
+        $(window).bind('resize', function () {
+            console.log('dimensione preferiti ' + $("#preferitiHomeContainer").width() + ' dimensione rc ' + $("#recuperoCreditiContainer").width());
+            var dimensione = $("#preferitiHomeContainer").width() >= $("#recuperoCreditiContainer").width() ? $("#preferitiHomeContainer").width() : $("#recuperoCreditiContainer").width()
+            dimensione = dimensione >= $("#portafoglioContainer").width() ? dimensione : $("#portafoglioContainer").width();
+            $("#preferiti").setGridWidth(dimensione, true);
+            $("#recuperoCrediti").setGridWidth(dimensione, true);
+            $("#pCrediti").setGridWidth(dimensione, true);
+        }).trigger('resize');
+
+
+
+        $("#preferiti").jqGrid({
+            url: './GetPreferitiHome',
+            datatype: 'json',
+            height: 'auto',
+            autowidth: true,
+            shrinkToFit: true,
+            altRows: true,
+            mtype: 'POST',
+            repeatitems: false,
+            colNames: ['PIVA', 'Rag.Soc.','Esposizione', 'Fido', 'Report','Report Aggiornato', 'Score', 'Data Variazione',/* 'Monitoraggio',*/'Aggiornamento', 'Andamentale', '', '', ''],
+            colModel: [
+                { name: 'PartitaIva', index: 'id', align: "center", classes: "puntatore", key: true },
+                { name: 'RagioneSociale', index: 'RagioneSociale', align: "center", classes: "puntatore" },
+                { name: 'Esposizione', index: 'Esposizione', formatter: "currency", formatoptions: { thousandsSeparator: ".", decimalPlaces: 0, prefix: "€" }, search: false, align: "center", hidden: @{if(ViewBag.IdRuolo != 1){<text>true</text>}else{<text>false</text>}}},
+                { name: 'Fido', index: 'Fido', formatter: "currency", formatoptions: { thousandsSeparator: ".", decimalPlaces: 0, prefix: "€" }, search: false, align: "center" },
+                { name: 'Rapporto', index: 'Rapporto', formatter: reportFormatter, sortable: false, align: "center" },
+                { name: 'Rapportonew', index: 'Rapportonew', formatter: reportNewFormatter, sortable: false, align: "center"},
+                { name: 'Rating', index: 'Rating', formatter: cervedFormatter, align: "center", search: false, hidden: nascondiRating },
+                { name: 'DataAggiornamento', index: 'DataAggiornamento', formatter: "date", search: false, align: "center" },
+                { name: 'DescrizioneVariazione', sortable: false, index: 'DescrizioneVariazione', align: "center", search: false },
+                //{ name: 'Aggiornamento', index: 'Aggiornamento', formatter: aggiornamentoFormatter, sortable: false, align: "center" },        
+                { name: 'Osservatorio', index: 'Andamentale', formatter: andamentaleFormatter, sortable: false, align: "center", search: false },
+                //{ name: 'Osservatorio', index: 'Scadenze', formatter: scadenzeFormatter, sortable: false, align: "center", search: false },
+            /*PER DEMO{ name: 'Esposizione', index: 'Esposizione', formatter: demoFormatter, search: false, align: "center" },*/
+                //{ name: 'UtenteNews', index: 'UtenteNews', sortable: false, search: false, hidden: @{if(ViewBag.IdRuolo != 0){<text>true</text>}else{<text>false</text>}},align:"center" },
+                { name: 'ID', index: 'PartitaIva', sortable: false, search: false, hidden: true },
+                { name: 'Letto', index: 'Letto', sortable: false, search: false, hidden: true },
+                { name: 'CodiceRapporto', index: 'CodiceRapporto', sortable: false, search: false, hidden: true },
+   	],
+            jsonReader: { repeatitems: false },
+            rowNum: 10,
+            rowList: [10, 20, 30, 40, 50],
+            pager: '#pagerPreferiti',
+            viewrecords: true,
+            
+            onCellSelect: function (rowid, iCol, cellcontent, e) {
+                switch (iCol) {
+                    case 0:
+                    case 1:
+                        var idAzienda = $("#preferiti").jqGrid('getCell', rowid, 'PartitaIva');
+                        $.post("./GetDettaglioAnagrafica", { piva: idAzienda },
+                                        function (data) {
+                                            if (data != '') {
+                                                $("div#dialog-anagrafica").html(data);
+                                                $("div#dialog-anagrafica").dialog({
+                                                    open: function (event, ui) {
+                                                        $(".ui-dialog-titlebar-close").hide();
+                                                    },
+                                                    resizable: false,
+                                                    closeOnEscape: false,
+                                                    width: $(window).width() * 0.8,
+                                                    height: $(window).height() * 0.8,
+                                                    modal: true,
+                                                    buttons: {
+                                                        "Chiudi": function () {
+                                                            $(this).dialog("close");
+
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        });
+                        break;
+                              
+                }
+            },
+            viewrecords: true,
+            pgbuttons: true,
+            pginput: true,
+            sortorder: "desc",
+            caption: "<span id='filtraValoriPreferiti'>Ricerca</span><a style='text-decoration:none' href='@Url.Action("GetPreferitiHomeXLS","LoggedHome")'><span id='reportPreferiti'><i class='fa fa-file-excel-o'></i>&nbsp;Report</span></a>"
+        });
+
+
+         function descFormatter(cellvalue, options, rowObject) {
+            var display = "";
+            if (cellvalue == "0") {
+                display = "N.D.";
+            }
+            else {
+                display ="<style='font-size:29px;color:#FF0000' >" + cellvalue;
+            }
+
+            return display;
+
+        }
+
+        function fidoFormatter(cellvalue, options, rowObject) {
+            var display = "";
+            if (cellvalue == "0") {
+                display = "N.D.";
+            }
+            else {
+                display = cellvalue;
+            }
+
+            return display;
+
+        }
+
+        function demoFormatter(cellvalue, options, rowObject) {
+
+            return "€ ---";
+
+        }
+
+
+        function andamentaleFormatter(cellvalue, options, rowObject) {
+
+            var link = '@Url.Action("Andamento","Mercato")';
+            var linkRC = '@Url.Action("RecuperoCrediti","MiaAzienda")';
+            if (cellvalue != "") {
+                link = "<a href='" + link + "?piva=" + cellvalue + "'><i style='font-size:20px;color:#2e6e9e' class='fa fa-line-chart'></i></a>";
+            }
+            else {
+                link = "<span>N.D.</span>";
+            }
+            return link;
+        }
+
+        function scadenzeFormatter(cellvalue, options, rowObject) {
+
+            var linkRC = '@Url.Action("RecuperoCrediti","MiaAzienda")';
+            if (cellvalue != "") {
+                link = "<a href='" + linkRC + "?piva=" + id + "'><i class='fa fa-eur' style='font-size:20px;color:#2e6e9e'></i></a>";
+            }
+            else {
+                link = "<span>N.D.</span>";
+            }
+
+            return link;
+
+        }
+        function dettaglioFormatter(cellvalue, options, rowObject) {
+            var link = "<img src='../content/images/lente_ingr.png' alt='Report PDF Cerved' name='Report PDF Cerved' />";
+            return link;
+        }
+
+        /*RIMUOVERE E FARE VEDERE A GABRIELE*/
+        function pivaFormatterRC(cellvalue, options, rowObject) {
+            //var pivaLink = cellvalue;
+            //return "<a href='./RecuperoCrediti/" + pivaLink + "'>" + pivaLink + "</a>";
+            return cellvalue;
+        }
+
+        function avFormatter(cellvalue, options, rowObject) {
+            if (cellvalue == '')
+                returnValue = "Non rilevate";
+            else
+                returnValue = cellvalue;
+            return returnValue;
+        }
+
+        function reportFormatter(cellvalue, options, rowObject) {
+            var report = cellvalue;
+            var link = '@Url.Action("Check","PDF")';
+            if (report != "") {
+               report = "<a href='" + link + "/" + report + "' target='_blank'><img src='../content/images/pdf.gif' style='height:26px;width:25px' alt='Report PDF Cerved' name='Report PDF Cerved' /></a>";
+            }
+            else {
+                link = '@Url.Action("GetGlobalReportDirect", "CreditSafe")';
+                report = "<a href='" + link + "?piva=" + rowObject.id + "' target='_blank'><img src='../content/images/lente_ingr.png' style='height:26px;width:25px' alt='Report PDF Cerved' name='Report PDF Cerved' /></a>";
+            }
+            return report;
+        }
+
+         function reportNewFormatter(cellvalue, options, rowObject) {
+            var report = cellvalue;
+            var link = '@Url.Action("Check","PDF")';
+            if (report != "0")
+            {
+               report = "<img src='../content/images/ok.png' style='height:26px;width:25px' alt='Report PDF Cerved' name='Report PDF Cerved' />";
+            }
+            else
+            {
+              link = '@Url.Action("GetGlobalReportDirect", "CreditSafe")';
+              report = "<a href='" + link + "?piva=" + rowObject.id + "' target='_blank'><img src='../content/images/lente_ingr.png' style='height:26px;width:25px' alt='Report PDF Cerved' name='Report PDF Cerved' /></a>";
+            }
+            return report;
+
+        }
+
+        function aggiornamentoFormatter(cellvalue, options, rowObject) {
+            var report = cellvalue;
+            var link = '@Url.Action("CheckUpdate","PDF")';
+            if (report != null) {
+                report = "<a href='" + link + "/" + report + "' target='_blank'><i class='fa fa-envelope' style='font-size:20px;color:#2e6e9e'></i></a>";
+            }
+            else {
+                report = "....";
+            }
+            return report;
+        }
+        function cervedFormatter(cellvalue, options, rowObject) {
+            var rating = parseInt(cellvalue);
+            var stato = "n.d";
+           
+               if (rating < 28&&rating>=0)
+                stato = "<img src='../Content/images/sfera_rossa.gif' alt='Rossa' title='Rossa' />";
+            else if (rating >= 28 && rating < 52)
+                stato = "<img src='../content/images/sfera_gialla.gif' alt='Gialla' title='Gialla' />";
+            else if (rating >= 52&&rating<=100)
+                    stato = "<img src='../content/images/sfera_verde.gif' alt='Verde' title='Verde' />";
+            return stato;
+
+        };
+
+        function dsoFormatter(cellvalue, options, rowObject) {
+            var rating = parseInt(cellvalue);
+
+
+            switch (rating) {
+                case 1:
+                    returnValue = "<img src='../content/images/sfera_verde.gif' alt='Verde' title='Verde' />";
+                    break;
+                case 2:
+                    returnValue = "<img src='../content/images/sfera_gialla.gif' alt='Gialla' title='Gialla' />";
+                    break;
+                case 3:
+                    returnValue = "<img src='../content/images/sfera_rossa.gif' alt='Rossa' title='Rossa' />";
+                    break;
+                case 4:
+                    returnValue = "<img src='../content/images/sfera_grigia.gif' alt='Grigia' title='Grigia' />";
+                    break;
+                default:
+                    returnValue = "N.D.";
+            }
+            return returnValue;
+
+        };
+
+        $("#preferiti").jqGrid('navGrid', '#pagerPreferiti', { edit: false, add: false, del: false });
+
+
+
+
+        /*CARICAMENTE JSON RECUPERO CREDITI*/
+
+
+
+        $("#recuperoCrediti").jqGrid({
+            url: './GetRichiesteRecuperoCrediti',
+            datatype: 'json',
+            height: 'auto',
+            autowidth: true,
+            shrinkToFit: true,
+            mtype: 'POST',
+            repeatitems: false,
+            colNames: ['Partita Iva', 'Ragione Sociale', 'Data Richiesta', 'Stato Richiesta', 'Totale Importo','Totale Incasso', 'Id. Richiesta'],
+            colModel: [
+        { name: 'PartitaIva', index: 'idRC', formatter: pivaFormatterRC, align: "center" ,classes: "puntatore"},
+   		{ name: 'RagioneSocialeRC', index: 'RagioneSocialeRC', align: "center" ,classes: "puntatore"},
+   		{ name: 'DataRichiesta', index: 'DataRichiesta', formatter: "date", formatoptions: { newformat: "d/m/Y" }, search: false, align: "center" ,classes: "puntatore"},
+        { name: 'StatoRichiesta', index: 'StatoRichiesta', search: false, align: "center" ,classes: "puntatore"},
+        { name: 'SommaFatture', index: 'SommaFatture', formatter: "currency", formatoptions: { thousandsSeparator: ".", decimalPlaces: 0, prefix: "€" }, search: false, align: "center" ,classes: "puntatore"},
+        { name: 'SommaIncasso', index: 'SommaIncasso', formatter: "currency", formatoptions: { thousandsSeparator: ".", decimalPlaces: 0, prefix: "€" }, search: false, align: "center" ,classes: "puntatore"},
+        {name: 'IdDettaglio', index: 'IdDettaglio', sortable: false, align: "center", width: 240, search: false ,classes: "puntatore"},
+   	],
+            jsonReader: { repeatitems: false },
+            rowNum: 10,
+            rowList: [10, 20, 30, 40, 50],
+            pager: '#pagerRecuperoCrediti',
+            viewrecords: true,
+            sortname: 'RagioneSociale',
+            onSelectRow: function (rowid, selected) {
+                var idRichiesta = $("#recuperoCrediti").jqGrid('getCell', rowid, 'IdDettaglio'); ;
+                $.post("./GetFattureDettaglioInvioRC", { identRichiesta: idRichiesta },
+                function (data) {
+                    $("div#dialog-fattura").html(data);
+                    $("div#dialog-fattura").dialog({
+                        open: function (event, ui) {
+                            $(".ui-dialog-titlebar-close").hide();
+                        },
+                        resizable: false,
+                        closeOnEscape: false,
+                        width: $(window).width() * 0.8,
+                        height: $(window).height() * 0.8,
+                        modal: true,
+                        buttons: {
+                            "Chiudi": function () {
+                                $(this).dialog("close");
+
+                            }
+                        }
+                    });
+
+                });
+            },
+            viewrecords: true,
+            pgbuttons: true,
+            pginput: true,
+            sortorder: "desc",
+            caption: "<span id='filtraValoriRC'>Ricerca</span><a style='text-decoration:none' href='@Url.Action("GetRiepilogoRecuperoCreditiXLS","LoggedHome")'><span id='reportPreferitiRCHome'><i class='fa fa-file-excel-o'></i>&nbsp;Report</span></a>"
+        });
+
+
+        $("#recuperoCrediti").jqGrid('navGrid', '#pagerRecuperoCrediti', { edit: false, add: false, del: false });
+
+        $("#pCrediti").jqGrid({
+            url: '../MiaAzienda/GetPreferitiMonitoraggio',
+            datatype: 'json',
+            height: 'auto',
+            autowidth: true,
+            shrinkToFit: true,
+            altRows: true,
+            mtype: 'POST',
+            onCellSelect: function (rowid, iCol, cellcontent, e) {
+                switch (iCol) {
+
+                    case 0:
+                    case 1:
+                        var idAzienda = $("#pCrediti").jqGrid('getCell', rowid, 'PartitaIva'); ;
+                        $.post("../LoggedHome/GetDettaglioAnagrafica", { piva: idAzienda },
+                                        function (data) {
+                                            if (data != '') {
+                                                $("div#dialog-anagrafica").html(data);
+                                                $("div#dialog-anagrafica").dialog({
+                                                    open: function (event, ui) {
+                                                        $(".ui-dialog-titlebar-close").hide();
+                                                    },
+                                                    resizable: false,
+                                                    closeOnEscape: false,
+                                                    width: $(window).width() * 0.8,
+                                                    height: $(window).height() * 0.8,
+                                                    modal: true,
+                                                    buttons: {
+                                                        "Chiudi": function () {
+                                                            $(this).dialog("close");
+
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        });
+                        break;
+                    case 5:
+                        var idAzienda = $("#pCrediti").jqGrid('getCell', rowid, 'PartitaIva');
+                        var codiceRapporto = "CDWS_" + $("#pCrediti").jqGrid('getCell', rowid, 'CodiceRapporto');
+                        var rapportoLink = rowid[1];
+                        var link = '@Url.Action("Check","PDF")';
+                        window.open(link + '/' + codiceRapporto, '', '');
+
+                        break;
+                }
+            },
+            repeatitems: false,
+            colNames: ['PIVA', 'Rag.Soc.', 'Esposizione', 'Fido', 'Valutazione', 'ScoreFedagro', 'Andamentale', 'Scadenze', ''],
+            colModel: [
+                { name: 'PartitaIva', index: 'id', align: "center", classes: "puntatore", key: true },
+                { name: 'RagioneSociale', index: 'RagioneSociale', align: "center", classes: "puntatore" },
+                { name: 'Esposizione', index: 'Esposizione', formatter: "currency", formatoptions: { thousandsSeparator: ".", decimalPlaces: 0, prefix: "€" }, search: false, align: "center" },
+                { name: 'Fido', index: 'Fido', formatter: "currency", formatoptions: { thousandsSeparator: ".", decimalPlaces: 0, prefix: "€" }, search: false, align: "center" },
+                { name: 'Rapporto', index: 'Rapporto', formatter: reportFormatter, sortable: false, align: "center" },
+                { name: 'Rating', index: 'Rating', formatter: cervedFormatter, align: "center", search: false, hidden: nascondiRating },
+                { name: 'Osservatorio', index: 'Andamentale', formatter: andamentaleFormatter, sortable: false, align: "center", search: false },
+                { name: 'Osservatorio', index: 'Scadenze', formatter: scadenzeFormatter, sortable: false, align: "center", search: false },
+                { name: 'CodiceRapporto', index: 'CodiceRapporto', sortable: false, search: false, hidden: true },
+   	],
+            jsonReader: { repeatitems: false },
+            rowNum: 10,
+            rowList: [10, 20, 30, 40, 50],
+            pager: '#pagerpCrediti',
+            viewrecords: true,
+            sortname: 'Esposizione',
+            viewrecords: true,
+            pgbuttons: true,
+            pginput: true,
+            sortorder: "desc",
+            caption: "<span id='filtraValoriPortafoglio'>Ricerca</span><a style='text-decoration:none' href='@Url.Action("GetMonitoraggiXLS","MiaAzienda")'><span id='reportPreferiti'><i class='fa fa-file-excel-o'></i>&nbsp;Report</span></a>"
+        });
+
+         $("#pCrediti2").jqGrid({
+             url: '../ReportMercato',
+            datatype: 'json',
+            height: 'auto',
+            autowidth: true,
+            shrinkToFit: true,
+            altRows: true,
+            mtype: 'POST',
+           
+            repeatitems: false,
+            colNames: ['PIVA', 'Rag.Soc.', 'Esposizione', 'Fido', 'Valutazione', 'ScoreFedagro', 'Andamentale', 'Scadenze', ''],
+            colModel: [
+                { name: 'PartitaIva', index: 'id', align: "center", classes: "puntatore", key: true },
+                { name: 'RagioneSociale', index: 'RagioneSociale', align: "center", classes: "puntatore" },
+                { name: 'Esposizione', index: 'Esposizione', formatter: "currency", formatoptions: { thousandsSeparator: ".", decimalPlaces: 0, prefix: "€" }, search: false, align: "center" },
+                { name: 'Fido', index: 'Fido', formatter: "currency", formatoptions: { thousandsSeparator: ".", decimalPlaces: 0, prefix: "€" }, search: false, align: "center" },
+                { name: 'Rapporto', index: 'Rapporto', formatter: reportFormatter, sortable: false, align: "center" },
+                { name: 'Rating', index: 'Rating', formatter: cervedFormatter, align: "center", search: false, hidden: nascondiRating },
+                { name: 'Osservatorio', index: 'Andamentale', formatter: andamentaleFormatter, sortable: false, align: "center", search: false },
+                { name: 'Osservatorio', index: 'Scadenze', formatter: scadenzeFormatter, sortable: false, align: "center", search: false },
+                { name: 'CodiceRapporto', index: 'CodiceRapporto', sortable: false, search: false, hidden: true },
+   	],
+            jsonReader: { repeatitems: false },
+            rowNum: 10,
+            rowList: [10, 20, 30, 40, 50],
+            pager: '#pagerpCrediti',
+            viewrecords: true,
+            sortname: 'Esposizione',
+            viewrecords: true,
+            pgbuttons: true,
+            pginput: true,
+            sortorder: "desc",
+            caption: "<span id='filtraValoriPortafoglio'>Ricerca</span><a style='text-decoration:none' href='@Url.Action("GetMonitoraggiXLS","ReportMercato")'><span id='reportPreferiti'><i class='fa fa-file-excel-o'></i>&nbsp;Report</span></a>"
+        });
+
+
+        $("#pCrediti").jqGrid('navGrid', '#pagerpCrediti', { edit: false, add: false, del: false });
+
+
+        $('.ui-icon-seek-next').attr('alt', 'Pagina Successiva');
+        $('.ui-icon-seek-next').attr('title', 'Pagina Successiva');
+
+        $('.ui-icon-seek-prev').attr('alt', 'Pagina Precedente');
+        $('.ui-icon-seek-prev').attr('title', 'Pagina Precedente');
+
+        $('.ui-icon-seek-end').attr('alt', 'Ultima Pagina');
+        $('.ui-icon-seek-end').attr('title', 'Ultima Pagina');
+
+        $('.ui-icon-seek-first').attr('alt', 'Prima Pagina');
+        $('.ui-icon-seek-first').attr('title', 'Prima Pagina');
+
+
+    });
+</script>
+}
+@section sectionTitle{
+<div id="title">
+    <h1>Home</h1>	
+</div>
+}
+@section additionalCss {
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/redmond/jquery-ui-1.8.2.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/ui.jqgrid.css" />
+}
+
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+
+
+@section searchForm {
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+
+
+
+@section breadCrumb {
+    @RenderPage("~/Views/Shared/_BreadCrumb.cshtml")
+}
+<div id="homeTabs">
+<ul>
+    <li><a href="#preferitiHomeContainer">News Preferiti</a></li>
+</ul>
+<div id="preferitiHomeContainer">
+    <div id="dialog-message-gp" title="Ricerca Cerved" style="display:none">
+        <p>
+            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+            <!--La Richiesta sta per essere inoltrata, riceverete il Rapporto Informativo Global Profile sulla vostra casella di posta elettronica non appena disponibile.<br />Si desidera proseguire?-->
+            Si sta per scaricare il documento richiesto in formato Excel.<br />Si desidera proseguire?
+        </p>
+    </div>
+    <h2>News Preferiti</h2>
+    <table id="preferiti"></table>
+    <div id="pagerPreferiti"></div>
+</div>
+</div>
+<div id="dialog-anagrafica" style="display:none">
+</div>
+<div id="dialog-valutazione" style="display:none">
+</div>
+<div id="dialog-fattura" style="display:none">
+</div>
+<div id="dialog-privacy" style="display:none">
+    <b>Documento informativo ai sensi e per gli effetti di cui all'art. 13, D.lgs 196/03</b>
+    <br />
+    Ai sensi dell'Art. 13 del Decreto Legislativo 20 Giugno 2003, n.196 Codice in materia di protezione dei dati personali (di seguito denominato Codice), la società <b>OSSERVA SRL</b>, con sede legale in Via Giuseppe Ferrari 12, 00195 Roma, C.F. – P.I. n. 03158470363, in qualità di Responsabile Esterno del trattamento dei dati, designato ex art. 29 del D.Lgs 196/03 designato dai Titolari dei trattamenti dei dati, per le finalità di cui ai singoli contratti stipulati con le società gerenti i mercati aderenti alla Fedagro Mercati, la informa di quanto segue:
+    <ol>
+        <li>
+            <b>Le finalità e le modalità del trattamento cui sono destinati i dati</b><br />
+            Il trattamento a cui saranno sottoposti i dati da Lei forniti o acquisiti è diretto:
+            <ul style="list-style-type:disc">
+                <li>alla partecipazione della Sua azienda all'Osservatorio Nazionale per i Mercati Agroalimentari, per la protezione dei crediti commerciali degli operatori dei Centri Agroalimentari all'ingrosso aderenti al network;</li>
+                <li>alla fornitura servizi di informazione commerciale che servono per valutare le attività, solidità e capacità sul piano economico e commerciale dell’azienda e per svolgere verifiche nell’ambito di eventuali relazioni commerciali in corso o da instaurarsi; per tale attività il titolare effettuerà trattamento di informazioni che riguardano aspetti economici e commerciali, relativi all’attività esercitata da operatori economici;</li>
+                <li>alla gestione del rapporto instaurato e dei connessi adempimenti contrattuali, amministrativi, contabili, fiscali e di Legge;</li>
+                <li>alla attivazione di eventuali servizi informativi aggiuntivi (solo in caso di sottoscrizione del relativo contratto di servizio);</li>
+                <li>all’invio di materiale informativo e/o pubblicitario da parte del titolare del trattamento dei dati, solo qualora ci fornisca un autonomo ed esplicito consenso.</li>
+            </ul>
+            Il trattamento sarà effettuato per mezzo delle operazioni o complessi di operazioni indicate all'Art. 4, comma 1, Lettera a) del Codice: <cite>“qualunque operazione o complesso di operazioni, effettuati anche senza l’ausilio di strumenti elettronici, concernenti la raccolta, la registrazione, l’organizzazione, la conservazione, la consultazione, l’elaborazione la modificazione, la selezione, l’estrazione, il raffronto, l’utilizzo, l’interconnessione, il blocco, la comunicazione, la diffusione, la cancellazione e la distruzione di dati anche se non registrati in una banca dati”</cite>.
+            Le banche dati saranno organizzate e gestite con le procedure informatizzate necessarie alla comunicazione, anche per via telematica, di documenti riportanti i dati estratti dalle fonti pubbliche e/o all’analisi, raffronto ed elaborazione di tali dati per la predisposizione di rapporti o dossier informativi a carattere economico o commerciale.
+            I dati personali acquisiti possono essere, inoltre, fatti oggetto di ulteriori analisi od elaborazioni statistiche, anche in forma automatizzata, al fine di attribuire indicatori sintetici sul piano economico e commerciale dell’impresa interessata. In particolare, i dati trattati faranno riferimento a:
+            <ul style="list-style-type:disc">
+                <li>livelli di esposizioni del credito commerciale;</li>
+                <li>andamento degli incassi e vendite;</li>
+                <li>calcolo dei giorni medi di pagamento;</li>
+                <li>gestione della clientela (vendite, esposizione e incassi);</li>
+                <li>informazioni anagrafiche sulla composizione della compagine sociale;</li>
+                <li>principali indicatori di bilancio.</li>
+            </ul>
+            I dati personali, ovvero, <cite>“qualunque informazione relativa a persona fisica, persona giuridica, ente od associazione, identificati o identificabili, anche indirettamente, mediante riferimento a qualsiasi altra informazione, ivi compreso un numero di identificazione personale”</cite> a lei richiesti o acquisiti, saranno trattati su supporti cartacei ed elettronici e con modalità informatiche ad opera di soggetti a ciò appositamente incaricati dalla società.
+            I dati <cite>sensibili</cite> ovvero, <cite>“i dati personali idonei a rivelare l'origine razziale ed etnica, le convinzioni religiose, filosofiche o di altro genere, le opinioni politiche, l'adesione a partiti, sindacati, associazioni od organizzazioni a carattere religioso, filosofico, politico o sindacale, nonché i dati personali idonei a rivelare lo stato di salute e la vita sessuale”</cite>, riferiti esclusivamente alla eventuale appartenenza della Sua azienda a specifiche associazioni datoriali/sindacali, saranno trattati su supporti cartacei e con modalità elettroniche ad opera di soggetti a ciò appositamente incaricati dalla società.
+            La informiamo che Osserva, in qualità di Responsabile esterno del trattamento, ha provveduto ad adottare tutte le Misure Idonee e Minime di Sicurezza di cui agli Art. 31,33,34,35 e Allegato B) del suddetto Codice e che  i dati personali a Lei riferibili saranno trattati nel rispetto delle modalità indicate nell'Art. 11 D.Lgs 196/03. Evidenziamo che rimangono anche a carico dei rispettivi titolari gli adempimenti previsti dalla normativa vigente in materia di privacy.
+        </li>
+
+        <li>
+            <b>La natura obbligatoria o facoltativa del conferimento dei dati</b><br />
+            Ferma l'autonomia personale dell'interessato, il conferimento dei dati è strettamente necessario per la partecipazione della Sua azienda all'Osservatorio Nazionale per i Mercati Agroalimentari, per la protezione dei crediti commerciali degli operatori dei Centri Agroalimentari all'ingrosso aderenti al network, per la corretta gestione del rapporto instaurato e degli adempimenti connessi e per la erogazione dei servizi richiesti.
+            Il conferimento dei dati ai fini dell’invio di materiale informativo e/o pubblicitario da parte del titolare del trattamento dei dati, è facoltativo. Lei potrà opporsi in ogni momento a tale trattamento di dati, in maniera agevole e gratuitamente, ottenendo un immediato riscontro che confermi l'interruzione di tale trattamento, contattandoci ai seguenti recapiti: posta elettronica <a href="mailto:info@osservamercati.it">info@osservamercati.it</a> fax <b>059/4905914</b>, telefono <b>059/4909854</b>
+        </li>
+
+        <li>
+            <b>Le conseguenze di un eventuale rifiuto a conferire i dati</b><br />
+            L'eventuale rifiuto da parte dell'interessato di conferire i dati personali, comporta il mancato adempimento delle finalità precedentemente esposte, l'impossibilità di gestire correttamente il rapporto intercorso, gli adempimenti connessi e la corretta erogazione dei servizi richiesti.
+            L'eventuale rifiuto da parte dell'interessato di conferire i dati personali ai fini dell’invio di materiale informativo e/o pubblicitario permette di partecipare comunque Osservatorio Nazionale per i Mercati Agroalimentari ma, preclude la possibilità di ricevere materiale informativo e/o pubblicitario da parte del titolare del trattamento dei dati.
+        </li>
+
+        <li>
+            <b>Soggetti ai quali i dati possono essere comunicati o che possono venirne a conoscenza</b><br />
+            I dati personali potranno essere comunicati per le finalità di cui al punto 1 e per essere sottoposti ai trattamenti aventi le medesime finalità o obbligatori per legge, a:
+            <ul>
+                <li>Dipendenti e collaboratori, appositamente incaricati da Osserva, in qualità di responsabile esterno del trattamento e/o dai titolari del trattamento, per finalità di gestione del rapporto commerciale instaurato e dei connessi adempimenti contrattuali, amministrativi, contabili, fiscali e di Legge;</li>
+                <li>Responsabili interni o esterni del trattamento dei dati, eventualmente nominati dal titolare del trattamento, per la gestione dei dati o delle procedure di trattamento degli stessi;</li>
+                <li>Società e studi legali, qualora necessario, per la eventuale tutela dei diritti contrattuali;</li>
+                <li>Società o professionisti esterni che collaborano con il titolare del trattamento dei dati ai fini della corretta e completa erogazione dei servizi richiesti e solo qualora strettamente necessario e nell’ambito degli accordi contrattuali sottoscritti;</li>
+                <li>Organi di Stato centrali e periferici, Enti Pubblici e altri Istituti per obblighi di Legge;</li>
+            </ul>
+            Gli eventuali dati sensibili potranno essere comunicati a:
+            <ul style="list-style-type:disc">
+                <li>Dipendenti e collaboratori, appositamente incaricati da Osserva, in qualità di responsabile esterno del trattamento e/o dai titolari del trattamento, per finalità di gestione del rapporto commerciale instaurato e dei connessi adempimenti contrattuali, amministrativi, contabili, fiscali e di Legge;</li>
+                <li>Responsabili interni o esterni del trattamento dei dati, eventualmente nominati dal titolare del trattamento, per la gestione dei dati o delle procedure di trattamento degli stessi;</li>
+            </ul>
+            I dati personali e sensibili non saranno soggetti a diffusione.
+        </li>
+        <li>
+            <b>
+                I diritti di cui all'art.7<br />
+                Art. 7. Diritto di accesso ai dati personali ed altri diritti<br />
+            </b>
+            <ol style="list-style-type:decimal">
+                <li>L'interessato ha diritto di ottenere la conferma dell'esistenza o meno di dati personali che lo riguardano, anche se non ancora registrati, e la loro comunicazione in forma intelligibile.</li>
+                <li>
+                    L'interessato ha diritto di ottenere l'indicazione:
+                    <ol style="list-style-type:lower-latin">
+                        <li>dell'origine dei dati personali;</li>
+                        <li>delle finalità e modalità del trattamento;</li>
+                        <li>della logica applicata in caso di trattamento effettuato con l'ausilio di strumenti elettronici;</li>
+                        <li>degli estremi identificativi del titolare, dei responsabili e del rappresentante designato ai sensi dell'articolo 5, comma 2;</li>
+                        <li>dei soggetti o delle categorie di soggetti ai quali i dati personali possono essere comunicati o che possono venirne a conoscenza in qualità di rappresentante designato nel territorio dello Stato, di responsabili o incaricati.</li>
+                    </ol>
+                <li>
+                    L'interessato ha diritto di ottenere:
+                    <ol style="list-style-type:lower-latin">
+                        <li>l'aggiornamento, la rettificazione ovvero, quando vi ha interesse, l'integrazione dei dati;</li>
+                        <li>la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non è necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati;</li>
+                        <li>l'attestazione che le operazioni di cui alle lettere a) e b) sono state portate a conoscenza, anche per quanto riguarda il loro contenuto, di coloro ai quali i dati sono stati comunicati o diffusi, eccettuato il caso in cui tale adempimento si rivela impossibile o comporta un impiego di mezzi manifestamente sproporzionato rispetto al diritto tutelato.</li>
+                    </ol>
+                <li>
+                    L'interessato ha diritto di opporsi, in tutto o in parte:
+                    <ol style="list-style-type:lower-latin">
+                        <li>per motivi legittimi al trattamento dei dati personali che lo riguardano, ancorché pertinenti allo scopo della raccolta;</li>
+                        <li>al trattamento di dati personali che lo riguardano a fini di invio di materiale pubblicitario o di vendita diretta o per il compimento di ricerche di mercato o di comunicazione commerciale.</li>
+                    </ol>
+                </li>
+        </li>
+        <li>
+            <b>Gli estremi identificativi del responsabile e dei titolari</b>
+            Il titolare del trattamento dei dati è la società <b>OSSERVA SRL</b>, con sede legale in Via Giuseppe Ferrari 12, 00195 Roma, C.F. – P.I. n. 03158470363. I titolari del trattamento dei dati sono gli enti o le società gerenti i singoli mercati tramite i quali l'interessato accede all'Osservatorio Nazionale per i Mercati Agroalimentari
+        </li>
+        <li>
+            <b>Espressioni del consenso</b><br />
+            <ol style="list-style-type:lower-latin">
+                <li>
+                    Il sottoscritto interessato/a, della ditta/società <b>@ViewBag.Azienda</b>, con sede legale in <b>@ViewBag.Indirizzo</b> a <b>@ViewBag.Localita</b>. (….), P.I. n. <b>@ViewBag.PartitaIva</b>,  presa visione dell'informativa, ai sensi degli Art.13, 23 e 24 del D.lgs 196/03, reso edotto delle conseguenze dell'eventuale rifiuto di conferire i dati, liberamente, acconsente al trattamento dei dati personali e sensibili, da parte di <b>OSSERVA SRL</b>,in qualità di responsabile esterno del trattamento, con sede legale in Via Giuseppe Ferrari 12, 00195 Roma, C.F. – P.I. n. 03158470363 e alle relative necessarie comunicazioni a terzi.<br />
+                </li>
+                <li>Il sottoscritto interessato/a, della ditta/società <b>@ViewBag.Azienda</b>, con sede legale in <b>@ViewBag.Indirizzo</b> a <b>@ViewBag.Localita</b>. (….), P.I. n. <b>@ViewBag.PartitaIva</b>, presa visione dell'informativa, ai sensi degli Art.13, 23 e 24 del D.lgs 196/03, reso edotto delle conseguenze dell'eventuale rifiuto di conferire i dati, liberamente, acconsente al trattamento dei propri dati personali per l’invio di materiale informativo o pubblicitario, da parte del titolare del trattamento dei dati <b>OSSERVA SRL</b>, con sede legale in Via Giuseppe Ferrari 12, 00195 Roma, C.F. – P.I. n. 03158470363.
+            </ol>
+        </li>
+    </ol>
+    <br />
+    <b> Data @DateTime.Now</b>
+</div>
+<script type="text/javascript">
+    $(function () {
+        
+
+        $('#filtraValoriPreferiti').click(function () {            
+            $("#preferiti").jqGrid(                
+                'searchGrid',
+                {
+                    caption: "Cerca in Monitoraggio Preferiti",
+                    sopt: ['cn'],
+                    odata: ['contiene']
+                });
+        });
+
+        $('#filtraValoriPortafoglio').click(function () {
+            $("#pCrediti").jqGrid(
+                'searchGrid',
+                {
+                    caption: "Cerca in Monitoraggio Clienti",
+                    sopt: ['cn'],
+                    odata: ['contiene']
+                });
+        });
+
+        $('#filtraValoriRC').click(function () {            
+            $("#recuperoCrediti").jqGrid(
+                'searchGrid',
+                {
+                    caption: "Cerca in Richieste Recupero Crediti",
+                    sopt: ['cn'],
+                    odata: ['contiene']
+                });
+            });
+
+            @if(ViewBag.ApprovatoPrivacy == false)
+            {
+            <text>
+                
+                $("div#dialog-privacy").dialog({
+                open:function(event,ui){
+                    $(".ui-dialog-titlebar-close").hide();
+                },
+                resizable: false,
+                closeOnEscape: false,
+                width: $(window).width() * 0.9,
+                height: $(window).height() * 0.9,
+                modal: true,
+                buttons: {
+                    "Accetto": function () {
+                        $(this).dialog("close");
+                        $.post("./AccettaPrivacy",{ codiceAzienda: "@ViewBag.CodiceAzienda" });
+                    },
+                    "Rifiuto": function () {
+                        $(this).dialog("close");
+                        location.href = "@Url.Action("Logout","Home")"; 
+                    }
+                }
+            });
+            </text>
+            }
+            $( "#homeTabs" ).tabs();
+    });
+</script>

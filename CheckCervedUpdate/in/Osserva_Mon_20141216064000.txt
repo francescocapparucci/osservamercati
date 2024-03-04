@@ -1,0 +1,23 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;16/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;16/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;16/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;10515451;ORTOFRUTTICOLA SAN GIOVANNI DI NIOI VINCENZA E PIREDDU CRISTIAN;03260100924;03260100924;10/10/2014;RI080;A;Nuovo esponente;16/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;7014014;CENTRALFRUTTA PURGATORIO DAL 1960 DI CHIOCCIA CINZIA;CHCCNZ64L63G148Z;01350790554;10/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;16/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;7014014;CENTRALFRUTTA PURGATORIO DAL 1960 DI CHIOCCIA CINZIA;CHCCNZ64L63G148Z;01350790554;10/11/2014;GL006;N;Variazione negativa del fido automatico 2;16/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;7014014;CENTRALFRUTTA PURGATORIO DAL 1960 DI CHIOCCIA CINZIA;CHCCNZ64L63G148Z;01350790554;11/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;16/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;7014014;CENTRALFRUTTA PURGATORIO DAL 1960 DI CHIOCCIA CINZIA;CHCCNZ64L63G148Z;01350790554;11/11/2014;GL006;N;Variazione negativa del fido automatico 2;16/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9960294;SOIL FRU';02294250697;02294250697;11/11/2014;PT067;P;Cancellazione effetto su esponente/socio;16/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9960294;SOIL FRU';02294250697;02294250697;11/11/2014;PT067;P;Cancellazione effetto su esponente/socio;16/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9960294;SOIL FRU';02294250697;02294250697;11/11/2014;PT067;P;Cancellazione effetto su esponente/socio;16/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;260576;SAN LEONE AGRICOLA;00127560597;00127560597;12/11/2014;MC010;A;Nuova movimentazione su azienda;16/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;12/11/2014;MC010;A;Nuova movimentazione su azienda;16/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1207519;MICHELOTTI;00522030477;00522030477;12/11/2014;GL001;P;Variazione positiva del fido automatico;16/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;7014014;CENTRALFRUTTA PURGATORIO DAL 1960 DI CHIOCCIA CINZIA;CHCCNZ64L63G148Z;01350790554;12/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;16/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;7014014;CENTRALFRUTTA PURGATORIO DAL 1960 DI CHIOCCIA CINZIA;CHCCNZ64L63G148Z;01350790554;12/11/2014;GL006;N;Variazione negativa del fido automatico 2;16/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9960294;SOIL FRU';02294250697;02294250697;12/11/2014;PT067;P;Cancellazione effetto su esponente/socio;16/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9960294;SOIL FRU';02294250697;02294250697;12/11/2014;PT067;P;Cancellazione effetto su esponente/socio;16/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9960294;SOIL FRU';02294250697;02294250697;12/11/2014;PT067;P;Cancellazione effetto su esponente/socio;16/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;2234461;APULIA DISTRIBUZIONE;05754810728;05754810728;13/11/2014;SC001;A;Nuovo Elenco Soci;16/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;10515451;ORTOFRUTTICOLA SAN GIOVANNI DI NIOI VINCENZA E PIREDDU CRISTIAN;03260100924;03260100924;13/11/2014;RI080;A;Nuovo esponente;16/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;360230017;EUROSEL;03405130927;03405130927;01/12/2014;BL001;U;Nuovo Bilancio Aziendale;16/12/2014;01/12/2015

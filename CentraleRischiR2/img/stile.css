@@ -1,0 +1,76 @@
+
+
+/* HTML Elements                               */
+/***********************************************/
+* {font-family: Verdana, Arial, Helvetica, sans-serif;font-size:11px;color: #000;
+}
+html,body{margin:0;padding:0;
+}
+body {background:#ffffff;
+}
+h1{font-size:14px;color: #000;visibility: hidden;display:none;
+}
+a img{border:0
+}
+a {text-decoration:none;
+}
+a:hover {text-decoration:none!important;
+}
+
+/* PAGINAZIONE                                 */
+/***********************************************/
+div#container {width:100%; margin:0; padding:0; min-width:990px;width:expression(document.body.clientWidth < 999 ? "990px":"auto" )
+}
+div#header {margin:0;  width: 100%; 
+}
+div#header div.mercati {margin:7px; padding:0; 
+}
+div#header div.statistiche {margin:20px; padding:0; float:right;
+}
+/* MENU */
+* html div#menu { with:100%; padding:0; margin:0; background:#FF9900;
+}
+div#menu { with:100%; padding:0; margin:0; height :20px; background:#FF9900;
+}
+div#menu ul{ list-style:none; margin:0; padding:0; width:990px; hei ght:20px
+}
+div#menu ul li{ margin: 0; padding:0; padding-top:3px; float:left; text-align:center; width:100px; border-right:solid 1px #FFFFFF; height:20px; font-weight:bold; color:#fff
+}
+div#menu ul li a{ text-decoration:none;color:#fff
+}
+div#menu ul li a:hover{ text-decoration:none;color:#fff
+}
+
+
+/* CONTENET */
+div#content {margin: 0;
+}
+div#content div.titolomercati { margin:auto;  with:100%; padding:0; 
+}
+div#content div.titolomercati .titolocentro {color:#666666; font-size:11px;font-weight:bold; 
+}
+div#content div#sx { margin:0; with:100%; padding-left:15px; padding-right:10px;
+}
+div.titolo { font-size:11px; color:#FF9900; font-weight:bold; float:left; margin-right:20px;
+}
+div.titolo2 { font-size:11px; color:#FF9900; font-weight:bold; float:left;margin-right:20px; 
+}
+div.cerca { float:left;ma rgin-right:20px; margin-top:10px
+}
+/*
+ul { list-style:none; margin:0; padding-right:0px; padding-top:10px;
+}
+ul li {margin:0 0 0.1em 0; 
+}
+ul li a { text-decoration:underline;
+}
+ul li a:hover { text-decoration:underline;
+}
+*/
+* html div#content div#dx { margin:0; float:left; background:#fff; 
+}
+div#content div#dx { margin:0; float:left; background:#fff; w idth:80%; padding-left:15px;
+}
+div#content div#dx .titolotab { font-weight:bold; font-size:8pt
+}
+

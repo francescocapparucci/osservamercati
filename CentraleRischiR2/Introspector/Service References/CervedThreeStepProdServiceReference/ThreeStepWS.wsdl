@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.lince.it/WSCorporate_1/ThreeStepService" name="ThreeStepWS" targetNamespace="http://www.lince.it/WSCorporate_1/ThreeStepService" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema targetNamespace="http://www.lince.it/WSCorporate_1/ThreeStepService" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="buyReport" type="tns:buyReport" />
+      <xs:element name="buyReportRealTime" type="tns:buyReportRealTime" />
+      <xs:element name="buyReportRealTimeResponse" type="tns:buyReportRealTimeResponse" />
+      <xs:element name="buyReportResponse" type="tns:buyReportResponse" />
+      <xs:element name="professionalAccount" type="tns:professionalAccount" />
+      <xs:element name="professionalAccountResponse" type="tns:professionalAccountResponse" />
+      <xs:element name="retrieveCompanyProducts" type="tns:retrieveCompanyProducts" />
+      <xs:element name="retrieveCompanyProductsResponse" type="tns:retrieveCompanyProductsResponse" />
+      <xs:element name="retrievePersonProducts" type="tns:retrievePersonProducts" />
+      <xs:element name="retrievePersonProductsResponse" type="tns:retrievePersonProductsResponse" />
+      <xs:element name="searchCompany" type="tns:searchCompany" />
+      <xs:element name="searchCompanyResponse" type="tns:searchCompanyResponse" />
+      <xs:element name="searchPerson" type="tns:searchPerson" />
+      <xs:element name="searchPersonResponse" type="tns:searchPersonResponse" />
+      <xs:complexType name="buyReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="buyReportParams" type="tns:buyReportParams" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="buyReportParams">
+        <xs:sequence>
+          <xs:element name="company" nillable="true" type="tns:company" />
+          <xs:element name="person" nillable="true" type="tns:person" />
+          <xs:element name="product" type="tns:product" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="subProducts" nillable="true" type="tns:product" />
+          <xs:element name="deliveryChannel" nillable="true" type="tns:deliveryChannel" />
+          <xs:element name="reason" nillable="true" type="tns:enquiryReason" />
+          <xs:element name="requestedCredit" nillable="true" type="xs:long" />
+          <xs:element name="urgency" nillable="true" type="xs:int" />
+          <xs:element name="language" nillable="true" type="tns:language" />
+          <xs:element minOccurs="0" name="fullTranslation" type="xs:boolean" />
+          <xs:element name="userNotes" nillable="true" type="xs:string" />
+          <xs:element name="userReference" nillable="true" type="xs:string" />
+          <xs:element name="mail" nillable="true" type="xs:string" />
+          <xs:element name="professionalProduct" nillable="true" type="tns:professionalProduct" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="company">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:signedObject">
+            <xs:sequence>
+              <xs:element name="companyCode" nillable="true" type="xs:long" />
+              <xs:element name="reaProvince" nillable="true" type="xs:string" />
+              <xs:element name="reaNumber" nillable="true" type="xs:long" />
+              <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+              <xs:element name="vatNumber" nillable="true" type="xs:string" />
+              <xs:element name="name" nillable="true" type="xs:string" />
+              <xs:element maxOccurs="unbounded" name="addresses" type="tns:address" />
+              <xs:element name="active" nillable="true" type="xs:boolean" />
+              <xs:element name="registrationDate" nillable="true" type="xs:dateTime" />
+              <xs:element name="legalForm" nillable="true" type="xs:string" />
+              <xs:element name="istatCode" nillable="true" type="xs:string" />
+              <xs:element name="ceaseDate" nillable="true" type="xs:dateTime" />
+              <xs:element name="activityStatus" nillable="true" type="xs:string" />
+              <xs:element name="activityStatusCode" nillable="true" type="xs:string" />
+              <xs:element name="cAtecoDescription" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="signedObject" abstract="true">
+        <xs:sequence>
+          <xs:element name="checksum" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="address">
+        <xs:sequence>
+          <xs:element name="street" nillable="true" type="xs:string" />
+          <xs:element name="province" nillable="true" type="xs:string" />
+          <xs:element name="town" nillable="true" type="xs:string" />
+          <xs:element name="country" nillable="true" type="xs:string" />
+          <xs:element name="hamlet" nillable="true" type="xs:string" />
+          <xs:element name="zipCode" nillable="true" type="xs:string" />
+          <xs:element name="registeredOffice" type="xs:boolean" />
+          <xs:element name="phoneNumber" nillable="true" type="xs:string" />
+          <xs:element name="owner" nillable="true" type="xs:boolean" />
+          <xs:element name="resident" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="person">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:signedObject">
+            <xs:sequence>
+              <xs:element name="personCode" nillable="true" type="xs:long" />
+              <xs:element name="name" nillable="true" type="xs:string" />
+              <xs:element name="surname" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="addresses" nillable="true" type="tns:address" />
+              <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+              <xs:element name="cityOfResidence" nillable="true" type="xs:string" />
+              <xs:element name="provinceOfResidence" nillable="true" type="xs:string" />
+              <xs:element name="birthday" nillable="true" type="xs:dateTime" />
+              <xs:element name="hometown" nillable="true" type="xs:string" />
+              <xs:element name="gender" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="companies" nillable="true" type="tns:company" />
+              <xs:element name="tabCode" nillable="true" type="xs:long" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="product">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:signedObject">
+            <xs:sequence>
+              <xs:element name="productCode" type="xs:long" />
+              <xs:element name="name" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="availableLanguages" nillable="true" type="tns:language" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="availableUrgencies" nillable="true" type="xs:int" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="subProducts" nillable="true" type="tns:product" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="professionalProduct">
+        <xs:sequence>
+          <xs:element name="trend" nillable="true" type="tns:trend" />
+          <xs:element name="accountLapse" nillable="true" type="tns:accountLapse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="trend">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:signedObject">
+            <xs:sequence>
+              <xs:element name="trendDate" type="xs:string" />
+              <xs:element name="division" type="xs:string" />
+              <xs:element name="description" type="xs:string" />
+              <xs:element name="code" type="xs:string" />
+              <xs:element name="trendType" type="tns:trendType" />
+              <xs:element maxOccurs="unbounded" name="notes" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="accountLapse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:signedObject">
+            <xs:sequence>
+              <xs:element name="closingDate" type="xs:string" />
+              <xs:element name="description" type="xs:string" />
+              <xs:element name="accountType" type="tns:accountType" />
+              <xs:element minOccurs="0" name="fourthDirective" type="xs:boolean" />
+              <xs:element minOccurs="0" name="pages" type="xs:int" />
+              <xs:element minOccurs="0" name="dimension" type="xs:long" />
+              <xs:element name="code" type="xs:string" />
+              <xs:element name="reaProvince" type="xs:string" />
+              <xs:element name="reaNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="operatingTerm" type="xs:string" />
+              <xs:element minOccurs="0" name="sourceBalance" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="notes" type="xs:string" />
+              <xs:element minOccurs="0" name="fullSyntheticType" type="tns:fullSyntheticType" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="buyReportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="buyResult" type="tns:buyResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="buyResult">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:result">
+            <xs:sequence>
+              <xs:element name="requestCode" nillable="true" type="xs:long" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="result" abstract="true">
+        <xs:sequence>
+          <xs:element name="error" nillable="true" type="tns:error" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="error">
+        <xs:sequence>
+          <xs:element name="errorType" nillable="true" type="tns:errorType" />
+          <xs:element name="additionalDescription" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retrieveCompanyProducts">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="company" type="tns:company" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retrieveCompanyProductsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="productListResult" type="tns:CompanyProductListResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CompanyProductListResult">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:productListResult">
+            <xs:sequence>
+              <xs:element name="company" type="tns:company" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="productListResult">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:result">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="products" type="tns:product" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="retrievePersonProducts">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="person" type="tns:person" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retrievePersonProductsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="personProducts" type="tns:PersonProductListResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PersonProductListResult">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:productListResult">
+            <xs:sequence>
+              <xs:element name="person" type="tns:person" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="searchCompany">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="params" type="tns:searchCompanyParameters" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchCompanyParameters">
+        <xs:sequence>
+          <xs:element name="companyCode" nillable="true" type="xs:long" />
+          <xs:element name="registrationProvince" nillable="true" type="xs:string" />
+          <xs:element name="registrationNumber" nillable="true" type="xs:int" />
+          <xs:element name="vatNumber" nillable="true" type="xs:string" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element name="companyName" nillable="true" type="xs:string" />
+          <xs:element name="city" nillable="true" type="xs:string" />
+          <xs:element name="province" nillable="true" type="xs:string" />
+          <xs:element name="removeExpired" nillable="true" type="xs:boolean" />
+          <xs:element name="reference" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchCompanyResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="searchResult" type="tns:searchResults" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResults">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:result">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="companies" nillable="true" type="tns:company" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="searchPerson">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:searchPersonParameters" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchPersonParameters">
+        <xs:sequence>
+          <xs:element name="name" nillable="true" type="xs:string" />
+          <xs:element name="surname" nillable="true" type="xs:string" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element name="cityOfResidence" nillable="true" type="xs:string" />
+          <xs:element name="provinceOfResidence" nillable="true" type="xs:string" />
+          <xs:element name="birthday" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchPersonResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="personSearchResult" type="tns:personSearchResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="personSearchResult">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:result">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="persons" nillable="true" type="tns:person" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="professionalAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="product" type="tns:product" />
+          <xs:element minOccurs="0" name="company" type="tns:company" />
+          <xs:element minOccurs="0" name="compact" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="professionalAccountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="account" type="tns:account" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="account">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:result">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="trends" type="tns:trend" />
+              <xs:element maxOccurs="unbounded" name="accountLapses" type="tns:accountLapse" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="buyReportRealTime">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="buyReportRealtimeParams" type="tns:buyReportRealtimeParams" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="buyReportRealtimeParams">
+        <xs:sequence>
+          <xs:element name="company" nillable="true" type="tns:company" />
+          <xs:element name="person" nillable="true" type="tns:person" />
+          <xs:element name="product" type="tns:product" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="subProducts" nillable="true" type="tns:product" />
+          <xs:element name="deliveryChannel" nillable="true" type="tns:deliveryChannel" />
+          <xs:element name="reason" nillable="true" type="tns:enquiryReason" />
+          <xs:element name="requestedCredit" nillable="true" type="xs:long" />
+          <xs:element name="urgency" nillable="true" type="xs:int" />
+          <xs:element name="language" nillable="true" type="tns:language" />
+          <xs:element minOccurs="0" name="fullTranslation" type="xs:boolean" />
+          <xs:element name="userNotes" nillable="true" type="xs:string" />
+          <xs:element name="userReference" nillable="true" type="xs:string" />
+          <xs:element name="mail" nillable="true" type="xs:string" />
+          <xs:element name="professionalProduct" nillable="true" type="tns:professionalProduct" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="outputFormats" nillable="true" type="tns:outputFormatRealtimeThreeStep" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="additionalInputParams" nillable="true" type="tns:additionalInputParam" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="additionalInputParam">
+        <xs:sequence>
+          <xs:element name="inputKeyParam" nillable="true" type="tns:inputKeyParam" />
+          <xs:element name="value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="buyReportRealTimeResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="buyResultRealtime" type="tns:buyResultRealtime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="buyResultRealtime">
+        <xs:sequence>
+          <xs:element name="requestCode" nillable="true" type="xs:long" />
+          <xs:element maxOccurs="unbounded" name="outputDocumentRealtime" nillable="true" type="tns:outputDocumentRealtime" />
+          <xs:element maxOccurs="unbounded" name="extraOutputInformations" nillable="true" type="tns:extraOutputInformation" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="outputDocumentRealtime">
+        <xs:sequence>
+          <xs:element name="buyResultRealtimeStatus" nillable="true" type="tns:buyResultRealtimeStatus" />
+          <xs:element name="statusMessage" nillable="true" type="xs:string" />
+          <xs:element name="outputFormat" nillable="true" type="tns:outputFormatRealtimeThreeStep" />
+          <xs:element name="document" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="extraOutputInformation">
+        <xs:sequence>
+          <xs:element name="key" nillable="true" type="xs:string" />
+          <xs:element name="value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="language">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ITALIAN" />
+          <xs:enumeration value="ENGLISH" />
+          <xs:enumeration value="FRENCH" />
+          <xs:enumeration value="GERMAN" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="deliveryChannel">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="WEB" />
+          <xs:enumeration value="WEB_AND_MAIL" />
+          <xs:enumeration value="MAIL" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="enquiryReason">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="CREDIT_LINE_DEFINITION_FOR_A_NEW_CUSTOMER" />
+          <xs:enumeration value="CREDIT_LINE_FOR_OLD_CUSTOMER" />
+          <xs:enumeration value="PAYMENTS_DELAY" />
+          <xs:enumeration value="SUPPLIER" />
+          <xs:enumeration value="COMPETITOR" />
+          <xs:enumeration value="DEPT_COLLECTION" />
+          <xs:enumeration value="OTHER" />
+          <xs:enumeration value="WEBSERVICE_REQUEST" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="trendType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="TREND" />
+          <xs:enumeration value="TREND_WITH_SECTORS_MEANS" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="accountType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="OPTICAL" />
+          <xs:enumeration value="OPTICAL_SYNTHETIC" />
+          <xs:enumeration value="FULL_SYNTHETIC" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="fullSyntheticType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SYNTHETIC" />
+          <xs:enumeration value="FULL" />
+          <xs:enumeration value="FULL_SYNTHETIC" />
+          <xs:enumeration value="NOT_IV_DIRECTIVE" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="errorType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NO_ERROR" />
+          <xs:enumeration value="GENERIC_ERROR" />
+          <xs:enumeration value="OPERATION_NOT_PERMITTED" />
+          <xs:enumeration value="USER_BLOCKED" />
+          <xs:enumeration value="INSUFFICENT_CREDIT" />
+          <xs:enumeration value="MISSING_COMPANY_OR_PERSON" />
+          <xs:enumeration value="MISSING_MANDARTORY_SEARCH_PARAMETERS" />
+          <xs:enumeration value="INVALID_FISCAL_CODE" />
+          <xs:enumeration value="INVALID_REA" />
+          <xs:enumeration value="INVALID_VAT_NUMBER" />
+          <xs:enumeration value="INVALID_COMPANY_CODE" />
+          <xs:enumeration value="INVALID_CITY_OR_PROVINCE" />
+          <xs:enumeration value="TOO_MANY_SEARCH_RESULTS" />
+          <xs:enumeration value="EXTERNAL_PROVIDER_ERROR" />
+          <xs:enumeration value="COMPANY_NAME_TOO_LONG" />
+          <xs:enumeration value="REQUEST_DUPLICATED" />
+          <xs:enumeration value="PRODUCT_NOT_AVAILABLE" />
+          <xs:enumeration value="MISSING_TREND_OR_ACCOUNTLAPSE" />
+          <xs:enumeration value="NO_AVAILABLE_PRODUCTS" />
+          <xs:enumeration value="INVALID_OPERATION_ON_THE_REQUEST" />
+          <xs:enumeration value="REQUEST_NOT_UNDER_MONITORING" />
+          <xs:enumeration value="REQUEST_NOT_YET_DELIVERED_OR_NONEXISTENT" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="outputFormatRealtimeThreeStep">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="XML" />
+          <xs:enumeration value="PDF" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="inputKeyParam">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="XML" />
+          <xs:enumeration value="PDF" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="buyResultRealtimeStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="AVAILABLE" />
+          <xs:enumeration value="ERROR" />
+          <xs:enumeration value="NOT_READY" />
+          <xs:enumeration value="FORMAT_NOT_AVAILABLE" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </types>
+  <message name="ThreeStepWS_professionalAccount">
+    <part name="professionalAccount" element="tns:professionalAccount" />
+  </message>
+  <message name="ThreeStepWS_buyReportRealTime">
+    <part name="buyReportRealTime" element="tns:buyReportRealTime" />
+  </message>
+  <message name="ThreeStepWS_retrievePersonProducts">
+    <part name="retrievePersonProducts" element="tns:retrievePersonProducts" />
+  </message>
+  <message name="ThreeStepWS_buyReport">
+    <part name="buyReport" element="tns:buyReport" />
+  </message>
+  <message name="ThreeStepWS_searchPerson">
+    <part name="searchPerson" element="tns:searchPerson" />
+  </message>
+  <message name="ThreeStepWS_professionalAccountResponse">
+    <part name="professionalAccountResponse" element="tns:professionalAccountResponse" />
+  </message>
+  <message name="ThreeStepWS_searchCompany">
+    <part name="searchCompany" element="tns:searchCompany" />
+  </message>
+  <message name="ThreeStepWS_retrieveCompanyProductsResponse">
+    <part name="retrieveCompanyProductsResponse" element="tns:retrieveCompanyProductsResponse" />
+  </message>
+  <message name="ThreeStepWS_searchCompanyResponse">
+    <part name="searchCompanyResponse" element="tns:searchCompanyResponse" />
+  </message>
+  <message name="ThreeStepWS_retrieveCompanyProducts">
+    <part name="retrieveCompanyProducts" element="tns:retrieveCompanyProducts" />
+  </message>
+  <message name="ThreeStepWS_retrievePersonProductsResponse">
+    <part name="retrievePersonProductsResponse" element="tns:retrievePersonProductsResponse" />
+  </message>
+  <message name="ThreeStepWS_buyReportRealTimeResponse">
+    <part name="buyReportRealTimeResponse" element="tns:buyReportRealTimeResponse" />
+  </message>
+  <message name="ThreeStepWS_searchPersonResponse">
+    <part name="searchPersonResponse" element="tns:searchPersonResponse" />
+  </message>
+  <message name="ThreeStepWS_buyReportResponse">
+    <part name="buyReportResponse" element="tns:buyReportResponse" />
+  </message>
+  <portType name="ThreeStepWS">
+    <operation name="buyReport" parameterOrder="buyReport">
+      <input message="tns:ThreeStepWS_buyReport" />
+      <output message="tns:ThreeStepWS_buyReportResponse" />
+    </operation>
+    <operation name="buyReportRealTime" parameterOrder="buyReportRealTime">
+      <input message="tns:ThreeStepWS_buyReportRealTime" />
+      <output message="tns:ThreeStepWS_buyReportRealTimeResponse" />
+    </operation>
+    <operation name="professionalAccount" parameterOrder="professionalAccount">
+      <input message="tns:ThreeStepWS_professionalAccount" />
+      <output message="tns:ThreeStepWS_professionalAccountResponse" />
+    </operation>
+    <operation name="retrieveCompanyProducts" parameterOrder="retrieveCompanyProducts">
+      <input message="tns:ThreeStepWS_retrieveCompanyProducts" />
+      <output message="tns:ThreeStepWS_retrieveCompanyProductsResponse" />
+    </operation>
+    <operation name="retrievePersonProducts" parameterOrder="retrievePersonProducts">
+      <input message="tns:ThreeStepWS_retrievePersonProducts" />
+      <output message="tns:ThreeStepWS_retrievePersonProductsResponse" />
+    </operation>
+    <operation name="searchCompany" parameterOrder="searchCompany">
+      <input message="tns:ThreeStepWS_searchCompany" />
+      <output message="tns:ThreeStepWS_searchCompanyResponse" />
+    </operation>
+    <operation name="searchPerson" parameterOrder="searchPerson">
+      <input message="tns:ThreeStepWS_searchPerson" />
+      <output message="tns:ThreeStepWS_searchPersonResponse" />
+    </operation>
+  </portType>
+  <binding name="ThreeStepWSBinding" type="tns:ThreeStepWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="buyReport">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buyReportRealTime">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="professionalAccount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="retrieveCompanyProducts">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="retrievePersonProducts">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="searchCompany">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="searchPerson">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ThreeStepWS">
+    <port name="ThreeStepWSPort" binding="tns:ThreeStepWSBinding">
+      <soap:address location="http://wscorp.lince.it/WSCorporate_1/ThreeStepWS" />
+    </port>
+  </service>
+</definitions>

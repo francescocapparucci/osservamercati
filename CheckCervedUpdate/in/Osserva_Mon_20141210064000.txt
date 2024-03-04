@@ -1,0 +1,16 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1233069;SUPEREMME;02007720929;02255740926;10/10/2014;RI062;A;Evento Trasferimento Azienda;10/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;1233069;SUPEREMME;02007720929;02255740926;10/10/2014;RI091;A;Dati Azienda Chisura Unita Locale;10/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;10329650;FRUIT OF CALATRI;03271190922;03271190922;10/10/2014;BL003;A;Nuova Relazione di Gestione;10/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;10329650;FRUIT OF CALATRI;03271190922;03271190922;10/10/2014;BL001;U;Nuovo Bilancio Aziendale;10/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;10329650;FRUIT OF CALATRI;03271190922;03271190922;15/10/2014;BL003;A;Nuova Relazione di Gestione;10/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;10329650;FRUIT OF CALATRI;03271190922;03271190922;15/10/2014;BL001;U;Nuovo Bilancio Aziendale;10/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;964723;UNTERTHINER KG DES UNTERTHINER PAUL & CO.;01182760213;01182760213;10/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;10/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;10329650;FRUIT OF CALATRI;03271190922;03271190922;11/11/2014;BL003;A;Nuova Relazione di Gestione;10/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;10329650;FRUIT OF CALATRI;03271190922;03271190922;11/11/2014;BL001;U;Nuovo Bilancio Aziendale;10/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;8551581;VER.IMM.;04309831008;04309831008;12/11/2014;PC011;P;Annotamento atto pregiudizievole su azienda;10/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;964723;UNTERTHINER KG DES UNTERTHINER PAUL & CO.;01182760213;01182760213;12/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;10/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;10329650;FRUIT OF CALATRI;03271190922;03271190922;13/11/2014;BL003;A;Nuova Relazione di Gestione;10/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;10329650;FRUIT OF CALATRI;03271190922;03271190922;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;10/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;10329650;FRUIT OF CALATRI;03271190922;03271190922;13/11/2014;BL003;A;Nuova Relazione di Gestione;10/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;10329650;FRUIT OF CALATRI;03271190922;03271190922;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;10/12/2014;13/11/2015

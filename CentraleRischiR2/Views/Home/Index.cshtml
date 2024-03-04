@@ -1,0 +1,58 @@
+﻿@model CentraleRischiR2.Models.User
+@{
+    ViewBag.Title = "Login Web";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        }
+        else {
+            x.type = "password";
+        }
+    }
+
+</script>
+@section additionalCss {
+    <link rel="stylesheet" type="text/css" media="screen" href="~/css/redmond/jquery-ui-1.8.2.custom.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/css/stile.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/css/mddmenu.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/Site.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+}
+<h1>@ViewBag.Rediretto</h1>
+<div class="loginbox">
+    <img src="~/Content/images/avatatLogin.png" class="avatar" />
+    <h1>Login Here</h1>
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+    <form>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            <p>Nome Utente</p>
+            @Html.TextBoxFor(m => m.Name, null, new { @class = "bigfield", placeholder = " Inserisci Nome Utente", required = "required", id = "UserID" })
+            <p>Password</p>
+            @Html.PasswordFor(m => m.Password, new { @class = "bigfield", placeholder = "Inserisci Password", @id = "myInput" , required = "required" })
+            <div class="col-sm-2" id="show-pass">
+                <label><input type="checkbox" onclick="myFunction()">Show Password</label>
+            </div>
+            <input type="submit" id="submit_prog" name="btn" value="Login" />
+            <a href="@Url.Action("IndexPass", "Home")?cust=Name">
+                <span>Password Dimenticata</span>
+            </a>
+        }
+    </form> 
+    }
+    <div id="legge">
+        Questo sito prevede di utilizzare determinate categorie di cookie per diversi motivi. Per ottenere maggiori informazioni sulle categorie di cookie utilizzati e limitarne l’utilizzo, consulta la
+        <a href="@Url.Action("Policy", "Home")" target="_blank">
+            <span> cookie policy.</span>
+        </a>
+    </div>
+</div>
+
+

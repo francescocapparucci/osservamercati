@@ -1,0 +1,172 @@
+﻿@{
+    ViewBag.Title = "Statistiche";
+    Layout = "~/Views/Shared/_Layout.cshtml";    
+}
+@section scripts {
+<script src="~/scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="~/js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+<script src="~/js/i18n/grid.locale-it.js" type="text/javascript"></script>
+<script src="~/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#invioPratiche').click(function () {
+            var list = $("#fatture").jqGrid('getGridParam', 'selarrrow');
+            var risultato = "<table>";
+            for (x in list) {
+                risultato += "<tr><td>Fattura N. " + $("tr#" + list[x] + " td:eq(1)").html() + " del " + $("tr#" + list[x] + " td:eq(4)").html() + " di " + $("tr#" + list[x] + " td:eq(7)").html() + "</td></tr>";
+            }
+            risultato += "</table><br /><br /><b>Non ti saranno addebitati costi di attivazione.</b>";
+            $("div#dialog-confirm").append(risultato);
+
+            $("div#dialog-confirm").dialog({
+                resizable: false,
+                width: 640,
+                height: 480,
+                modal: true,
+                buttons: {
+                    "Confermare Invio": function () {
+                        $(this).dialog("close");
+                    },
+                    "Annullare": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        });
+
+
+        $('div.submitArea').hide();
+
+        // Here we set the altRows option globally
+        jQuery.extend(jQuery.jgrid.defaults, { altRows: true, emptyrecords: "Nessun risultato", pgtext: "Pagina {0} di {1}", recordtext: "Visualizza {0} - {1} di {2}", autowidth: true });
+
+
+        $("#statistiche").jqGrid({
+            url: './GetStatistiche',
+            datatype: 'json',
+            height: 'auto',
+            postData: { rsS: $('#rsS').val(), pivaS: $('#pivaS').val(), ratingCerved: $('#ratingCerved').val(), ratingVendite: $('#ratingVendite').val(), ratingEsposizione: $('#ratingEsposizione').val(), preferiti: $('#checkPreferiti').val() },
+            width: 80,
+            mtype: 'POST',
+            repeatitems: false,
+            colNames: ['Partita Iva', 'Ragione Sociale','Vendite', 'Esposizione','Incassi' , 'Giorni Medi'],
+            colModel: [
+        { name: 'PartitaIva', index: 'id', width: 35 },
+   		{ name: 'RagioneSociale', index: 'RagioneSociale', width: 120 },
+        { name: 'Vendite', index: 'Vendite', width: 30, formatter: "currency", formatoptions: { decimalSeparator: ",", thousandsSeparator: ".", decimalPlaces: 2, prefix: ""} },
+   		{ name: 'Esposizione', index: 'Esposizione', width: 30, formatter: "currency", formatoptions: { decimalSeparator: ",", thousandsSeparator: ".", decimalPlaces: 2, prefix: ""} },
+        { name: 'Incassi', index: 'Incassi', width: 30, formatter: "currency", formatoptions: { decimalSeparator: ",", thousandsSeparator: ".", decimalPlaces: 2, prefix: ""} },
+        { name: 'GG', index: 'GG', width: 20 },
+   	],
+            jsonReader: { repeatitems: false },
+            rowNum: 10,
+            pager: '#pagerStatistiche',
+            viewrecords: true,
+            sortname: 'GG',
+            viewrecords: true,
+            pgbuttons: true,
+            pginput: false,
+            sortorder: "desc",
+            caption: "Statistiche"
+        });
+
+
+        
+
+
+        function avFormatter(cellvalue, options, rowObject) {
+            if (cellvalue == false)
+                returnValue = "no";
+            else
+                returnValue = "sì";
+            return returnValue;
+        }
+     
+        $("#statistiche").jqGrid('navGrid', '#pagerStatistiche', { edit: false, add: false, del: true });
+
+
+        $('.ui-icon-seek-next').attr('alt', 'Pagina Successiva');
+        $('.ui-icon-seek-next').attr('title', 'Pagina Successiva');
+
+        $('.ui-icon-seek-prev').attr('alt', 'Pagina Precedente');
+        $('.ui-icon-seek-prev').attr('title', 'Pagina Precedente');
+
+        $('.ui-icon-seek-end').attr('alt', 'Ultima Pagina');
+        $('.ui-icon-seek-end').attr('title', 'Ultima Pagina');
+
+        $('.ui-icon-seek-first').attr('alt', 'Prima Pagina');
+        $('.ui-icon-seek-first').attr('title', 'Prima Pagina');
+    });
+</script>
+}
+@section additionalCss {
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/redmond/jquery-ui-1.8.2.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/ui.jqgrid.css" />
+}
+
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+@section searchForm {
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+@section breadCrumb {
+    @RenderPage("~/Views/Shared/_BreadCrumb.cshtml")
+}
+<br />
+<div id="statisticheFormContainer">
+    <form action="~/MiaAzienda/Statistiche" method="POST">
+        <input type="hidden" name="hRatingCerved" id="hRatingCerved" value="@ViewBag.RatingCerved" />
+        <input type="hidden" name="hRatingVendite" id="hRatingVendite" value="@ViewBag.RatingVendite" />
+        <input type="hidden" name="hRatingEsposizione" id="hRatingEsposizione" value="@ViewBag.RatingVendite" />
+        <label for="rsS">Ragione Sociale:</label>
+        <input type="search" name="rsS" id="rsS" value="@ViewBag.RagioneSocialeS" />
+        <label for="pivaS">Partita Iva:</label>
+        <input type="search" name="pivaS" id="pivaS" value="@ViewBag.PartitaIvaS" />
+        <label for="ratingCerved">Rating Cerved:</label>
+        <select name="ratingCerved" id="ratingCerved">
+            <option value="">Tutte</option>
+            <option value="red">Alto Rischio</option>
+            <option value="yellow">Medio Rischio</option>
+            <option value="green">Basso Rischio</option>
+            <option value="gray">Senza Valutazione</option>            
+        </select>
+        <br />
+        <label for="ratingVendite">Vendite:</label>
+        <select name="ratingVendite" id="ratingVendite">
+            <option value="0">Tutte</option>
+            <option value="20000">sotto 20.000</option>
+            <option value="100000">tra 20.000 e 100.000</option>
+            <option value="400.000">tra 100.000 e 400.000</option>
+            <option value="999.999">oltre 400.000</option>            
+        </select>
+        <label for="ratingEsposizione">Esposizione:</label>
+        <select name="ratingEsposizione" id="ratingEsposizione">
+            <option value="0">Tutte</option>
+            <option value="1000">sotto 1.000</option>
+            <option value="5000">tra 1.000 e 5.000</option>
+            <option value="25000">tra 5.000 e 25.000 </option>
+            <option value="100000">tra 25.000 e 100.000</option>            
+            <option value="999.999">oltre 100.000</option>            
+        </select>
+        <label for="checkPreferiti" >Preferiti:</label>
+        <input type="checkbox"" id="checkPreferiti" name="checkPreferiti" />
+        <br />
+        <input type="submit"" value="Cerca" />
+    </form>   
+</div>
+<br /><br />
+<div id="statisticheContainer">
+    <table id="statistiche"></table>
+    <div id="pagerStatistiche"></div>    
+</div>
+<script>
+    $(function () {
+        $('#ratingCerved').val($('#hRatingCerved').val());
+        $('#ratingVendite').val($('#hRatingVendite').val());
+        $('#ratingEsposizione').val($('#hRatingEsposizione').val());
+    });
+</script>

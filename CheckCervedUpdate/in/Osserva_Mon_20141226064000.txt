@@ -1,0 +1,3 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;11864333;GESSA GIAMPAOLO;GSSGPL64D23D430M;01316050911;10/10/2014;RI041;A;Variazione PEC;26/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;26/12/2014;10/10/2015

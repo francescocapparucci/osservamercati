@@ -1,0 +1,5 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;9521380;ORTOFRUTTICOLA CAMPIDANO;02854630924;02854630924;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;22/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;6861232;STEFANIA O CON DENOMINAZION E ABBREVIATA STEFANIA;03006000925;03006000925;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;22/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;6861232;STEFANIA O CON DENOMINAZION E ABBREVIATA STEFANIA;03006000925;03006000925;15/10/2014;BL001;U;Nuovo Bilancio Aziendale;22/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;9521380;ORTOFRUTTICOLA CAMPIDANO;02854630924;02854630924;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;22/11/2014;13/11/2015

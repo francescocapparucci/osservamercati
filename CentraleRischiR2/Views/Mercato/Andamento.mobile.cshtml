@@ -1,0 +1,232 @@
+﻿@{
+    ViewBag.Title = "Mercato";
+}
+@section scripts {
+<script type="text/javascript">
+
+    function mercato() {
+        var titolo = $('#piva').val() != "" ? "Andamento Mercato Partita Iva " + $('#piva').val() : "Andamento Mercato";
+        $.post("./GetReportMercato",
+        { ragioneSociale: "", partitaIva: $('#piva').val() },
+        function (data) {
+            $("#mercatoGraph").dxChart({
+                commonPaneSettings: {
+                    backgroundColor: '#f0f0f0',
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    }
+                },
+                commonAxisSettings: {
+                    backgroundColor: '#f0f0f0',
+
+                    label: {
+                        format: "currency",
+                        font: {
+                            color: 'black',
+                            weight: 700
+                        },
+                        customizeText: function (value) {
+                            return value.valueText.replace('$', '€').replace(',', '.').replace(',', '.');
+                        }
+                    }
+                },
+                dataSource: data.valueOf(),
+                tooltip: {
+                    enabled: true,
+                    format: "currency",
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText: function (value) {
+                        return value.valueText.replace('$', '€').replace(',', '.').replace(',', '.');
+                    }
+                },
+                commonSeriesSettings: {
+                    argumentField: "Mensilita",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    label: {
+                        visible: false,
+                        format: "fixedPoint",
+                        precision: 0
+                    }
+                },
+                series: [
+            { valueField: "Vendite", name: "Vendite Mercato", color: "rgb(226,231,88)" },
+            { valueField: "Saldi", name: "Esposizione Mercato", color: "rgb(244,89,53)" },
+            { valueField: "Incassi", name: "Incassi Mercato", color: "rgb(59,172,77)" },
+
+
+        ],
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center",
+                    backgroundColor: "#f0f0f0",
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    }
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+        });
+    }
+
+    function nazionale() {        
+        var titolo = $('#piva').val() != "" ? "Andamento Nazione Partita Iva " + $('#piva').val() : "Andamento Nazione";
+        $.post("./GetReportNazione",
+        { ragioneSociale: "", partitaIva: $('#piva').val() },
+        function (data) {
+            $("#nazionaleGraph").dxChart({
+                commonPaneSettings: {
+                    backgroundColor: '#ffffff'
+                },
+                commonAxisSettings: {
+                    backgroundColor: '#f0f0f0',
+
+                    label: {
+                        format: "currency",
+                        font: {
+                            color: 'black',
+                            weight: 700
+                        },
+                        customizeText: function (value) {
+                            return value.valueText.replace('$', '€').replace(',', '.').replace(',', '.');
+                        }
+                    }
+                },
+                dataSource: data.valueOf(),
+                tooltip: {
+                    enabled: true,
+                    format: "currency",
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText: function (value) {
+                        return value.valueText.replace('$', '€').replace(',', '.').replace(',', '.');
+                    }
+                },
+                commonSeriesSettings: {
+                    argumentField: "Mensilita",
+                    type: "bar",
+                    hoverMode: "allArgumentPoints",
+                    selectionMode: "allArgumentPoints",
+                    label: {
+                        visible: false,
+                        argumentFormat: "currency",
+                        precision: 0
+                    }
+                },
+                series: [
+        { valueField: "Vendite", name: "Vendite Mercato", color: "rgb(226,231,88)" },
+            { valueField: "Saldi", name: "Esposizione Mercato", color: "rgb(244,89,53)" },
+            { valueField: "Incassi", name: "Incassi Mercato", color: "rgb(59,172,77)" }
+    ],
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center",
+                    backgroundColor: "#f0f0f0",
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    }
+                },
+                pointClick: function (point) {
+                    this.select();
+                }
+            });
+        });
+        
+    }
+
+
+    $(function () {
+        @{if (ViewBag.Ambiente != "MONOAZIENDALE")
+        {<text>
+            mercato();
+            $('#nazionaleGraph').hide();
+            $('#nazionaleTabWrapper').hide();
+            $('#btnMercato').click(function () {            
+            mercato();
+            $('#nazionaleGraph').hide();
+            $('#nazionaleTabWrapper').hide();
+            $('#mercatoGraph').show();
+            $('#mercatoTabWrapper').show();
+        });
+
+        $('#btnNazione').click(function () {            
+            nazionale();
+            $('#nazionaleGraph').show();
+            $('#nazionaleTabWrapper').show();
+            $('#mercatoGraph').hide();
+            $('#mercatoTabWrapper').hide();
+        });
+        </text>}
+        else{<text>
+            nazionale();
+            $('#mercatoGraph').hide();
+            $('#mercatoTabWrapper').hide();
+        </text>}}  
+
+    });
+</script>
+}
+@section sectionTitle{
+    <h1>Mercato</h1>	
+    <a href="#" data-icon="gear" class="ui-btn-left">Imposta</a>    
+    <a href="~/Home/Logout" data-icon="delete" class="ui-btn-right">Uscita</a>    
+}
+@section additionalCss {
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/redmond/jquery-ui-1.8.2.custom.css" />
+}
+
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+@section searchForm {
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+<br />
+@{if (ViewBag.Ambiente != "MONOAZIENDALE")
+  {  
+<text>      
+<div data-role="navbar">
+    <ul>
+        <li>
+            <a href="#" id="btnMercato" data-role="button" class="ui-btn-active">Mercato</a>
+        </li>
+        <li>
+            <a href="#" id="btnNazione" data-role="button">Nazione</a>
+        </li>
+    </ul>
+</div>
+</text>
+}
+else
+{
+<div data-role="navbar">
+    <ul>
+        <li>
+            <a href="#" data-role="button" class="ui-btn-active">Andamento</a>
+        </li>
+    </ul>
+</div>
+}
+}    
+<br />
+<div id="swipePanel">
+    <div id="mercatoGraph" class="chartContainer"></div>
+    <div id="nazionaleGraph" class="chartContainer"></div>
+</div>
+<div data-role="fieldcontain">
+<input type="hidden" id="piva" value="@ViewBag.PartitaIva" style="width:240px" />
+</div>

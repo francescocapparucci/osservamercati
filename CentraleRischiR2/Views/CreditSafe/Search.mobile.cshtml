@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Ricerca Anagrafica";
+}
+@section sectionTitle{
+	<h1>Ricerca Anagrafica</h1>	
+    <a href="#" data-icon="gear" class="ui-btn-left">Impostazioni</a>    
+    <a href="~/Home/Logout" data-icon="exit" class="ui-btn-right">Uscita</a>    
+}
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+@section searchForm {
+
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+
+<div class="ui-grid-d">
+    <div class="ui-block-a ui-bar-b">Partita Iva</div>
+    <div class="ui-block-b ui-bar-b">Ragione Sociale</div>    
+    <div class="ui-block-c ui-bar-b">Valutazione</div>        
+    <div class="ui-block-d ui-bar-b">Fido</div>        
+    <div class="ui-block-e ui-bar-b">Eventi Negativi</div>        
+    @foreach (var elementoAnagrafica in ViewBag.Anagrafiche)
+    {      
+      <div class="ui-block-a">
+      <div class="ui-body ui-body-d">
+        @elementoAnagrafica.PartitaIva
+      </div>
+      </div>
+      <div class="ui-block-b">
+      <div class="ui-body ui-body-d">
+      @elementoAnagrafica.RagioneSociale
+      </div>      
+      </div>
+      <div class="ui-block-c">
+      <div class="ui-body ui-body-d">
+            @{
+        if (elementoAnagrafica.Rating == "0")
+        {            
+            <text>
+                <img src='../content/images/sfera_grigia.gif' alt='Grigia' title='Grigia' />
+            </text>
+        }
+        else
+            if (elementoAnagrafica.Rating == "1")
+            {            
+            <text>
+                <img src='../content/images/sfera_verde.gif' alt='Verde 1' title='Verde 1' />
+            </text>
+            }
+            else
+                if (elementoAnagrafica.Rating == "2")
+                {            
+            <text>
+                <img src='../content/images/sfera_verde.gif' alt='Verde 2' title='Verde 2' />
+            </text>
+                }
+                else
+                    if (elementoAnagrafica.Rating == "3")
+                    {            
+            <text>
+                <img src='../content/images/sfera_verde.gif' alt='Verde 3' title='Verde 3' />
+            </text>
+                    }
+                    else
+                        if (elementoAnagrafica.Rating == "4")
+                        {            
+            <text>
+                <img src='../content/images/sfera_gialla.gif' alt='Gialla' title='Gialla' />
+            </text>
+                        }
+                        else
+                            if (elementoAnagrafica.Rating == "5")
+                            {            
+            <text>
+                <img src='../content/images/sfera_rossa.gif' alt='Rossa' title='Rossa' />
+            </text>
+                            }
+                            else
+                                if (elementoAnagrafica.Rating == "")
+                                {            
+            <text>
+                <form action='./RichiediRapportoMobile' method='POST'><input type='submit' value='Richiedi'><input type='hidden' name='piva' value='@elementoAnagrafica.PartitaIva'></form>
+            </text>
+                                }
+                                else
+                                    if (Convert.ToInt32(elementoAnagrafica.Rating) < 30 && Convert.ToInt32(elementoAnagrafica.Rating) > 10)
+                                    {
+            <text><img src='../content/images/sfera_rossa.gif' alt='Rossa' title='Rossa' /></text>
+                                    }
+                                    else
+                                        if (Convert.ToInt32(elementoAnagrafica.Rating) >= 30 && Convert.ToInt32(elementoAnagrafica.Rating) < 60)
+                                        {
+            <text><img src='../content/images/sfera_gialla.gif' alt='Gialla' title='Gialla' /></text>
+                                        }
+                                        else
+                                            if (Convert.ToInt32(elementoAnagrafica.Rating) >= 60)
+                                            {
+            <text><img src='../content/images/sfera_verde.gif' alt='Verde' title='Verde' /></text>
+                                            }            
+        }
+      </div>     
+      </div>     
+       <div class="ui-block-d">
+       <div class="ui-body ui-body-d">
+        @elementoAnagrafica.Fido       
+        </div> 
+        </div>
+       <div class="ui-block-e">
+       <div class="ui-body ui-body-d">
+            @elementoAnagrafica.EventiNegativi
+       </div> 
+       </div> 
+    }
+</div>
+
+
+
+
+
+

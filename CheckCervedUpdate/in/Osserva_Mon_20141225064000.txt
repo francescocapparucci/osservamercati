@@ -1,0 +1,6 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;618836;SPESA INTELLIGENTE;02416840235;02416840235;10/10/2014;MC010;A;Nuova movimentazione su azienda;25/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;3493358;GLI ORTI DI ASSISI DI COTOZZOLO PIERO & C.;01614440541;01614440541;11/11/2014;RI124;N;Aggiornamento Proposta Preconcordato;25/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;3493358;GLI ORTI DI ASSISI DI COTOZZOLO PIERO & C.;01614440541;01614440541;11/11/2014;RI124;N;Aggiornamento Proposta Preconcordato;25/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;3493358;GLI ORTI DI ASSISI DI COTOZZOLO PIERO & C.;01614440541;01614440541;12/11/2014;RI124;N;Aggiornamento Proposta Preconcordato;25/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;663640;ORTOFRUTTICOLA S.ALESSIO;07984100151;07984100151;13/11/2014;PC050;N;Nuovo pregiudizievole su socio;25/12/2014;13/11/2015

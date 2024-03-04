@@ -1,0 +1,56 @@
+﻿body 
+{
+    
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;    
+    text-align:center;
+    background: #feffff; 
+    
+    background: -webkit-linear-gradient(top, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 );
+    
+    
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+.ui-input-text
+{
+width: 75% !important;
+}
+
+
+.ui-input-button
+{
+width: 75px !important;
+}
+.chartContainer
+{
+    width:70%;
+    margin:auto;
+}
+div#mercatoTab table#mercatoTab
+{
+    width:70%;
+    margin:auto;
+}
+
+div#pieRating
+{    
+    width: 70%; margin-left: auto; margin-right: auto;
+}
+div#pieVendite
+{    
+    width: 70%; margin-left: auto; margin-right: auto;
+}
+div#pieGiorni
+{    
+    width: 70%; margin-left: auto; margin-right: auto;
+}
+div#pieEsposizione
+{    
+    width: 70%; margin-left: auto; margin-right: auto;
+}

@@ -1,0 +1,7 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;855273;AGRUMICOLA SARRABUS AGRICOLA;00211010921;00211010921;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;29/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;855273;AGRUMICOLA SARRABUS AGRICOLA;00211010921;00211010921;05/08/2014;GL001;P;Variazione positiva del fido automatico;29/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;05/08/2014;GL001;P;Variazione positiva del fido automatico;29/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;15/10/2014;GL001;P;Variazione positiva del fido automatico;29/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;9136878;M.S. TRADE;02540840804;02540840804;11/11/2014;BL001;U;Nuovo Bilancio Aziendale;29/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;12/11/2014;GL001;P;Variazione positiva del fido automatico;29/11/2014;12/11/2015

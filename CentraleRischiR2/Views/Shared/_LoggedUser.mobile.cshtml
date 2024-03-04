@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "LoggedUser";
+}
+@{if(ViewBag.Ambiente != "MONOAZIENDALE")
+{  
+<text>
+<div id="loggedUserPanel" class="ui-grid-b">
+    <div class="ui-block-a">
+        Utente:<br /> <b>@ViewBag.Username</b>
+    </div>
+    <div class="ui-block-b">
+    Azienda:<br />  <b>
+        @if (ViewBag.Demo == true)
+    {
+        <text>Demo</text>
+    }
+    else
+    {
+        @ViewBag.Azienda
+    }
+
+             </b>
+    </div>    
+    <div class="ui-block-c">
+        Mercato:<br />  <b>
+            @if (ViewBag.Demo == true)
+            {
+                <text>Demo</text>
+            }
+            else
+            {        
+                @ViewBag.Mercato
+            }</b>
+    </div>
+</div>
+</text>
+}
+else
+{
+    <div id="loggedUserPanel" class="ui-grid-a">
+    <div class="ui-block-a">
+        Utente: <b>@ViewBag.Username</b>
+    </div>
+    <div class="ui-block-b">
+    Azienda: <b>@ViewBag.Azienda</b>
+    </div>        
+</div>
+}
+}

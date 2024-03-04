@@ -1,0 +1,4 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PC040;N;Nuovo pregiudizievole su esponente;16/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;6331131;BOSCOLO ROBERTO GIOACHINA;BSCRRT62L30C638B;03046290270;13/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;16/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;29/12/2014;PC040;N;Nuovo pregiudizievole su esponente;16/01/2015;29/12/2015

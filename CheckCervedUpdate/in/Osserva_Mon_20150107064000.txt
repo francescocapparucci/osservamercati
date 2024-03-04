@@ -1,0 +1,25 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1672519;PISANO PIETRO PAOLO;PSNPRP48A11A359B;02211690926;05/08/2014;RI062;A;Evento Trasferimento Azienda;07/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;1672519;PISANO PIETRO PAOLO;PSNPRP48A11A359B;02211690926;05/08/2014;RI062;A;Evento Trasferimento Azienda;07/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;8057156;BUGS & LOLA DI CORDEDDU DANIELE & C.;03088300920;03088300920;05/08/2014;RI083;A;Esponente con carica recessa;07/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;8057156;BUGS & LOLA DI CORDEDDU DANIELE & C.;03088300920;03088300920;05/08/2014;RI010;A;Variazione ragione sociale ufficiale;07/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;8057156;BUGS & LOLA DI CORDEDDU DANIELE & C.;03088300920;03088300920;05/08/2014;RI082;A;Nuova carica per esponente;07/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;8057156;BUGS & LOLA DI CORDEDDU DANIELE & C.;03088300920;03088300920;05/08/2014;RI083;A;Esponente con carica recessa;07/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;8057156;BUGS & LOLA DI CORDEDDU DANIELE & C.;03088300920;03088300920;05/08/2014;RI041;A;Variazione PEC;07/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;8057156;BUGS & LOLA DI CORDEDDU DANIELE & C.;03088300920;03088300920;05/08/2014;RI082;A;Nuova carica per esponente;07/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;1233069;SUPEREMME;02007720929;02255740926;10/10/2014;RI091;A;Dati Azienda Chisura Unita Locale;07/01/2015;10/10/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;12/11/2014;RI081;A;Esponente rimosso dall'azienda;07/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;12/11/2014;RI082;A;Nuova carica per esponente;07/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;12/11/2014;RI083;A;Esponente con carica recessa;07/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;12/11/2014;RI082;A;Nuova carica per esponente;07/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;12/11/2014;RI081;A;Esponente rimosso dall'azienda;07/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;12/11/2014;RI082;A;Nuova carica per esponente;07/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;30/12/2014;RI081;A;Esponente rimosso dall'azienda;07/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;30/12/2014;RI082;A;Nuova carica per esponente;07/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;30/12/2014;RI083;A;Esponente con carica recessa;07/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;30/12/2014;RI082;A;Nuova carica per esponente;07/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;30/12/2014;RI081;A;Esponente rimosso dall'azienda;07/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;330256;SPREAFICO FRANCESCO E F.LLI;00348240136;00348240136;30/12/2014;RI082;A;Nuova carica per esponente;07/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;9967749;SANT'ANTONIO;01527040099;01527040099;30/12/2014;RI050;A;Variazione capitale sociale;07/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;9967749;SANT'ANTONIO;01527040099;01527040099;30/12/2014;SC001;A;Nuovo Elenco Soci;07/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;362041007;O.P.ORTO NATURA;03263700795;03263700795;30/12/2014;RI041;A;Variazione PEC;07/01/2015;30/12/2015

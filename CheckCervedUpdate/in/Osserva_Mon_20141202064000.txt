@@ -1,0 +1,18 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1372506;ELSA DI GIACOMO PILLONI & C.;02635060920;02635060920;05/08/2014;GL002;C;Variazione cautelativa del fido automatico;02/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;758073;F.LLI L'AMANTE DI ANTONIO BRUNO & C.;00935140590;00935140590;10/11/2014;MC010;A;Nuova movimentazione su azienda;02/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;3493358;GLI ORTI DI ASSISI DI COTOZZOLO PIERO & C.;01614440541;01614440541;11/11/2014;AD127;A;Variazione proposta concordato;02/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;10816510;LA PICCOLA FONDI;02552470599;02552470599;11/11/2014;RI091;A;Dati Azienda Chisura Unita Locale;02/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;10816510;LA PICCOLA FONDI;02552470599;02552470599;11/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;02/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;3493358;GLI ORTI DI ASSISI DI COTOZZOLO PIERO & C.;01614440541;01614440541;11/11/2014;AD127;A;Variazione proposta concordato;02/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;10816510;LA PICCOLA FONDI;02552470599;02552470599;11/11/2014;RI091;A;Dati Azienda Chisura Unita Locale;02/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;10816510;LA PICCOLA FONDI;02552470599;02552470599;11/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;02/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;6850007;ORTOFRUTTICOLA CIAMPANELLA DI CIAMPANELLA MARIO & C.;06965701003;06965701003;12/11/2014;RI041;A;Variazione PEC;02/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;3493358;GLI ORTI DI ASSISI DI COTOZZOLO PIERO & C.;01614440541;01614440541;12/11/2014;AD127;A;Variazione proposta concordato;02/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;10816510;LA PICCOLA FONDI;02552470599;02552470599;13/11/2014;RI091;A;Dati Azienda Chisura Unita Locale;02/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;10816510;LA PICCOLA FONDI;02552470599;02552470599;13/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;02/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;6331131;BOSCOLO ROBERTO GIOACHINA;BSCRRT62L30C638B;03046290270;13/11/2014;GL006;N;Variazione negativa del fido automatico 2;02/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;3704145;MOCCALDI GERARDO;03971060656;03971060656;13/11/2014;RI060;A;Evento Fusione Scissione;02/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;367351606;ROMA FUNGHI SEMPLIFICATA;13016891007;13016891007;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;02/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;361699055;ENOTECA CENTRALE DI CANI VALENTINA;CNAVNT82A47B745B;03428930923;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;02/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;364458782;ESSEMARKET SANT'EULALIA DI ANDREA SECCI;03504020920;03504020920;13/11/2014;RI041;A;Variazione PEC;02/12/2014;13/11/2015

@@ -1,0 +1,19 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;10329657;COM.SAR.;03277350926;03277350926;10/10/2014;GL002;C;Variazione cautelativa del fido automatico;28/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;5953878;SALVANO CLAUDIO;SLVCLD63D09I480K;01400180095;10/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;1158447;DURI SERGIO;DRUSRG59M04M082R;00593060569;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;362295215;G.S.G. SEMPLIFICATA;01522470887;01522470887;11/11/2014;PL001;A;Disponibilita Grading Esperienze Pagamento;28/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9612158;ADDESSI EGIDIO;02399970595;02399970595;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;7549587;PLAY OFF ONE;03275520611;03275520611;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;1176791;SCALAS ANTONIO;SCLNTN58A17F208X;00094230950;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;5953878;SALVANO CLAUDIO;SLVCLD63D09I480K;01400180095;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;362295215;G.S.G. SEMPLIFICATA;01522470887;01522470887;12/11/2014;PL001;A;Disponibilita Grading Esperienze Pagamento;28/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;2635628;DI GREGORIO SALVATORE;DGRSVT54L24C130C;00267160810;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;10447620;PUBBLI 3000 FOOD;02534690595;02534690595;13/11/2014;PL001;A;Disponibilita Grading Esperienze Pagamento;28/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;3661999;ARCOFRUTTA;05867201005;05867201005;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;6895191;ORTOLABB;06174390721;06174390721;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;6895191;ORTOLABB;06174390721;06174390721;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;28/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;10698233;CIOCIO FRUTTA DI RAFFAELE CIOCIO;CCIRFL50A08F912C;06944780961;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;12876437;CAMPANELLI ROBERTO;CMPRRT67T08C773W;11549751003;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;28/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;8212515;KARALIS EVENTS;02408290928;02408290928;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;28/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;810031;ORTOFRUTTICOLA ETNA DOLOMITI;00195720263;00195720263;22/12/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;28/12/2014;22/12/2015

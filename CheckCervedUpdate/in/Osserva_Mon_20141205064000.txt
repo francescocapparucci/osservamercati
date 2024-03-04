@@ -1,0 +1,39 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1735043;O.C.S. ORGANIZZAZIONE CENTRO SERVIZI;01970400923;01970400923;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;05/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;05/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;05/08/2014;BL003;A;Nuova Relazione di Gestione;05/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;7657512;PUTZOLU ANGELO;PTZNGL58B28F208Z;00099990954;10/10/2014;GL001;P;Variazione positiva del fido automatico;05/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;10329657;COM.SAR.;03277350926;03277350926;10/10/2014;GL001;P;Variazione positiva del fido automatico;05/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;15/10/2014;BL001;U;Nuovo Bilancio Aziendale;05/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;15/10/2014;BL003;A;Nuova Relazione di Gestione;05/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;11043535;FALCONE MARCO;FLCMRC79B16F230D;01049770454;10/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;05/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;6003274;MINCIOTTI RUGGERO;MNCRGR67D16C773H;01320400565;10/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;05/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;3493358;GLI ORTI DI ASSISI DI COTOZZOLO PIERO & C.;01614440541;01614440541;11/11/2014;RI124;N;Aggiornamento Proposta Preconcordato;05/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;11/11/2014;BL001;U;Nuovo Bilancio Aziendale;05/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;11/11/2014;BL003;A;Nuova Relazione di Gestione;05/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;11043535;FALCONE MARCO;FLCMRC79B16F230D;01049770454;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;05/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;3493358;GLI ORTI DI ASSISI DI COTOZZOLO PIERO & C.;01614440541;01614440541;11/11/2014;RI124;N;Aggiornamento Proposta Preconcordato;05/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;11/11/2014;BL001;U;Nuovo Bilancio Aziendale;05/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;11/11/2014;BL003;A;Nuova Relazione di Gestione;05/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;12043738;RI.MA. 2 ORTOFRUTTA;02606190599;02606190599;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;05/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;5692715;IPERFRUTTA;02923080754;02923080754;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;05/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;1572990;MONTE FRUTTA DI LONGOBARDI DOMENICO PROCOLO & C.;06518530636;06518530636;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;6003274;MINCIOTTI RUGGERO;MNCRGR67D16C773H;01320400565;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;RI081;A;Esponente rimosso dall'azienda;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;RI061;A;Evento Procedura concorsuale;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;RI081;A;Esponente rimosso dall'azienda;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;RI083;A;Esponente con carica recessa;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;RI080;A;Nuovo esponente;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;RI081;A;Esponente rimosso dall'azienda;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;RI081;A;Esponente rimosso dall'azienda;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;RI010;A;Variazione ragione sociale ufficiale;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;SA003;N;Variazione stato azienda - cessazione;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;3493358;GLI ORTI DI ASSISI DI COTOZZOLO PIERO & C.;01614440541;01614440541;12/11/2014;RI124;N;Aggiornamento Proposta Preconcordato;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;7849680;PIETROSANTO ROBERTO;PTRRRT64R09D662V;01735230599;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9689765;DGS SERVICE;02105210690;02105210690;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;05/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;05/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;13/11/2014;BL003;A;Nuova Relazione di Gestione;05/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;05/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;1715844;MA.MU.SA.;02561330925;02561330925;13/11/2014;BL003;A;Nuova Relazione di Gestione;05/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;8533049;CDC SUPERMERCATI;03074180922;03074180922;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;05/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;361426878;TERRA MARE VILLARIOS;03423150923;03423150923;13/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;05/12/2014;13/11/2015

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.lince.it/WSCorporate_1/CdsService" name="CdsWS" targetNamespace="http://www.lince.it/WSCorporate_1/CdsService" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema targetNamespace="http://www.lince.it/WSCorporate_1/CdsService" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="evaluate" type="tns:evaluate" />
+      <xs:element name="evaluateExended" type="tns:evaluateExended" />
+      <xs:element name="evaluateExendedResponse" type="tns:evaluateExendedResponse" />
+      <xs:element name="evaluateResponse" type="tns:evaluateResponse" />
+      <xs:complexType name="evaluate">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cdsRequestData" type="tns:cdsRequestData" />
+          <xs:element minOccurs="0" name="cdsValuationData" type="tns:cdsValuationData" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsRequestData">
+        <xs:sequence>
+          <xs:element name="cdsCompany" nillable="true" type="tns:cdsCompany" />
+          <xs:element name="cdsPerson" nillable="true" type="tns:cdsPerson" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsCompany">
+        <xs:sequence>
+          <xs:element name="cervedCode" nillable="true" type="xs:long" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element name="vatNumber" nillable="true" type="xs:string" />
+          <xs:element name="registrationProvince" nillable="true" type="xs:string" />
+          <xs:element name="registrationNumber" nillable="true" type="xs:long" />
+          <xs:element name="companyName" nillable="true" type="xs:string" />
+          <xs:element name="address" nillable="true" type="xs:string" />
+          <xs:element name="town" nillable="true" type="xs:string" />
+          <xs:element name="addressProvince" nillable="true" type="xs:string" />
+          <xs:element name="hamlet" nillable="true" type="xs:string" />
+          <xs:element name="zipCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsPerson">
+        <xs:sequence>
+          <xs:element name="name" nillable="true" type="xs:string" />
+          <xs:element name="surname" nillable="true" type="xs:string" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element name="personCode" nillable="true" type="xs:long" />
+          <xs:element name="address" nillable="true" type="xs:string" />
+          <xs:element name="city" nillable="true" type="xs:string" />
+          <xs:element name="country" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsValuationData">
+        <xs:sequence>
+          <xs:element name="operationType" nillable="true" type="tns:cdsOperationType" />
+          <xs:element name="grid" nillable="true" type="xs:string" />
+          <xs:element name="cdsId" nillable="true" type="xs:long" />
+          <xs:element name="documentType" nillable="true" type="xs:string" />
+          <xs:element name="internalData" nillable="true" type="xs:string" />
+          <xs:element name="contextClear" nillable="true" type="tns:cdsContextClear" />
+          <xs:element name="urgency" nillable="true" type="xs:long" />
+          <xs:element name="ndg" nillable="true" type="xs:string" />
+          <xs:element name="matricola" nillable="true" type="xs:string" />
+          <xs:element name="userNameCliente" nillable="true" type="xs:string" />
+          <xs:element name="outputType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="evaluateResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cdsResult" type="tns:cdsResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsResult">
+        <xs:sequence>
+          <xs:element name="cdsResponse" nillable="true" type="tns:cdsResponse" />
+          <xs:element name="cdsError" nillable="true" type="tns:error" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsResponse">
+        <xs:sequence>
+          <xs:element name="responseId" type="xs:string" />
+          <xs:element name="timeStamp" type="xs:dateTime" />
+          <xs:element name="cdsOutput" type="tns:cdsOutput" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="accountInformation" nillable="true" type="tns:accountInformation" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="additionalInformation" nillable="true" type="tns:additionalInformation" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="clientMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="token" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="outputFormatInformation" nillable="true" type="tns:outputFormatInformation" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsOutput">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="evalData" nillable="true" type="tns:evalData" />
+          <xs:element minOccurs="0" name="evalSummary" nillable="true" type="tns:evalSummary" />
+          <xs:element minOccurs="0" name="extraInformation" nillable="true" type="tns:extraInformation" />
+          <xs:element minOccurs="0" name="idDiff" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pdfDocument" nillable="true" type="tns:cervedGroupDocument" />
+          <xs:element minOccurs="0" name="practiceId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="request" nillable="true" type="tns:requestDataInfo" />
+          <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="subject" nillable="true" type="tns:companyDataInformation" />
+          <xs:element minOccurs="0" name="xmlDocument" nillable="true" type="tns:cervedGroupDocument" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="evalData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="evalSummary">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="colore" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="note" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="valore" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="extraInformation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="gridProfile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="legalFormCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="numConsDocEsternoAndAbil4" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cervedGroupDocument">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="document" nillable="true" type="tns:dataDoc" />
+          <xs:element minOccurs="0" name="encoding" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="length" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="zipMethod" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="dataDoc">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="document" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="size" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestDataInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cervedDocCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="color" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="evasionDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="gridId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="gridName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gridProfile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gridVer" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="isEvalueted" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="isReady" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="practiceId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="procTimes" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="requestCode" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="requestDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="userId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="companyDataInformation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cciaa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="denomination" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="legalFormCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="legalFormCodeDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nrea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="practiceId" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accountInformation">
+        <xs:sequence>
+          <xs:element name="operationDate" nillable="true" type="xs:anySimpleType" />
+          <xs:element name="operationType" nillable="true" type="xs:string" />
+          <xs:element name="parametersLog" nillable="true" type="xs:string" />
+          <xs:element name="price" nillable="true" type="xs:long" />
+          <xs:element name="productCode" nillable="true" type="xs:string" />
+          <xs:element name="productDescription" nillable="true" type="xs:string" />
+          <xs:element name="quantity" nillable="true" type="xs:long" />
+          <xs:element name="residue" nillable="true" type="xs:long" />
+          <xs:element name="um" nillable="true" type="xs:string" />
+          <xs:element name="uniqueIdentifier" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="additionalInformation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="from" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="to" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="outputFormatInformation">
+        <xs:sequence>
+          <xs:element name="bytes" type="xs:base64Binary" />
+          <xs:element name="format" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="error">
+        <xs:sequence>
+          <xs:element name="cdsErrorType" nillable="true" type="tns:cdsErrorType" />
+          <xs:element name="additionalDescription" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="evaluateExended">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cdsRequestData" type="tns:cdsRequestData" />
+          <xs:element minOccurs="0" name="cdsEvaluationData" type="tns:cdsEvaluationData" />
+          <xs:element minOccurs="0" name="cdsAdditionalInputParameters" type="tns:cdsAdditionalInputParameters" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsEvaluationData">
+        <xs:sequence>
+          <xs:element name="operationType" nillable="true" type="tns:cdsOperationType" />
+          <xs:element name="grid" nillable="true" type="xs:string" />
+          <xs:element name="urgency" nillable="true" type="xs:long" />
+          <xs:element name="internalData" nillable="true" type="xs:string" />
+          <xs:element name="cdsId" nillable="true" type="xs:long" />
+          <xs:element name="documentType" nillable="true" type="xs:string" />
+          <xs:element name="contextClear" nillable="true" type="tns:cdsContextClear" />
+          <xs:element name="outputType" nillable="true" type="xs:string" />
+          <xs:element name="ndg" nillable="true" type="xs:string" />
+          <xs:element name="matricola" nillable="true" type="xs:string" />
+          <xs:element name="userNameCliente" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsAdditionalInputParameters">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="cdsAdditionalInputParameter" type="tns:cdsAdditionalInputParameter" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsAdditionalInputParameter">
+        <xs:sequence>
+          <xs:element name="cdsInputKeyParam" type="tns:cdsInputKeyParam" />
+          <xs:element name="value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="evaluateExendedResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cdsResultExtended" type="tns:cdsResultExtended" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsResultExtended">
+        <xs:sequence>
+          <xs:element name="cdsResponseExtended" nillable="true" type="tns:cdsResponseExtended" />
+          <xs:element name="cdsError" nillable="true" type="tns:error" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsResponseExtended">
+        <xs:sequence>
+          <xs:element name="cdsRequestInfo" nillable="true" type="tns:cdsRequestInfo" />
+          <xs:element name="cdsItemInformation" nillable="true" type="tns:cdsItemInformation" />
+          <xs:element maxOccurs="unbounded" name="cdsAdditionalOutputParameters" nillable="true" type="tns:cdsAdditionalOutputParameter" />
+          <xs:element maxOccurs="unbounded" name="outputFormatInformation" nillable="true" type="tns:outputFormatInformation" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsRequestInfo">
+        <xs:sequence>
+          <xs:element name="referenceNumber" nillable="true" type="xs:string" />
+          <xs:element name="matricola" nillable="true" type="xs:string" />
+          <xs:element name="username" nillable="true" type="xs:string" />
+          <xs:element name="documentId" nillable="true" type="xs:long" />
+          <xs:element name="productCode" nillable="true" type="xs:string" />
+          <xs:element name="requestId" nillable="true" type="xs:long" />
+          <xs:element name="resultCode" nillable="true" type="xs:string" />
+          <xs:element name="resultDescription" nillable="true" type="xs:string" />
+          <xs:element name="grid" nillable="true" type="xs:string" />
+          <xs:element name="requestDate" type="xs:dateTime" />
+          <xs:element name="deliveryDate" type="xs:dateTime" />
+          <xs:element name="urgency" nillable="true" type="xs:long" />
+          <xs:element name="trafficLight" nillable="true" type="xs:string" />
+          <xs:element name="score" nillable="true" type="xs:double" />
+          <xs:element name="creditLimit" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsItemInformation">
+        <xs:sequence>
+          <xs:element name="idCervedGroup" nillable="true" type="xs:long" />
+          <xs:element name="taxCode" nillable="true" type="xs:string" />
+          <xs:element name="vatRegistrationNo" nillable="true" type="xs:string" />
+          <xs:element name="cciaa" nillable="true" type="xs:string" />
+          <xs:element name="nrea" nillable="true" type="xs:long" />
+          <xs:element name="companyName" nillable="true" type="xs:string" />
+          <xs:element name="legalFormCode" nillable="true" type="xs:string" />
+          <xs:element name="fullAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cdsAdditionalOutputParameter">
+        <xs:sequence>
+          <xs:element name="dataCode" type="xs:string" />
+          <xs:element name="dataValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="cdsOperationType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="VAL" />
+          <xs:enumeration value="IDP" />
+          <xs:enumeration value="EVP" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="cdsContextClear">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="INTEGRAL_CONTEXT" />
+          <xs:enumeration value="CLEANED_CONTEXT" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="cdsErrorType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="OK" />
+          <xs:enumeration value="GENERIC_ERROR" />
+          <xs:enumeration value="INVALID_REQUEST_DATA" />
+          <xs:enumeration value="MISSING_OPERATION_TYPE" />
+          <xs:enumeration value="MISSING_VALUTATION_DATA" />
+          <xs:enumeration value="INCOMPLETE_VALUTATION_DATA" />
+          <xs:enumeration value="MISSING_REQUEST_DATA" />
+          <xs:enumeration value="MISSING_MANDATORY_COMPANY_PARAMETERS" />
+          <xs:enumeration value="MISSING_MANDATORY_PERSON_PARAMETERS" />
+          <xs:enumeration value="MISSING_CDS_ID" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="cdsInputKeyParam">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="PRODUCT_CODE" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </types>
+  <message name="CdsWS_evaluateExended">
+    <part name="evaluateExended" element="tns:evaluateExended" />
+  </message>
+  <message name="CdsWS_evaluate">
+    <part name="evaluate" element="tns:evaluate" />
+  </message>
+  <message name="CdsWS_evaluateResponse">
+    <part name="evaluateResponse" element="tns:evaluateResponse" />
+  </message>
+  <message name="CdsWS_evaluateExendedResponse">
+    <part name="evaluateExendedResponse" element="tns:evaluateExendedResponse" />
+  </message>
+  <portType name="CdsWS">
+    <operation name="evaluate" parameterOrder="evaluate">
+      <input message="tns:CdsWS_evaluate" />
+      <output message="tns:CdsWS_evaluateResponse" />
+    </operation>
+    <operation name="evaluateExended" parameterOrder="evaluateExended">
+      <input message="tns:CdsWS_evaluateExended" />
+      <output message="tns:CdsWS_evaluateExendedResponse" />
+    </operation>
+  </portType>
+  <binding name="CdsWSBinding" type="tns:CdsWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="evaluate">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="evaluateExended">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CdsWS">
+    <port name="CdsWSPort" binding="tns:CdsWSBinding">
+      <soap:address location="https://wscorp.lince.it/WSCorporate_1/CdsWS" />
+    </port>
+  </service>
+</definitions>

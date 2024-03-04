@@ -1,0 +1,1968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OsservaCentraleRischiModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="OsservaCentraleRischiModelStoreContainer">
+          <EntitySet Name="categoria" EntityType="OsservaCentraleRischiModel.Store.categoria" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="documento" EntityType="OsservaCentraleRischiModel.Store.documento" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m00_centri" EntityType="OsservaCentraleRischiModel.Store.m00_centri" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m01_aziende" EntityType="OsservaCentraleRischiModel.Store.m01_aziende" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m02_anagrafica" EntityType="OsservaCentraleRischiModel.Store.m02_anagrafica" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m03_saldi" EntityType="OsservaCentraleRischiModel.Store.m03_saldi" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m03_saldi_new" EntityType="OsservaCentraleRischiModel.Store.m03_saldi_new" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m03_saldi_storico" EntityType="OsservaCentraleRischiModel.Store.m03_saldi_storico" store:Type="Tables" store:Schema="dbo" store:Name="m03_saldi_storico" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [m03_saldi_storico].[m03_idmovimento] AS [m03_idmovimento], 
+      [m03_saldi_storico].[m03_codiceazienda] AS [m03_codiceazienda], 
+      [m03_saldi_storico].[m03_partitaiva] AS [m03_partitaiva], 
+      [m03_saldi_storico].[m03_codicefiscale] AS [m03_codicefiscale], 
+      [m03_saldi_storico].[m03_dtsaldo] AS [m03_dtsaldo], 
+      [m03_saldi_storico].[m03_saldo] AS [m03_saldo], 
+      [m03_saldi_storico].[m03_dtupdate] AS [m03_dtupdate]
+      FROM [dbo].[m03_saldi_storico] AS [m03_saldi_storico]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="m04_vendite" EntityType="OsservaCentraleRischiModel.Store.m04_vendite" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m04_vendite_new" EntityType="OsservaCentraleRischiModel.Store.m04_vendite_new" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m04_vendite_storico" EntityType="OsservaCentraleRischiModel.Store.m04_vendite_storico" store:Type="Tables" store:Schema="dbo" store:Name="m04_vendite_storico" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [m04_vendite_storico].[m04_idmovimento] AS [m04_idmovimento], 
+      [m04_vendite_storico].[m04_codiceazienda] AS [m04_codiceazienda], 
+      [m04_vendite_storico].[m04_partitaiva] AS [m04_partitaiva], 
+      [m04_vendite_storico].[m04_codicefiscale] AS [m04_codicefiscale], 
+      [m04_vendite_storico].[m04_tipodoc] AS [m04_tipodoc], 
+      [m04_vendite_storico].[m04_numdoc] AS [m04_numdoc], 
+      [m04_vendite_storico].[m04_dtdocvendita] AS [m04_dtdocvendita], 
+      [m04_vendite_storico].[m04_dtrifvendita] AS [m04_dtrifvendita], 
+      [m04_vendite_storico].[m04_importo] AS [m04_importo], 
+      [m04_vendite_storico].[m04_dtscadenza] AS [m04_dtscadenza], 
+      [m04_vendite_storico].[m04_dtupdate] AS [m04_dtupdate]
+      FROM [dbo].[m04_vendite_storico] AS [m04_vendite_storico]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="m05_rating" EntityType="OsservaCentraleRischiModel.Store.m05_rating" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m06_anagrafica_rapporti" EntityType="OsservaCentraleRischiModel.Store.m06_anagrafica_rapporti" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m08_richieste" EntityType="OsservaCentraleRischiModel.Store.m08_richieste" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m10_utenti" EntityType="OsservaCentraleRischiModel.Store.m10_utenti" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m11_ruoli" EntityType="OsservaCentraleRischiModel.Store.m11_ruoli" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m12_fasce_vendite" EntityType="OsservaCentraleRischiModel.Store.m12_fasce_vendite" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m13_fasce_esposizione" EntityType="OsservaCentraleRischiModel.Store.m13_fasce_esposizione" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m14_stati_lince" EntityType="OsservaCentraleRischiModel.Store.m14_stati_lince" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m16_contatori" EntityType="OsservaCentraleRischiModel.Store.m16_contatori" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m17_nazioni" EntityType="OsservaCentraleRischiModel.Store.m17_nazioni" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m18_moduli" EntityType="OsservaCentraleRischiModel.Store.m18_moduli" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m19_documenti" EntityType="OsservaCentraleRischiModel.Store.m19_documenti" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m21_tipoassistenza" EntityType="OsservaCentraleRischiModel.Store.m21_tipoassistenza" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m22_assistenza" EntityType="OsservaCentraleRischiModel.Store.m22_assistenza" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m23_homepage" EntityType="OsservaCentraleRischiModel.Store.m23_homepage" store:Type="Tables" store:Schema="dbo" store:Name="m23_homepage" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [m23_homepage].[m23_id] AS [m23_id], 
+      [m23_homepage].[m23_txt1] AS [m23_txt1], 
+      [m23_homepage].[m23_txt2] AS [m23_txt2], 
+      [m23_homepage].[m23_txt3] AS [m23_txt3], 
+      [m23_homepage].[m23_banner1] AS [m23_banner1], 
+      [m23_homepage].[m23_banner2] AS [m23_banner2], 
+      [m23_homepage].[m23_banner3] AS [m23_banner3], 
+      [m23_homepage].[m23_banner4] AS [m23_banner4], 
+      [m23_homepage].[m23_banner5] AS [m23_banner5], 
+      [m23_homepage].[m23_banner6] AS [m23_banner6]
+      FROM [dbo].[m23_homepage] AS [m23_homepage]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="m25_parametri_dso" EntityType="OsservaCentraleRischiModel.Store.m25_parametri_dso" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m26_richiesta_recupero_crediti" EntityType="OsservaCentraleRischiModel.Store.m26_richiesta_recupero_crediti" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m27_fattura_richiesta" EntityType="OsservaCentraleRischiModel.Store.m27_fattura_richiesta" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="m28_giorni_storico" EntityType="OsservaCentraleRischiModel.Store.m28_giorni_storico" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="t_lince_aziende_saldominimo" EntityType="OsservaCentraleRischiModel.Store.t_lince_aziende_saldominimo" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="t_lince_esperienze" EntityType="OsservaCentraleRischiModel.Store.t_lince_esperienze" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="t04_centro_clienti" EntityType="OsservaCentraleRischiModel.Store.t04_centro_clienti" store:Type="Tables" store:Schema="dbo" store:Name="t04_centro_clienti" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [t04_centro_clienti].[t04_idcentro] AS [t04_idcentro], 
+      [t04_centro_clienti].[t04_partitaiva] AS [t04_partitaiva]
+      FROM [dbo].[t04_centro_clienti] AS [t04_centro_clienti]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="t05_azienda_clienti" EntityType="OsservaCentraleRischiModel.Store.t05_azienda_clienti" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="t06_statistiche_centro" EntityType="OsservaCentraleRischiModel.Store.t06_statistiche_centro" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="t07_statistiche_nazione" EntityType="OsservaCentraleRischiModel.Store.t07_statistiche_nazione" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="t08_aziendaupdatedati" EntityType="OsservaCentraleRischiModel.Store.t08_aziendaupdatedati" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="t09_contatori_movimenti" EntityType="OsservaCentraleRischiModel.Store.t09_contatori_movimenti" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="vs_piva_nonvisualizzare" EntityType="OsservaCentraleRischiModel.Store.vs_piva_nonvisualizzare" store:Type="Views" store:Schema="dbo" store:Name="vs_piva_nonvisualizzare" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [vs_piva_nonvisualizzare].[m01_idcentro] AS [m01_idcentro], 
+      [vs_piva_nonvisualizzare].[t05_partitaiva] AS [t05_partitaiva], 
+      [vs_piva_nonvisualizzare].[operatori] AS [operatori]
+      FROM [dbo].[vs_piva_nonvisualizzare] AS [vs_piva_nonvisualizzare]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vs_piva_nonvisualizzare_nazione" EntityType="OsservaCentraleRischiModel.Store.vs_piva_nonvisualizzare_nazione" store:Type="Views" store:Schema="dbo" store:Name="vs_piva_nonvisualizzare_nazione" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [vs_piva_nonvisualizzare_nazione].[t05_partitaiva] AS [t05_partitaiva], 
+      [vs_piva_nonvisualizzare_nazione].[operatori] AS [operatori]
+      FROM [dbo].[vs_piva_nonvisualizzare_nazione] AS [vs_piva_nonvisualizzare_nazione]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vs_richieste_statopiurecente" EntityType="OsservaCentraleRischiModel.Store.vs_richieste_statopiurecente" store:Type="Views" store:Schema="dbo" store:Name="vs_richieste_statopiurecente" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [vs_richieste_statopiurecente].[m06_partitaiva] AS [m06_partitaiva], 
+      [vs_richieste_statopiurecente].[m06_ragionesociale] AS [m06_ragionesociale], 
+      [vs_richieste_statopiurecente].[stato] AS [stato], 
+      [vs_richieste_statopiurecente].[Expr2] AS [Expr2]
+      FROM [dbo].[vs_richieste_statopiurecente] AS [vs_richieste_statopiurecente]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="categoria">
+          <Key>
+            <PropertyRef Name="id_category" />
+            <PropertyRef Name="tipo_documento" />
+          </Key>
+          <Property Name="id_category" Type="int" Nullable="false" />
+          <Property Name="tipo_documento" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="description" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="documento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tipo_documento" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="titolo" Type="text" />
+          <Property Name="abstract" Type="text" />
+          <Property Name="testo" Type="text" />
+          <Property Name="file_download" Type="varchar" MaxLength="255" />
+          <Property Name="immagine" Type="varchar" MaxLength="255" />
+          <Property Name="pubblicato" Type="bit" Nullable="false" />
+          <Property Name="principale" Type="bit" Nullable="false" />
+          <Property Name="title" Type="text" />
+          <Property Name="keywords" Type="text" />
+          <Property Name="description" Type="text" />
+          <Property Name="id_category" Type="int" />
+        </EntityType>
+        <EntityType Name="m00_centri">
+          <Key>
+            <PropertyRef Name="m00_idcentro" />
+          </Key>
+          <Property Name="m00_idcentro" Type="int" Nullable="false" />
+          <Property Name="m00_centro" Type="varchar" MaxLength="50" />
+          <Property Name="m00_logo" Type="varchar" MaxLength="50" />
+          <Property Name="m00_assistenza" Type="varchar(max)" />
+          <Property Name="m00_localita" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="m01_aziende">
+          <Key>
+            <PropertyRef Name="m01_idazienda" />
+          </Key>
+          <Property Name="m01_idazienda" Type="int" Nullable="false" />
+          <Property Name="m01_codice" Type="varchar" MaxLength="50" />
+          <Property Name="m01_idcentro" Type="int" />
+          <Property Name="m01_ragionesociale" Type="varchar" MaxLength="50" />
+          <Property Name="m01_partitaiva" Type="varchar" MaxLength="50" />
+          <Property Name="m01_codicefiscale" Type="varchar" MaxLength="50" />
+          <Property Name="m01_indirizzo" Type="varchar" MaxLength="200" />
+          <Property Name="m01_localita" Type="varchar" MaxLength="50" />
+          <Property Name="m01_cap" Type="varchar" MaxLength="50" />
+          <Property Name="m01_pv" Type="varchar" MaxLength="2" />
+          <Property Name="m01_telefono" Type="varchar" MaxLength="50" />
+          <Property Name="m01_mobile" Type="varchar" MaxLength="50" />
+          <Property Name="m01_fax" Type="varchar" MaxLength="50" />
+          <Property Name="m01_referente" Type="varchar" MaxLength="50" />
+          <Property Name="m01_email" Type="varchar" MaxLength="50" />
+          <Property Name="m01_gestionale" Type="varchar" MaxLength="50" />
+          <Property Name="m01_server" Type="varchar" MaxLength="50" />
+          <Property Name="m01_dbmysql" Type="varchar" MaxLength="50" />
+          <Property Name="m01_dbuser" Type="varchar" MaxLength="50" />
+          <Property Name="m01_dbpassword" Type="varchar" MaxLength="50" />
+          <Property Name="m01_flg" Type="bit" />
+          <Property Name="m01_attivo" Type="bit" />
+          <Property Name="m01_assicurato" Type="bit" />
+          <Property Name="m01_polizza" Type="varchar" MaxLength="50" />
+          <Property Name="m01_datainizio" Type="datetime" />
+          <Property Name="m01_datafine" Type="datetime" />
+          <Property Name="m01_mesi" Type="int" />
+          <Property Name="m01_fatt_assicurabile" Type="numeric" Scale="2" />
+          <Property Name="m01_recupero_crediti" Type="bit" />
+          <Property Name="m01_tipo_gestionale" Type="varchar" MaxLength="50" />
+          <Property Name="m01_cartella" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="m02_anagrafica">
+          <Key>
+            <PropertyRef Name="m02_partitaiva" />
+          </Key>
+          <Property Name="m02_partitaiva" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="m02_codicefiscale" Type="varchar" MaxLength="16" />
+          <Property Name="m02_ragionesociale" Type="varchar" MaxLength="200" />
+          <Property Name="m02_indirizzo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m02_cap" Type="varchar" MaxLength="10" />
+          <Property Name="m02_comune" Type="varchar" MaxLength="40" />
+          <Property Name="m02_nazione" Type="varchar" MaxLength="3" />
+          <Property Name="m02_prefisso" Type="varchar" MaxLength="7" />
+          <Property Name="m02_telefono" Type="varchar" MaxLength="12" />
+          <Property Name="m02_email" Type="varchar" MaxLength="50" />
+          <Property Name="m02_note" Type="varchar" MaxLength="50" />
+          <Property Name="m02_dtupdate" Type="datetime" />
+          <Property Name="m02_updadm" Type="bit" />
+        </EntityType>
+        <EntityType Name="m03_saldi">
+          <Key>
+            <PropertyRef Name="m03_codiceazienda" />
+            <PropertyRef Name="m03_partitaiva" />
+            <PropertyRef Name="m03_dtsaldo" />
+            <PropertyRef Name="m03_saldo" />
+          </Key>
+          <Property Name="m03_codiceazienda" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m03_partitaiva" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m03_codicefiscale" Type="varchar" MaxLength="50" />
+          <Property Name="m03_dtsaldo" Type="datetime" Nullable="false" />
+          <Property Name="m03_saldo" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="m03_dtupdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="m03_saldi_new">
+          <Key>
+            <PropertyRef Name="m03_codiceazienda" />
+            <PropertyRef Name="m03_partitaiva" />
+            <PropertyRef Name="m03_dtsaldo" />
+            <PropertyRef Name="m03_saldo" />
+          </Key>
+          <Property Name="m03_codiceazienda" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m03_partitaiva" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m03_codicefiscale" Type="varchar" MaxLength="50" />
+          <Property Name="m03_dtsaldo" Type="datetime" Nullable="false" />
+          <Property Name="m03_saldo" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="m03_dtupdate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OsservaCentraleRischi.dbo.m03_saldi_storico' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="m03_saldi_storico">
+          <Key>
+            <PropertyRef Name="m03_idmovimento" />
+          </Key>
+          <Property Name="m03_idmovimento" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m03_codiceazienda" Type="varchar" MaxLength="50" />
+          <Property Name="m03_partitaiva" Type="varchar" MaxLength="50" />
+          <Property Name="m03_codicefiscale" Type="varchar" MaxLength="50" />
+          <Property Name="m03_dtsaldo" Type="datetime" />
+          <Property Name="m03_saldo" Type="decimal" Scale="2" />
+          <Property Name="m03_dtupdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="m04_vendite">
+          <Key>
+            <PropertyRef Name="m04_codiceazienda" />
+            <PropertyRef Name="m04_partitaiva" />
+            <PropertyRef Name="m04_numdoc" />
+            <PropertyRef Name="m04_dtdocvendita" />
+          </Key>
+          <Property Name="m04_codiceazienda" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m04_partitaiva" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="m04_codicefiscale" Type="varchar" MaxLength="16" />
+          <Property Name="m04_tipodoc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m04_numdoc" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="m04_dtdocvendita" Type="datetime" Nullable="false" />
+          <Property Name="m04_dtrifvendita" Type="datetime" />
+          <Property Name="m04_importo" Type="float" />
+          <Property Name="m04_dtscadenza" Type="datetime" />
+          <Property Name="m04_dtupdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="m04_vendite_new">
+          <Key>
+            <PropertyRef Name="m04_codiceazienda" />
+            <PropertyRef Name="m04_partitaiva" />
+            <PropertyRef Name="m04_numdoc" />
+            <PropertyRef Name="m04_dtdocvendita" />
+          </Key>
+          <Property Name="m04_codiceazienda" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m04_partitaiva" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="m04_codicefiscale" Type="varchar" MaxLength="16" />
+          <Property Name="m04_tipodoc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m04_numdoc" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="m04_dtdocvendita" Type="datetime" Nullable="false" />
+          <Property Name="m04_dtrifvendita" Type="datetime" />
+          <Property Name="m04_importo" Type="float" />
+          <Property Name="m04_dtscadenza" Type="datetime" />
+          <Property Name="m04_dtupdate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OsservaCentraleRischi.dbo.m04_vendite_storico' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="m04_vendite_storico">
+          <Key>
+            <PropertyRef Name="m04_idmovimento" />
+            <PropertyRef Name="m04_codiceazienda" />
+            <PropertyRef Name="m04_tipodoc" />
+            <PropertyRef Name="m04_numdoc" />
+          </Key>
+          <Property Name="m04_idmovimento" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m04_codiceazienda" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m04_partitaiva" Type="varchar" MaxLength="16" />
+          <Property Name="m04_codicefiscale" Type="varchar" MaxLength="16" />
+          <Property Name="m04_tipodoc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m04_numdoc" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="m04_dtdocvendita" Type="datetime" />
+          <Property Name="m04_dtrifvendita" Type="datetime" />
+          <Property Name="m04_importo" Type="float" />
+          <Property Name="m04_dtscadenza" Type="datetime" />
+          <Property Name="m04_dtupdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="m05_rating">
+          <Key>
+            <PropertyRef Name="m05_id" />
+          </Key>
+          <Property Name="m05_partitaiva" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="m05_dtriferimento" Type="datetime" Nullable="false" />
+          <Property Name="m05_stato" Type="char" MaxLength="1" />
+          <Property Name="m05_dtfinevalidita" Type="datetime" />
+          <Property Name="m05_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="m06_anagrafica_rapporti">
+          <Key>
+            <PropertyRef Name="m06_partitaiva" />
+          </Key>
+          <Property Name="m06_partitaiva" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m06_codicefiscale" Type="varchar" MaxLength="50" />
+          <Property Name="m06_codicelince" Type="varchar" MaxLength="50" />
+          <Property Name="m06_codiceDB" Type="varchar" MaxLength="50" />
+          <Property Name="m06_ragionesociale" Type="varchar" MaxLength="200" />
+          <Property Name="m06_indirizzo" Type="varchar" MaxLength="200" />
+          <Property Name="m06_citta" Type="varchar" MaxLength="200" />
+          <Property Name="m06_cap" Type="nchar" MaxLength="10" />
+          <Property Name="m06_pv" Type="varchar" MaxLength="2" />
+          <Property Name="m06_dt_upd_rapporto" Type="datetime" />
+          <Property Name="m06_dt_evasione_rapporto" Type="datetime" />
+          <Property Name="m06_tiporapporto" Type="int" />
+          <Property Name="m06_stato" Type="int" />
+          <Property Name="m06_alert" Type="bit" />
+        </EntityType>
+        <EntityType Name="m08_richieste">
+          <Key>
+            <PropertyRef Name="m08_idrichiesta" />
+          </Key>
+          <Property Name="m08_idrichiesta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="m08_user" Type="varchar" MaxLength="10" />
+          <Property Name="m08_dtrichiesta" Type="datetime" />
+          <Property Name="m08_codice" Type="varchar" MaxLength="50" />
+          <Property Name="m08_ragsoc" Type="varchar" MaxLength="100" />
+          <Property Name="m08_partitaiva" Type="varchar" MaxLength="50" />
+          <Property Name="m08_codfis" Type="varchar" MaxLength="50" />
+          <Property Name="m08_indirizzo" Type="varchar" MaxLength="200" />
+          <Property Name="m08_localita" Type="varchar" MaxLength="100" />
+          <Property Name="m08_provincia" Type="varchar" MaxLength="5" />
+          <Property Name="m08_tiporichiesta" Type="int" />
+          <Property Name="m08_urgenza" Type="int" />
+          <Property Name="m08_email" Type="varchar" MaxLength="100" />
+          <Property Name="m08_dt_invio" Type="datetime" />
+          <Property Name="m08_file" Type="varchar" MaxLength="50" />
+          <Property Name="m08_dt_evasione" Type="datetime" />
+          <Property Name="m08_estero" Type="bit" />
+          <Property Name="m08_dbmonitor" Type="varchar" MaxLength="50" />
+          <Property Name="m08_dbinvestigation" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="m10_utenti">
+          <Key>
+            <PropertyRef Name="m10_iduser" />
+          </Key>
+          <Property Name="m10_iduser" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="m10_user" Type="varchar" MaxLength="50" />
+          <Property Name="m10_pass" Type="varchar" MaxLength="50" />
+          <Property Name="m10_idazienda" Type="int" />
+          <Property Name="m10_idruolo" Type="int" />
+          <Property Name="m10_nomeutente" Type="varchar" MaxLength="50" />
+          <Property Name="m10_email" Type="varchar" MaxLength="50" />
+          <Property Name="m10_attivo" Type="bit" />
+        </EntityType>
+        <EntityType Name="m11_ruoli">
+          <Key>
+            <PropertyRef Name="m11_idruolo" />
+          </Key>
+          <Property Name="m11_idruolo" Type="int" Nullable="false" />
+          <Property Name="m11_ruolo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="m12_fasce_vendite">
+          <Key>
+            <PropertyRef Name="m12_idfascia" />
+          </Key>
+          <Property Name="m12_idfascia" Type="int" Nullable="false" />
+          <Property Name="m12_limite_inferiore" Type="decimal" Scale="2" />
+          <Property Name="m12_limite_superiore" Type="decimal" Scale="2" />
+          <Property Name="m12_descrizione" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="m13_fasce_esposizione">
+          <Key>
+            <PropertyRef Name="m13_idfascia" />
+          </Key>
+          <Property Name="m13_idfascia" Type="int" Nullable="false" />
+          <Property Name="m13_limite_inferiore" Type="decimal" Scale="2" />
+          <Property Name="m13_limite_superiore" Type="decimal" Scale="2" />
+          <Property Name="m13_descrizione" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="m14_stati_lince">
+          <Key>
+            <PropertyRef Name="m14_idstato" />
+          </Key>
+          <Property Name="m14_idstato" Type="int" Nullable="false" />
+          <Property Name="m14_descrizione" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="m16_contatori">
+          <Key>
+            <PropertyRef Name="m16_idcentro" />
+            <PropertyRef Name="m16_tipo" />
+          </Key>
+          <Property Name="m16_idcentro" Type="int" Nullable="false" />
+          <Property Name="m16_tipo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m16_valore" Type="int" />
+        </EntityType>
+        <EntityType Name="m17_nazioni">
+          <Key>
+            <PropertyRef Name="m17_codice" />
+          </Key>
+          <Property Name="m17_codice" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="m17_nazione" Type="varchar" MaxLength="50" />
+          <Property Name="m17_prodotto" Type="varchar" MaxLength="50" />
+          <Property Name="m17_rating" Type="varchar" MaxLength="50" />
+          <Property Name="m17_fido" Type="varchar" MaxLength="50" />
+          <Property Name="m17_monitor" Type="bit" />
+        </EntityType>
+        <EntityType Name="m18_moduli">
+          <Key>
+            <PropertyRef Name="m18_idmodulo" />
+          </Key>
+          <Property Name="m18_idmodulo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="m18_descrizione" Type="varchar" MaxLength="50" />
+          <Property Name="m18_pagina" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="m19_documenti">
+          <Key>
+            <PropertyRef Name="m19_iddocumento" />
+          </Key>
+          <Property Name="m19_iddocumento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="m19_idazienda" Type="int" />
+          <Property Name="m19_idmodulo" Type="int" />
+          <Property Name="m19_datacreazione" Type="datetime" />
+          <Property Name="m19_dataaggiornamento" Type="datetime" />
+        </EntityType>
+        <EntityType Name="m21_tipoassistenza">
+          <Key>
+            <PropertyRef Name="m21_idtipoassistenza" />
+          </Key>
+          <Property Name="m21_idtipoassistenza" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="m21_descrizione" Type="varchar" MaxLength="100" />
+          <Property Name="m21_email_avviso" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="m22_assistenza">
+          <Key>
+            <PropertyRef Name="m22_idassistenza" />
+          </Key>
+          <Property Name="m22_idassistenza" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="m22_idazienda" Type="int" />
+          <Property Name="m22_tiporichiesta" Type="int" />
+          <Property Name="m22_stato" Type="int" />
+          <Property Name="m22_dt_richiesta" Type="datetime" />
+          <Property Name="m22_dt_aggiornamento" Type="datetime" />
+          <Property Name="m22_richiesta" Type="text" />
+          <Property Name="m22_risposta" Type="text" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OsservaCentraleRischi.dbo.m23_homepage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="m23_homepage">
+          <Key>
+            <PropertyRef Name="m23_id" />
+            <PropertyRef Name="m23_txt1" />
+          </Key>
+          <Property Name="m23_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="m23_txt1" Type="varchar(max)" Nullable="false" />
+          <Property Name="m23_txt2" Type="varchar(max)" />
+          <Property Name="m23_txt3" Type="varchar(max)" />
+          <Property Name="m23_banner1" Type="varchar" MaxLength="50" />
+          <Property Name="m23_banner2" Type="varchar" MaxLength="50" />
+          <Property Name="m23_banner3" Type="varchar" MaxLength="50" />
+          <Property Name="m23_banner4" Type="varchar" MaxLength="50" />
+          <Property Name="m23_banner5" Type="varchar" MaxLength="50" />
+          <Property Name="m23_banner6" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="m25_parametri_dso">
+          <Key>
+            <PropertyRef Name="m25_id" />
+          </Key>
+          <Property Name="m25_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="m25_numero_mesi_1" Type="smallint" Nullable="false" />
+          <Property Name="m25_numero_giorni_1" Type="int" Nullable="false" />
+          <Property Name="m25_numero_mesi_2" Type="smallint" Nullable="false" />
+          <Property Name="m25_numero_giorni_2" Type="int" Nullable="false" />
+          <Property Name="m25_condizione_and" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m26_richiesta_recupero_crediti">
+          <Key>
+            <PropertyRef Name="m26_id" />
+          </Key>
+          <Property Name="m26_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="m26_codice_azienda" Type="int" Nullable="false" />
+          <Property Name="m26_ragione_sociale" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="m26_partita_iva" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="m26_data_ultima_modifica" Type="datetime2" Nullable="false" />
+          <Property Name="m26_data_inserimento" Type="datetime" Nullable="false" />
+          <Property Name="m26_codice_richiedente" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m26_tipo_richiesta" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m26_inviato_assicom" Type="datetime" />
+        </EntityType>
+        <EntityType Name="m27_fattura_richiesta">
+          <Key>
+            <PropertyRef Name="m27_id" />
+          </Key>
+          <Property Name="m27_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="m27_numero_documento" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="m27_data_documento" Type="datetime" Nullable="false" />
+          <Property Name="m27_data_scadenza_documento" Type="datetime" />
+          <Property Name="m27_descrizione_documento" Type="varchar" MaxLength="50" />
+          <Property Name="m27_importo_documento" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="m27_valuta_documento" Type="varchar" MaxLength="10" />
+          <Property Name="m27_note_documento" Type="varchar(max)" />
+          <Property Name="m27_id_richiesta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m28_giorni_storico">
+          <Key>
+            <PropertyRef Name="m28_partita_iva" />
+            <PropertyRef Name="m28_id_centro" />
+            <PropertyRef Name="m28_mensilita_actual" />
+          </Key>
+          <Property Name="m28_partita_iva" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="m28_id_centro" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_actual" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_actual" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_1" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_1" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_2" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_2" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_3" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_3" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_4" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_4" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_5" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_5" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_6" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_6" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_7" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_7" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_8" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_8" Type="int" />
+          <Property Name="m28_mensilita_9" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_9" Type="int" />
+          <Property Name="m28_mensilita_10" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_10" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_11" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_11" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_12" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="m28_giorni_12" Type="int" Nullable="false" />
+          <Property Name="m28_mensilita_13" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_13" Type="int" />
+          <Property Name="m28_mensilita_14" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_14" Type="int" />
+          <Property Name="m28_mensilita_15" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_15" Type="int" />
+          <Property Name="m28_mensilita_16" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_16" Type="int" />
+          <Property Name="m28_mensilita_17" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_17" Type="int" />
+          <Property Name="m28_mensilita_18" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_18" Type="int" />
+          <Property Name="m28_mensilita_19" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_19" Type="int" />
+          <Property Name="m28_mensilita_20" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_20" Type="int" />
+          <Property Name="m28_mensilita_21" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_21" Type="int" />
+          <Property Name="m28_mensilita_22" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_22" Type="int" />
+          <Property Name="m28_mensilita_23" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_23" Type="int" />
+          <Property Name="m28_mensilita_24" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_24" Type="int" />
+          <Property Name="m28_mensilita_25" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_25" Type="int" />
+          <Property Name="m28_mensilita_26" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_26" Type="int" />
+          <Property Name="m28_mensilita_27" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_27" Type="int" />
+          <Property Name="m28_mensilita_28" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_28" Type="int" />
+          <Property Name="m28_mensilita_29" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_29" Type="int" />
+          <Property Name="m28_mensilita_30" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_30" Type="int" />
+          <Property Name="m28_mensilita_31" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_31" Type="int" />
+          <Property Name="m28_mensilita_32" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_32" Type="int" />
+          <Property Name="m28_mensilita_33" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_33" Type="int" />
+          <Property Name="m28_mensilita_34" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_34" Type="int" />
+          <Property Name="m28_mensilita_35" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_35" Type="int" />
+          <Property Name="m28_mensilita_36" Type="varchar" MaxLength="10" />
+          <Property Name="m28_giorni_36" Type="int" />
+          <Property Name="m28_data_aggiornamento" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t_lince_aziende_saldominimo">
+          <Key>
+            <PropertyRef Name="partitaiva" />
+            <PropertyRef Name="dt_saldo_minimo" />
+            <PropertyRef Name="codice_operatore" />
+          </Key>
+          <Property Name="partitaiva" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="ragionesociale" Type="varchar" MaxLength="200" />
+          <Property Name="dt_saldo_minimo" Type="datetime" Nullable="false" />
+          <Property Name="valore_minimo" Type="float" />
+          <Property Name="codice_operatore" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="t_lince_esperienze">
+          <Key>
+            <PropertyRef Name="piva" />
+            <PropertyRef Name="codice_operatore" />
+            <PropertyRef Name="numeroDocumento" />
+            <PropertyRef Name="dataDocumento" />
+            <PropertyRef Name="importo" />
+          </Key>
+          <Property Name="piva" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ragionesociale" Type="varchar" MaxLength="200" />
+          <Property Name="codice_operatore" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="numeroDocumento" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="dataDocumento" Type="datetime" Nullable="false" />
+          <Property Name="dataScadenza" Type="datetime" />
+          <Property Name="dataRiferimento" Type="datetime" />
+          <Property Name="importo" Type="float" Nullable="false" />
+          <Property Name="esposizione" Type="float" />
+          <Property Name="incasso" Type="float" />
+          <Property Name="giorni" Type="int" />
+          <Property Name="dataPagamento" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OsservaCentraleRischi.dbo.t04_centro_clienti' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="t04_centro_clienti">
+          <Key>
+            <PropertyRef Name="t04_idcentro" />
+            <PropertyRef Name="t04_partitaiva" />
+          </Key>
+          <Property Name="t04_idcentro" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="t04_partitaiva" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="t05_azienda_clienti">
+          <Key>
+            <PropertyRef Name="t05_codiceazienda" />
+            <PropertyRef Name="t05_partitaiva" />
+          </Key>
+          <Property Name="t05_codiceazienda" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="t05_partitaiva" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="t06_statistiche_centro">
+          <Key>
+            <PropertyRef Name="t06_idcentro" />
+            <PropertyRef Name="t06_partitaiva" />
+          </Key>
+          <Property Name="t06_idcentro" Type="int" Nullable="false" />
+          <Property Name="t06_partitaiva" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="t06_vendite" Type="decimal" />
+          <Property Name="t06_esposizione" Type="decimal" />
+          <Property Name="t06_incassi" Type="decimal" />
+          <Property Name="t06_giorni" Type="bigint" />
+          <Property Name="t06_fascia_vendite" Type="int" />
+          <Property Name="t06_fascia_esposizione" Type="int" />
+          <Property Name="t06_fascia_rating" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="t07_statistiche_nazione">
+          <Key>
+            <PropertyRef Name="t07_partitaiva" />
+          </Key>
+          <Property Name="t07_partitaiva" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="t07_vendite" Type="decimal" />
+          <Property Name="t07_esposizione" Type="decimal" />
+          <Property Name="t07_incassi" Type="decimal" />
+          <Property Name="t07_giorni" Type="bigint" />
+          <Property Name="t07_fascia_vendite" Type="int" />
+          <Property Name="t07_fascia_esposizione" Type="int" />
+          <Property Name="t07_fascia_rating" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="t08_aziendaupdatedati">
+          <Key>
+            <PropertyRef Name="t08_codice" />
+          </Key>
+          <Property Name="t08_codice" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="t08_dt_update" Type="varchar" MaxLength="30" />
+          <Property Name="t08_gg_ritardo" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="t09_contatori_movimenti">
+          <Key>
+            <PropertyRef Name="t09_codiceazienda" />
+          </Key>
+          <Property Name="t09_codiceazienda" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="t09_contatore_vendite" Type="bigint" Nullable="false" />
+          <Property Name="t09_contatore_saldi" Type="bigint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OsservaCentraleRischi.dbo.vs_piva_nonvisualizzare' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vs_piva_nonvisualizzare">
+          <Key>
+            <PropertyRef Name="t05_partitaiva" />
+          </Key>
+          <Property Name="m01_idcentro" Type="int" />
+          <Property Name="t05_partitaiva" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="operatori" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OsservaCentraleRischi.dbo.vs_piva_nonvisualizzare_nazione' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vs_piva_nonvisualizzare_nazione">
+          <Key>
+            <PropertyRef Name="t05_partitaiva" />
+          </Key>
+          <Property Name="t05_partitaiva" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="operatori" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OsservaCentraleRischi.dbo.vs_richieste_statopiurecente' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vs_richieste_statopiurecente">
+          <Key>
+            <PropertyRef Name="m06_partitaiva" />
+          </Key>
+          <Property Name="m06_partitaiva" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="m06_ragionesociale" Type="varchar" MaxLength="200" />
+          <Property Name="stato" Type="char" MaxLength="1" />
+          <Property Name="Expr2" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'OsservaCentraleRischi.dbo.m09_file_inviati' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="m09_file_inviati">
+        <Property Name="m09_file" Type="varchar" MaxLength="50" />
+        <Property Name="m09_dt_invio" Type="datetime" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'OsservaCentraleRischi.dbo.m15_preferiti' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="m15_preferiti">
+        <Property Name="m15_iduser" Type="int" />
+        <Property Name="m15_partitaiva" Type="varchar" MaxLength="50" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'OsservaCentraleRischi.dbo.m20_valori_documento' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="m20_valori_documento">
+        <Property Name="m20_iddocumento" Type="int" />
+        <Property Name="m20_controls" Type="varchar" MaxLength="50" />
+        <Property Name="m20_valore" Type="varchar" MaxLength="50" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'OsservaCentraleRischi.dbo.m24_accessi' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="m24_accessi">
+        <Property Name="m24_iduser" Type="int" />
+        <Property Name="m24_data_accesso" Type="datetime" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'OsservaCentraleRischi.dbo.t_lince_esperienze_azienda_tmp' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="t_lince_esperienze_azienda_tmp">
+        <Property Name="partitaiva" Type="varchar" MaxLength="16" />
+        <Property Name="ragionesociale" Type="varchar" MaxLength="200" />
+        <Property Name="numdoc" Type="varchar" MaxLength="10" />
+        <Property Name="dtDocVendita" Type="datetime" />
+        <Property Name="dtScadenza" Type="datetime" />
+        <Property Name="dtRifVendita" Type="datetime" />
+        <Property Name="importo" Type="float" />
+        <Property Name="saldo" Type="float" />
+        <Property Name="codice_operatore" Type="varchar" MaxLength="50" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'OsservaCentraleRischi.dbo.t02_riepilogovendite' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="t02_riepilogovendite">
+        <Property Name="t02_idcentro" Type="int" />
+        <Property Name="t02_partitaiva" Type="varchar" MaxLength="16" />
+        <Property Name="t02_dtdocvendita" Type="varchar" MaxLength="7" />
+        <Property Name="t02_importo" Type="float" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'OsservaCentraleRischi.dbo.t03_riepilogoesposizione' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="t03_riepilogoesposizione">
+        <Property Name="t03_idcentro" Type="int" />
+        <Property Name="t03_partitaiva" Type="varchar" MaxLength="50" />
+        <Property Name="t03_dtsaldo" Type="varchar" MaxLength="50" />
+        <Property Name="t03_saldo" Type="decimal" Scale="2" />
+        <Property Name="t03_azienda" Type="varchar" MaxLength="50" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'OsservaCentraleRischi.dbo.vs_esposizione_assicurati' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="vs_esposizione_assicurati">
+        <Property Name="t03_partitaiva" Type="varchar" MaxLength="50" />
+        <Property Name="t03_saldo" Type="decimal" Precision="38" Scale="2" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OsservaCentraleRischiModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="OsservaCentraleRischEntitiesR1" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="categoria" EntityType="OsservaCentraleRischiModel.categoria" />
+          <EntitySet Name="documento" EntityType="OsservaCentraleRischiModel.documento" />
+          <EntitySet Name="m00_centri" EntityType="OsservaCentraleRischiModel.m00_centri" />
+          <EntitySet Name="m01_aziende" EntityType="OsservaCentraleRischiModel.m01_aziende" />
+          <EntitySet Name="m02_anagrafica" EntityType="OsservaCentraleRischiModel.m02_anagrafica" />
+          <EntitySet Name="m03_saldi" EntityType="OsservaCentraleRischiModel.m03_saldi" />
+          <EntitySet Name="m03_saldi_new" EntityType="OsservaCentraleRischiModel.m03_saldi_new" />
+          <EntitySet Name="m03_saldi_storico" EntityType="OsservaCentraleRischiModel.m03_saldi_storico" />
+          <EntitySet Name="m04_vendite" EntityType="OsservaCentraleRischiModel.m04_vendite" />
+          <EntitySet Name="m04_vendite_new" EntityType="OsservaCentraleRischiModel.m04_vendite_new" />
+          <EntitySet Name="m04_vendite_storico" EntityType="OsservaCentraleRischiModel.m04_vendite_storico" />
+          <EntitySet Name="m05_rating" EntityType="OsservaCentraleRischiModel.m05_rating" />
+          <EntitySet Name="m06_anagrafica_rapporti" EntityType="OsservaCentraleRischiModel.m06_anagrafica_rapporti" />
+          <EntitySet Name="m08_richieste" EntityType="OsservaCentraleRischiModel.m08_richieste" />
+          <EntitySet Name="m10_utenti" EntityType="OsservaCentraleRischiModel.m10_utenti" />
+          <EntitySet Name="m11_ruoli" EntityType="OsservaCentraleRischiModel.m11_ruoli" />
+          <EntitySet Name="m12_fasce_vendite" EntityType="OsservaCentraleRischiModel.m12_fasce_vendite" />
+          <EntitySet Name="m13_fasce_esposizione" EntityType="OsservaCentraleRischiModel.m13_fasce_esposizione" />
+          <EntitySet Name="m14_stati_lince" EntityType="OsservaCentraleRischiModel.m14_stati_lince" />
+          <EntitySet Name="m16_contatori" EntityType="OsservaCentraleRischiModel.m16_contatori" />
+          <EntitySet Name="m17_nazioni" EntityType="OsservaCentraleRischiModel.m17_nazioni" />
+          <EntitySet Name="m18_moduli" EntityType="OsservaCentraleRischiModel.m18_moduli" />
+          <EntitySet Name="m19_documenti" EntityType="OsservaCentraleRischiModel.m19_documenti" />
+          <EntitySet Name="m21_tipoassistenza" EntityType="OsservaCentraleRischiModel.m21_tipoassistenza" />
+          <EntitySet Name="m22_assistenza" EntityType="OsservaCentraleRischiModel.m22_assistenza" />
+          <EntitySet Name="m23_homepage" EntityType="OsservaCentraleRischiModel.m23_homepage" />
+          <EntitySet Name="m25_parametri_dso" EntityType="OsservaCentraleRischiModel.m25_parametri_dso" />
+          <EntitySet Name="m26_richiesta_recupero_crediti" EntityType="OsservaCentraleRischiModel.m26_richiesta_recupero_crediti" />
+          <EntitySet Name="m27_fattura_richiesta" EntityType="OsservaCentraleRischiModel.m27_fattura_richiesta" />
+          <EntitySet Name="m28_giorni_storico" EntityType="OsservaCentraleRischiModel.m28_giorni_storico" />
+          <EntitySet Name="t_lince_aziende_saldominimo" EntityType="OsservaCentraleRischiModel.t_lince_aziende_saldominimo" />
+          <EntitySet Name="t_lince_esperienze" EntityType="OsservaCentraleRischiModel.t_lince_esperienze" />
+          <EntitySet Name="t04_centro_clienti" EntityType="OsservaCentraleRischiModel.t04_centro_clienti" />
+          <EntitySet Name="t05_azienda_clienti" EntityType="OsservaCentraleRischiModel.t05_azienda_clienti" />
+          <EntitySet Name="t06_statistiche_centro" EntityType="OsservaCentraleRischiModel.t06_statistiche_centro" />
+          <EntitySet Name="t07_statistiche_nazione" EntityType="OsservaCentraleRischiModel.t07_statistiche_nazione" />
+          <EntitySet Name="t08_aziendaupdatedati" EntityType="OsservaCentraleRischiModel.t08_aziendaupdatedati" />
+          <EntitySet Name="t09_contatori_movimenti" EntityType="OsservaCentraleRischiModel.t09_contatori_movimenti" />
+          <EntitySet Name="vs_piva_nonvisualizzare" EntityType="OsservaCentraleRischiModel.vs_piva_nonvisualizzare" />
+          <EntitySet Name="vs_piva_nonvisualizzare_nazione" EntityType="OsservaCentraleRischiModel.vs_piva_nonvisualizzare_nazione" />
+          <EntitySet Name="vs_richieste_statopiurecente" EntityType="OsservaCentraleRischiModel.vs_richieste_statopiurecente" />
+        </EntityContainer>
+        <EntityType Name="categoria">
+          <Key>
+            <PropertyRef Name="id_category" />
+            <PropertyRef Name="tipo_documento" />
+          </Key>
+          <Property Name="id_category" Type="Int32" Nullable="false" />
+          <Property Name="tipo_documento" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="documento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="tipo_documento" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" />
+          <Property Name="titolo" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="abstract" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="testo" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="file_download" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="immagine" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="pubblicato" Type="Boolean" Nullable="false" />
+          <Property Name="principale" Type="Boolean" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="keywords" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="id_category" Type="Int32" />
+        </EntityType>
+        <EntityType Name="m00_centri">
+          <Key>
+            <PropertyRef Name="m00_idcentro" />
+          </Key>
+          <Property Name="m00_idcentro" Type="Int32" Nullable="false" />
+          <Property Name="m00_centro" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m00_logo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m00_assistenza" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="m00_localita" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m01_aziende">
+          <Key>
+            <PropertyRef Name="m01_idazienda" />
+          </Key>
+          <Property Name="m01_idazienda" Type="Int32" Nullable="false" />
+          <Property Name="m01_codice" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_idcentro" Type="Int32" />
+          <Property Name="m01_ragionesociale" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_partitaiva" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_codicefiscale" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_indirizzo" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="m01_localita" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_cap" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_pv" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="m01_telefono" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_mobile" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_referente" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_gestionale" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_server" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_dbmysql" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_dbuser" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_dbpassword" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_flg" Type="Boolean" />
+          <Property Name="m01_attivo" Type="Boolean" />
+          <Property Name="m01_assicurato" Type="Boolean" />
+          <Property Name="m01_polizza" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_datainizio" Type="DateTime" />
+          <Property Name="m01_datafine" Type="DateTime" />
+          <Property Name="m01_mesi" Type="Int32" />
+          <Property Name="m01_fatt_assicurabile" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="m01_recupero_crediti" Type="Boolean" />
+          <Property Name="m01_tipo_gestionale" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m01_cartella" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m02_anagrafica">
+          <Key>
+            <PropertyRef Name="m02_partitaiva" />
+          </Key>
+          <Property Name="m02_partitaiva" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="m02_codicefiscale" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="m02_ragionesociale" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="m02_indirizzo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m02_cap" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m02_comune" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="m02_nazione" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="m02_prefisso" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="m02_telefono" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="m02_email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m02_note" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m02_dtupdate" Type="DateTime" />
+          <Property Name="m02_updadm" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="m03_saldi">
+          <Key>
+            <PropertyRef Name="m03_codiceazienda" />
+            <PropertyRef Name="m03_partitaiva" />
+            <PropertyRef Name="m03_dtsaldo" />
+            <PropertyRef Name="m03_saldo" />
+          </Key>
+          <Property Name="m03_codiceazienda" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m03_partitaiva" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m03_codicefiscale" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m03_dtsaldo" Type="DateTime" Nullable="false" />
+          <Property Name="m03_saldo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="m03_dtupdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="m03_saldi_new">
+          <Key>
+            <PropertyRef Name="m03_codiceazienda" />
+            <PropertyRef Name="m03_partitaiva" />
+            <PropertyRef Name="m03_dtsaldo" />
+            <PropertyRef Name="m03_saldo" />
+          </Key>
+          <Property Name="m03_codiceazienda" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m03_partitaiva" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m03_codicefiscale" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m03_dtsaldo" Type="DateTime" Nullable="false" />
+          <Property Name="m03_saldo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="m03_dtupdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="m03_saldi_storico">
+          <Key>
+            <PropertyRef Name="m03_idmovimento" />
+          </Key>
+          <Property Name="m03_idmovimento" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m03_codiceazienda" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m03_partitaiva" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m03_codicefiscale" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m03_dtsaldo" Type="DateTime" />
+          <Property Name="m03_saldo" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="m03_dtupdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="m04_vendite">
+          <Key>
+            <PropertyRef Name="m04_codiceazienda" />
+            <PropertyRef Name="m04_partitaiva" />
+            <PropertyRef Name="m04_numdoc" />
+            <PropertyRef Name="m04_dtdocvendita" />
+          </Key>
+          <Property Name="m04_codiceazienda" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m04_partitaiva" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="m04_codicefiscale" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="m04_tipodoc" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m04_numdoc" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="m04_dtdocvendita" Type="DateTime" Nullable="false" />
+          <Property Name="m04_dtrifvendita" Type="DateTime" />
+          <Property Name="m04_importo" Type="Double" />
+          <Property Name="m04_dtscadenza" Type="DateTime" />
+          <Property Name="m04_dtupdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="m04_vendite_new">
+          <Key>
+            <PropertyRef Name="m04_codiceazienda" />
+            <PropertyRef Name="m04_partitaiva" />
+            <PropertyRef Name="m04_numdoc" />
+            <PropertyRef Name="m04_dtdocvendita" />
+          </Key>
+          <Property Name="m04_codiceazienda" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m04_partitaiva" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="m04_codicefiscale" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="m04_tipodoc" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m04_numdoc" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="m04_dtdocvendita" Type="DateTime" Nullable="false" />
+          <Property Name="m04_dtrifvendita" Type="DateTime" />
+          <Property Name="m04_importo" Type="Double" />
+          <Property Name="m04_dtscadenza" Type="DateTime" />
+          <Property Name="m04_dtupdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="m04_vendite_storico">
+          <Key>
+            <PropertyRef Name="m04_idmovimento" />
+            <PropertyRef Name="m04_codiceazienda" />
+            <PropertyRef Name="m04_tipodoc" />
+            <PropertyRef Name="m04_numdoc" />
+          </Key>
+          <Property Name="m04_idmovimento" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m04_codiceazienda" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m04_partitaiva" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="m04_codicefiscale" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="m04_tipodoc" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m04_numdoc" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="m04_dtdocvendita" Type="DateTime" />
+          <Property Name="m04_dtrifvendita" Type="DateTime" />
+          <Property Name="m04_importo" Type="Double" />
+          <Property Name="m04_dtscadenza" Type="DateTime" />
+          <Property Name="m04_dtupdate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="m05_rating">
+          <Key>
+            <PropertyRef Name="m05_id" />
+          </Key>
+          <Property Name="m05_partitaiva" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="m05_dtriferimento" Type="DateTime" Nullable="false" />
+          <Property Name="m05_stato" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="m05_dtfinevalidita" Type="DateTime" />
+          <Property Name="m05_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="m06_anagrafica_rapporti">
+          <Key>
+            <PropertyRef Name="m06_partitaiva" />
+          </Key>
+          <Property Name="m06_partitaiva" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m06_codicefiscale" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m06_codicelince" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m06_codiceDB" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m06_ragionesociale" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="m06_indirizzo" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="m06_citta" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="m06_cap" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="m06_pv" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="m06_dt_upd_rapporto" Type="DateTime" />
+          <Property Name="m06_dt_evasione_rapporto" Type="DateTime" />
+          <Property Name="m06_tiporapporto" Type="Int32" />
+          <Property Name="m06_stato" Type="Int32" />
+          <Property Name="m06_alert" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="m08_richieste">
+          <Key>
+            <PropertyRef Name="m08_idrichiesta" />
+          </Key>
+          <Property Name="m08_idrichiesta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="m08_user" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m08_dtrichiesta" Type="DateTime" />
+          <Property Name="m08_codice" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m08_ragsoc" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="m08_partitaiva" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m08_codfis" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m08_indirizzo" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="m08_localita" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="m08_provincia" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="m08_tiporichiesta" Type="Int32" />
+          <Property Name="m08_urgenza" Type="Int32" />
+          <Property Name="m08_email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="m08_dt_invio" Type="DateTime" />
+          <Property Name="m08_file" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m08_dt_evasione" Type="DateTime" />
+          <Property Name="m08_estero" Type="Boolean" />
+          <Property Name="m08_dbmonitor" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m08_dbinvestigation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m10_utenti">
+          <Key>
+            <PropertyRef Name="m10_iduser" />
+          </Key>
+          <Property Name="m10_iduser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="m10_user" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m10_pass" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m10_idazienda" Type="Int32" />
+          <Property Name="m10_idruolo" Type="Int32" />
+          <Property Name="m10_nomeutente" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m10_email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m10_attivo" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="m11_ruoli">
+          <Key>
+            <PropertyRef Name="m11_idruolo" />
+          </Key>
+          <Property Name="m11_idruolo" Type="Int32" Nullable="false" />
+          <Property Name="m11_ruolo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m12_fasce_vendite">
+          <Key>
+            <PropertyRef Name="m12_idfascia" />
+          </Key>
+          <Property Name="m12_idfascia" Type="Int32" Nullable="false" />
+          <Property Name="m12_limite_inferiore" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="m12_limite_superiore" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="m12_descrizione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m13_fasce_esposizione">
+          <Key>
+            <PropertyRef Name="m13_idfascia" />
+          </Key>
+          <Property Name="m13_idfascia" Type="Int32" Nullable="false" />
+          <Property Name="m13_limite_inferiore" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="m13_limite_superiore" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="m13_descrizione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m14_stati_lince">
+          <Key>
+            <PropertyRef Name="m14_idstato" />
+          </Key>
+          <Property Name="m14_idstato" Type="Int32" Nullable="false" />
+          <Property Name="m14_descrizione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m16_contatori">
+          <Key>
+            <PropertyRef Name="m16_idcentro" />
+            <PropertyRef Name="m16_tipo" />
+          </Key>
+          <Property Name="m16_idcentro" Type="Int32" Nullable="false" />
+          <Property Name="m16_tipo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m16_valore" Type="Int32" />
+        </EntityType>
+        <EntityType Name="m17_nazioni">
+          <Key>
+            <PropertyRef Name="m17_codice" />
+          </Key>
+          <Property Name="m17_codice" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="m17_nazione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m17_prodotto" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m17_rating" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m17_fido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m17_monitor" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="m18_moduli">
+          <Key>
+            <PropertyRef Name="m18_idmodulo" />
+          </Key>
+          <Property Name="m18_idmodulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="m18_descrizione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m18_pagina" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m19_documenti">
+          <Key>
+            <PropertyRef Name="m19_iddocumento" />
+          </Key>
+          <Property Name="m19_iddocumento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="m19_idazienda" Type="Int32" />
+          <Property Name="m19_idmodulo" Type="Int32" />
+          <Property Name="m19_datacreazione" Type="DateTime" />
+          <Property Name="m19_dataaggiornamento" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="m21_tipoassistenza">
+          <Key>
+            <PropertyRef Name="m21_idtipoassistenza" />
+          </Key>
+          <Property Name="m21_idtipoassistenza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="m21_descrizione" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="m21_email_avviso" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m22_assistenza">
+          <Key>
+            <PropertyRef Name="m22_idassistenza" />
+          </Key>
+          <Property Name="m22_idassistenza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="m22_idazienda" Type="Int32" />
+          <Property Name="m22_tiporichiesta" Type="Int32" />
+          <Property Name="m22_stato" Type="Int32" />
+          <Property Name="m22_dt_richiesta" Type="DateTime" />
+          <Property Name="m22_dt_aggiornamento" Type="DateTime" />
+          <Property Name="m22_richiesta" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="m22_risposta" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m23_homepage">
+          <Key>
+            <PropertyRef Name="m23_id" />
+            <PropertyRef Name="m23_txt1" />
+          </Key>
+          <Property Name="m23_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="m23_txt1" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="m23_txt2" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="m23_txt3" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="m23_banner1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m23_banner2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m23_banner3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m23_banner4" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m23_banner5" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m23_banner6" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="m25_parametri_dso">
+          <Key>
+            <PropertyRef Name="m25_id" />
+          </Key>
+          <Property Name="m25_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="m25_numero_mesi_1" Type="Int16" Nullable="false" />
+          <Property Name="m25_numero_giorni_1" Type="Int32" Nullable="false" />
+          <Property Name="m25_numero_mesi_2" Type="Int16" Nullable="false" />
+          <Property Name="m25_numero_giorni_2" Type="Int32" Nullable="false" />
+          <Property Name="m25_condizione_and" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m26_richiesta_recupero_crediti">
+          <Key>
+            <PropertyRef Name="m26_id" />
+          </Key>
+          <Property Name="m26_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="m26_codice_azienda" Type="Int32" Nullable="false" />
+          <Property Name="m26_ragione_sociale" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="m26_partita_iva" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="m26_data_ultima_modifica" Type="DateTime" Nullable="false" />
+          <Property Name="m26_data_inserimento" Type="DateTime" Nullable="false" />
+          <Property Name="m26_codice_richiedente" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m26_tipo_richiesta" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m26_inviato_assicom" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="m27_fattura_richiesta">
+          <Key>
+            <PropertyRef Name="m27_id" />
+          </Key>
+          <Property Name="m27_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="m27_numero_documento" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="m27_data_documento" Type="DateTime" Nullable="false" />
+          <Property Name="m27_data_scadenza_documento" Type="DateTime" />
+          <Property Name="m27_descrizione_documento" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m27_importo_documento" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="m27_valuta_documento" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m27_note_documento" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="m27_id_richiesta" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m28_giorni_storico">
+          <Key>
+            <PropertyRef Name="m28_partita_iva" />
+            <PropertyRef Name="m28_id_centro" />
+            <PropertyRef Name="m28_mensilita_actual" />
+          </Key>
+          <Property Name="m28_partita_iva" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="m28_id_centro" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_actual" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_actual" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_1" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_1" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_2" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_2" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_3" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_3" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_4" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_4" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_5" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_5" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_6" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_6" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_7" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_7" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_8" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_8" Type="Int32" />
+          <Property Name="m28_mensilita_9" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_9" Type="Int32" />
+          <Property Name="m28_mensilita_10" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_10" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_11" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_11" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_12" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_12" Type="Int32" Nullable="false" />
+          <Property Name="m28_mensilita_13" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_13" Type="Int32" />
+          <Property Name="m28_mensilita_14" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_14" Type="Int32" />
+          <Property Name="m28_mensilita_15" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_15" Type="Int32" />
+          <Property Name="m28_mensilita_16" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_16" Type="Int32" />
+          <Property Name="m28_mensilita_17" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_17" Type="Int32" />
+          <Property Name="m28_mensilita_18" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_18" Type="Int32" />
+          <Property Name="m28_mensilita_19" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_19" Type="Int32" />
+          <Property Name="m28_mensilita_20" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_20" Type="Int32" />
+          <Property Name="m28_mensilita_21" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_21" Type="Int32" />
+          <Property Name="m28_mensilita_22" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_22" Type="Int32" />
+          <Property Name="m28_mensilita_23" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_23" Type="Int32" />
+          <Property Name="m28_mensilita_24" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_24" Type="Int32" />
+          <Property Name="m28_mensilita_25" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_25" Type="Int32" />
+          <Property Name="m28_mensilita_26" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_26" Type="Int32" />
+          <Property Name="m28_mensilita_27" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_27" Type="Int32" />
+          <Property Name="m28_mensilita_28" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_28" Type="Int32" />
+          <Property Name="m28_mensilita_29" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_29" Type="Int32" />
+          <Property Name="m28_mensilita_30" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_30" Type="Int32" />
+          <Property Name="m28_mensilita_31" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_31" Type="Int32" />
+          <Property Name="m28_mensilita_32" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_32" Type="Int32" />
+          <Property Name="m28_mensilita_33" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_33" Type="Int32" />
+          <Property Name="m28_mensilita_34" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_34" Type="Int32" />
+          <Property Name="m28_mensilita_35" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_35" Type="Int32" />
+          <Property Name="m28_mensilita_36" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="m28_giorni_36" Type="Int32" />
+          <Property Name="m28_data_aggiornamento" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t_lince_aziende_saldominimo">
+          <Key>
+            <PropertyRef Name="partitaiva" />
+            <PropertyRef Name="dt_saldo_minimo" />
+            <PropertyRef Name="codice_operatore" />
+          </Key>
+          <Property Name="partitaiva" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="ragionesociale" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="dt_saldo_minimo" Type="DateTime" Nullable="false" />
+          <Property Name="valore_minimo" Type="Double" />
+          <Property Name="codice_operatore" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="t_lince_esperienze">
+          <Key>
+            <PropertyRef Name="piva" />
+            <PropertyRef Name="codice_operatore" />
+            <PropertyRef Name="numeroDocumento" />
+            <PropertyRef Name="dataDocumento" />
+            <PropertyRef Name="importo" />
+          </Key>
+          <Property Name="piva" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ragionesociale" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="codice_operatore" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="numeroDocumento" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="dataDocumento" Type="DateTime" Nullable="false" />
+          <Property Name="dataScadenza" Type="DateTime" />
+          <Property Name="dataRiferimento" Type="DateTime" />
+          <Property Name="importo" Type="Double" Nullable="false" />
+          <Property Name="esposizione" Type="Double" />
+          <Property Name="incasso" Type="Double" />
+          <Property Name="giorni" Type="Int32" />
+          <Property Name="dataPagamento" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t04_centro_clienti">
+          <Key>
+            <PropertyRef Name="t04_idcentro" />
+            <PropertyRef Name="t04_partitaiva" />
+          </Key>
+          <Property Name="t04_idcentro" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="t04_partitaiva" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="t05_azienda_clienti">
+          <Key>
+            <PropertyRef Name="t05_codiceazienda" />
+            <PropertyRef Name="t05_partitaiva" />
+          </Key>
+          <Property Name="t05_codiceazienda" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="t05_partitaiva" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="t06_statistiche_centro">
+          <Key>
+            <PropertyRef Name="t06_idcentro" />
+            <PropertyRef Name="t06_partitaiva" />
+          </Key>
+          <Property Name="t06_idcentro" Type="Int32" Nullable="false" />
+          <Property Name="t06_partitaiva" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="t06_vendite" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="t06_esposizione" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="t06_incassi" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="t06_giorni" Type="Int64" />
+          <Property Name="t06_fascia_vendite" Type="Int32" />
+          <Property Name="t06_fascia_esposizione" Type="Int32" />
+          <Property Name="t06_fascia_rating" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="t07_statistiche_nazione">
+          <Key>
+            <PropertyRef Name="t07_partitaiva" />
+          </Key>
+          <Property Name="t07_partitaiva" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="t07_vendite" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="t07_esposizione" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="t07_incassi" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="t07_giorni" Type="Int64" />
+          <Property Name="t07_fascia_vendite" Type="Int32" />
+          <Property Name="t07_fascia_esposizione" Type="Int32" />
+          <Property Name="t07_fascia_rating" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="t08_aziendaupdatedati">
+          <Key>
+            <PropertyRef Name="t08_codice" />
+          </Key>
+          <Property Name="t08_codice" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="t08_dt_update" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="t08_gg_ritardo" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="t09_contatori_movimenti">
+          <Key>
+            <PropertyRef Name="t09_codiceazienda" />
+          </Key>
+          <Property Name="t09_codiceazienda" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="t09_contatore_vendite" Type="Int64" Nullable="false" />
+          <Property Name="t09_contatore_saldi" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vs_piva_nonvisualizzare">
+          <Key>
+            <PropertyRef Name="t05_partitaiva" />
+          </Key>
+          <Property Name="m01_idcentro" Type="Int32" />
+          <Property Name="t05_partitaiva" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="operatori" Type="Int32" />
+        </EntityType>
+        <EntityType Name="vs_piva_nonvisualizzare_nazione">
+          <Key>
+            <PropertyRef Name="t05_partitaiva" />
+          </Key>
+          <Property Name="t05_partitaiva" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="operatori" Type="Int32" />
+        </EntityType>
+        <EntityType Name="vs_richieste_statopiurecente">
+          <Key>
+            <PropertyRef Name="m06_partitaiva" />
+          </Key>
+          <Property Name="m06_partitaiva" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="m06_ragionesociale" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="stato" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Expr2" Type="DateTime" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OsservaCentraleRischiModelStoreContainer" CdmEntityContainer="OsservaCentraleRischEntitiesR1">
+          <EntitySetMapping Name="categoria"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.categoria"><MappingFragment StoreEntitySet="categoria">
+            <ScalarProperty Name="id_category" ColumnName="id_category" />
+            <ScalarProperty Name="tipo_documento" ColumnName="tipo_documento" />
+            <ScalarProperty Name="description" ColumnName="description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="documento"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.documento"><MappingFragment StoreEntitySet="documento">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="tipo_documento" ColumnName="tipo_documento" />
+            <ScalarProperty Name="data" ColumnName="data" />
+            <ScalarProperty Name="titolo" ColumnName="titolo" />
+            <ScalarProperty Name="abstract" ColumnName="abstract" />
+            <ScalarProperty Name="testo" ColumnName="testo" />
+            <ScalarProperty Name="file_download" ColumnName="file_download" />
+            <ScalarProperty Name="immagine" ColumnName="immagine" />
+            <ScalarProperty Name="pubblicato" ColumnName="pubblicato" />
+            <ScalarProperty Name="principale" ColumnName="principale" />
+            <ScalarProperty Name="title" ColumnName="title" />
+            <ScalarProperty Name="keywords" ColumnName="keywords" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="id_category" ColumnName="id_category" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m00_centri"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m00_centri"><MappingFragment StoreEntitySet="m00_centri">
+            <ScalarProperty Name="m00_idcentro" ColumnName="m00_idcentro" />
+            <ScalarProperty Name="m00_centro" ColumnName="m00_centro" />
+            <ScalarProperty Name="m00_logo" ColumnName="m00_logo" />
+            <ScalarProperty Name="m00_assistenza" ColumnName="m00_assistenza" />
+            <ScalarProperty Name="m00_localita" ColumnName="m00_localita" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m01_aziende"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m01_aziende"><MappingFragment StoreEntitySet="m01_aziende">
+            <ScalarProperty Name="m01_idazienda" ColumnName="m01_idazienda" />
+            <ScalarProperty Name="m01_codice" ColumnName="m01_codice" />
+            <ScalarProperty Name="m01_idcentro" ColumnName="m01_idcentro" />
+            <ScalarProperty Name="m01_ragionesociale" ColumnName="m01_ragionesociale" />
+            <ScalarProperty Name="m01_partitaiva" ColumnName="m01_partitaiva" />
+            <ScalarProperty Name="m01_codicefiscale" ColumnName="m01_codicefiscale" />
+            <ScalarProperty Name="m01_indirizzo" ColumnName="m01_indirizzo" />
+            <ScalarProperty Name="m01_localita" ColumnName="m01_localita" />
+            <ScalarProperty Name="m01_cap" ColumnName="m01_cap" />
+            <ScalarProperty Name="m01_pv" ColumnName="m01_pv" />
+            <ScalarProperty Name="m01_telefono" ColumnName="m01_telefono" />
+            <ScalarProperty Name="m01_mobile" ColumnName="m01_mobile" />
+            <ScalarProperty Name="m01_fax" ColumnName="m01_fax" />
+            <ScalarProperty Name="m01_referente" ColumnName="m01_referente" />
+            <ScalarProperty Name="m01_email" ColumnName="m01_email" />
+            <ScalarProperty Name="m01_gestionale" ColumnName="m01_gestionale" />
+            <ScalarProperty Name="m01_server" ColumnName="m01_server" />
+            <ScalarProperty Name="m01_dbmysql" ColumnName="m01_dbmysql" />
+            <ScalarProperty Name="m01_dbuser" ColumnName="m01_dbuser" />
+            <ScalarProperty Name="m01_dbpassword" ColumnName="m01_dbpassword" />
+            <ScalarProperty Name="m01_flg" ColumnName="m01_flg" />
+            <ScalarProperty Name="m01_attivo" ColumnName="m01_attivo" />
+            <ScalarProperty Name="m01_assicurato" ColumnName="m01_assicurato" />
+            <ScalarProperty Name="m01_polizza" ColumnName="m01_polizza" />
+            <ScalarProperty Name="m01_datainizio" ColumnName="m01_datainizio" />
+            <ScalarProperty Name="m01_datafine" ColumnName="m01_datafine" />
+            <ScalarProperty Name="m01_mesi" ColumnName="m01_mesi" />
+            <ScalarProperty Name="m01_fatt_assicurabile" ColumnName="m01_fatt_assicurabile" />
+            <ScalarProperty Name="m01_recupero_crediti" ColumnName="m01_recupero_crediti" />
+            <ScalarProperty Name="m01_tipo_gestionale" ColumnName="m01_tipo_gestionale" />
+            <ScalarProperty Name="m01_cartella" ColumnName="m01_cartella" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m02_anagrafica"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m02_anagrafica"><MappingFragment StoreEntitySet="m02_anagrafica">
+            <ScalarProperty Name="m02_partitaiva" ColumnName="m02_partitaiva" />
+            <ScalarProperty Name="m02_codicefiscale" ColumnName="m02_codicefiscale" />
+            <ScalarProperty Name="m02_ragionesociale" ColumnName="m02_ragionesociale" />
+            <ScalarProperty Name="m02_indirizzo" ColumnName="m02_indirizzo" />
+            <ScalarProperty Name="m02_cap" ColumnName="m02_cap" />
+            <ScalarProperty Name="m02_comune" ColumnName="m02_comune" />
+            <ScalarProperty Name="m02_nazione" ColumnName="m02_nazione" />
+            <ScalarProperty Name="m02_prefisso" ColumnName="m02_prefisso" />
+            <ScalarProperty Name="m02_telefono" ColumnName="m02_telefono" />
+            <ScalarProperty Name="m02_email" ColumnName="m02_email" />
+            <ScalarProperty Name="m02_note" ColumnName="m02_note" />
+            <ScalarProperty Name="m02_dtupdate" ColumnName="m02_dtupdate" />
+            <ScalarProperty Name="m02_updadm" ColumnName="m02_updadm" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m03_saldi"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m03_saldi"><MappingFragment StoreEntitySet="m03_saldi">
+            <ScalarProperty Name="m03_codiceazienda" ColumnName="m03_codiceazienda" />
+            <ScalarProperty Name="m03_partitaiva" ColumnName="m03_partitaiva" />
+            <ScalarProperty Name="m03_codicefiscale" ColumnName="m03_codicefiscale" />
+            <ScalarProperty Name="m03_dtsaldo" ColumnName="m03_dtsaldo" />
+            <ScalarProperty Name="m03_saldo" ColumnName="m03_saldo" />
+            <ScalarProperty Name="m03_dtupdate" ColumnName="m03_dtupdate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m03_saldi_new"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m03_saldi_new"><MappingFragment StoreEntitySet="m03_saldi_new">
+            <ScalarProperty Name="m03_codiceazienda" ColumnName="m03_codiceazienda" />
+            <ScalarProperty Name="m03_partitaiva" ColumnName="m03_partitaiva" />
+            <ScalarProperty Name="m03_codicefiscale" ColumnName="m03_codicefiscale" />
+            <ScalarProperty Name="m03_dtsaldo" ColumnName="m03_dtsaldo" />
+            <ScalarProperty Name="m03_saldo" ColumnName="m03_saldo" />
+            <ScalarProperty Name="m03_dtupdate" ColumnName="m03_dtupdate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m03_saldi_storico"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m03_saldi_storico"><MappingFragment StoreEntitySet="m03_saldi_storico">
+            <ScalarProperty Name="m03_idmovimento" ColumnName="m03_idmovimento" />
+            <ScalarProperty Name="m03_codiceazienda" ColumnName="m03_codiceazienda" />
+            <ScalarProperty Name="m03_partitaiva" ColumnName="m03_partitaiva" />
+            <ScalarProperty Name="m03_codicefiscale" ColumnName="m03_codicefiscale" />
+            <ScalarProperty Name="m03_dtsaldo" ColumnName="m03_dtsaldo" />
+            <ScalarProperty Name="m03_saldo" ColumnName="m03_saldo" />
+            <ScalarProperty Name="m03_dtupdate" ColumnName="m03_dtupdate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m04_vendite"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m04_vendite"><MappingFragment StoreEntitySet="m04_vendite">
+            <ScalarProperty Name="m04_codiceazienda" ColumnName="m04_codiceazienda" />
+            <ScalarProperty Name="m04_partitaiva" ColumnName="m04_partitaiva" />
+            <ScalarProperty Name="m04_codicefiscale" ColumnName="m04_codicefiscale" />
+            <ScalarProperty Name="m04_tipodoc" ColumnName="m04_tipodoc" />
+            <ScalarProperty Name="m04_numdoc" ColumnName="m04_numdoc" />
+            <ScalarProperty Name="m04_dtdocvendita" ColumnName="m04_dtdocvendita" />
+            <ScalarProperty Name="m04_dtrifvendita" ColumnName="m04_dtrifvendita" />
+            <ScalarProperty Name="m04_importo" ColumnName="m04_importo" />
+            <ScalarProperty Name="m04_dtscadenza" ColumnName="m04_dtscadenza" />
+            <ScalarProperty Name="m04_dtupdate" ColumnName="m04_dtupdate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m04_vendite_new"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m04_vendite_new"><MappingFragment StoreEntitySet="m04_vendite_new">
+            <ScalarProperty Name="m04_codiceazienda" ColumnName="m04_codiceazienda" />
+            <ScalarProperty Name="m04_partitaiva" ColumnName="m04_partitaiva" />
+            <ScalarProperty Name="m04_codicefiscale" ColumnName="m04_codicefiscale" />
+            <ScalarProperty Name="m04_tipodoc" ColumnName="m04_tipodoc" />
+            <ScalarProperty Name="m04_numdoc" ColumnName="m04_numdoc" />
+            <ScalarProperty Name="m04_dtdocvendita" ColumnName="m04_dtdocvendita" />
+            <ScalarProperty Name="m04_dtrifvendita" ColumnName="m04_dtrifvendita" />
+            <ScalarProperty Name="m04_importo" ColumnName="m04_importo" />
+            <ScalarProperty Name="m04_dtscadenza" ColumnName="m04_dtscadenza" />
+            <ScalarProperty Name="m04_dtupdate" ColumnName="m04_dtupdate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m04_vendite_storico"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m04_vendite_storico"><MappingFragment StoreEntitySet="m04_vendite_storico">
+            <ScalarProperty Name="m04_idmovimento" ColumnName="m04_idmovimento" />
+            <ScalarProperty Name="m04_codiceazienda" ColumnName="m04_codiceazienda" />
+            <ScalarProperty Name="m04_partitaiva" ColumnName="m04_partitaiva" />
+            <ScalarProperty Name="m04_codicefiscale" ColumnName="m04_codicefiscale" />
+            <ScalarProperty Name="m04_tipodoc" ColumnName="m04_tipodoc" />
+            <ScalarProperty Name="m04_numdoc" ColumnName="m04_numdoc" />
+            <ScalarProperty Name="m04_dtdocvendita" ColumnName="m04_dtdocvendita" />
+            <ScalarProperty Name="m04_dtrifvendita" ColumnName="m04_dtrifvendita" />
+            <ScalarProperty Name="m04_importo" ColumnName="m04_importo" />
+            <ScalarProperty Name="m04_dtscadenza" ColumnName="m04_dtscadenza" />
+            <ScalarProperty Name="m04_dtupdate" ColumnName="m04_dtupdate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m05_rating"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m05_rating"><MappingFragment StoreEntitySet="m05_rating">
+            <ScalarProperty Name="m05_partitaiva" ColumnName="m05_partitaiva" />
+            <ScalarProperty Name="m05_dtriferimento" ColumnName="m05_dtriferimento" />
+            <ScalarProperty Name="m05_stato" ColumnName="m05_stato" />
+            <ScalarProperty Name="m05_dtfinevalidita" ColumnName="m05_dtfinevalidita" />
+            <ScalarProperty Name="m05_id" ColumnName="m05_id" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m06_anagrafica_rapporti"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m06_anagrafica_rapporti"><MappingFragment StoreEntitySet="m06_anagrafica_rapporti">
+            <ScalarProperty Name="m06_partitaiva" ColumnName="m06_partitaiva" />
+            <ScalarProperty Name="m06_codicefiscale" ColumnName="m06_codicefiscale" />
+            <ScalarProperty Name="m06_codicelince" ColumnName="m06_codicelince" />
+            <ScalarProperty Name="m06_codiceDB" ColumnName="m06_codiceDB" />
+            <ScalarProperty Name="m06_ragionesociale" ColumnName="m06_ragionesociale" />
+            <ScalarProperty Name="m06_indirizzo" ColumnName="m06_indirizzo" />
+            <ScalarProperty Name="m06_citta" ColumnName="m06_citta" />
+            <ScalarProperty Name="m06_cap" ColumnName="m06_cap" />
+            <ScalarProperty Name="m06_pv" ColumnName="m06_pv" />
+            <ScalarProperty Name="m06_dt_upd_rapporto" ColumnName="m06_dt_upd_rapporto" />
+            <ScalarProperty Name="m06_dt_evasione_rapporto" ColumnName="m06_dt_evasione_rapporto" />
+            <ScalarProperty Name="m06_tiporapporto" ColumnName="m06_tiporapporto" />
+            <ScalarProperty Name="m06_stato" ColumnName="m06_stato" />
+            <ScalarProperty Name="m06_alert" ColumnName="m06_alert" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m08_richieste"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m08_richieste"><MappingFragment StoreEntitySet="m08_richieste">
+            <ScalarProperty Name="m08_idrichiesta" ColumnName="m08_idrichiesta" />
+            <ScalarProperty Name="m08_user" ColumnName="m08_user" />
+            <ScalarProperty Name="m08_dtrichiesta" ColumnName="m08_dtrichiesta" />
+            <ScalarProperty Name="m08_codice" ColumnName="m08_codice" />
+            <ScalarProperty Name="m08_ragsoc" ColumnName="m08_ragsoc" />
+            <ScalarProperty Name="m08_partitaiva" ColumnName="m08_partitaiva" />
+            <ScalarProperty Name="m08_codfis" ColumnName="m08_codfis" />
+            <ScalarProperty Name="m08_indirizzo" ColumnName="m08_indirizzo" />
+            <ScalarProperty Name="m08_localita" ColumnName="m08_localita" />
+            <ScalarProperty Name="m08_provincia" ColumnName="m08_provincia" />
+            <ScalarProperty Name="m08_tiporichiesta" ColumnName="m08_tiporichiesta" />
+            <ScalarProperty Name="m08_urgenza" ColumnName="m08_urgenza" />
+            <ScalarProperty Name="m08_email" ColumnName="m08_email" />
+            <ScalarProperty Name="m08_dt_invio" ColumnName="m08_dt_invio" />
+            <ScalarProperty Name="m08_file" ColumnName="m08_file" />
+            <ScalarProperty Name="m08_dt_evasione" ColumnName="m08_dt_evasione" />
+            <ScalarProperty Name="m08_estero" ColumnName="m08_estero" />
+            <ScalarProperty Name="m08_dbmonitor" ColumnName="m08_dbmonitor" />
+            <ScalarProperty Name="m08_dbinvestigation" ColumnName="m08_dbinvestigation" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m10_utenti"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m10_utenti"><MappingFragment StoreEntitySet="m10_utenti">
+            <ScalarProperty Name="m10_iduser" ColumnName="m10_iduser" />
+            <ScalarProperty Name="m10_user" ColumnName="m10_user" />
+            <ScalarProperty Name="m10_pass" ColumnName="m10_pass" />
+            <ScalarProperty Name="m10_idazienda" ColumnName="m10_idazienda" />
+            <ScalarProperty Name="m10_idruolo" ColumnName="m10_idruolo" />
+            <ScalarProperty Name="m10_nomeutente" ColumnName="m10_nomeutente" />
+            <ScalarProperty Name="m10_email" ColumnName="m10_email" />
+            <ScalarProperty Name="m10_attivo" ColumnName="m10_attivo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m11_ruoli"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m11_ruoli"><MappingFragment StoreEntitySet="m11_ruoli">
+            <ScalarProperty Name="m11_idruolo" ColumnName="m11_idruolo" />
+            <ScalarProperty Name="m11_ruolo" ColumnName="m11_ruolo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m12_fasce_vendite"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m12_fasce_vendite"><MappingFragment StoreEntitySet="m12_fasce_vendite">
+            <ScalarProperty Name="m12_idfascia" ColumnName="m12_idfascia" />
+            <ScalarProperty Name="m12_limite_inferiore" ColumnName="m12_limite_inferiore" />
+            <ScalarProperty Name="m12_limite_superiore" ColumnName="m12_limite_superiore" />
+            <ScalarProperty Name="m12_descrizione" ColumnName="m12_descrizione" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m13_fasce_esposizione"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m13_fasce_esposizione"><MappingFragment StoreEntitySet="m13_fasce_esposizione">
+            <ScalarProperty Name="m13_idfascia" ColumnName="m13_idfascia" />
+            <ScalarProperty Name="m13_limite_inferiore" ColumnName="m13_limite_inferiore" />
+            <ScalarProperty Name="m13_limite_superiore" ColumnName="m13_limite_superiore" />
+            <ScalarProperty Name="m13_descrizione" ColumnName="m13_descrizione" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m14_stati_lince"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m14_stati_lince"><MappingFragment StoreEntitySet="m14_stati_lince">
+            <ScalarProperty Name="m14_idstato" ColumnName="m14_idstato" />
+            <ScalarProperty Name="m14_descrizione" ColumnName="m14_descrizione" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m16_contatori"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m16_contatori"><MappingFragment StoreEntitySet="m16_contatori">
+            <ScalarProperty Name="m16_idcentro" ColumnName="m16_idcentro" />
+            <ScalarProperty Name="m16_tipo" ColumnName="m16_tipo" />
+            <ScalarProperty Name="m16_valore" ColumnName="m16_valore" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m17_nazioni"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m17_nazioni"><MappingFragment StoreEntitySet="m17_nazioni">
+            <ScalarProperty Name="m17_codice" ColumnName="m17_codice" />
+            <ScalarProperty Name="m17_nazione" ColumnName="m17_nazione" />
+            <ScalarProperty Name="m17_prodotto" ColumnName="m17_prodotto" />
+            <ScalarProperty Name="m17_rating" ColumnName="m17_rating" />
+            <ScalarProperty Name="m17_fido" ColumnName="m17_fido" />
+            <ScalarProperty Name="m17_monitor" ColumnName="m17_monitor" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m18_moduli"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m18_moduli"><MappingFragment StoreEntitySet="m18_moduli">
+            <ScalarProperty Name="m18_idmodulo" ColumnName="m18_idmodulo" />
+            <ScalarProperty Name="m18_descrizione" ColumnName="m18_descrizione" />
+            <ScalarProperty Name="m18_pagina" ColumnName="m18_pagina" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m19_documenti"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m19_documenti"><MappingFragment StoreEntitySet="m19_documenti">
+            <ScalarProperty Name="m19_iddocumento" ColumnName="m19_iddocumento" />
+            <ScalarProperty Name="m19_idazienda" ColumnName="m19_idazienda" />
+            <ScalarProperty Name="m19_idmodulo" ColumnName="m19_idmodulo" />
+            <ScalarProperty Name="m19_datacreazione" ColumnName="m19_datacreazione" />
+            <ScalarProperty Name="m19_dataaggiornamento" ColumnName="m19_dataaggiornamento" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m21_tipoassistenza"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m21_tipoassistenza"><MappingFragment StoreEntitySet="m21_tipoassistenza">
+            <ScalarProperty Name="m21_idtipoassistenza" ColumnName="m21_idtipoassistenza" />
+            <ScalarProperty Name="m21_descrizione" ColumnName="m21_descrizione" />
+            <ScalarProperty Name="m21_email_avviso" ColumnName="m21_email_avviso" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m22_assistenza"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m22_assistenza"><MappingFragment StoreEntitySet="m22_assistenza">
+            <ScalarProperty Name="m22_idassistenza" ColumnName="m22_idassistenza" />
+            <ScalarProperty Name="m22_idazienda" ColumnName="m22_idazienda" />
+            <ScalarProperty Name="m22_tiporichiesta" ColumnName="m22_tiporichiesta" />
+            <ScalarProperty Name="m22_stato" ColumnName="m22_stato" />
+            <ScalarProperty Name="m22_dt_richiesta" ColumnName="m22_dt_richiesta" />
+            <ScalarProperty Name="m22_dt_aggiornamento" ColumnName="m22_dt_aggiornamento" />
+            <ScalarProperty Name="m22_richiesta" ColumnName="m22_richiesta" />
+            <ScalarProperty Name="m22_risposta" ColumnName="m22_risposta" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m23_homepage"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m23_homepage"><MappingFragment StoreEntitySet="m23_homepage">
+            <ScalarProperty Name="m23_id" ColumnName="m23_id" />
+            <ScalarProperty Name="m23_txt1" ColumnName="m23_txt1" />
+            <ScalarProperty Name="m23_txt2" ColumnName="m23_txt2" />
+            <ScalarProperty Name="m23_txt3" ColumnName="m23_txt3" />
+            <ScalarProperty Name="m23_banner1" ColumnName="m23_banner1" />
+            <ScalarProperty Name="m23_banner2" ColumnName="m23_banner2" />
+            <ScalarProperty Name="m23_banner3" ColumnName="m23_banner3" />
+            <ScalarProperty Name="m23_banner4" ColumnName="m23_banner4" />
+            <ScalarProperty Name="m23_banner5" ColumnName="m23_banner5" />
+            <ScalarProperty Name="m23_banner6" ColumnName="m23_banner6" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m25_parametri_dso"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m25_parametri_dso"><MappingFragment StoreEntitySet="m25_parametri_dso">
+            <ScalarProperty Name="m25_id" ColumnName="m25_id" />
+            <ScalarProperty Name="m25_numero_mesi_1" ColumnName="m25_numero_mesi_1" />
+            <ScalarProperty Name="m25_numero_giorni_1" ColumnName="m25_numero_giorni_1" />
+            <ScalarProperty Name="m25_numero_mesi_2" ColumnName="m25_numero_mesi_2" />
+            <ScalarProperty Name="m25_numero_giorni_2" ColumnName="m25_numero_giorni_2" />
+            <ScalarProperty Name="m25_condizione_and" ColumnName="m25_condizione_and" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m26_richiesta_recupero_crediti"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m26_richiesta_recupero_crediti"><MappingFragment StoreEntitySet="m26_richiesta_recupero_crediti">
+            <ScalarProperty Name="m26_id" ColumnName="m26_id" />
+            <ScalarProperty Name="m26_codice_azienda" ColumnName="m26_codice_azienda" />
+            <ScalarProperty Name="m26_ragione_sociale" ColumnName="m26_ragione_sociale" />
+            <ScalarProperty Name="m26_partita_iva" ColumnName="m26_partita_iva" />
+            <ScalarProperty Name="m26_data_ultima_modifica" ColumnName="m26_data_ultima_modifica" />
+            <ScalarProperty Name="m26_data_inserimento" ColumnName="m26_data_inserimento" />
+            <ScalarProperty Name="m26_codice_richiedente" ColumnName="m26_codice_richiedente" />
+            <ScalarProperty Name="m26_tipo_richiesta" ColumnName="m26_tipo_richiesta" />
+            <ScalarProperty Name="m26_inviato_assicom" ColumnName="m26_inviato_assicom" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m27_fattura_richiesta"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m27_fattura_richiesta"><MappingFragment StoreEntitySet="m27_fattura_richiesta">
+            <ScalarProperty Name="m27_id" ColumnName="m27_id" />
+            <ScalarProperty Name="m27_numero_documento" ColumnName="m27_numero_documento" />
+            <ScalarProperty Name="m27_data_documento" ColumnName="m27_data_documento" />
+            <ScalarProperty Name="m27_data_scadenza_documento" ColumnName="m27_data_scadenza_documento" />
+            <ScalarProperty Name="m27_descrizione_documento" ColumnName="m27_descrizione_documento" />
+            <ScalarProperty Name="m27_importo_documento" ColumnName="m27_importo_documento" />
+            <ScalarProperty Name="m27_valuta_documento" ColumnName="m27_valuta_documento" />
+            <ScalarProperty Name="m27_note_documento" ColumnName="m27_note_documento" />
+            <ScalarProperty Name="m27_id_richiesta" ColumnName="m27_id_richiesta" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="m28_giorni_storico"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.m28_giorni_storico"><MappingFragment StoreEntitySet="m28_giorni_storico">
+            <ScalarProperty Name="m28_partita_iva" ColumnName="m28_partita_iva" />
+            <ScalarProperty Name="m28_id_centro" ColumnName="m28_id_centro" />
+            <ScalarProperty Name="m28_mensilita_actual" ColumnName="m28_mensilita_actual" />
+            <ScalarProperty Name="m28_giorni_actual" ColumnName="m28_giorni_actual" />
+            <ScalarProperty Name="m28_mensilita_1" ColumnName="m28_mensilita_1" />
+            <ScalarProperty Name="m28_giorni_1" ColumnName="m28_giorni_1" />
+            <ScalarProperty Name="m28_mensilita_2" ColumnName="m28_mensilita_2" />
+            <ScalarProperty Name="m28_giorni_2" ColumnName="m28_giorni_2" />
+            <ScalarProperty Name="m28_mensilita_3" ColumnName="m28_mensilita_3" />
+            <ScalarProperty Name="m28_giorni_3" ColumnName="m28_giorni_3" />
+            <ScalarProperty Name="m28_mensilita_4" ColumnName="m28_mensilita_4" />
+            <ScalarProperty Name="m28_giorni_4" ColumnName="m28_giorni_4" />
+            <ScalarProperty Name="m28_mensilita_5" ColumnName="m28_mensilita_5" />
+            <ScalarProperty Name="m28_giorni_5" ColumnName="m28_giorni_5" />
+            <ScalarProperty Name="m28_mensilita_6" ColumnName="m28_mensilita_6" />
+            <ScalarProperty Name="m28_giorni_6" ColumnName="m28_giorni_6" />
+            <ScalarProperty Name="m28_mensilita_7" ColumnName="m28_mensilita_7" />
+            <ScalarProperty Name="m28_giorni_7" ColumnName="m28_giorni_7" />
+            <ScalarProperty Name="m28_mensilita_8" ColumnName="m28_mensilita_8" />
+            <ScalarProperty Name="m28_giorni_8" ColumnName="m28_giorni_8" />
+            <ScalarProperty Name="m28_mensilita_9" ColumnName="m28_mensilita_9" />
+            <ScalarProperty Name="m28_giorni_9" ColumnName="m28_giorni_9" />
+            <ScalarProperty Name="m28_mensilita_10" ColumnName="m28_mensilita_10" />
+            <ScalarProperty Name="m28_giorni_10" ColumnName="m28_giorni_10" />
+            <ScalarProperty Name="m28_mensilita_11" ColumnName="m28_mensilita_11" />
+            <ScalarProperty Name="m28_giorni_11" ColumnName="m28_giorni_11" />
+            <ScalarProperty Name="m28_mensilita_12" ColumnName="m28_mensilita_12" />
+            <ScalarProperty Name="m28_giorni_12" ColumnName="m28_giorni_12" />
+            <ScalarProperty Name="m28_mensilita_13" ColumnName="m28_mensilita_13" />
+            <ScalarProperty Name="m28_giorni_13" ColumnName="m28_giorni_13" />
+            <ScalarProperty Name="m28_mensilita_14" ColumnName="m28_mensilita_14" />
+            <ScalarProperty Name="m28_giorni_14" ColumnName="m28_giorni_14" />
+            <ScalarProperty Name="m28_mensilita_15" ColumnName="m28_mensilita_15" />
+            <ScalarProperty Name="m28_giorni_15" ColumnName="m28_giorni_15" />
+            <ScalarProperty Name="m28_mensilita_16" ColumnName="m28_mensilita_16" />
+            <ScalarProperty Name="m28_giorni_16" ColumnName="m28_giorni_16" />
+            <ScalarProperty Name="m28_mensilita_17" ColumnName="m28_mensilita_17" />
+            <ScalarProperty Name="m28_giorni_17" ColumnName="m28_giorni_17" />
+            <ScalarProperty Name="m28_mensilita_18" ColumnName="m28_mensilita_18" />
+            <ScalarProperty Name="m28_giorni_18" ColumnName="m28_giorni_18" />
+            <ScalarProperty Name="m28_mensilita_19" ColumnName="m28_mensilita_19" />
+            <ScalarProperty Name="m28_giorni_19" ColumnName="m28_giorni_19" />
+            <ScalarProperty Name="m28_mensilita_20" ColumnName="m28_mensilita_20" />
+            <ScalarProperty Name="m28_giorni_20" ColumnName="m28_giorni_20" />
+            <ScalarProperty Name="m28_mensilita_21" ColumnName="m28_mensilita_21" />
+            <ScalarProperty Name="m28_giorni_21" ColumnName="m28_giorni_21" />
+            <ScalarProperty Name="m28_mensilita_22" ColumnName="m28_mensilita_22" />
+            <ScalarProperty Name="m28_giorni_22" ColumnName="m28_giorni_22" />
+            <ScalarProperty Name="m28_mensilita_23" ColumnName="m28_mensilita_23" />
+            <ScalarProperty Name="m28_giorni_23" ColumnName="m28_giorni_23" />
+            <ScalarProperty Name="m28_mensilita_24" ColumnName="m28_mensilita_24" />
+            <ScalarProperty Name="m28_giorni_24" ColumnName="m28_giorni_24" />
+            <ScalarProperty Name="m28_mensilita_25" ColumnName="m28_mensilita_25" />
+            <ScalarProperty Name="m28_giorni_25" ColumnName="m28_giorni_25" />
+            <ScalarProperty Name="m28_mensilita_26" ColumnName="m28_mensilita_26" />
+            <ScalarProperty Name="m28_giorni_26" ColumnName="m28_giorni_26" />
+            <ScalarProperty Name="m28_mensilita_27" ColumnName="m28_mensilita_27" />
+            <ScalarProperty Name="m28_giorni_27" ColumnName="m28_giorni_27" />
+            <ScalarProperty Name="m28_mensilita_28" ColumnName="m28_mensilita_28" />
+            <ScalarProperty Name="m28_giorni_28" ColumnName="m28_giorni_28" />
+            <ScalarProperty Name="m28_mensilita_29" ColumnName="m28_mensilita_29" />
+            <ScalarProperty Name="m28_giorni_29" ColumnName="m28_giorni_29" />
+            <ScalarProperty Name="m28_mensilita_30" ColumnName="m28_mensilita_30" />
+            <ScalarProperty Name="m28_giorni_30" ColumnName="m28_giorni_30" />
+            <ScalarProperty Name="m28_mensilita_31" ColumnName="m28_mensilita_31" />
+            <ScalarProperty Name="m28_giorni_31" ColumnName="m28_giorni_31" />
+            <ScalarProperty Name="m28_mensilita_32" ColumnName="m28_mensilita_32" />
+            <ScalarProperty Name="m28_giorni_32" ColumnName="m28_giorni_32" />
+            <ScalarProperty Name="m28_mensilita_33" ColumnName="m28_mensilita_33" />
+            <ScalarProperty Name="m28_giorni_33" ColumnName="m28_giorni_33" />
+            <ScalarProperty Name="m28_mensilita_34" ColumnName="m28_mensilita_34" />
+            <ScalarProperty Name="m28_giorni_34" ColumnName="m28_giorni_34" />
+            <ScalarProperty Name="m28_mensilita_35" ColumnName="m28_mensilita_35" />
+            <ScalarProperty Name="m28_giorni_35" ColumnName="m28_giorni_35" />
+            <ScalarProperty Name="m28_mensilita_36" ColumnName="m28_mensilita_36" />
+            <ScalarProperty Name="m28_giorni_36" ColumnName="m28_giorni_36" />
+            <ScalarProperty Name="m28_data_aggiornamento" ColumnName="m28_data_aggiornamento" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="t_lince_aziende_saldominimo"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.t_lince_aziende_saldominimo"><MappingFragment StoreEntitySet="t_lince_aziende_saldominimo">
+            <ScalarProperty Name="partitaiva" ColumnName="partitaiva" />
+            <ScalarProperty Name="ragionesociale" ColumnName="ragionesociale" />
+            <ScalarProperty Name="dt_saldo_minimo" ColumnName="dt_saldo_minimo" />
+            <ScalarProperty Name="valore_minimo" ColumnName="valore_minimo" />
+            <ScalarProperty Name="codice_operatore" ColumnName="codice_operatore" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="t_lince_esperienze"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.t_lince_esperienze"><MappingFragment StoreEntitySet="t_lince_esperienze">
+            <ScalarProperty Name="piva" ColumnName="piva" />
+            <ScalarProperty Name="ragionesociale" ColumnName="ragionesociale" />
+            <ScalarProperty Name="codice_operatore" ColumnName="codice_operatore" />
+            <ScalarProperty Name="numeroDocumento" ColumnName="numeroDocumento" />
+            <ScalarProperty Name="dataDocumento" ColumnName="dataDocumento" />
+            <ScalarProperty Name="dataScadenza" ColumnName="dataScadenza" />
+            <ScalarProperty Name="dataRiferimento" ColumnName="dataRiferimento" />
+            <ScalarProperty Name="importo" ColumnName="importo" />
+            <ScalarProperty Name="esposizione" ColumnName="esposizione" />
+            <ScalarProperty Name="incasso" ColumnName="incasso" />
+            <ScalarProperty Name="giorni" ColumnName="giorni" />
+            <ScalarProperty Name="dataPagamento" ColumnName="dataPagamento" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="t04_centro_clienti"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.t04_centro_clienti"><MappingFragment StoreEntitySet="t04_centro_clienti">
+            <ScalarProperty Name="t04_idcentro" ColumnName="t04_idcentro" />
+            <ScalarProperty Name="t04_partitaiva" ColumnName="t04_partitaiva" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="t05_azienda_clienti"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.t05_azienda_clienti"><MappingFragment StoreEntitySet="t05_azienda_clienti">
+            <ScalarProperty Name="t05_codiceazienda" ColumnName="t05_codiceazienda" />
+            <ScalarProperty Name="t05_partitaiva" ColumnName="t05_partitaiva" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="t06_statistiche_centro"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.t06_statistiche_centro"><MappingFragment StoreEntitySet="t06_statistiche_centro">
+            <ScalarProperty Name="t06_idcentro" ColumnName="t06_idcentro" />
+            <ScalarProperty Name="t06_partitaiva" ColumnName="t06_partitaiva" />
+            <ScalarProperty Name="t06_vendite" ColumnName="t06_vendite" />
+            <ScalarProperty Name="t06_esposizione" ColumnName="t06_esposizione" />
+            <ScalarProperty Name="t06_incassi" ColumnName="t06_incassi" />
+            <ScalarProperty Name="t06_giorni" ColumnName="t06_giorni" />
+            <ScalarProperty Name="t06_fascia_vendite" ColumnName="t06_fascia_vendite" />
+            <ScalarProperty Name="t06_fascia_esposizione" ColumnName="t06_fascia_esposizione" />
+            <ScalarProperty Name="t06_fascia_rating" ColumnName="t06_fascia_rating" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="t07_statistiche_nazione"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.t07_statistiche_nazione"><MappingFragment StoreEntitySet="t07_statistiche_nazione">
+            <ScalarProperty Name="t07_partitaiva" ColumnName="t07_partitaiva" />
+            <ScalarProperty Name="t07_vendite" ColumnName="t07_vendite" />
+            <ScalarProperty Name="t07_esposizione" ColumnName="t07_esposizione" />
+            <ScalarProperty Name="t07_incassi" ColumnName="t07_incassi" />
+            <ScalarProperty Name="t07_giorni" ColumnName="t07_giorni" />
+            <ScalarProperty Name="t07_fascia_vendite" ColumnName="t07_fascia_vendite" />
+            <ScalarProperty Name="t07_fascia_esposizione" ColumnName="t07_fascia_esposizione" />
+            <ScalarProperty Name="t07_fascia_rating" ColumnName="t07_fascia_rating" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="t08_aziendaupdatedati"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.t08_aziendaupdatedati"><MappingFragment StoreEntitySet="t08_aziendaupdatedati">
+            <ScalarProperty Name="t08_codice" ColumnName="t08_codice" />
+            <ScalarProperty Name="t08_dt_update" ColumnName="t08_dt_update" />
+            <ScalarProperty Name="t08_gg_ritardo" ColumnName="t08_gg_ritardo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="t09_contatori_movimenti"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.t09_contatori_movimenti"><MappingFragment StoreEntitySet="t09_contatori_movimenti">
+            <ScalarProperty Name="t09_codiceazienda" ColumnName="t09_codiceazienda" />
+            <ScalarProperty Name="t09_contatore_vendite" ColumnName="t09_contatore_vendite" />
+            <ScalarProperty Name="t09_contatore_saldi" ColumnName="t09_contatore_saldi" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vs_piva_nonvisualizzare"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.vs_piva_nonvisualizzare"><MappingFragment StoreEntitySet="vs_piva_nonvisualizzare">
+            <ScalarProperty Name="m01_idcentro" ColumnName="m01_idcentro" />
+            <ScalarProperty Name="t05_partitaiva" ColumnName="t05_partitaiva" />
+            <ScalarProperty Name="operatori" ColumnName="operatori" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vs_piva_nonvisualizzare_nazione"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.vs_piva_nonvisualizzare_nazione"><MappingFragment StoreEntitySet="vs_piva_nonvisualizzare_nazione">
+            <ScalarProperty Name="t05_partitaiva" ColumnName="t05_partitaiva" />
+            <ScalarProperty Name="operatori" ColumnName="operatori" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vs_richieste_statopiurecente"><EntityTypeMapping TypeName="OsservaCentraleRischiModel.vs_richieste_statopiurecente"><MappingFragment StoreEntitySet="vs_richieste_statopiurecente">
+            <ScalarProperty Name="m06_partitaiva" ColumnName="m06_partitaiva" />
+            <ScalarProperty Name="m06_ragionesociale" ColumnName="m06_ragionesociale" />
+            <ScalarProperty Name="stato" ColumnName="stato" />
+            <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="False" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <edmx:Diagram Name="CentraleRischiR1">
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.categoria" Width="1.5" PointX="0.75" PointY="0.75" Height="1.427958984375" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.documento" Width="1.5" PointX="2.75" PointY="0.75" Height="3.2357796223958326" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m00_centri" Width="1.5" PointX="4.75" PointY="0.75" Height="1.7566536458333326" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m01_aziende" Width="1.5" PointX="0.75" PointY="4.75" Height="6.0296842447916656" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m02_anagrafica" Width="1.5" PointX="2.75" PointY="4.75" Height="3.0714322916666656" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m03_saldi" Width="1.5" PointX="4.75" PointY="3.75" Height="1.9210009765624996" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m03_saldi_new" Width="1.5" PointX="6.75" PointY="0.75" Height="1.9210009765624996" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m03_saldi_storico" Width="1.5" PointX="6.75" PointY="3.75" Height="2.0853483072916674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m04_vendite" Width="1.5" PointX="4.75" PointY="6.75" Height="2.5783902994791674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m04_vendite_new" Width="1.5" PointX="6.75" PointY="6.75" Height="2.5783902994791674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m04_vendite_storico" Width="1.5" PointX="8.75" PointY="0.75" Height="2.7427376302083317" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m05_rating" Width="1.5" PointX="8.75" PointY="4.75" Height="1.7566536458333317" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m06_anagrafica_rapporti" Width="1.5" PointX="8.75" PointY="7.75" Height="3.2357796223958388" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m08_richieste" Width="1.5" PointX="10.75" PointY="0.75" Height="4.0575162760416674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m10_utenti" Width="1.5" PointX="2.75" PointY="10.75" Height="2.2496956380208388" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m11_ruoli" Width="1.5" PointX="4.75" PointY="10.75" Height="1.2636116536458388" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m12_fasce_vendite" Width="1.5" PointX="10.75" PointY="5.75" Height="1.5923063151041674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m13_fasce_esposizione" Width="1.5" PointX="10.75" PointY="8.75" Height="1.5923063151041674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m14_stati_lince" Width="1.5" PointX="6.75" PointY="11.75" Height="1.2636116536458388" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m16_contatori" Width="1.5" PointX="8.75" PointY="11.75" Height="1.4279589843750031" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m17_nazioni" Width="1.5" PointX="10.75" PointY="11.75" Height="1.9210009765625031" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m18_moduli" Width="1.5" PointX="12.75" PointY="0.75" Height="1.4279589843750067" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m19_documenti" Width="1.5" PointX="12.75" PointY="3.75" Height="1.7566536458333246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m21_tipoassistenza" Width="1.5" PointX="12.75" PointY="6.75" Height="1.4279589843750102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m22_assistenza" Width="1.5" PointX="12.75" PointY="9.75" Height="2.2496956380208246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m23_homepage" Width="1.5" PointX="12.75" PointY="12.75" Height="2.5783902994791674" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m25_parametri_dso" Width="1.5" PointX="0.75" PointY="13.75" Height="1.9210009765625102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m26_richiesta_recupero_crediti" Width="1.5" PointX="2.75" PointY="13.75" Height="2.4140429687500102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m27_fattura_richiesta" Width="1.5" PointX="14.75" PointY="0.75" Height="2.4140429687500102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.m28_giorni_storico" Width="1.5" PointX="14.75" PointY="4.75" Height="13.589661458333325" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.t_lince_aziende_saldominimo" Width="1.5" PointX="4.75" PointY="14.75" Height="1.7566536458333246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.t_lince_esperienze" Width="1.5" PointX="6.75" PointY="14.75" Height="2.9070849609375102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.t04_centro_clienti" Width="1.5" PointX="8.75" PointY="14.75" Height="1.2636116536458246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.t05_azienda_clienti" Width="1.5" PointX="16.75" PointY="0.75" Height="1.2636116536458246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.t06_statistiche_centro" Width="1.5" PointX="16.75" PointY="3.75" Height="2.4140429687500102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.t07_statistiche_nazione" Width="1.5" PointX="16.75" PointY="7.75" Height="2.2496956380208246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.t08_aziendaupdatedati" Width="1.5" PointX="16.75" PointY="10.75" Height="1.4279589843750102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.t09_contatori_movimenti" Width="1.5" PointX="10.75" PointY="16.75" Height="1.4279589843750102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.vs_piva_nonvisualizzare" Width="1.5" PointX="16.75" PointY="13.75" Height="1.4279589843750102" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.vs_piva_nonvisualizzare_nazione" Width="1.5" PointX="16.75" PointY="16.75" Height="1.2636116536458246" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="OsservaCentraleRischiModel.vs_richieste_statopiurecente" Width="1.5" PointX="0.75" PointY="17.75" Height="1.5923063151041674" IsExpanded="true" />
+      </edmx:Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

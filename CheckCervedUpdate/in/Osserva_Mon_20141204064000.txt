@@ -1,0 +1,52 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;886633;PARIBELFRUTTA DI PARIBELLO ANTONIO A.P.;02184780928;02184780928;05/08/2014;PL002;P;Variazione Positiva Grading Esperienze Pagamento;04/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;05/08/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;7502272;FRUTTITALIA 2;03003130923;03003130923;05/08/2014;RI010;A;Variazione ragione sociale ufficiale;04/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;7502272;FRUTTITALIA 2;03003130923;03003130923;05/08/2014;FL001;N;Apertura Procedura Concorsuale;04/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;7502272;FRUTTITALIA 2;03003130923;03003130923;05/08/2014;SA003;N;Variazione stato azienda - cessazione;04/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;2280171;PUTZU GIUSEPPE & C.;01612550929;01612550929;10/10/2014;AD115;A;Nuova rapporto curatore;04/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;813720;SOC. SA.DA. DI GESSA MARIO & C.;02211980921;02211980921;10/10/2014;RI091;A;Dati Azienda Chisura Unita Locale;04/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;2280171;PUTZU GIUSEPPE & C.;01612550929;01612550929;15/10/2014;AD115;A;Nuova rapporto curatore;04/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;886633;PARIBELFRUTTA DI PARIBELLO ANTONIO A.P.;02184780928;02184780928;15/10/2014;PL002;P;Variazione Positiva Grading Esperienze Pagamento;04/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;15/10/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;1801937;COOPERATIVA FRUTTICOLTORI KURMARK UNIFRUT SOCIETA' AGRICOLA;00125760215;00125760215;10/11/2014;NW003;A;Aggiornamento News;04/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;2399125;ORTOFRUTTA MEONI ADRIANO;MNEDRN55L05C319A;01053250518;10/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;7753011;FRACASSI PIERLUIGI;FRCPLG79L23A515W;01706300660;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;04/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;915939;RECCHIA ANTONIO GIOVANNI & C.;01765930597;01765930597;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9352534;MISTOFRUTTA DI TITONE VITO;TTNVTI86P11F061H;02295070813;11/11/2014;GL001;P;Variazione positiva del fido automatico;04/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;362429183;LE DELIZIE DEL CREATO SEMPLIFICATA;02756340804;02756340804;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;04/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;5999415;BERARDINO SALVATORE;BRRSVT64C10D662X;01945510590;11/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;04/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;5692715;IPERFRUTTA;02923080754;02923080754;11/11/2014;PT011;N;Nuovo effetto sull'azienda;04/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;5692715;IPERFRUTTA;02923080754;02923080754;11/11/2014;PT011;N;Nuovo effetto sull'azienda;04/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;5692715;IPERFRUTTA;02923080754;02923080754;11/11/2014;PT011;N;Nuovo effetto sull'azienda;04/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;399008;SOCIETA' COOPERATIVA AGRICOLA DI LEGNAIA SIGLABILE "LEGNAIACOOP"  "COOP LEGNAIA"  "COOP. DI LEGNAIA"  "AGRICOLA LEGNAIA" ACCOMPAGNATO DA SOCIETA' COOPERATIVA (OVVERO SOC. COOP.);00393950480;00393950480;12/11/2014;RI091;A;Dati Azienda Chisura Unita Locale;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;5527867;BERTOLUCCI DI BERTOLUCCI ERNESTO & C.;00506010453;00506010453;12/11/2014;PL001;A;Disponibilita Grading Esperienze Pagamento;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;2399125;ORTOFRUTTA MEONI ADRIANO;MNEDRN55L05C319A;01053250518;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;365492070;2B;01377060528;01377060528;12/11/2014;GL001;P;Variazione positiva del fido automatico;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;896676;COOPERATIVA ORTOFLOROFRUTTICOLA PONTINA;01462760594;01462760594;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;896676;COOPERATIVA ORTOFLOROFRUTTICOLA PONTINA;01462760594;01462760594;12/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;5003021;RICCOMINI OROSMANO;01507710463;01507710463;12/11/2014;BL001;U;Nuovo Bilancio Aziendale;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;5003021;RICCOMINI OROSMANO;01507710463;01507710463;12/11/2014;PL001;A;Disponibilita Grading Esperienze Pagamento;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;5999415;BERARDINO SALVATORE;BRRSVT64C10D662X;01945510590;12/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;3170168;PARISELLA FRUTTA;02150910590;02150910590;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;6096337;ORTOSI' SOCIETA' AGRICOLA;02257090593;02257090593;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1050704;G. MARICCHIOLO SUCC. DI PAOLO MARICCHIOLO & CO.;00057630329;00057630329;13/11/2014;GL001;P;Variazione positiva del fido automatico;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;2635628;DI GREGORIO SALVATORE;DGRSVT54L24C130C;00267160810;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C. EMPLICE;03208570105;03208570105;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C. EMPLICE;03208570105;03208570105;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;2371663;MAC FRUTTA;03680940263;03680940263;13/11/2014;SC001;A;Nuovo Elenco Soci;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;2371663;MAC FRUTTA;03680940263;03680940263;13/11/2014;RI050;A;Variazione capitale sociale;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;363981774;ALESSIA GROUP;07542171215;07542171215;13/11/2014;GL001;P;Variazione positiva del fido automatico;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;11708323;AMBU PAOLO;MBAPLA58C28I580M;01894170925;13/11/2014;RI041;A;Variazione PEC;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;11708323;AMBU PAOLO;MBAPLA58C28I580M;01894170925;13/11/2014;RI041;A;Variazione PEC;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;695400;PILUDU ELISABETTA;PLDLBT68A51F808T;01983700921;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;813720;SOC. SA.DA. DI GESSA MARIO & C.;02211980921;02211980921;13/11/2014;RI091;A;Dati Azienda Chisura Unita Locale;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;7502272;FRUTTITALIA 2;03003130923;03003130923;13/11/2014;RI010;A;Variazione ragione sociale ufficiale;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;7502272;FRUTTITALIA 2;03003130923;03003130923;13/11/2014;FL001;N;Apertura Procedura Concorsuale;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;7502272;FRUTTITALIA 2;03003130923;03003130923;13/11/2014;SA003;N;Variazione stato azienda - cessazione;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;362565851;ALMA BUSINESS;03466670928;03466670928;13/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;362827182;TOQUE BLANCHE;03481360927;03481360927;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;362827182;TOQUE BLANCHE;03481360927;03481360927;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;04/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;5550642;GRANDOLFO STELIO DI GRANDOLFO MARCO & CO.;00961330321;00961330321;01/12/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;04/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;364426932;SACS IMPORT EXPORT;02389460748;02389460748;01/12/2014;PL001;A;Disponibilita Grading Esperienze Pagamento;04/12/2014;01/12/2015

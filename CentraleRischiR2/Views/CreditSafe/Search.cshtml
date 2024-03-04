@@ -1,0 +1,287 @@
+﻿@{
+    ViewBag.Title = "Ricerca Anagrafica";
+}
+@section scripts {
+    <script src="~/scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="~/js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+    <script src="~/js/i18n/grid.locale-it.js" type="text/javascript"></script>
+    <script src="~/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function () {
+        $('#loading').hide();
+        $body = $("body");
+
+        $(document).on({
+            ajaxStart: function () { $body.addClass("loading"); },
+            ajaxStop: function () { $body.removeClass("loading"); }
+        });
+
+        // Here we set the altRows option globally
+        jQuery.extend(jQuery.jgrid.defaults, { altRows: true, emptyrecords: "Nessun risultato", pgtext: "Pagina {0} di {1}", recordtext: "Visualizza {0} - {1} di {2}", autowidth: true });
+
+
+        $("#cerved").jqGrid({
+            url: './GetAnagraficheCS',
+            postData: { rs: $('#RagioneSociale').val(), piva: $('#PartitaIva').val() },
+            datatype: 'json',
+            height: 'auto',
+            autowidth: true,
+            shrinkToFit: true,
+            rowNum: 10000,
+            onCellSelect: function (rowid, iCol, cellcontent, e) {
+                switch (iCol) {
+                    case 5:
+                        if (rowid == "null") {
+                            $("#dialog-message-piva").dialog({
+                                modal: true,
+                                buttons: {
+                                    Ok: function () {
+                                        $(this).dialog("close");
+                                    }
+                                }
+                            });
+                        }
+                        else
+                            if(cellcontent.indexOf("<a") < 0)
+                            {
+                                $("#dialog-message-gp").dialog({
+                                    modal: true,
+
+                                    buttons: {
+                                        Annulla: function () {
+                                            $(this).dialog("close");
+                                        },
+                                        Ok: function () {
+                                            $('#loading').show();
+                                            $(this).dialog("close");
+                                            var params = "piva=" + rowid;
+                                            var request = new XMLHttpRequest();
+                                            request.responseType = "blob";
+                                            request.open("POST", "./GetGlobalReportDirect", true);
+                                            request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                                            request.onload = function () {
+                                                var url = window.URL.createObjectURL(this.response);
+                                                var a = document.createElement("a");
+                                                document.body.appendChild(a);
+                                                a.href = url;
+                                                a.download = rowid + ".pdf";
+                                                $('#loading').hide();
+                                                a.click();
+                                            }
+                                            request.send(params);
+
+                                        }
+                                    }
+                                });
+                            }
+
+                        break;
+                }
+            },
+            mtype: 'POST',
+            repeatitems: false,
+            colNames: ['Partita Iva', 'Ragione Sociale', 'Indirizzo', 'Provincia', 'Valutaz.', 'Rapporto','Pdf Aggiornato', 'Stato Attività', ''],
+            colModel: [
+        { name: 'PartitaIva', index: 'id', align: "center", classes: "puntatore", key: true },
+   		{ name: 'RagioneSociale', index: 'RagioneSociale', sortable: false, align: "center" },
+        { name: 'Indirizzo', index: 'Indirizzo', sortable: false, align: "center" },
+        { name: 'Provincia', index: 'Provincia', sortable: false, align: "center" },
+        { name: 'Rating', index: 'Rating', formatter: cervedFormatter, sortable: false, align: "center", align: "center" },
+        { name: 'Rapporto', index: 'Rapporto', formatter: reportFormatter, sortable: false, align: "center", align: "center" },
+        { name: 'Rapportonew', index: 'Rapportonew', formatter: reportnewFormatter, sortable: false, align: "center" },
+        { name: 'StatoAttivita', index: 'StatoAttivita', formatter: statoFormatter, sortable: false, align: "center", align: "center" },
+        { name: 'Osservatorio', index: 'Osservatorio', formatter: osservatorioFormatter, sortable: false, align: "left" },
+   	],
+            jsonReader: { repeatitems: false },
+            viewrecords: true,
+            sortname: 'Esposizione',
+            pageSize: -1,
+            viewrecords: true,
+            pgbuttons: true,
+            pginput: false,
+            sortorder: "desc",
+            caption: ""
+        });
+
+        function reportFormatter(cellvalue, options, rowObject) {
+            var report = cellvalue;
+            var link = '@Url.Action("Check","PDF")';
+            if (report != "") {
+                report = "<a href='" + link + "/" + report + "' target='_blank'><img src='../content/images/pdf.gif' style='height:26px;width:25px' alt='Report PDF Cerved' name='Report PDF Cerved' /></a>";
+            }
+            else {
+
+                link = '@Url.Action("GetGlobalReportDirect","CreditSafe")';
+                report = "<a href='" + link + "?piva=" + rowObject.PartitaIva + "' target='_blank'><img src='../content/images/lente_ingr.png' style='height:26px;width:25px' alt='Report PDF Cerved' name='Report PDF Cerved' /></a>";
+            }
+            return report;
+
+        }
+        function reportnewFormatter(cellvalue, options, rowObject) {
+            var report = cellvalue;
+            var link = '@Url.Action("Check","PDF")';
+            if (report != "0") {
+                report = "<img src='../content/images/ok.png' style='height:26px;width:25px' alt='Report PDF Cerved' name='Report PDF Cerved' /></a>";
+            }
+            else {
+
+                link = '@Url.Action("GetGlobalReportDirect","CreditSafe")';
+                report = "<img src='../content/images/ko.jpg' style='height:26px;width:25px' alt='Report PDF Cerved' name='Report PDF Cerved' /></a>";
+            }
+            return report;
+        }
+        function fidoFormatter(cellvalue, options, rowObject) {
+            var display = "";
+            if (cellvalue == "0" || cellvalue == "") {
+                display = "N.D.";
+            }
+            else {
+                display = cellvalue;
+            }
+
+            return display;
+
+        }
+
+        function statoFormatter(cellvalue, options, rowObject) {
+            if (cellvalue == null)
+                returnValue = "Non rilevato";
+            else
+                returnValue = cellvalue;
+            return returnValue;
+
+        }
+
+        function osservatorioFormatter(cellvalue, options, rowObject) {
+            var link = '@Url.Action("Andamento","Mercato")';
+            var linkRC = '@Url.Action("RecuperoCrediti","MiaAzienda")';
+            if (cellvalue != "") {
+                //link = "&nbsp;&nbsp;<a href='" + link + "?piva=" + cellvalue + "'><img src='../content/images/lente.jpg' alt='Vai ad Andamento' title='Vai ad Andamento' /></a>&nbsp;&nbsp;<a href='" + linkRC + "?piva=" + cellvalue + "'><img src='../content/images/rc.jpg' width='25' height='25' alt='Vai a Recupero Crediti' title='Vai a Recupero Crediti' /></a>";
+                link = "<a href='" + link + "?piva=" + cellvalue + "'><i style='font-size:20px;padding-left:10px' class='fa fa-globe'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='" + linkRC + "?piva=" + cellvalue + "'><i class='fa fa-eur' style='font-size:20px'></i></a>";
+            }
+            else {
+                link = "N.D.";
+            }
+
+            return link;
+
+        }
+
+        function cervedFormatter(cellvalue, options, rowObject) {
+            var rating = parseInt(cellvalue);
+            var stato ="<img src='../Content/images/images.jpg'  />";
+            if (rating < 28&&rating>=0)
+                stato = "<img src='../Content/images/sfera_rossa.gif' alt='Rossa' title='Rossa' />";
+            else if (rating >= 28 && rating < 52)
+                stato = "<img src='../content/images/sfera_gialla.gif' alt='Gialla' title='Gialla' />";
+            else if (rating >= 52&&rating<=100)
+                    stato = "<img src='../content/images/sfera_verde.gif' alt='Verde' title='Verde' />";
+            return stato;
+        };
+
+        $("#cerved").jqGrid('navGrid', '#pagerCerved', { edit: false, add: false, del: false });
+
+
+
+        $('.ui-icon-seek-next').attr('alt', 'Pagina Successiva');
+        $('.ui-icon-seek-next').attr('title', 'Pagina Successiva');
+
+        $('.ui-icon-seek-prev').attr('alt', 'Pagina Precedente');
+        $('.ui-icon-seek-prev').attr('title', 'Pagina Precedente');
+
+        $('.ui-icon-seek-end').attr('alt', 'Ultima Pagina');
+        $('.ui-icon-seek-end').attr('title', 'Ultima Pagina');
+
+        $('.ui-icon-seek-first').attr('alt', 'Prima Pagina');
+        $('.ui-icon-seek-first').attr('title', 'Prima Pagina');
+    });
+    </script>
+}
+@section sectionTitle{
+    <div id="title">
+        <h1>Ricerca Anagrafica</h1>
+    </div>
+}
+@section additionalCss {
+    <link rel="stylesheet" type="text/css" media="screen" href="~/css/redmond/jquery-ui-1.8.2.custom.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/css/ui.jqgrid.css" />
+    <style>
+        div#cervedContainer div.ui-jqgrid .ui-widget-header {
+            background: -webkit-linear-gradient(top, #026ea2 0%,#027075 35%,#013b56 100%); /* Chrome10+,Safari5.1+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
+        }
+
+        div.ui-dialog-titlebar {
+            background: -webkit-linear-gradient(top, #026ea2 0%,#027075 35%,#013b56 100%); /* Chrome10+,Safari5.1+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+        }
+
+        body.loading {
+            overflow: hidden;
+        }
+
+            /* Anytime the body has the loading class, our
+        modal element will be visible */
+            body.loading .modal {
+                display: block;
+            }
+    </style>
+}
+
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+
+@section searchForm {
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+<br />
+<div id="dialog-message-gp" title="Ricerca Cerved" style="display:none">
+    <p>
+        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+        <!--La Richiesta sta per essere inoltrata, riceverete il Rapporto Informativo Global Profile sulla vostra casella di posta elettronica non appena disponibile.<br />Si desidera proseguire?-->
+        Si sta per scaricare il documento richiesto in formato Pdf. Questo potrebbe comportare dei costi aggiuntivi<br />Si desidera proseguire?
+    </p>
+</div>
+
+<div id="dialog-message-ok" title="Ricerca Cerved" style="display:none">
+    <p>
+        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+        <!--La richiesta è stata inoltrata. Riceverete il report sulla vostra casella email.<br />-->
+        Fatto !.<br />
+    </p>
+</div>
+<div id="dialog-message-piva" title="Ricerca Cerved" style="display:none">
+    <p>
+        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+        Non è possibile richiedere monitoraggi su posizioni la cui partita iva è assente
+    </p>
+</div>
+<div id="cervedContainer">
+    <div id="loading">
+        <!-- <img src="../../content/images/ajax-loader.gif" alt="Processing" />-->
+    </div>
+    <h2>Risultati Ricerca</h2>
+    <table id="cerved"></table>
+    <div id="pagerCerved"></div>
+</div>
+<div id="res"></div>
+<div class="modal">
+</div>
+
+
+

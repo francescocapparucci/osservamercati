@@ -1,0 +1,304 @@
+﻿@{
+    ViewBag.Title = "Azienda";
+}
+@section scripts {
+
+<script type="text/javascript">
+
+    function calcolaGiorni() {
+        $.post("./GetReportFasceGiorni",
+        function (data) {
+            $("#pieGiorni").dxPieChart({
+                loadingIndicator: {
+                    text: "...in attesa..."
+                },
+                palette: ['rgb(59,172,77)', 'rgb(226,231,88)', 'rgb(244,89,53)'],
+                dataSource: data.valueOf(),
+                title: {
+                    text: "Dilaz. Giorni"
+                },
+                legend: {
+                    horizontalAlignment: "center",
+                    verticalAlignment: "bottom",
+                    margin: 0,
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    }
+                },
+                pointClick: function (clickedPoint) {
+                    var rating = clickedPoint.originalArgument;
+                    switch (rating) {
+                        case "60 Giorni":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="giorni",valore ="60"}))';
+                            break;
+                        case "Tra i 60 e i 150 Giorni":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="giorni",valore ="150"}))';
+                            break;
+                        case "Oltre i 150 giorni":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="giorni",valore ="999"}))';
+                            break;
+                    }
+                    location.href = url;
+                },
+                tooltip: {
+                    enabled: true,
+                    percentPrecision: 2,
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText: function () {
+                        return this.argumentText + ' ' + this.valueText + " ( " + this.percentText + ")";
+                    }
+                }
+            ,
+                series: [{
+                    argumentField: "Fascia",
+                    valueField: "Companies",
+                    label: {
+                        visible: false,
+                        font: {
+                            size: 16,
+                            color: 'black'
+                        },
+                        connector: {
+                            visible: true,
+                            width: 0.5
+                        },
+                        position: "columns",
+                        customizeText: function (arg) {
+                            return arg.argumentText + ' ' + arg.valueText + " ( " + arg.percentText + ")";
+                        }
+                    }
+                }]
+            });
+        });
+    }
+
+
+    function calcolaVendite() {
+        $.post("./GetReportFasceVendite",
+        function (data) {
+            $("#pieVendite").dxPieChart({
+                loadingIndicator: {
+                    text: "...in attesa..."
+                },
+                palette: ['rgb(59,172,77)', 'rgb(226,231,88)', 'orange', 'rgb(244,89,53)'],
+                dataSource: data.valueOf(),
+                title: {
+                    text: "Vendite"
+                },
+                legend: {
+                    horizontalAlignment: "center",
+                    verticalAlignment: "bottom",
+                    margin: 0,
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    }
+                },
+                pointClick: function (clickedPoint) {
+                    var rating = clickedPoint.originalArgument;
+                    switch (rating) {
+                        case "Sotto i 20.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="vendite",valore ="20000"}))';
+                            break;
+                        case "Tra i 20.000 e i 100.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="vendite",valore ="100000"}))';
+                            break;
+                        case "Tra i 100.000 e i 400.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="vendite",valore ="400000"}))';
+                            break;
+                        case "Oltre i 400.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="vendite",valore ="999"}))';
+                            break;
+                    }
+                    location.href = url;
+                },
+                tooltip: {
+                    enabled: true,
+                    percentPrecision: 2,
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText: function () {
+                        return this.argumentText + ' ' + this.valueText + " ( " + this.percentText + ")";
+                    }
+                }
+        ,
+                series: [{
+                    commonPaneSettings: {
+                        backgroundColor: '#ffffff'
+                    },
+                    argumentField: "Fascia",
+                    valueField: "Companies",
+                    label: {
+                        visible: false,
+                        font: {
+                            size: 16,
+                            color: "black"
+                        },
+                        connector: {
+                            visible: true,
+                            width: 0.5
+                        },
+                        position: "columns",
+                        customizeText: function (arg) {
+                            return arg.argumentText + ' ' + arg.valueText + " ( " + arg.percentText + ")";
+                        }
+                    }
+                }]
+            });
+        });
+
+    }
+
+
+    function calcolaEsposizione() {        
+    $.post("./GetReportFasceEsposizione",
+        function (data) {
+            $("#pieEsposizione").dxPieChart({
+                loadingIndicator: {
+                    text: "...in attesa...",
+                    backgroundColor: "#ffffff",                
+                },                     
+                palette: ['rgb(59,172,77)', 'rgb(226,231,88)', 'orange', 'rgb(244,89,53)','gray'],
+                dataSource: data.valueOf(),
+                title: {
+                    text: "Esposiz."
+                },
+                legend: {
+                    horizontalAlignment: "center",
+                    verticalAlignment: "bottom",
+                    margin: 0,
+                    font: {
+                        color: 'black',
+                        weight: 700                        
+                    }
+                },
+                pointClick: function (clickedPoint) {
+                    var rating = clickedPoint.originalArgument;
+                    switch (rating) {
+                        case "Sotto i 1.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="esposizione",valore ="1000"}))';
+                            break;
+                        case "Tra i 1.000 e i 5.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti", "MiaAzienda", new { chiave = "esposizione", valore = "5000" }))';
+                            break;
+                        case "Tra i 5.000 e i 25.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="esposizione",valore ="25000"}))';
+                            break;
+                        case "Tra i 25.000 e i 100.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="esposizione",valore ="100000"}))';
+                            break;
+                        case "Sopra i 100.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="esposizione",valore ="999"}))';
+                            break;
+                    }
+                    location.href = url;
+                },
+                tooltip: {                    
+                    enabled: true,
+                    percentPrecision: 2,
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText: function () {
+                        return this.argumentText + ' ' + this.valueText + " ( " + this.percentText + ")";
+                    }
+                }
+        ,
+                series: [{
+                    argumentField: "Fascia",
+                    valueField: "Companies",                    
+                    label: {
+                        visible: false,                        
+                        font: {
+                            size: 16,
+                            color:"black"                           
+
+                        },
+                        connector: {
+                            visible: true,
+                            width: 0.5
+                        },
+                        position: "columns",
+                        customizeText: function (arg) {
+                            return arg.argumentText + ' ' + arg.valueText + " ( " + arg.percentText + ")";
+                        }
+                    }
+                }]
+            });
+        });
+
+    }
+
+    $(function () {
+
+        $('#pieVendite').hide();
+        $('#pieEsposizione').hide();
+        $('#pieGiorni').show();
+        calcolaGiorni();
+        
+        $('#btnGiorni').click(function () {
+            $('#pieVendite').hide();
+            $('#pieEsposizione').hide();
+            $('#pieGiorni').show();
+            calcolaGiorni();
+        });
+
+        $('#btnVendite').click(function () {
+            $('#pieGiorni').hide();
+            $('#pieEsposizione').hide();
+            $('#pieVendite').show();
+            calcolaVendite();
+        });
+
+        $('#btnEsposizione').click(function () {
+            $('#pieGiorni').hide();
+            $('#pieVendite').hide();
+            $('#pieEsposizione').show();
+            calcolaEsposizione();
+        });
+    });
+</script>
+}
+@section sectionTitle{
+    <h1>Azienda</h1>	
+    <a href="#" data-icon="gear" class="ui-btn-left">Imposta</a>    
+    <a href="~/Home/Logout" data-icon="delete" class="ui-btn-right">Uscita</a>    
+}
+@section additionalCss {
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/redmond/jquery-ui-1.8.2.custom.css" />
+}
+
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+@section searchForm {
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+<br />
+<div data-role="navbar">
+    <ul>
+        <li>
+            <a href="#" id="btnGiorni" data-role="button" class="ui-btn-active">Dilaz.Giorni</a>
+        </li>
+        <li>
+            <a href="#" id="btnVendite" data-role="button">Vendite</a>
+        </li>
+        <li>
+            <a href="#" id="btnEsposizione" data-role="button">Esposiz.</a>
+        </li>
+    </ul>
+</div>
+<br />
+<div id="pieGiorni" ></div>
+<div id="pieVendite" ></div>
+<div id="pieEsposizione"></div>

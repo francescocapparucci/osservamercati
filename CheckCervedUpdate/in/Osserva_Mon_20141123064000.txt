@@ -1,0 +1,2 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;23/11/2014;10/10/2015

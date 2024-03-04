@@ -1,0 +1,63 @@
+﻿@model CentraleRischiR2.Models.Search
+@{
+    ViewBag.Title = "_SearchCerved";
+
+}
+@{if (ViewBag.RicercaAbilitata)
+{<text>
+    <div class="box-ricerca collapse" id="boxCerved" data-toggle="true">
+        <!-- <h3 style="text-align:left;padding-left:5px">Ricerca Anagrafica</h3> -->
+        <div id="searchCervedForm">
+            @using (Html.BeginForm("Search", "CreditSafe", FormMethod.Post))
+            {
+
+                <h3 style="display:inline;color:#fff; padding-right:20px; font-weight:lighter;font-size:25px;">Ricerca Anagrafica:</h3>
+                @Html.TextBoxFor(model => model.RagioneSociale, new { @type = "search", @placeholder = " Ragione Sociale" })
+                <text>&nbsp; &nbsp;</text>
+                @Html.TextBoxFor(model => model.PartitaIva, new { @type = "search", @placeholder = " Partita Iva" })
+                <text>&nbsp; &nbsp;</text>
+                <input id="sub-cerca" type="submit" value="Cerca" />
+            }
+        </div>
+    </div>
+  
+    <div id="dialog-message" title="Ricerca Cerved" style="display:none">
+        <p>
+            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+            Specificare Ragione Sociale oppure Partita Iva per ricerca
+        </p>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+
+            /*
+            $("#accordion").accordion({
+                event: "click",
+                active: 0,
+                collapsible:true
+            });
+            */
+            $("#RagioneSociale").click(function () {
+                $("#PartitaIva").val("");
+            });
+            $("#PartitaIva").click(function () {
+                $("#RagioneSociale").val("");
+            });
+            $("form").first().submit(function () {
+                if ($.trim($("#RagioneSociale").val()) == "" && $.trim($("#PartitaIva").val()) == "") {
+                    $("#dialog-message").dialog({
+                        modal: true,
+                        buttons: {
+                            Ok: function () {
+                                $(this).dialog("close");
+                            }
+                        }
+                    });
+                    return false;
+                }
+            });
+        });
+    </script>
+</text>
+}
+}

@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "_NavBar";
+    var controller = (string)ViewContext.RouteData.Values["controller"];
+    var action = (string)ViewContext.RouteData.Values["action"];
+}
+<div class="navbar">
+    <ul class="menuNavbar" id="menu">
+        <li><a href="@Url.Action("Home", "LoggedHome")" @if (controller == "LoggedHome") { <text> style=text-decoration:underline </text> }>Home</a></li>
+        @{if (ViewBag.IdRuolo == 2)
+            {
+                <text>
+                    <li>
+                        La mia azienda
+                        <div class="dropdown_1column align_left">
+                            <div class="col_2">
+                                                <ul class="simple">
+                                                    <li><a @{if (action == "Andamento") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("Andamento","Mercato", new {andamento ="azienda" })">Andamento Azienda</a></li>
+                                                    <li><a @{if (action == "RepMer") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("RepMer", "ReportMercato")">Resoconto Report&nbsp;</a></li>
+                                                    <li><a @{if (action == "MonitoraggioPreferiti") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("MonitoraggioPreferiti", "MiaAzienda")">Monitoraggio&nbsp;Clienti</a></li>
+                                                    <li><a @{if (action == "PortafoglioClienti") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("PortafoglioClienti", "MiaAzienda")">Portafoglio&nbsp;Clienti</a></li>
+                                                    <li><a @{if (action == "RecuperoCrediti") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("RecuperoCrediti", "MiaAzienda")">Anticipo&nbsp;Fatture</a></li>
+                                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </text>
+            }
+        }
+        @{if (ViewBag.IdRuolo == 1)
+            {
+                <text>
+                    <li>
+                        Il mio Mercato
+                        <div class="dropdown_1column align_left">
+                            <div class="col_2">
+                                <ul class="simple">
+                                    <li><a @{if (action == "Andamento") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("Andamento","Mercato", new {andamento ="azienda" })">Andamento Azienda</a></li>
+                                    <li><a @{if (action == "MonitoraggioPreferiti") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("MonitoraggioPreferiti", "MiaAzienda")">Monitoraggio&nbsp;Clienti</a></li>
+                                    <li><a @{if (action == "PortafoglioClienti") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("PortafoglioClienti", "MiaAzienda")">Portafoglio&nbsp;Clienti</a></li>
+                                    <li><a @{if (action == "RecuperoCrediti") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("RecuperoCrediti", "MiaAzienda")">Recupero&nbsp;Crediti</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </text>
+            }
+        }
+
+
+        @{if (ViewBag.Ambiente != "MONOAZIENDALE")
+            {
+                <text>
+                    <li>
+                        <a href="@Url.Action("Andamento","Mercato")" @{if (controller == "Mercato") { <text> style=text-decoration:underline </text>  }}>Analisi Dei Dati</a>
+                        <div class="dropdown_1column align_left">
+                            <div class="col_2">
+                                <ul class="simple">
+                                    <li><a @{if (action == "Andamento") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("Andamento","Mercato")"> Andamento Mercati Osserva</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </text>
+            }
+            else
+            {
+                <text>
+                <li>
+                    <a href="@Url.Action("Andamento","Mercato")" @{if (controller == "Mercato") { <text> style=text-decoration:underline </text>  }}>Andamento</a>
+                </text>
+            }
+        }
+    </li>
+    @{if (ViewBag.IdRuolo == 1)
+        {
+            <text>
+                <li>
+                    <a @{if (action == "RepMer") { <text> style=text-decoration:underline </text>  }} href="@Url.Action("RepMer", "ReportMercato")">
+                        Report&nbsp;
+                    </a>
+                </li>
+            </text>
+        }
+    }
+    <li>
+        <a>Gestisci</a>
+        <div class="dropdown_1column align_left">
+            <div class="col_2">
+                <ul class="simple">
+                    @if (ViewBag.IdRuolo == 0)
+                    {
+                        <text>
+                            <li><a @if (action == "Gestione") { <text> style=text-decoration:underline </text> } href="@Url.Action("Gestione", "Gestione")">Gestione Aziende & Utenti</a></li>
+                        </text>
+                    }
+                    else
+                    {
+                        <text>
+                            <li><a @if (action == "Gestione") { <text> style=text-decoration:underline </text> } href="@Url.Action("GestioneUser", "Gestione")">Modifca Utente</a></li>
+                        </text>
+                    }
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li>
+        <a href="ftp://support:support@63.33.245.62/" data-role="button">Documenti</a>
+    </li>
+
+</ul>
+</div>
+<button id="btnCervedBox" class="btn btn-primary pull-right" type="button" data-toggle="collapse" data-target="#boxCerved" aria-expanded="false" aria-controls="collapseExample">
+    CERCA AZIENDA
+</button>

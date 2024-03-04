@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "_BreadCrumb";
+    var controller = (string)ViewContext.RouteData.Values["controller"];
+    var action = (string)ViewContext.RouteData.Values["action"];
+
+    var displayController = "";
+    var displayAction = "";
+
+    var url = Url.Action(action, controller);
+
+    switch(controller)
+    {
+        case "LoggedHome":
+            displayController = "Home";
+            break;
+        case "MiaAzienda":
+            displayController = "La Mia Azienda";
+            displayAction = " > Monitoraggio Preferiti";
+            break;
+        case "Mercato":
+            displayController = "Il Mercato";
+            displayAction = " > Andamento";
+            break;
+        case "Gestione":
+            displayController = "Gestione";
+            break;
+        case "ReportisticaAdmin":
+            displayController = "Reportistica   ";
+            break;
+    }
+
+    switch (action)
+    {
+        case "MonitoraggioPreferiti":
+            displayAction = " > Monitoraggio Preferiti";
+            break;
+        case "PortafoglioClienti":
+            displayAction = " > Portafoglio Clienti";
+            break;
+        case "RecuperoCrediti":
+            displayAction = " > Recupero Crediti";
+            break;
+        case "PosizionamentoAziendale":
+            displayAction = " > Posizionamento Aziendale";
+            break;
+        case "Andamento":
+            displayAction = " > Andamento";
+            break;
+        case "Posizionamento":
+            displayAction = " > Posizionamento Clienti";
+            break;
+
+
+    }
+}
+<h4 id="meta-info">Siete in: <a href="@url">@displayController</a> @displayAction</h4>

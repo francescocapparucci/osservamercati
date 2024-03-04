@@ -1,0 +1,3 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;6979281;LITTARRU FRANCO E C.;01670930922;01670930922;29/12/2014;RI061;A;Evento Procedura concorsuale;01/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;6979281;LITTARRU FRANCO E C.;01670930922;01670930922;29/12/2014;SA001;A;Variazione stato azienda;01/01/2015;29/12/2015

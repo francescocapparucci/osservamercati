@@ -1,0 +1,17 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;8030005;AGRORTOFRUTTA DIEMME;02858630920;02858630920;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;15/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;8030005;AGRORTOFRUTTA DIEMME;02858630920;02858630920;15/10/2014;BL001;U;Nuovo Bilancio Aziendale;15/01/2015;15/10/2015
+Documento acquistato per valutazione CDS;9842284;SERONE ANGELO;SRNNGL61A03D662L;01655050597;11/11/2014;RI041;A;Variazione PEC;15/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;8030005;AGRORTOFRUTTA DIEMME;02858630920;02858630920;11/11/2014;BL001;U;Nuovo Bilancio Aziendale;15/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;7647831;SAPIO;03303120616;03303120616;11/11/2014;BL001;U;Nuovo Bilancio Aziendale;15/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;8030005;AGRORTOFRUTTA DIEMME;02858630920;02858630920;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;15/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C.;03208570105;03208570105;13/11/2014;RI061;A;Evento Procedura concorsuale;15/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C.;03208570105;03208570105;13/11/2014;RI010;A;Variazione ragione sociale ufficiale;15/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C.;03208570105;03208570105;13/11/2014;RI082;A;Nuova carica per esponente;15/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C.;03208570105;03208570105;13/11/2014;SA003;N;Variazione stato azienda - cessazione;15/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;7647831;SAPIO;03303120616;03303120616;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;15/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;8030005;AGRORTOFRUTTA DIEMME;02858630920;02858630920;29/12/2014;BL001;U;Nuovo Bilancio Aziendale;15/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C.;03208570105;03208570105;30/12/2014;RI061;A;Evento Procedura concorsuale;15/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C.;03208570105;03208570105;30/12/2014;RI010;A;Variazione ragione sociale ufficiale;15/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C.;03208570105;03208570105;30/12/2014;RI082;A;Nuova carica per esponente;15/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C.;03208570105;03208570105;30/12/2014;SA003;N;Variazione stato azienda - cessazione;15/01/2015;30/12/2015

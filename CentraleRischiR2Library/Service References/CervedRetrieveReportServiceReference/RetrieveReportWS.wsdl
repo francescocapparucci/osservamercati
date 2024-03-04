@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.lince.it/WSCorporate_1/RetrieveReportService" name="RetrieveReportWS" targetNamespace="http://www.lince.it/WSCorporate_1/RetrieveReportService" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema targetNamespace="http://www.lince.it/WSCorporate_1/RetrieveReportService" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="DocumentFormatNotAvailableException" type="tns:DocumentFormatNotAvailableException" />
+      <xs:element name="NotAvailableReportException" type="tns:NotAvailableReportException" />
+      <xs:element name="RetrieveReportException" type="tns:RetrieveReportException" />
+      <xs:element name="queryRequestDb" type="tns:queryRequestDb" />
+      <xs:element name="queryRequestDbExtended" type="tns:queryRequestDbExtended" />
+      <xs:element name="queryRequestDbExtendedResponse" type="tns:queryRequestDbExtendedResponse" />
+      <xs:element name="queryRequestDbResponse" type="tns:queryRequestDbResponse" />
+      <xs:element name="retrieveReport" type="tns:retrieveReport" />
+      <xs:element name="retrieveReportExtended" type="tns:retrieveReportExtended" />
+      <xs:element name="retrieveReportExtendedResponse" type="tns:retrieveReportExtendedResponse" />
+      <xs:element name="retrieveReportResponse" type="tns:retrieveReportResponse" />
+      <xs:complexType name="queryRequestDb">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="queryDbParams" type="tns:queryRequestParameters" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryRequestParameters">
+        <xs:sequence>
+          <xs:element name="dataBaseQueryFilter" type="tns:dataBaseQueryFilter" />
+          <xs:element name="companyName" nillable="true" type="xs:string" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element name="vatNumber" nillable="true" type="xs:string" />
+          <xs:element name="companyCode" nillable="true" type="xs:long" />
+          <xs:element name="personCode" nillable="true" type="xs:long" />
+          <xs:element name="reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="connectedUsers" type="xs:boolean" />
+          <xs:element name="dateTo" nillable="true" type="xs:dateTime" />
+          <xs:element name="dateFrom" nillable="true" type="xs:dateTime" />
+          <xs:element name="check" nillable="true" type="tns:customDbCheck" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryRequestDbResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="requestCodes" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RetrieveReportException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retrieveReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="retrieveReportParameter" type="tns:retrieveReportParameter" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retrieveReportParameter">
+        <xs:sequence>
+          <xs:element name="reportCode" type="xs:long" />
+          <xs:element name="documentFormat" nillable="true" type="tns:documentFormat" />
+          <xs:element minOccurs="0" name="dataObject" type="xs:boolean" />
+          <xs:element minOccurs="0" name="documentType" type="tns:documentType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retrieveReportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="report" type="tns:report" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="report">
+        <xs:sequence>
+          <xs:element name="companyData" nillable="true" type="tns:companyData" />
+          <xs:element xmlns:ns1="http://www.w3.org/2005/05/xmlmime" ns1:expectedContentTypes="application/octet-stream" minOccurs="0" name="document" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="companyData">
+        <xs:sequence>
+          <xs:element name="companyIdentification" nillable="true" type="tns:companyIdentification" />
+          <xs:element name="reportInfo" nillable="true" type="tns:reportInfo" />
+          <xs:element name="companyEvaluation" nillable="true" type="tns:companyEvaluation" />
+          <xs:element name="structuralData" nillable="true" type="tns:structuralData" />
+          <xs:element name="shareholdersData" nillable="true" type="tns:shareholdersData" />
+          <xs:element name="financialData" nillable="true" type="tns:financialData" />
+          <xs:element maxOccurs="unbounded" name="financialRatios" nillable="true" type="tns:financialRatios" />
+          <xs:element name="financialForecast" nillable="true" type="tns:financialForecast" />
+          <xs:element maxOccurs="unbounded" name="financialStatements" nillable="true" type="tns:financialStatements" />
+          <xs:element maxOccurs="unbounded" name="shortFinancialStatement" nillable="true" type="tns:shortFinancialStatement" />
+          <xs:element maxOccurs="unbounded" name="locations" nillable="true" type="tns:location" />
+          <xs:element name="protests" nillable="true" type="tns:protests" />
+          <xs:element name="closingDown" nillable="true" type="tns:closingDown" />
+          <xs:element maxOccurs="unbounded" name="windingUp" nillable="true" type="tns:windingUp" />
+          <xs:element name="companyName" nillable="true" type="tns:directorships" />
+          <xs:element maxOccurs="unbounded" name="customFinancialStatements" nillable="true" type="tns:customFinancialStatement" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="companyIdentification">
+        <xs:sequence>
+          <xs:element name="companyName" nillable="true" type="xs:string" />
+          <xs:element name="legalForm" nillable="true" type="xs:string" />
+          <xs:element name="encodedLegalForm" nillable="true" type="xs:string" />
+          <xs:element name="address" nillable="true" type="xs:string" />
+          <xs:element name="regNumber" nillable="true" type="xs:string" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element name="vatNumber" nillable="true" type="xs:string" />
+          <xs:element name="linceCode" nillable="true" type="xs:long" />
+          <xs:element name="phoneNumber" nillable="true" type="xs:string" />
+          <xs:element name="webSite" nillable="true" type="xs:string" />
+          <xs:element name="companyStatus" nillable="true" type="xs:string" />
+          <xs:element name="encodedCompanyStatus" nillable="true" type="xs:string" />
+          <xs:element name="activity" nillable="true" type="xs:string" />
+          <xs:element name="istatCode" nillable="true" type="xs:string" />
+          <xs:element name="naceCode" nillable="true" type="xs:string" />
+          <xs:element name="rae" nillable="true" type="xs:string" />
+          <xs:element name="sae" nillable="true" type="xs:string" />
+          <xs:element name="officialCompanyName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="reportInfo">
+        <xs:sequence>
+          <xs:element name="deliveryDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="reference" nillable="true" type="xs:string" />
+          <xs:element name="reportInfo" nillable="true" type="xs:long" />
+          <xs:element name="deliveryCode" nillable="true" type="xs:long" />
+          <xs:element name="originalRequestCode" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="companyEvaluation">
+        <xs:sequence>
+          <xs:element name="creditDesc" nillable="true" type="xs:string" />
+          <xs:element name="creditCode" nillable="true" type="xs:string" />
+          <xs:element name="creditValue" nillable="true" type="xs:string" />
+          <xs:element name="creditRisk" nillable="true" type="xs:string" />
+          <xs:element name="trend" nillable="true" type="xs:string" />
+          <xs:element name="payments" nillable="true" type="xs:string" />
+          <xs:element name="financialSituation" nillable="true" type="xs:string" />
+          <xs:element name="negativeEvents" nillable="true" type="xs:string" />
+          <xs:element name="protestsNumber" type="xs:int" />
+          <xs:element name="protestsValue" type="xs:float" />
+          <xs:element name="protestsLatestDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="protestsLatestDateOnCompany" nillable="true" type="xs:dateTime" />
+          <xs:element name="protestsLastDateOnPrincipals" nillable="true" type="xs:dateTime" />
+          <xs:element name="protestsLastDateOnShareholders" nillable="true" type="xs:dateTime" />
+          <xs:element name="protestsLastDateOnExPrincipals" nillable="true" type="xs:dateTime" />
+          <xs:element name="protestsLastDateOnUnofficials" nillable="true" type="xs:dateTime" />
+          <xs:element name="protestsNumberOnCompany" type="xs:int" />
+          <xs:element name="protestsValueOnCompany" type="xs:float" />
+          <xs:element name="protestsNumberOnPrincipals" type="xs:int" />
+          <xs:element name="protestsValueOnPrincipals" type="xs:float" />
+          <xs:element name="protestsNumberOnShareholders" type="xs:int" />
+          <xs:element name="protestsValueOnShareholders" type="xs:float" />
+          <xs:element name="protestsNumberOnExPrincipals" type="xs:int" />
+          <xs:element name="protestsValueOnExPrincipals" type="xs:float" />
+          <xs:element name="protestsNumberOnUnofficials" type="xs:int" />
+          <xs:element name="protestsValueOnUnofficials" type="xs:float" />
+          <xs:element name="registeredChargesNumber" type="xs:int" />
+          <xs:element name="registeredCourtChargesNumber" type="xs:int" />
+          <xs:element name="registeredCourtChargesLastDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="registeredCuratorShipChargesLatestDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="registeredCuratorShipChargesNumber" type="xs:int" />
+          <xs:element name="registeredChargesLatestDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="managementScore" nillable="true" type="xs:string" />
+          <xs:element name="ratingValue" nillable="true" type="xs:string" />
+          <xs:element name="creditworthinessdegreeValue" nillable="true" type="xs:float" />
+          <xs:element name="creditworthinessdegreeType" nillable="true" type="xs:string" />
+          <xs:element name="probabilityOfInsolvency" nillable="true" type="xs:float" />
+          <xs:element name="mbdRating" nillable="true" type="xs:string" />
+          <xs:element name="mbdRatingClass" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="structuralData">
+        <xs:sequence>
+          <xs:element name="staff" nillable="true" type="xs:int" />
+          <xs:element name="dateOfIncorporation" nillable="true" type="xs:dateTime" />
+          <xs:element name="startingDate" nillable="true" type="xs:dateTime" />
+          <xs:element maxOccurs="unbounded" name="officialDirectors" nillable="true" type="tns:officialDirector" />
+          <xs:element name="dateOfDeed" nillable="true" type="xs:dateTime" />
+          <xs:element name="shareCapital" nillable="true" type="xs:float" />
+          <xs:element name="participationsNumber" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="officialDirector">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="xs:string" />
+          <xs:element minOccurs="0" name="birthLocation" type="xs:string" />
+          <xs:element minOccurs="0" name="city" type="xs:string" />
+          <xs:element minOccurs="0" name="companyName" type="xs:string" />
+          <xs:element minOccurs="0" name="dateBirth" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="directorship" type="xs:string" />
+          <xs:element minOccurs="0" name="directorshipCode" type="xs:int" />
+          <xs:element minOccurs="0" name="directorshipPriority" type="xs:int" />
+          <xs:element minOccurs="0" name="directorshipStartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="firstName" type="xs:string" />
+          <xs:element minOccurs="0" name="fiscalCode" type="xs:string" />
+          <xs:element minOccurs="0" name="legalForm" type="xs:string" />
+          <xs:element minOccurs="0" name="linceCompanyCode" type="xs:long" />
+          <xs:element minOccurs="0" name="lincePersonCode" type="xs:long" />
+          <xs:element minOccurs="0" name="postCode" type="xs:string" />
+          <xs:element minOccurs="0" name="region" type="xs:string" />
+          <xs:element minOccurs="0" name="surname" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="shareholdersData">
+        <xs:sequence>
+          <xs:element name="shareCapital" type="xs:float" />
+          <xs:element maxOccurs="unbounded" name="shareholder" nillable="true" type="tns:shareholder" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="shareholder">
+        <xs:sequence>
+          <xs:element name="numberOfShares" type="xs:int" />
+          <xs:element name="typeOfRight" nillable="true" type="xs:string" />
+          <xs:element name="shareholderName" nillable="true" type="xs:string" />
+          <xs:element name="valueOfShares" type="xs:float" />
+          <xs:element name="percentageRate" type="xs:float" />
+          <xs:element name="shareholderFiscalCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="financialData">
+        <xs:sequence>
+          <xs:element name="shareholdersFundsValue" nillable="true" type="xs:float" />
+          <xs:element name="shareholdersFundsYear" type="xs:int" />
+          <xs:element name="kindOfTurnover" nillable="true" type="xs:string" />
+          <xs:element name="turnoverYear" type="xs:int" />
+          <xs:element name="turnover" nillable="true" type="xs:float" />
+          <xs:element name="operatingResultValue" nillable="true" type="xs:float" />
+          <xs:element name="shareCapital" nillable="true" type="xs:float" />
+          <xs:element name="authorizedShareCapital" nillable="true" type="xs:float" />
+          <xs:element name="issuedShareCapital" nillable="true" type="xs:float" />
+          <xs:element name="paidupShareCapital" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="financialRatios">
+        <xs:sequence>
+          <xs:element name="year" type="xs:int" />
+          <xs:element name="debtRatio" nillable="true" type="xs:float" />
+          <xs:element name="financialIndependenceRatio" nillable="true" type="xs:float" />
+          <xs:element name="dependenceOnBanksRatio" nillable="true" type="xs:float" />
+          <xs:element name="currentRatio" nillable="true" type="xs:float" />
+          <xs:element name="quickRatio" nillable="true" type="xs:float" />
+          <xs:element name="netWorkingCapital" nillable="true" type="xs:float" />
+          <xs:element name="treasuryMargin" nillable="true" type="xs:float" />
+          <xs:element name="structureMargin" nillable="true" type="xs:float" />
+          <xs:element name="guaranteeRatioOfMediumLongTermDebts" nillable="true" type="xs:float" />
+          <xs:element name="mediumLongTermFinancialEquilibrium" nillable="true" type="xs:float" />
+          <xs:element name="investmentsElasticity" nillable="true" type="xs:float" />
+          <xs:element name="investmentsElasticityLevel" nillable="true" type="xs:float" />
+          <xs:element name="creditsAveragePeriod" nillable="true" type="xs:float" />
+          <xs:element name="stocksAverageTerm" nillable="true" type="xs:float" />
+          <xs:element name="debtsAveragePeriod" nillable="true" type="xs:float" />
+          <xs:element name="operatingCostProductionValue" nillable="true" type="xs:float" />
+          <xs:element name="consumptionOfStocksOperatingCosts" nillable="true" type="xs:float" />
+          <xs:element name="generalExpensesOperatingCost" nillable="true" type="xs:float" />
+          <xs:element name="labourCostOperatingCost" nillable="true" type="xs:float" />
+          <xs:element name="amortizationsAndDepreciationsOperatingCost" nillable="true" type="xs:float" />
+          <xs:element name="financialChargesOnSales" nillable="true" type="xs:float" />
+          <xs:element name="productionValuePerEmployee" nillable="true" type="xs:float" />
+          <xs:element name="salesPerEmployee" nillable="true" type="xs:float" />
+          <xs:element name="valueAddedPerEmployee" nillable="true" type="xs:float" />
+          <xs:element name="labourCostPerEmployee" nillable="true" type="xs:float" />
+          <xs:element name="profitLossPerEmployee" nillable="true" type="xs:float" />
+          <xs:element name="cashFlow" nillable="true" type="xs:float" />
+          <xs:element name="incidenceOfRecOfTangAssetsCashflow" nillable="true" type="xs:float" />
+          <xs:element name="ros" nillable="true" type="xs:float" />
+          <xs:element name="roi" nillable="true" type="xs:float" />
+          <xs:element name="roe" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="financialForecast">
+        <xs:sequence>
+          <xs:element name="financialYear" nillable="true" type="xs:float" />
+          <xs:element name="sales" nillable="true" type="xs:float" />
+          <xs:element name="inventoryVariation" nillable="true" type="xs:float" />
+          <xs:element name="totalRevenues" nillable="true" type="xs:float" />
+          <xs:element name="costOfGoodsSold" nillable="true" type="xs:float" />
+          <xs:element name="changeInInventory" nillable="true" type="xs:float" />
+          <xs:element name="overheadExpenses" nillable="true" type="xs:float" />
+          <xs:element name="staffCost" nillable="true" type="xs:float" />
+          <xs:element name="grossMargin" nillable="true" type="xs:float" />
+          <xs:element name="amortizationsAndDepreciations" nillable="true" type="xs:float" />
+          <xs:element name="operatingResult" nillable="true" type="xs:float" />
+          <xs:element name="financialIncomeAndExpenses" nillable="true" type="xs:float" />
+          <xs:element name="financialIncome" nillable="true" type="xs:float" />
+          <xs:element name="financialExpenses" nillable="true" type="xs:float" />
+          <xs:element name="preTaxProfit" nillable="true" type="xs:float" />
+          <xs:element name="forecastCashFlow" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="financialStatements">
+        <xs:sequence>
+          <xs:element name="financialYear" type="xs:int" />
+          <xs:element name="assets" nillable="true" type="xs:float" />
+          <xs:element name="fixedAssets" nillable="true" type="xs:float" />
+          <xs:element name="intangibleAssets" nillable="true" type="xs:float" />
+          <xs:element name="tangibleAssets" nillable="true" type="xs:float" />
+          <xs:element name="financialAssets" nillable="true" type="xs:float" />
+          <xs:element name="currentAssets" nillable="true" type="xs:float" />
+          <xs:element name="stocks" nillable="true" type="xs:float" />
+          <xs:element name="creditsAgainstCustomers" nillable="true" type="xs:float" />
+          <xs:element name="otherShortTermCredits" nillable="true" type="xs:float" />
+          <xs:element name="liabilities" nillable="true" type="xs:float" />
+          <xs:element name="shareholdersFunds" nillable="true" type="xs:float" />
+          <xs:element name="shareCapital" nillable="true" type="xs:float" />
+          <xs:element name="other" nillable="true" type="xs:float" />
+          <xs:element name="mediumLongTermLiabilities" nillable="true" type="xs:float" />
+          <xs:element name="debtsTowardsBanksTerm" nillable="true" type="xs:float" />
+          <xs:element name="otherDebts" nillable="true" type="xs:float" />
+          <xs:element name="currentLiabilities" nillable="true" type="xs:float" />
+          <xs:element name="debtsTowardsBanksCorr" nillable="true" type="xs:float" />
+          <xs:element name="tradeCreditors" nillable="true" type="xs:float" />
+          <xs:element name="otherShortTermLiabilities" nillable="true" type="xs:float" />
+          <xs:element name="sales" nillable="true" type="xs:float" />
+          <xs:element name="variationsOfStocks" nillable="true" type="xs:float" />
+          <xs:element name="workInProgress" nillable="true" type="xs:float" />
+          <xs:element name="capitalizedExpenses" nillable="true" type="xs:float" />
+          <xs:element name="totalRevenues" nillable="true" type="xs:float" />
+          <xs:element name="costOfGoodsSold" nillable="true" type="xs:float" />
+          <xs:element name="changeInInventory" nillable="true" type="xs:float" />
+          <xs:element name="overheadExpenses" nillable="true" type="xs:float" />
+          <xs:element name="staffCost" nillable="true" type="xs:float" />
+          <xs:element name="grossMargin" nillable="true" type="xs:float" />
+          <xs:element name="amortizationsAndDepreciations" nillable="true" type="xs:float" />
+          <xs:element name="provisions" nillable="true" type="xs:float" />
+          <xs:element name="operatingResult" nillable="true" type="xs:float" />
+          <xs:element name="financialIncomeAndExpenses" nillable="true" type="xs:float" />
+          <xs:element name="financialIncome" nillable="true" type="xs:float" />
+          <xs:element name="financialExpenses" nillable="true" type="xs:float" />
+          <xs:element name="otherIncomAndCosts" nillable="true" type="xs:float" />
+          <xs:element name="adjustmentsFin" nillable="true" type="xs:float" />
+          <xs:element name="extraordinaryItemsResult" nillable="true" type="xs:float" />
+          <xs:element name="preTaxProfit" nillable="true" type="xs:float" />
+          <xs:element name="taxPayable" nillable="true" type="xs:float" />
+          <xs:element name="profitAfterTax" nillable="true" type="xs:float" />
+          <xs:element name="adjustmentsAcc" nillable="true" type="xs:float" />
+          <xs:element name="profitOrLoss" nillable="true" type="xs:float" />
+          <xs:element name="cashFlow" nillable="true" type="xs:float" />
+          <xs:element name="isf" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="shortFinancialStatement">
+        <xs:sequence>
+          <xs:element name="regNumber" nillable="true" type="xs:string" />
+          <xs:element name="businessSector" nillable="true" type="xs:string" />
+          <xs:element name="closingDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="originalCurrency" nillable="true" type="xs:string" />
+          <xs:element name="creditsAgainstShareholders" nillable="true" type="xs:float" />
+          <xs:element name="fixedAssets" nillable="true" type="xs:float" />
+          <xs:element name="intangileAssets" nillable="true" type="xs:float" />
+          <xs:element name="tangibleAssets" nillable="true" type="xs:float" />
+          <xs:element name="landAndBuildings" nillable="true" type="xs:float" />
+          <xs:element name="otherTangibleAssets" nillable="true" type="xs:float" />
+          <xs:element name="financialAssets" nillable="true" type="xs:float" />
+          <xs:element name="participations" nillable="true" type="xs:float" />
+          <xs:element name="creditsAgainstSubsidiariesAndRelatedCompanies" nillable="true" type="xs:float" />
+          <xs:element name="otherFinancialAssets" nillable="true" type="xs:float" />
+          <xs:element name="workingCapital" nillable="true" type="xs:float" />
+          <xs:element name="stocks" nillable="true" type="xs:float" />
+          <xs:element name="rawMaterials" nillable="true" type="xs:float" />
+          <xs:element name="semiFinishedAndFinishedGoods" nillable="true" type="xs:float" />
+          <xs:element name="workInProgress" nillable="true" type="xs:float" />
+          <xs:element name="credits" nillable="true" type="xs:float" />
+          <xs:element name="creditsAgainstCustomers" nillable="true" type="xs:float" />
+          <xs:element name="otherCredits" nillable="true" type="xs:float" />
+          <xs:element name="otherShortTermFinancialAssets" nillable="true" type="xs:float" />
+          <xs:element name="liquidFunds" nillable="true" type="xs:float" />
+          <xs:element name="assetsAccrualsAndPayables" nillable="true" type="xs:float" />
+          <xs:element name="totalAssets" nillable="true" type="xs:float" />
+          <xs:element name="shareholdersFunds" nillable="true" type="xs:float" />
+          <xs:element name="provisionAndChargesAccounts" nillable="true" type="xs:float" />
+          <xs:element name="severancePay" nillable="true" type="xs:float" />
+          <xs:element name="mediumLongTermDebts" nillable="true" type="xs:float" />
+          <xs:element name="mediumLongTermDebtsTowardsBanks" nillable="true" type="xs:float" />
+          <xs:element name="otherMediumLongTermDebts" nillable="true" type="xs:float" />
+          <xs:element name="shortTermDebts" nillable="true" type="xs:float" />
+          <xs:element name="shortTermDebtsTowardsBanks" nillable="true" type="xs:float" />
+          <xs:element name="trateCreditors" nillable="true" type="xs:float" />
+          <xs:element name="advanceFromCustomers" nillable="true" type="xs:float" />
+          <xs:element name="otherShortTermDebts" nillable="true" type="xs:float" />
+          <xs:element name="liabilitiesAccrualsAndPayables" nillable="true" type="xs:float" />
+          <xs:element name="totalLiabilities" nillable="true" type="xs:float" />
+          <xs:element name="totalRevenues" nillable="true" type="xs:float" />
+          <xs:element name="sales" nillable="true" type="xs:float" />
+          <xs:element name="inventoryVariation" nillable="true" type="xs:float" />
+          <xs:element name="changeInWorkInProgress" nillable="true" type="xs:float" />
+          <xs:element name="increasesOfFixedAssets" nillable="true" type="xs:float" />
+          <xs:element name="otherProceeds" nillable="true" type="xs:float" />
+          <xs:element name="operatingCosts" nillable="true" type="xs:float" />
+          <xs:element name="costOfGoodsSold" nillable="true" type="xs:float" />
+          <xs:element name="changeInInventory" nillable="true" type="xs:float" />
+          <xs:element name="overheadExpenses" nillable="true" type="xs:float" />
+          <xs:element name="staffCost" nillable="true" type="xs:float" />
+          <xs:element name="depreciations" nillable="true" type="xs:float" />
+          <xs:element name="provisions" nillable="true" type="xs:float" />
+          <xs:element name="differentOperatingCharges" nillable="true" type="xs:float" />
+          <xs:element name="financialIncomeAndExpenses" nillable="true" type="xs:float" />
+          <xs:element name="financialIncome" nillable="true" type="xs:float" />
+          <xs:element name="financialCharges" nillable="true" type="xs:float" />
+          <xs:element name="financialAssetsVariations" nillable="true" type="xs:float" />
+          <xs:element name="settlementOfExtraordinaryeturnsAndCosts" nillable="true" type="xs:float" />
+          <xs:element name="preTaxProfit" nillable="true" type="xs:float" />
+          <xs:element name="taxesOnIncome" nillable="true" type="xs:float" />
+          <xs:element name="profitLoss" nillable="true" type="xs:float" />
+          <xs:element name="adjustments" nillable="true" type="xs:float" />
+          <xs:element name="profitLossAfterTax" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="location">
+        <xs:sequence>
+          <xs:element name="address" nillable="true" type="xs:string" />
+          <xs:element name="city" nillable="true" type="xs:string" />
+          <xs:element name="postCode" nillable="true" type="xs:string" />
+          <xs:element name="kindOfLocation" nillable="true" type="xs:string" />
+          <xs:element name="region" nillable="true" type="xs:string" />
+          <xs:element name="country" nillable="true" type="xs:string" />
+          <xs:element name="district" nillable="true" type="xs:string" />
+          <xs:element name="locationId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="protests">
+        <xs:sequence>
+          <xs:element name="protestsNumber" type="xs:int" />
+          <xs:element name="protestsValue" type="xs:float" />
+          <xs:element name="protestsLatestDate" nillable="true" type="xs:dateTime" />
+          <xs:element maxOccurs="unbounded" name="companyProtests" nillable="true" type="tns:entityProtest" />
+          <xs:element maxOccurs="unbounded" name="directorProtests" nillable="true" type="tns:entityProtest" />
+          <xs:element maxOccurs="unbounded" name="shareholdersProtests" nillable="true" type="tns:entityProtest" />
+          <xs:element maxOccurs="unbounded" name="unofficialProtests" nillable="true" type="tns:entityProtest" />
+          <xs:element maxOccurs="unbounded" name="exDirectorProtests" nillable="true" type="tns:entityProtest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="entityProtest">
+        <xs:sequence>
+          <xs:element name="kindOfLink" nillable="true" type="xs:string" />
+          <xs:element name="companyName" nillable="true" type="xs:string" />
+          <xs:element name="name" nillable="true" type="xs:string" />
+          <xs:element name="protestsNumber" nillable="true" type="xs:int" />
+          <xs:element name="protestsAmount" nillable="true" type="xs:float" />
+          <xs:element name="linceCompanyCode" nillable="true" type="xs:long" />
+          <xs:element name="lincePersonCode" nillable="true" type="xs:long" />
+          <xs:element name="address" nillable="true" type="xs:string" />
+          <xs:element name="city" nillable="true" type="xs:string" />
+          <xs:element name="region" nillable="true" type="xs:string" />
+          <xs:element name="protestsLatestDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="closingDown">
+        <xs:sequence>
+          <xs:element name="closingDownCause" nillable="true" type="xs:string" />
+          <xs:element name="recordCancellationDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="closingDownRegistrationDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="closingDownDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="windingUp">
+        <xs:sequence>
+          <xs:element name="windingUpCode" nillable="true" type="xs:string" />
+          <xs:element name="windingUpOpeningDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="windingUpEndDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="windingUpClosingDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="deedCode" nillable="true" type="xs:string" />
+          <xs:element name="executorDescription" nillable="true" type="xs:string" />
+          <xs:element name="deedRegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element name="deedRegistrationDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="deedRegistrationPlace" nillable="true" type="xs:string" />
+          <xs:element name="deedRegistrationPlaceAbbr" nillable="true" type="xs:string" />
+          <xs:element name="windingUpRevocationDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="directorships">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="entityDirectorship" nillable="true" type="tns:entityDirectorship" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="entityDirectorship">
+        <xs:sequence>
+          <xs:element name="lincePersonCode" nillable="true" type="xs:long" />
+          <xs:element name="name" nillable="true" type="xs:string" />
+          <xs:element name="surname" nillable="true" type="xs:string" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element maxOccurs="unbounded" name="directorship" nillable="true" type="tns:directorship" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="directorship">
+        <xs:sequence>
+          <xs:element name="companyName" nillable="true" type="xs:string" />
+          <xs:element name="legalForm" nillable="true" type="xs:string" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element name="linceCompanyCode" nillable="true" type="xs:string" />
+          <xs:element name="directorship" nillable="true" type="xs:string" />
+          <xs:element name="directorshipStatus" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="customFinancialStatement">
+        <xs:sequence>
+          <xs:element name="subscribedCapitalUnpaid" nillable="true" type="xs:float" />
+          <xs:element name="fixedAssets" nillable="true" type="xs:float" />
+          <xs:element name="intangibleAssets" nillable="true" type="xs:float" />
+          <xs:element name="tangibleAssets" nillable="true" type="xs:float" />
+          <xs:element name="landAndBuildings" nillable="true" type="xs:float" />
+          <xs:element name="financialInstruments" nillable="true" type="xs:float" />
+          <xs:element name="amountsOwedByAffiliatedAssociatedCoS" nillable="true" type="xs:float" />
+          <xs:element name="equityInvestments" nillable="true" type="xs:float" />
+          <xs:element name="ownShares" nillable="true" type="xs:float" />
+          <xs:element name="currentAssets" nillable="true" type="xs:float" />
+          <xs:element name="stocks" nillable="true" type="xs:float" />
+          <xs:element name="finishedGoodsAndWorkInProgress" nillable="true" type="xs:float" />
+          <xs:element name="debtors" nillable="true" type="xs:float" />
+          <xs:element name="shortTermDebtors" nillable="true" type="xs:float" />
+          <xs:element name="tradeDebtors" nillable="true" type="xs:float" />
+          <xs:element name="shortTermTradeDebtors" nillable="true" type="xs:float" />
+          <xs:element name="financialAssets" nillable="true" type="xs:float" />
+          <xs:element name="financialAssetsOwnShares" nillable="true" type="xs:float" />
+          <xs:element name="cashAndBank" nillable="true" type="xs:float" />
+          <xs:element name="accrualsAndPayables" nillable="true" type="xs:float" />
+          <xs:element name="totalAssets" nillable="true" type="xs:float" />
+          <xs:element name="shareholdersEquity" nillable="true" type="xs:float" />
+          <xs:element name="shareCapital" nillable="true" type="xs:float" />
+          <xs:element name="sharePremium" nillable="true" type="xs:float" />
+          <xs:element name="revaluationReserves" nillable="true" type="xs:float" />
+          <xs:element name="provisionsAndChargesAccounts" nillable="true" type="xs:float" />
+          <xs:element name="provisionForTaxation" nillable="true" type="xs:float" />
+          <xs:element name="severancePay" nillable="true" type="xs:float" />
+          <xs:element name="creditors" nillable="true" type="xs:float" />
+          <xs:element name="shortTermCreditors" nillable="true" type="xs:float" />
+          <xs:element name="tradeCreditors" nillable="true" type="xs:float" />
+          <xs:element name="mediumLongTermLiabilitiesTowardsBanks" nillable="true" type="xs:float" />
+          <xs:element name="shortTermLiabilitiesTowardsBanks" nillable="true" type="xs:float" />
+          <xs:element name="accruedExpensesAndDeferredIncome" nillable="true" type="xs:float" />
+          <xs:element name="totalLiabilities" nillable="true" type="xs:float" />
+          <xs:element name="memorandumAccounts" nillable="true" type="xs:float" />
+          <xs:element name="totalRevenues" nillable="true" type="xs:float" />
+          <xs:element name="sales" nillable="true" type="xs:float" />
+          <xs:element name="inventoryVariation" nillable="true" type="xs:float" />
+          <xs:element name="otherRevenues" nillable="true" type="xs:float" />
+          <xs:element name="operatingCost" nillable="true" type="xs:float" />
+          <xs:element name="costOfGoodsSold" nillable="true" type="xs:float" />
+          <xs:element name="changeInInventory" nillable="true" type="xs:float" />
+          <xs:element name="consumptionOfStock" nillable="true" type="xs:float" />
+          <xs:element name="overheads" nillable="true" type="xs:float" />
+          <xs:element name="accrualForPotentialLiabilities" nillable="true" type="xs:float" />
+          <xs:element name="valueAdded" nillable="true" type="xs:float" />
+          <xs:element name="staffCosts" nillable="true" type="xs:float" />
+          <xs:element name="severanceIndemnity" nillable="true" type="xs:float" />
+          <xs:element name="grossOperatingMargin" nillable="true" type="xs:float" />
+          <xs:element name="amortizationsAndDepreciations" nillable="true" type="xs:float" />
+          <xs:element name="amortizationOfTangibleAssets" nillable="true" type="xs:float" />
+          <xs:element name="amortizationOfIntangibleAssets" nillable="true" type="xs:float" />
+          <xs:element name="profitLossFromOrdinaryOperatingActivities" nillable="true" type="xs:float" />
+          <xs:element name="otherIncomeAndCosts" nillable="true" type="xs:float" />
+          <xs:element name="financialIncome" nillable="true" type="xs:float" />
+          <xs:element name="operatingProfit" nillable="true" type="xs:float" />
+          <xs:element name="financialExpenses" nillable="true" type="xs:float" />
+          <xs:element name="profitLossPriorToExtraordinaryOps" nillable="true" type="xs:float" />
+          <xs:element name="adjustmentsToValueOfFinancialAssets" nillable="true" type="xs:float" />
+          <xs:element name="extraordinaryIncomeCharges" nillable="true" type="xs:float" />
+          <xs:element name="profitLossPriorToTaxation" nillable="true" type="xs:float" />
+          <xs:element name="taxations" nillable="true" type="xs:float" />
+          <xs:element name="profitLoss" nillable="true" type="xs:float" />
+          <xs:element name="cashFlow" nillable="true" type="xs:float" />
+          <xs:element name="employees" nillable="true" type="xs:int" />
+          <xs:element name="regNumber" nillable="true" type="xs:string" />
+          <xs:element name="businessSector" nillable="true" type="xs:string" />
+          <xs:element name="closingDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="accumulatedDepreciationOfTangibleAssets" nillable="true" type="xs:float" />
+          <xs:element name="totalVariations" nillable="true" type="xs:float" />
+          <xs:element name="amortizationsAndDepreciationsOfIntangibleAssets" nillable="true" type="xs:float" />
+          <xs:element name="profitLossAfterTax" nillable="true" type="xs:float" />
+          <xs:element name="advancesPartialPayments" nillable="true" type="xs:float" />
+          <xs:element name="workInProgress" nillable="true" type="xs:float" />
+          <xs:element name="adjustments" nillable="true" type="xs:float" />
+          <xs:element name="worksVariations" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NotAvailableReportException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DocumentFormatNotAvailableException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryRequestDbExtended">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="queryDbExtendendParams" type="tns:queryExtendedRequestParameters" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryExtendedRequestParameters">
+        <xs:sequence>
+          <xs:element name="dataBaseQueryFilter" type="tns:dataBaseQueryFilter" />
+          <xs:element name="companyName" nillable="true" type="xs:string" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element name="vatNumber" nillable="true" type="xs:string" />
+          <xs:element name="companyCode" nillable="true" type="xs:long" />
+          <xs:element name="personCode" nillable="true" type="xs:long" />
+          <xs:element name="reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="connectedUsers" type="xs:boolean" />
+          <xs:element name="dateTo" nillable="true" type="xs:dateTime" />
+          <xs:element name="dateFrom" nillable="true" type="xs:dateTime" />
+          <xs:element default="false" name="addressInformations" type="xs:boolean" />
+          <xs:element name="check" nillable="true" type="tns:customDbCheck" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryRequestDbExtendedResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="QueryDbExtendedReport" type="tns:QueryDbExtendedResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDbExtendedResult">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:retrieveReportResult">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="queryDbExtendedReports" type="tns:QueryDbExtendedReport" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="retrieveReportResult" abstract="true">
+        <xs:sequence>
+          <xs:element name="retrieveReportError" nillable="true" type="tns:error" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryDbExtendedReport">
+        <xs:sequence>
+          <xs:element name="companyCode" nillable="true" type="xs:long" />
+          <xs:element name="personCode" nillable="true" type="xs:long" />
+          <xs:element name="companyInfo" nillable="true" type="tns:companyInfo" />
+          <xs:element name="personInfo" nillable="true" type="tns:personInfo" />
+          <xs:element maxOccurs="unbounded" name="reports" nillable="true" type="tns:reportInformations" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="companyInfo">
+        <xs:sequence>
+          <xs:element name="name" nillable="true" type="xs:string" />
+          <xs:element name="vatNumber" nillable="true" type="xs:string" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element name="address" nillable="true" type="tns:address" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="address">
+        <xs:sequence>
+          <xs:element name="street" nillable="true" type="xs:string" />
+          <xs:element name="province" nillable="true" type="xs:string" />
+          <xs:element name="town" nillable="true" type="xs:string" />
+          <xs:element name="country" nillable="true" type="xs:string" />
+          <xs:element name="hamlet" nillable="true" type="xs:string" />
+          <xs:element name="zipCode" nillable="true" type="xs:string" />
+          <xs:element name="registeredOffice" type="xs:boolean" />
+          <xs:element name="phoneNumber" nillable="true" type="xs:string" />
+          <xs:element name="owner" nillable="true" type="xs:boolean" />
+          <xs:element name="resident" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="personInfo">
+        <xs:sequence>
+          <xs:element name="name" nillable="true" type="xs:string" />
+          <xs:element name="surname" nillable="true" type="xs:string" />
+          <xs:element name="fiscalCode" nillable="true" type="xs:string" />
+          <xs:element name="address" nillable="true" type="tns:address" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="reportInformations">
+        <xs:sequence>
+          <xs:element name="requestCode" nillable="true" type="xs:long" />
+          <xs:element name="productCode" nillable="true" type="xs:long" />
+          <xs:element name="userId" nillable="true" type="xs:string" />
+          <xs:element name="monitoringEndDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="error">
+        <xs:sequence>
+          <xs:element name="errorType" nillable="true" type="tns:retrieveReportErrorType" />
+          <xs:element name="additionalDescription" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retrieveReportExtended">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="retrieveReportParameter" type="tns:retrieveReportExtendedParameter" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retrieveReportExtendedParameter">
+        <xs:sequence>
+          <xs:element name="reportCode" type="xs:long" />
+          <xs:element maxOccurs="unbounded" name="documentRequest" nillable="true" type="tns:documentRequest" />
+          <xs:element maxOccurs="unbounded" name="addititionalInputParameters" nillable="true" type="tns:additionalInputParam" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="documentRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="documentType" type="tns:documentType" />
+          <xs:element maxOccurs="unbounded" name="documentFormat" nillable="true" type="tns:documentFormat" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="additionalInputParam">
+        <xs:sequence>
+          <xs:element name="inputKeyParam" nillable="true" type="tns:inputKeyParam" />
+          <xs:element name="value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retrieveReportExtendedResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="reportExtended" type="tns:reportExtended" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="reportExtended">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="reportDocuments" nillable="true" type="tns:reportDocument" />
+          <xs:element name="reportInfo" nillable="true" type="tns:reportInfo" />
+          <xs:element maxOccurs="unbounded" name="extraOutputInformations" nillable="true" type="tns:extraOutputInformation" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="reportDocument">
+        <xs:sequence>
+          <xs:element name="retrieveReportExtendedStatus" nillable="true" type="tns:retrieveReportExtendedStatus" />
+          <xs:element name="statusMessage" nillable="true" type="xs:string" />
+          <xs:element name="documentType" nillable="true" type="tns:documentType" />
+          <xs:element name="documentFormat" nillable="true" type="tns:documentFormat" />
+          <xs:element name="document" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="extraOutputInformation">
+        <xs:sequence>
+          <xs:element name="key" nillable="true" type="xs:string" />
+          <xs:element name="value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="dataBaseQueryFilter">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="DELIVERED" />
+          <xs:enumeration value="NOT_DELIVERED" />
+          <xs:enumeration value="NOT_VIEWED" />
+          <xs:enumeration value="MONITORING" />
+          <xs:enumeration value="MONITORING_EXPIRED" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="customDbCheck">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="BATCH_COMPLETE" />
+          <xs:enumeration value="IDX_READY" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="documentFormat">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="PDF" />
+          <xs:enumeration value="XML" />
+          <xs:enumeration value="TEXT" />
+          <xs:enumeration value="ZIP" />
+          <xs:enumeration value="XLS" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="documentType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="REPORT" />
+          <xs:enumeration value="MONITORING" />
+          <xs:enumeration value="BALANCE_SHEET" />
+          <xs:enumeration value="INQUIRY" />
+          <xs:enumeration value="PARTNERS" />
+          <xs:enumeration value="ANNUAL_REPORT" />
+          <xs:enumeration value="NEWS" />
+          <xs:enumeration value="UPDATED_REPORT" />
+          <xs:enumeration value="CRISP" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="retrieveReportErrorType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="GENERIC_ERROR" />
+          <xs:enumeration value="EMPTY_REQUEST" />
+          <xs:enumeration value="MISSING_FILTER_PARAMETER" />
+          <xs:enumeration value="QUERY_NOT_AVAILABLE" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="inputKeyParam">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="XML" />
+          <xs:enumeration value="PDF" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="retrieveReportExtendedStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="AVAILABLE" />
+          <xs:enumeration value="ERROR" />
+          <xs:enumeration value="FORMAT_NOT_AVAILABLE" />
+          <xs:enumeration value="NOT_READY" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </types>
+  <message name="DocumentFormatNotAvailableException">
+    <part name="DocumentFormatNotAvailableException" element="tns:DocumentFormatNotAvailableException" />
+  </message>
+  <message name="RetrieveReportWS_retrieveReportExtendedResponse">
+    <part name="retrieveReportExtendedResponse" element="tns:retrieveReportExtendedResponse" />
+  </message>
+  <message name="RetrieveReportWS_queryRequestDb">
+    <part name="queryRequestDb" element="tns:queryRequestDb" />
+  </message>
+  <message name="RetrieveReportWS_retrieveReportResponse">
+    <part name="retrieveReportResponse" element="tns:retrieveReportResponse" />
+  </message>
+  <message name="RetrieveReportWS_retrieveReport">
+    <part name="retrieveReport" element="tns:retrieveReport" />
+  </message>
+  <message name="RetrieveReportWS_queryRequestDbExtended">
+    <part name="queryRequestDbExtended" element="tns:queryRequestDbExtended" />
+  </message>
+  <message name="RetrieveReportWS_queryRequestDbResponse">
+    <part name="queryRequestDbResponse" element="tns:queryRequestDbResponse" />
+  </message>
+  <message name="RetrieveReportWS_queryRequestDbExtendedResponse">
+    <part name="queryRequestDbExtendedResponse" element="tns:queryRequestDbExtendedResponse" />
+  </message>
+  <message name="RetrieveReportException">
+    <part name="RetrieveReportException" element="tns:RetrieveReportException" />
+  </message>
+  <message name="RetrieveReportWS_retrieveReportExtended">
+    <part name="retrieveReportExtended" element="tns:retrieveReportExtended" />
+  </message>
+  <message name="NotAvailableReportException">
+    <part name="NotAvailableReportException" element="tns:NotAvailableReportException" />
+  </message>
+  <portType name="RetrieveReportWS">
+    <operation name="queryRequestDb" parameterOrder="queryRequestDb">
+      <input message="tns:RetrieveReportWS_queryRequestDb" />
+      <output message="tns:RetrieveReportWS_queryRequestDbResponse" />
+      <fault name="RetrieveReportException" message="tns:RetrieveReportException" />
+    </operation>
+    <operation name="queryRequestDbExtended" parameterOrder="queryRequestDbExtended">
+      <input message="tns:RetrieveReportWS_queryRequestDbExtended" />
+      <output message="tns:RetrieveReportWS_queryRequestDbExtendedResponse" />
+    </operation>
+    <operation name="retrieveReport" parameterOrder="retrieveReport">
+      <input message="tns:RetrieveReportWS_retrieveReport" />
+      <output message="tns:RetrieveReportWS_retrieveReportResponse" />
+      <fault name="RetrieveReportException" message="tns:RetrieveReportException" />
+      <fault name="NotAvailableReportException" message="tns:NotAvailableReportException" />
+      <fault name="DocumentFormatNotAvailableException" message="tns:DocumentFormatNotAvailableException" />
+    </operation>
+    <operation name="retrieveReportExtended" parameterOrder="retrieveReportExtended">
+      <input message="tns:RetrieveReportWS_retrieveReportExtended" />
+      <output message="tns:RetrieveReportWS_retrieveReportExtendedResponse" />
+    </operation>
+  </portType>
+  <binding name="RetrieveReportWSBinding" type="tns:RetrieveReportWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="queryRequestDb">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RetrieveReportException">
+        <soap:fault use="literal" name="RetrieveReportException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="queryRequestDbExtended">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="retrieveReport">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RetrieveReportException">
+        <soap:fault use="literal" name="RetrieveReportException" namespace="" />
+      </fault>
+      <fault name="NotAvailableReportException">
+        <soap:fault use="literal" name="NotAvailableReportException" namespace="" />
+      </fault>
+      <fault name="DocumentFormatNotAvailableException">
+        <soap:fault use="literal" name="DocumentFormatNotAvailableException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="retrieveReportExtended">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="RetrieveReportWS">
+    <port name="RetrieveReportWSPort" binding="tns:RetrieveReportWSBinding">
+      <soap:address location="https://wscorp.lince.it/WSCorporate_1/RetrieveReportWS" />
+    </port>
+  </service>
+</definitions>

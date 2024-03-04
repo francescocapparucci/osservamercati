@@ -1,0 +1,18 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;05/08/2014;GL002;C;Variazione cautelativa del fido automatico;25/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;364571961;FRATELLI CONCAS;03507410920;03507410920;05/08/2014;GL001;P;Variazione positiva del fido automatico;25/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;15/10/2014;GL002;C;Variazione cautelativa del fido automatico;25/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;364571961;FRATELLI CONCAS;03507410920;03507410920;15/10/2014;GL001;P;Variazione positiva del fido automatico;25/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;3493335;CAMINITI;97011310584;02151531007;11/11/2014;RI041;A;Variazione PEC;25/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;364571961;FRATELLI CONCAS;03507410920;03507410920;11/11/2014;GL001;P;Variazione positiva del fido automatico;25/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;11/11/2014;GL003;N;Variazione negativa del fido automatico;25/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;3493335;CAMINITI;97011310584;02151531007;11/11/2014;RI041;A;Variazione PEC;25/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;365444527;LIFE SEMPLIFICATA;02755970593;02755970593;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;25/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;364571961;FRATELLI CONCAS;03507410920;03507410920;11/11/2014;GL001;P;Variazione positiva del fido automatico;25/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;12/11/2014;GL003;N;Variazione negativa del fido automatico;25/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;3493335;CAMINITI;97011310584;02151531007;12/11/2014;RI041;A;Variazione PEC;25/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;25/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;364571961;FRATELLI CONCAS;03507410920;03507410920;13/11/2014;GL001;P;Variazione positiva del fido automatico;25/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;297867;SO.VE.OR;03595950159;03595950159;13/11/2014;SC001;A;Nuovo Elenco Soci;25/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;7711;MI.NO.TER.;00303050926;00303050926;13/11/2014;RI080;A;Nuovo esponente;25/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;7711;MI.NO.TER.;00303050926;00303050926;13/11/2014;RI080;A;Nuovo esponente;25/11/2014;13/11/2015

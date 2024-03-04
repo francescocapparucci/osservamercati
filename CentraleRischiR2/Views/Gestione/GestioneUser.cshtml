@@ -1,0 +1,568 @@
+﻿@model CentraleRischiR2.Models.SearchUserModel
+@{
+    ViewBag.Title = "Gestione";
+    Layout = Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@section scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="~/js/i18n/grid.locale-it.js" type="text/javascript"></script>
+    <script src="~/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+}
+@section sectionTitle{
+    <div id="title">
+        <h1>Gestione</h1>
+    </div>
+}
+@section additionalCss {
+    <link rel="stylesheet" type="text/css" media="screen" href="~/css/redmond/jquery-ui-1.8.2.custom.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/css/ui.jqgrid.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <style>
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        html {
+            font-size: 1em;
+        }
+
+        body {
+            font-size: .85em;
+            font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+            color: #232323;
+            text-align: center;
+            line-height: 21px;
+            display: block;
+            margin: 8px;
+        }
+
+        table#aggiornamentoOperatori {
+            background: none repeat scroll 0 0 rgba(1, 67, 98, 0.75);
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            color: #FFF;
+            box-shadow: 10px 10px 10px #666;
+            width: 95%;
+            font-size: 11px;
+            padding: 0px;
+            border-spacing: 0px;
+            line-height: 21px;
+        }
+
+            table#aggiornamentoOperatori td, table#aggiornamentoOperatori th {
+                text-align: left;
+                vertical-align: middle;
+            }
+
+                table#aggiornamentoOperatori td button {
+                    background: #ACD6EF;
+                    width: 120px;
+                    height: 40px;
+                    font-size: 14px;
+                    /* font-weight: bold; */
+                    color: #fff;
+                    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8b153), to(#DC9322));
+                    background-image: -moz-linear-gradient(top left 90deg, #f8b153 0%, #DC9322 100%);
+                    background-image: linear-gradient(top left 90deg, #f8b153 0%, #DC9322 100%);
+                    /* border-radius: 30px; */
+                    border: 1px solid #d68505;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+                    cursor: pointer;
+                }
+
+
+
+
+        div#preferitiContainer div.ui-jqgrid .ui-widget-header {
+            /* background: -webkit-linear-gradient(top, white 0%,#f9961b 35%,#f9961b 100%); /* Chrome10+,Safari5.1+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
+        }
+
+        div#gestioneUtentiContainer div.ui-jqgrid .ui-widget-header {
+            /* background: -webkit-linear-gradient(top, #026ea2 0%,#027075 35%,#013b56 100%); /* Chrome10+,Safari5.1+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
+        }
+
+        #gestioneAziendeContainer h2 {
+            background: #014464;
+            background: -moz-linear-gradient(center top, #0272A7, #013953) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            background: -webkit-gradient(linear, 0 0%, 0 100%, from(#0272A7), to(#013953));
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 38px;
+            min-width: 25%;
+            max-width: 50%;
+            color: #FFF;
+            margin: 0 auto;
+            line-height: 35px;
+            font-weight: lighter;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+
+        div#searchhdfbox_preferiti {
+            background: -webkit-linear-gradient(top, white 0%,#f9961b 35%,#f9961b 100%); /* Chrome10+,Safari5.1+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
+        }
+
+        div#searchhdfbox_recuperoCrediti {
+            background: -webkit-linear-gradient(top, #026ea2 0%,#027075 35%,#013b56 100%); /* Chrome10+,Safari5.1+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
+            background: #5c9ccc url(./../css/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100_cerved.png) 50% 50% repeat-x !important;
+        }
+
+
+        #search_preferiti {
+            display: none;
+        }
+
+        #search_recuperoCrediti {
+            display: none;
+        }
+
+        div.formEdit {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-bottom: dashed 2px #a6c9e2 !important;
+            border-top: dashed 2px #a6c9e2 !important;
+        }
+
+        div#gridUtenti {
+            margin-top: 2%;
+            border: 1px solid #a6c9e2;
+            border-radius: 5px;
+        }
+
+            div#gridUtenti div.row {
+                margin-top: 5px;
+            }
+
+        div#gridUtenti {
+        }
+
+        i.fa-thumbs-o-up {
+            font-size: 18pt;
+            color: Green;
+        }
+
+        i.fa-thumbs-o-down {
+            font-size: 18pt;
+            color: red;
+        }
+
+        button.modifica {
+            border: 1px transparent;
+            background: #008996;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #FFF;
+            margin: 0 auto;
+            height: 30px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+    </style>
+}
+
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+@section breadCrumb {
+    @RenderPage("~/Views/Shared/_BreadCrumb.cshtml")
+}
+<div id="homeTabsGestione">
+    <ul>
+        <li><a href="#gestioneUtentiContainer">Gestione Utenti</a></li>
+    </ul>
+    <div id="gestioneAziendeContainer">
+
+        <table id="operatori"></table>
+    </div>
+    <div id="gestioneUtentiContainer">
+        <h2>Gestione Utenti</h2>
+        <br />
+        @using (Html.BeginForm("SalvaUtente", "Gestione", FormMethod.Post, new { @class = "form-horizontal", @role = "form" }))
+        {
+            @Html.Hidden("IdUser", 0)
+            <div id="demo_new" class="collapse row formEdit">
+                <br />
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="Name" class="col-sm-2 form-control-label">Username</label>
+                    </div>
+                    <div class="col-sm-8">
+                        @Html.TextBox("Name", String.Empty, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="Password" class="col-sm-2 form-control-label">Password</label>
+                    </div>
+                    <div class="col-sm-8">
+                        @Html.Password("Password", String.Empty, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="Email" class="col-sm-2 form-control-label">Email</label>
+                    </div>
+                    <div class="col-sm-8">
+                        @Html.TextBox("Email", String.Empty, new { @class = "form-control", @type = "email" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="IdAzienda" class="col-sm-2 form-control-label">Azienda</label>
+                    </div>
+                    <div class="col-sm-8">
+                        @Html.DropDownList("IdAzienda", new SelectList(Model.ElencoAziende, "IdAzienda", "RagioneSociale"), new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="Abilitato" class="col-sm-2 form-control-label">Abilitato</label>
+                    </div>
+                    <div class="col-sm-8" style="text-align:left">
+                        @Html.CheckBox("Abilitato", false)
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="AbilitatoNotturno" class="col-sm-2 form-control-label">Abilitato Preferiti</label>
+                    </div>
+                    <div class="col-sm-8" style="text-align:left">
+                        @Html.CheckBox("AbilitatoNotturno", false)
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="Abilitato" class="col-sm-2 form-control-label">Abilitato  Ricerca</label>
+                    </div>
+                    <div class="col-sm-8" style="text-align:left">
+                        @Html.CheckBox("AbilitatoRicerca", false)
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="Demo" class="col-sm-2 form-control-label">Demo</label>
+                    </div>
+                    <div class="col-sm-8" style="text-align:left">
+                        @Html.CheckBox("Demo", false)
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="IdRuolo" class="col-sm-2 form-control-label">Ruolo</label>
+                    </div>
+                    <div class="col-sm-8">
+                        @Html.DropDownList("IdRole", new SelectList(Model.ElencoRuoli, "IdRole", "Descrizione"), new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="NetUser" class="col-sm-2 form-control-label">NET Cerved User</label>
+                    </div>
+                    <div class="col-sm-8">
+                        @Html.TextBox("NetUser", String.Empty, new { @class = "form-control", @type = "text" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                        <label for="NetPwd" class="col-sm-2 form-control-label">NET Cerved Password</label>
+                    </div>
+                    <div class="col-sm-8">
+                        @Html.TextBox("NetPwd", String.Empty, new { @class = "form-control", @type = "password" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-offset-2 col-sm-8">
+                        <input type="submit" value="Salva" />
+                    </div>
+                </div>
+
+            </div>
+        }
+        <div class="container-fluid" id="gridUtenti">
+            <div class="row">
+                <div class="col-sm-2">
+                    <b>Username</b>
+                </div>
+                <div class="col-sm-3">
+                    <b>Azienda</b>
+                </div>
+                <div class="col-sm-2">
+                    <b>Email</b>
+                </div>
+                <div class="col-sm-1">
+                    <b>Attivo</b>
+                </div>
+                <div class="col-sm-2">
+                    &nbsp;
+                </div>
+            </div>
+            @{
+                var counter = 0;
+                foreach (var user in Model.ElencoUtenti)
+                {
+                    string style = counter % 2 == 0 ? "background-color:rgba(1, 67, 98, 0.75);color:#ffffff;" : "background-color:transparent;color:black;";
+
+                    <div class="row" style=@style>
+                        <div class="col-sm-2 col-lg-2 col-md-2" style="text-align:center">
+                            @user.Name
+                        </div>
+                        <div class="col-sm-3 col-lg-3 col-md-3" style="text-align:center">
+                            @user.Azienda
+                        </div>
+                        <div class="col-sm-2 col-lg-2 col-md-2" style="text-align:center">
+                            <a href="mailo:@user.Email">@user.Email</a>
+                        </div>
+                        <div class="col-sm-1 col-lg-1 col-md-1">
+                            @{
+                                if (user.Abilitato)
+                                {
+                                    <i class="fa fa-thumbs-o-up" style="color:green"></i>
+                                }
+                                else
+                                {
+                                    <i class="fa fa-thumbs-o-down" style="color:red"></i>
+                                }
+                            }
+                        </div>
+                        <div class="col-sm-2 col-lg-2 col-md-2">
+                            <button class="modifica" data-toggle="collapse" data-target="#demo_@user.IdUser.ToString()" type="button"><i class="fa fa-user"></i>&nbsp; Modifica Utente</button>
+                        </div>
+                    </div>
+                    using (Html.BeginForm("SalvaUtente", "Gestione", FormMethod.Post, new { @class = "form-horizontal", @role = "form" }))
+                    {
+                        @Html.Hidden("IdUser", user.IdUser)
+        <div id="demo_@user.IdUser.ToString()" class="collapse row formEdit">
+            <br />
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <label for="Name" class="col-sm-2 form-control-label">Username</label>
+                </div>
+                <div class="col-sm-8">
+                    @Html.TextBox("Name", user.Name, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <label for="Password" class="col-sm-2 form-control-label">Password</label>
+                </div>
+                <div class="col-sm-6">
+                    @Html.Password("Password", user.Password, new { @class = "form-control", @id = "myInput" })
+                </div>
+                <div class="col-sm-2">
+                    <input type="checkbox" onclick="myFunction()">Show Password
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <label for="Email" class="col-sm-2 form-control-label">Email</label>
+                </div>
+                <div class="col-sm-8">
+                    @Html.TextBox("Email", user.Email, new { @class = "form-control", @type = "email" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <label for="IdAzienda" class="col-sm-2 form-control-label">Azienda</label>
+                </div>
+                <div class="col-sm-8">
+                    @Html.TextBox("IdAzienda", user.Azienda, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+            <div class="form-group row" style="visibility: hidden">
+                <div class="col-sm-3" style="visibility: hidden">
+                    <label for="Abilitato" class="col-sm-2 form-control-label">Abilitato</label>
+                </div>
+                <div class="col-sm-8" style="text-align:left">
+                    @Html.CheckBox("Abilitato", user.Abilitato)
+                </div>
+            </div>
+
+            <div class="form-group row"style="visibility: hidden">
+                <div class="col-sm-3">
+                    <label for="AbilitatoNotturno" class="col-sm-2 form-control-label">Abilitato Preferiti</label>
+                </div>
+                <div class="col-sm-8" style="text-align:left">
+                    @Html.CheckBox("AbilitatoNotturno", user.AbilitatoNotturno)
+                </div>
+            </div>
+
+            <div class="form-group row"style="visibility: hidden">
+                <div class="col-sm-3">
+                    <label for="AbilitatoRicerca" class="col-sm-2 form-control-label">Abilitato  Ricerca</label>
+                </div>
+                <div class="col-sm-8" style="text-align:left">
+                    @Html.CheckBox("AbilitatoRicerca", user.AbilitatoRicerca)
+                </div>
+            </div>
+            <div class="form-group row"style="visibility: hidden">
+                <div class="col-sm-3">
+                    <label for="Demo" class="col-sm-2 form-control-label">Demo</label>
+                </div>
+                <div class="col-sm-8">
+                    @Html.CheckBox("Demo", user.Demo)
+                </div>
+            </div>
+            <div class="form-group row" style="visibility: hidden">
+                <div class="col-sm-3">
+                    <label for="IdRuolo" class="col-sm-2 form-control-label">Ruolo</label>
+                </div>
+                <div class="col-sm-8">
+                    @Html.DropDownList("IdRole", new SelectList(Model.ElencoRuoli, "IdRole", "Descrizione", user.IdRole), new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group row" style="visibility: hidden">
+                <div class="col-sm-3">
+                    <label for="NetUser" class="col-sm-2 form-control-label">NET User</label>
+                </div>
+                <div class="col-sm-8">
+                    @Html.TextBox("NetUser", user.NetUser, new { @class = "form-control", @type = "text" })
+                </div>
+            </div>
+            <div class="form-group row" style="visibility: hidden">
+                <div class="col-sm-3">
+                    <label for="NetPwd" class="col-sm-2 form-control-label">NET Password</label>
+                </div>
+                <div class="col-sm-8">
+                    @Html.TextBox("NetPwd", user.NetPwd, new { @class = "form-control", @type = "password" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <input type="submit" value="Salva" />
+                </div>
+            </div>
+        </div>
+                    }
+                    counter++;
+                }
+            }
+            <br /><br />
+        </div>
+        <div id="pagerRecuperoCrediti"></div>
+    </div>
+</div>
+<div id="dialog-import" title="Conferma Importazione" style="display:none">
+    <h3>Numero Mesi:</h3>
+    <input type="number" value="1" min="1" max="13" id="numeroMesi" />
+</div>
+<div id="dialog-result" title="Importazione" style="display:none">
+    Richiesta importazione effettuata: riceverete una mail ad operazione effettuata.
+</div>
+
+<script type="text/javascript">
+
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        }
+        else {
+            x.type = "password";
+        }
+    }
+
+    function OnSuccess(response) {
+        alert(response);
+    }
+
+    function OnFailure(response) {
+        alert(response);
+    }
+
+
+    function ToJavaScriptDate(value) {
+        var pattern = /Date\(([^)]+)\)/;
+        var results = pattern.exec(value);
+        var dt = new Date(parseFloat(results[1]));
+        return (dt.getDate() + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear());
+    }
+    $(function () {
+
+        $('button#btnCervedBox').hide();
+        $("table#aggiornamentoOperatori").on("click", "td button", function () {
+            var codiceAz = $(this).attr('id').replace('import_', '');
+            $("div#dialog-import").dialog({
+                resizable: false,
+                width: 320,
+                height: 200,
+                modal: false,
+                buttons: {
+                    "Annullare": function () {
+                        $(this).dialog("close");
+                    },
+                    "Importa": function () {
+                        var numeroMesi = $('#numeroMesi').val();
+                        $.post("./ImportazioneMesiAzienda", {
+                            'codiceAzienda': codiceAz,
+                            'numeroMesi': numeroMesi,
+                        },
+                            function (data) {
+                                $("div#dialog-result").dialog({
+                                    resizable: false,
+                                    width: 320,
+                                    height: 200,
+                                    modal: false, buttons: {
+                                        "Ok": function () {
+                                            $(this).dialog("close");
+                                        }
+                                    }
+                                });
+                            }, "json");
+                        $(this).dialog("close");
+                    }
+                }
+            })
+        });
+
+        $('#btnElencoOperatori').click(function () {
+            var idCentro = $('#centroGestioneAziende').val();
+            $.post("./ElencoOperatoriCentro", {
+                'idcentro': idCentro
+            },
+                function (data) {
+                    var tabAgg = $('table#aggiornamentoOperatori');
+                    tabAgg.empty();
+                    tabAgg.append('<tr><th>Codice Azienda</th>' +
+                        '<th>Ragione Sociale</th>' +
+                        '<th>Tipo Gestionale</th>' +
+                        '<th>Gestionale</th>' +
+                        '<th>Ultima Vendita</th>' +
+                        '<th>Ultimo Saldo</th>' +
+                        '<th>Ultima Chiusura</th></tr>');
+                    for (var i = 0; i < data.length; i++) {
+                        console.log("dl" + data.length);
+                        var appendVar = '<tr><td>' + data[i].Codice + '</td>' +
+                            '<td>' + data[i].RagioneSociale + '</td>' +
+                            '<td>' + data[i].TipoGestionale + '</td>' +
+                            '<td>' + data[i].Gestionale + '</td>';
+                        try {
+                            appendVar += '<td>' + ToJavaScriptDate(data[i].UltimaVendita) + '</td>' +
+                                '<td>' + ToJavaScriptDate(data[i].UltimoSaldo) + '</td>' +
+                                '<td>' + ToJavaScriptDate(data[i].UltimaChiusura) + '</td>';
+                        }
+                        catch (err) {
+                            appendVar += '<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>';
+                        }
+                        appendVar += '<td><button id="import_' + data[i].Codice + '" type="button"><i class="fa fa-play-circle importButton"></i>&nbsp;Importa</button></td></tr>';
+                        tabAgg.append(appendVar);
+                    }
+                }, "json");
+        });
+
+
+        $("#homeTabsGestione").tabs();
+    });
+</script>

@@ -1,0 +1,27 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;357104545;MASILI ERCOLE;MSLRCL60C18L992D;00776640914;05/08/2014;GL006;N;Variazione negativa del fido automatico 2;23/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;618836;SPESA INTELLIGENTE;02416840235;02416840235;10/10/2014;RI090;A;Dati Azienda Nuova Unita Locale;23/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;618836;SPESA INTELLIGENTE;02416840235;02416840235;10/10/2014;MC010;A;Nuova movimentazione su azienda;23/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;618836;SPESA INTELLIGENTE;02416840235;02416840235;10/10/2014;RI090;A;Dati Azienda Nuova Unita Locale;23/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PINNA SAVERIO;03000380927;03000380927;13/10/2014;RI083;A;Esponente con carica recessa;23/12/2014;13/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PINNA SAVERIO;03000380927;03000380927;13/10/2014;RI081;A;Esponente rimosso dall'azienda;23/12/2014;13/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PINNA SAVERIO;03000380927;03000380927;13/10/2014;RI010;A;Variazione ragione sociale ufficiale;23/12/2014;13/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PINNA SAVERIO;03000380927;03000380927;13/10/2014;RI082;A;Nuova carica per esponente;23/12/2014;13/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PINNA SAVERIO;03000380927;03000380927;13/10/2014;RI083;A;Esponente con carica recessa;23/12/2014;13/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PINNA SAVERIO;03000380927;03000380927;13/10/2014;RI080;A;Nuovo esponente;23/12/2014;13/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PINNA SAVERIO;03000380927;03000380927;13/10/2014;RI091;A;Dati Azienda Chisura Unita Locale;23/12/2014;13/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PINNA SAVERIO;03000380927;03000380927;13/10/2014;RI081;A;Esponente rimosso dall'azienda;23/12/2014;13/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PINNA SAVERIO;03000380927;03000380927;13/10/2014;RI070;A;Variazione Indirizzo Sede;23/12/2014;13/10/2015
+Documento acquistato per valutazione CDS;460592;F.LLI BUCCOLINI ALBERTO ED ALFREDO;00400190435;00400190435;10/11/2014;RI091;A;Dati Azienda Chisura Unita Locale;23/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;50028;FOLIGNO FRUTTA;00665430542;00665430542;10/11/2014;BL001;U;Nuovo Bilancio Aziendale;23/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;362641871;CLEMENTAL 1;03242350787;03242350787;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;23/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9648513;FAMI;04305400261;04305400261;11/11/2014;SC001;A;Nuovo Elenco Soci;23/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;460592;F.LLI BUCCOLINI ALBERTO ED ALFREDO;00400190435;00400190435;12/11/2014;RI091;A;Dati Azienda Chisura Unita Locale;23/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;50028;FOLIGNO FRUTTA;00665430542;00665430542;12/11/2014;BL001;U;Nuovo Bilancio Aziendale;23/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;10046544;LAZIO PRODUCE;02511500593;02511500593;12/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;23/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;297867;SO.VE.OR;03595950159;03595950159;13/11/2014;RI080;A;Nuovo esponente;23/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;297867;SO.VE.OR;03595950159;03595950159;13/11/2014;RI081;A;Esponente rimosso dall'azienda;23/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;297867;SO.VE.OR;03595950159;03595950159;13/11/2014;RI080;A;Nuovo esponente;23/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;297867;SO.VE.OR;03595950159;03595950159;13/11/2014;RI080;A;Nuovo esponente;23/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;9648513;FAMI;04305400261;04305400261;13/11/2014;SC001;A;Nuovo Elenco Soci;23/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;2507399;AGROITALIA;08262160016;08262160016;13/11/2014;SC001;A;Nuovo Elenco Soci;23/12/2014;13/11/2015

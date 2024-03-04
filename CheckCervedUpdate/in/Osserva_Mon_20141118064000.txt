@@ -1,0 +1,84 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;10181451;IL TULIPANO DI MELIS MARIA PAOLA;MLSMPL53B54E281K;02061860926;05/08/2014;PT046;P;Cancellazione protesto su esponente;18/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;6262215;SOAVE;02496430923;02496430923;05/08/2014;RI090;A;Dati Azienda Nuova Unita Locale;18/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;6262215;SOAVE;02496430923;02496430923;05/08/2014;RI062;A;Evento Trasferimento Azienda;18/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;366224847;FRUTTOLANDIA S.;02572860902;02572860902;05/08/2014;GL001;P;Variazione positiva del fido automatico;18/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;11900541;PS DISTRIBUZIONE ORTOFRUTTA;03361060928;03361060928;05/08/2014;SC001;A;Nuovo Elenco Soci;18/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;11900541;PS DISTRIBUZIONE ORTOFRUTTA;03361060928;03361060928;05/08/2014;RI082;A;Nuova carica per esponente;18/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;364571961;FRATELLI CONCAS;03507410920;03507410920;05/08/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;8021744;PUTZOLU CESARE FRANCO;PTZCRF74E23F208Y;00684010952;10/10/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;18/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;18/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;18/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;18/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;18/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;10/10/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;652608;SUPERMERCATI PEPPICO SPANU;02021050923;02021050923;13/10/2014;SC001;A;Nuovo Elenco Soci;18/11/2014;13/10/2015
+Documento acquistato per valutazione CDS;652608;SUPERMERCATI PEPPICO SPANU;02021050923;02021050923;13/10/2014;RI050;A;Variazione capitale sociale;18/11/2014;13/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PIRAS CRISTIAN & C. O SOTTO;03000380927;03000380927;13/10/2014;RI091;A;Dati Azienda Chisura Unita Locale;18/11/2014;13/10/2015
+Documento acquistato per valutazione CDS;7344407;SMILE POINT DI PIRAS CRISTIAN & C. O SOTTO;03000380927;03000380927;13/10/2014;RI091;A;Dati Azienda Chisura Unita Locale;18/11/2014;13/10/2015
+Documento acquistato per valutazione CDS;8021744;PUTZOLU CESARE FRANCO;PTZCRF74E23F208Y;00684010952;15/10/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;15/10/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;11900541;PS DISTRIBUZIONE ORTOFRUTTA;03361060928;03361060928;15/10/2014;SC001;A;Nuovo Elenco Soci;18/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;11900541;PS DISTRIBUZIONE ORTOFRUTTA;03361060928;03361060928;15/10/2014;RI082;A;Nuova carica per esponente;18/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;364571961;FRATELLI CONCAS;03507410920;03507410920;15/10/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;2907075;DEI DI PICCININI GUERRINO & C.;00131480402;00131480402;11/11/2014;RI041;A;Variazione PEC;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;867237;ORTOFRUTTA PATRIZIA DI PELUSI PATRIZIA.;PLSPRZ59T58H867B;00833980709;10/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;10/11/2015
+Documento acquistato per valutazione CDS;1285331;OTTONELLO MARCO E C.;01015680091;01015680091;10/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;10/11/2015
+Documento acquistato per valutazione CDS;11043535;FALCONE MARCO;FLCMRC79B16F230D;01049770454;10/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;18/11/2014;10/11/2015
+Documento acquistato per valutazione CDS;11563421;JOLLY FRUTTA;02028600563;02028600563;11/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;11563421;JOLLY FRUTTA;02028600563;02028600563;11/11/2014;RI062;A;Evento Trasferimento Azienda;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;3493288;ORTOFRUTTICOLA 2099 DI PETRUCCELLI GIOVANNI;PTRGNN62E10D662W;02156820595;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;9352534;MISTOFRUTTA DI TITONE VITO;TTNVTI86P11F061H;02295070813;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;6622593;LA NUOVA FURIA DI VENTURATO ANTONIO;02627370618;02627370618;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;362183955;PONGA PATRIZIA;PNGPRZ82M64D005U;03200150781;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;364571961;FRATELLI CONCAS;03507410920;03507410920;11/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;1512631;MARINGELLI VITANTONIO;MRNVNT70H12G787V;04831220720;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;1306106;SUCCESSORI BONIFACIO LIVIO DI LIVIO BARTOLI & CO.;00771630324;00771630324;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;1285331;OTTONELLO MARCO E C.;01015680091;01015680091;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;11043535;FALCONE MARCO;FLCMRC79B16F230D;01049770454;11/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;11524033;INFRUTTA;01682540933;01682540933;11/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;5999415;BERARDINO SALVATORE;BRRSVT64C10D662X;01945510590;11/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;11563421;JOLLY FRUTTA;02028600563;02028600563;11/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;11563421;JOLLY FRUTTA;02028600563;02028600563;11/11/2014;RI062;A;Evento Trasferimento Azienda;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;3493288;ORTOFRUTTICOLA 2099 DI PETRUCCELLI GIOVANNI;PTRGNN62E10D662W;02156820595;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;13068890;LABBADIA GIAMPIERO;LBBGPR84H29D662T;02629130598;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;361200696;STRAVATO TONI GIOVANNI;STRTGV68E19D662V;02647060595;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;366362428;ROTUNNO VITTORIO ENRICO;RTNVTR56P01D662U;02757510595;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;364571961;FRATELLI CONCAS;03507410920;03507410920;11/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;1176791;SCALAS ANTONIO;SCLNTN58A17F208X;00094230950;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;1136191;MARROCCO & FABRIZIO;00284300597;00284300597;12/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;1363803;VITALFRUTTA DI MASSIMO VITALE;VTLMSM63M31L424J;00668270325;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;1306106;SUCCESSORI BONIFACIO LIVIO DI LIVIO BARTOLI & CO.;00771630324;00771630324;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;867237;ORTOFRUTTA PATRIZIA DI PELUSI PATRIZIA.;PLSPRZ59T58H867B;00833980709;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;1285331;OTTONELLO MARCO E C.;01015680091;01015680091;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;365492070;2B;01377060528;01377060528;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;896676;COOPERATIVA ORTOFLOROFRUTTICOLA PONTINA;01462760594;01462760594;12/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;8019942;TALANO NICOLA;TLNNCL72M30L120Z;01797190590;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;9615261;MAPI FRUTTA;01941050567;01941050567;12/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;5999415;BERARDINO SALVATORE;BRRSVT64C10D662X;01945510590;12/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;9654804;CERRONE GIANLUCA;CRRGLC73S29I712Y;02023690593;12/11/2014;PT046;P;Cancellazione protesto su esponente;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;11563421;JOLLY FRUTTA;02028600563;02028600563;12/11/2014;RI090;A;Dati Azienda Nuova Unita Locale;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;11563421;JOLLY FRUTTA;02028600563;02028600563;12/11/2014;RI062;A;Evento Trasferimento Azienda;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;3493288;ORTOFRUTTICOLA 2099 DI PETRUCCELLI GIOVANNI;PTRGNN62E10D662W;02156820595;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;5182116;AMBROSI & SDEI;02425260540;02425260540;12/11/2014;RI082;A;Nuova carica per esponente;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;2761521;TROMBETTONI PIERO E C.;02433760549;02433760549;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;10291156;AGRICOLA ORIANI & PECCHIA;02514330592;02514330592;12/11/2014;SC001;A;Nuovo Elenco Soci;18/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;366224847;FRUTTOLANDIA S.;02572860902;02572860902;13/11/2014;GL001;P;Variazione positiva del fido automatico;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;6622593;LA NUOVA FURIA DI VENTURATO ANTONIO;02627370618;02627370618;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;362183955;PONGA PATRIZIA;PNGPRZ82M64D005U;03200150781;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;362215471;BELLOTTI CRISTINA;BLLCST87S55B157X;03469890986;13/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;364571961;FRATELLI CONCAS;03507410920;03507410920;13/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;297867;SO.VE.OR;03595950159;03595950159;13/11/2014;SC001;A;Nuovo Elenco Soci;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;3231121;PEPI FRUIT;03616260877;03616260877;13/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;3704145;MOCCALDI GERARDO;03971060656;03971060656;13/11/2014;SC001;A;Nuovo Elenco Soci;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;1512631;MARINGELLI VITANTONIO;MRNVNT70H12G787V;04831220720;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;362316705;FIOR DI FRUTTA;05098620650;05098620650;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;8021744;PUTZOLU CESARE FRANCO;PTZCRF74E23F208Y;00684010952;13/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;9463636;PILLONI GIAMPIERO;PLLGPR54E15C882O;01735730929;13/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;10181451;IL TULIPANO DI MELIS MARIA PAOLA;MLSMPL53B54E281K;02061860926;13/11/2014;PT046;P;Cancellazione protesto su esponente;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;361426878;TERRA MARE VILLARIOS;03423150923;03423150923;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;361426878;TERRA MARE VILLARIOS;03423150923;03423150923;13/11/2014;GL006;N;Variazione negativa del fido automatico 2;18/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;361695096;DENOTTI BRUNO;DNTBRN69S02B274P;03429940921;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;18/11/2014;13/11/2015

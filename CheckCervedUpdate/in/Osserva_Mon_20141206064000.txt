@@ -1,0 +1,49 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1299609;ORTOSESTU AGRICOLA;01587190925;01587190925;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;1299609;ORTOSESTU AGRICOLA;01587190925;01587190925;05/08/2014;BL003;A;Nuova Relazione di Gestione;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;8677892;3D COMMERCIALE;02281140901;02281140901;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;8677892;3D COMMERCIALE;02281140901;02281140901;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;8677892;3D COMMERCIALE;02281140901;02281140901;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;8677892;3D COMMERCIALE;02281140901;02281140901;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;8677892;3D COMMERCIALE;02281140901;02281140901;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;8677892;3D COMMERCIALE;02281140901;02281140901;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;7338998;T.M.P. DI TOLU GIUSEPPE E TOLU CESARE E C.;02746520929;02746520929;05/08/2014;PL001;A;Disponibilita Grading Esperienze Pagamento;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;8440148;ORTOFRUTTICOLA 2G;03128470923;03128470923;05/08/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;11110048;ANDYCOC GESTIONI;03322320924;03322320924;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;06/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;85794;SICILIANI INDUSTRIA LAVORAZIONE CARNE;00272810722;00272810722;10/10/2014;MC010;A;Nuova movimentazione su azienda;06/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;85794;SICILIANI INDUSTRIA LAVORAZIONE CARNE;00272810722;00272810722;10/10/2014;MC010;A;Nuova movimentazione su azienda;06/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;3217581;ENAFRUTTA;02418660920;02418660920;10/10/2014;PL002;P;Variazione Positiva Grading Esperienze Pagamento;06/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;10/10/2014;GL001;P;Variazione positiva del fido automatico;06/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;6983206;DISCOUNT FRUTTA DI MOCCI S. & C.;02372580924;02372580924;13/10/2014;GL002;C;Variazione cautelativa del fido automatico;06/12/2014;13/10/2015
+Documento acquistato per valutazione CDS;1299609;ORTOSESTU AGRICOLA;01587190925;01587190925;15/10/2014;BL001;U;Nuovo Bilancio Aziendale;06/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;1299609;ORTOSESTU AGRICOLA;01587190925;01587190925;15/10/2014;BL003;A;Nuova Relazione di Gestione;06/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;3217581;ENAFRUTTA;02418660920;02418660920;15/10/2014;PL002;P;Variazione Positiva Grading Esperienze Pagamento;06/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;15/10/2014;GL001;P;Variazione positiva del fido automatico;06/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;8440148;ORTOFRUTTICOLA 2G;03128470923;03128470923;15/10/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;461090;ORTENZI;00908100431;00908100431;10/11/2014;MC010;A;Nuova movimentazione su azienda;06/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;1305062;SERRA MARIO;SRRMRA52L10I565O;00964360903;10/11/2014;GL002;C;Variazione cautelativa del fido automatico;06/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;3601800;QUARTIGLIA;01534780679;01534780679;10/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;3601800;QUARTIGLIA;01534780679;01534780679;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9392549;CASALE ANGELA;CSLNGL71E48D662P;02404320596;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;8440148;ORTOFRUTTICOLA 2G;03128470923;03128470923;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;461090;ORTENZI;00908100431;00908100431;11/11/2014;MC010;A;Nuova movimentazione su azienda;06/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;1305062;SERRA MARIO;SRRMRA52L10I565O;00964360903;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;06/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;5544380;FORCINA ANTONIO;FRCNTN49B08D662L;01348560598;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;7253261;CERACCHI SABRINA;CRCSRN79C48A132Y;02261790592;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;06/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;11/11/2014;GL001;P;Variazione positiva del fido automatico;06/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;6788499;NUOVA FRUTTA;07656851008;07656851008;12/11/2014;GL001;P;Variazione positiva del fido automatico;06/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;461090;ORTENZI;00908100431;00908100431;12/11/2014;MC010;A;Nuova movimentazione su azienda;06/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1305062;SERRA MARIO;SRRMRA52L10I565O;00964360903;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;06/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;6920622;VACCARO GINO & C.;01313620591;01313620591;12/11/2014;MC010;A;Nuova movimentazione su azienda;06/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1508338;LOCONTE ANTONIO;01882420746;01882420746;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;510680;ORTOFRUTTICOLA SILE;00198820268;00198820268;13/11/2014;MC010;A;Nuova movimentazione su azienda;06/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;5657305;SCHIRRIPA FRUTTA;02701220796;02701220796;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;366458352;ROYAL FRUIT DI LUCA DE LUCA;DLCLCU68M06D662O;02780880593;13/11/2014;PL001;A;Disponibilita Grading Esperienze Pagamento;06/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;6979809;PINNA DI AMBROGIO E ANNA;02848790925;02848790925;13/11/2014;GL001;P;Variazione positiva del fido automatico;06/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;8440148;ORTOFRUTTICOLA 2G;03128470923;03128470923;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;297867;SO.VE.OR;03595950159;03595950159;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;3652218;NAVA;05794430727;05794430727;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;3217581;ENAFRUTTA;02418660920;02418660920;13/11/2014;PL002;P;Variazione Positiva Grading Esperienze Pagamento;06/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;8440148;ORTOFRUTTICOLA 2G;03128470923;03128470923;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;06/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;8677892;3D COMMERCIALE;02281140901;02281140901;01/12/2014;BL001;U;Nuovo Bilancio Aziendale;06/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;3177368;CPR SYSTEM;01436840381;01436840381;01/12/2014;NW003;A;Aggiornamento News;06/12/2014;01/12/2015

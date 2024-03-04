@@ -1,0 +1,10 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;9517432;SUPER MERCATI SULCIS CARBONIA;03167430929;03167430929;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;27/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;3233855;OLIVO SUPERMERCATI;02766990929;02766990929;10/10/2014;BL001;U;Nuovo Bilancio Aziendale;27/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;1801937;COOPERATIVA FRUTTICOLTORI KURMARK UNIFRUT SOCIETA' AGRICOLA;00125760215;00125760215;10/11/2014;NW003;A;Aggiornamento News;27/11/2014;10/11/2015
+Documento acquistato per valutazione CDS;5440818;MEGAMARK;02969690615;02969690615;11/11/2014;NW003;A;Aggiornamento News;27/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;1105507;DI PISA;04162830378;04162830378;11/11/2014;BL001;U;Nuovo Bilancio Aziendale;27/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;341225;ORTOFRUTTA SATTIN;00361620289;01134020294;11/11/2014;BL001;U;Nuovo Bilancio Aziendale;27/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;341225;ORTOFRUTTA SATTIN;00361620289;01134020294;11/11/2014;BL003;A;Nuova Relazione di Gestione;27/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;5440818;MEGAMARK;02969690615;02969690615;13/11/2014;NW003;A;Aggiornamento News;27/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;1105507;DI PISA;04162830378;04162830378;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;27/11/2014;13/11/2015

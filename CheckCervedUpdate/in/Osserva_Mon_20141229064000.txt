@@ -1,0 +1,28 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;7143679;F.LLI BUZZO ANTONIO E GIUSEPPE;02712290929;02712290929;05/08/2014;GL001;P;Variazione positiva del fido automatico;29/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;460592;F.LLI BUCCOLINI ALBERTO ED ALFREDO;00400190435;00400190435;10/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;365656031;ABRUZZO FRUTTA SEMPLIFICATA;02079340689;02079340689;11/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;29/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;6675814;L'ORTOLANA DI PESCE GERARDO & C.;02421580263;02421580263;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;3490189;ORTOFRUTTA DI MELE CARMELA;03029021213;03029021213;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;6291915;CARLINO FRUTTA DI CARLINO ALESSANDRO & C.;02008420602;02008420602;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;5692715;IPERFRUTTA;02923080754;02923080754;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;2890659;COOPERATIVA AGRICOLA CENTRO SUD C.A.C.S;00083290593;00083290593;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;460592;F.LLI BUCCOLINI ALBERTO ED ALFREDO;00400190435;00400190435;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;5607266;BRANCIAROLI FRUTTA DI BRANCIAROLI PAOLO & C.;01305390666;01305390666;12/11/2014;PL001;A;Disponibilita Grading Esperienze Pagamento;29/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;7671334;FERRANTE;01806560684;01806560684;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1210519;LA COSTIERA DI VINACCIA FERDINANDO;VNCFDN75T04L845P;01831700594;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;7608614;ROMANO PIETRO;RMNPTR74M09D708D;01949040594;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;6291915;CARLINO FRUTTA DI CARLINO ALESSANDRO & C.;02008420602;02008420602;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;365656031;ABRUZZO FRUTTA SEMPLIFICATA;02079340689;02079340689;12/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;29/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9841433;ORTOFRUTTICOLA DELLE VERDURE;02413630597;02413630597;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;10046544;LAZIO PRODUCE;02511500593;02511500593;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;2540902;ORTO.CAV.2000;02526870130;02526870130;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;685226;STAND 14 DI VIRGA GIANFRANCO & C.;02563410824;02563410824;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;664216;NICORA STEFANO DI ARMANINI GUIDO E C. EMPLICE;03208570105;03208570105;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;7606037;MIA MILANO SOCIETA' AGRICOLA;03306310164;03306310164;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;10317733;UNIVERSAL FRUTTA DI SILVERIO MICHELE & C.;06634331000;06634331000;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;363981774;ALESSIA GROUP;07542171215;07542171215;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;29/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;7334567;ARU GIOVANNI;RAUGNN52L02G113X;01115860924;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;367352081;BOLOGNESI ORTOFRUTTA;01557570536;01557570536;01/12/2014;PL001;A;Disponibilita Grading Esperienze Pagamento;29/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;636605;ZAVAGLIA SERGIO & C.;00339600405;00339600405;22/12/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;22/12/2015
+Documento acquistato per valutazione CDS;460592;F.LLI BUCCOLINI ALBERTO ED ALFREDO;00400190435;00400190435;22/12/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;29/12/2014;22/12/2015

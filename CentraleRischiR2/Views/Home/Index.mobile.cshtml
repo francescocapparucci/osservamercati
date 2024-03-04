@@ -1,0 +1,32 @@
+﻿@model CentraleRischiR2.Models.User
+
+@{
+    ViewBag.Title = "Login Mobile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sectionTitle{
+	<h1>Accesso</h1>	
+}
+<div class="ui-body ui-body-b">  
+@using (Html.BeginForm("Login", "Home", FormMethod.Post, new { data_ajax = "false" }))
+{
+    @Html.ValidationSummary(true, "Login failed. Check your login details.");    
+        
+            <div data-role="fieldcontain">
+                @Html.LabelFor(u => u.Name)            
+                @Html.TextBoxFor(u => u.Name, new { data_mini = "true" })
+                @Html.ValidationMessageFor(u => u.Name)
+            </div>            
+            <div data-role="fieldcontain">
+                @Html.LabelFor(u => u.Password)
+                @Html.PasswordFor(u => u.Password, new { data_mini = "true" })
+                @Html.ValidationMessageFor(u => u.Password)
+            </div>           
+    <button data-theme="b" type="submit" data-inline="true">Accedi</button>  
+}
+</div>  
+
+
+
+
+

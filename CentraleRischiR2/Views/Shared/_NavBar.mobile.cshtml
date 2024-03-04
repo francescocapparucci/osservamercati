@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "_NavBar.mobile";
+}
+@{if (ViewBag.Ambiente != "MONOAZIENDALE")
+  {  
+      <text>
+<div data-role="navbar" data-iconpos="bottom">	
+    <ul>    
+        <li><a href="~/LoggedHome/Home" data-role="button" data-icon="home"><small>Home</small></a></li>        
+        <li><a href="~/MiaAzienda/MonitoraggioPreferiti" data-role="button" data-icon="alert"><small>Preferiti</small></a></li>        
+       <li><a href="~/MiaAzienda/PortafoglioClienti" data-role="button" data-icon="calendar"><small>Azienda</small></a></li>        
+       <li><a href="~/Mercato/Andamento" data-role="button" data-icon="grid"><small>Mercato</small></a></li>              
+    </ul>
+</div>
+</text>
+}
+else
+{
+      <div data-role="navbar" data-iconpos="bottom">	
+    <ul>    
+        <li><a href="~/LoggedHome/Home" data-role="button" data-icon="home"><small>Home</small></a></li>        
+       <li><a href="~/MiaAzienda/MonitoraggioPreferiti" data-role="button" data-icon="alert"><small>Preferiti</small></a></li>        
+       <li><a href="~/MiaAzienda/PortafoglioClienti" data-role="button" data-icon="calendar"><small>Azienda</small></a></li>        
+       <li><a href="~/Mercato/Andamento" data-role="button" data-icon="grid"><small>Andamento</small></a></li>              
+    </ul>
+</div>
+}
+}

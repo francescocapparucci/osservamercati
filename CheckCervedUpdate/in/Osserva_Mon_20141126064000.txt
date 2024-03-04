@@ -1,0 +1,23 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;48507;COBEC;01405930908;01405930908;05/08/2014;RI091;A;Dati Azienda Chisura Unita Locale;26/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;11658270;TRADE F.G.M.;03346880929;03346880929;05/08/2014;BL001;U;Nuovo Bilancio Aziendale;26/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;1220883;MARR;01836980365;02686290400;10/10/2014;NW003;A;Aggiornamento News;26/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;362006093;LA SPESA CHE VUOI TU;02677730596;02677730596;11/11/2014;RI082;A;Nuova carica per esponente;26/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;362006093;LA SPESA CHE VUOI TU;02677730596;02677730596;11/11/2014;RI050;A;Variazione capitale sociale;26/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;362006093;LA SPESA CHE VUOI TU;02677730596;02677730596;11/11/2014;SC001;A;Nuovo Elenco Soci;26/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;909682;CAVALLARO;00080350267;00080350267;11/11/2014;SC001;A;Nuovo Elenco Soci;26/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;909682;CAVALLARO;00080350267;00080350267;11/11/2014;RI010;A;Variazione ragione sociale ufficiale;26/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;909682;CAVALLARO;00080350267;00080350267;11/11/2014;RI050;A;Variazione capitale sociale;26/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;2765383;GIOMBETTI RAFFAELE;GMBRFL74P21D488D;02083700415;11/11/2014;RI070;A;Variazione Indirizzo Sede;26/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;2765383;GIOMBETTI RAFFAELE;GMBRFL74P21D488D;02083700415;11/11/2014;RI041;A;Variazione PEC;26/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;909682;CAVALLARO;00080350267;00080350267;12/11/2014;SC001;A;Nuovo Elenco Soci;26/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;909682;CAVALLARO;00080350267;00080350267;12/11/2014;RI010;A;Variazione ragione sociale ufficiale;26/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;909682;CAVALLARO;00080350267;00080350267;12/11/2014;RI050;A;Variazione capitale sociale;26/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;RI123;P;Inserimento Chiusura Preconcordato;26/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;AD151;A;Cancellazione annotazione procedure;26/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;AD126;A;Cancellazione proposta concordato;26/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;2765383;GIOMBETTI RAFFAELE;GMBRFL74P21D488D;02083700415;12/11/2014;RI070;A;Variazione Indirizzo Sede;26/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;2765383;GIOMBETTI RAFFAELE;GMBRFL74P21D488D;02083700415;12/11/2014;RI041;A;Variazione PEC;26/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;1023173;SPECIALFRUTTA;03499010829;03499010829;13/11/2014;FL036;P;Revoca Procedura Concorsuale su azienda connessa tramite esponente;26/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;1023173;SPECIALFRUTTA;03499010829;03499010829;13/11/2014;FL033;N;Apertura Procedura Concorsuale su azienda connessa tramite esponente;26/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;10591042;BOYLFRUITS DI MANCA ANDREA & ORTU MARINO;01134330958;01134330958;13/11/2014;RI041;A;Variazione PEC;26/11/2014;13/11/2015

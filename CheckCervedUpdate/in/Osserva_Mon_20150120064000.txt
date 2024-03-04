@@ -1,0 +1,27 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;05/08/2014;GL002;C;Variazione cautelativa del fido automatico;20/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;15/10/2014;GL002;C;Variazione cautelativa del fido automatico;20/01/2015;15/10/2015
+Documento acquistato per valutazione CDS;6622593;LA NUOVA FURIA DI VENTURATO ANTONIO;02627370618;02627370618;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;20/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;12280523;DI MEO;11527761008;11527761008;11/11/2014;RI083;A;Esponente con carica recessa;20/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;12280523;DI MEO;11527761008;11527761008;11/11/2014;RI080;A;Nuovo esponente;20/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;12280523;DI MEO;11527761008;11527761008;12/11/2014;RI083;A;Esponente con carica recessa;20/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;12280523;DI MEO;11527761008;11527761008;12/11/2014;RI080;A;Nuovo esponente;20/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;8838306;COOPERATIVA AGRICOLA FUTURO;02408260590;02408260590;12/11/2014;RI080;A;Nuovo esponente;20/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;20/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;6622593;LA NUOVA FURIA DI VENTURATO ANTONIO;02627370618;02627370618;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;20/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;3704145;MOCCALDI GERARDO;03971060656;03971060656;13/11/2014;RI064;A;Evento Subentro;20/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;3704145;MOCCALDI GERARDO;03971060656;03971060656;13/11/2014;SA001;A;Variazione stato azienda;20/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;663640;ORTOFRUTTICOLA S.ALESSIO;07984100151;07984100151;13/11/2014;SC001;A;Nuovo Elenco Soci;20/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;2587689;G.A.L.A. FRUIT DI CATALANO GIUSEPPE E FIGLI;11051840152;11051840152;13/11/2014;SC001;A;Nuovo Elenco Soci;20/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;12280523;DI MEO;11527761008;11527761008;13/11/2014;RI083;A;Esponente con carica recessa;20/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;12280523;DI MEO;11527761008;11527761008;13/11/2014;RI080;A;Nuovo esponente;20/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;780344;AGROTER DI ROBERTO DELLA CASA & PARTNERS;01984900363;01984900363;01/12/2014;RI041;A;Variazione PEC;20/01/2015;01/12/2015
+Documento acquistato per valutazione CDS;780344;AGROTER DI ROBERTO DELLA CASA & PARTNERS;01984900363;01984900363;01/12/2014;RI081;A;Esponente rimosso dall'azienda;20/01/2015;01/12/2015
+Documento acquistato per valutazione CDS;780344;AGROTER DI ROBERTO DELLA CASA & PARTNERS;01984900363;01984900363;01/12/2014;RI081;A;Esponente rimosso dall'azienda;20/01/2015;01/12/2015
+Documento acquistato per valutazione CDS;780344;AGROTER DI ROBERTO DELLA CASA & PARTNERS;01984900363;01984900363;01/12/2014;RI010;A;Variazione ragione sociale ufficiale;20/01/2015;01/12/2015
+Documento acquistato per valutazione CDS;780344;AGROTER DI ROBERTO DELLA CASA & PARTNERS;01984900363;01984900363;01/12/2014;RI080;A;Nuovo esponente;20/01/2015;01/12/2015
+Documento acquistato per valutazione CDS;8838306;COOPERATIVA AGRICOLA FUTURO;02408260590;02408260590;29/12/2014;RI080;A;Nuovo esponente;20/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;3220559;FRUITS SERVICE;02457420921;02457420921;29/12/2014;GL002;C;Variazione cautelativa del fido automatico;20/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;12227687;ORTOFRUTTA BEN DI BEN AMARA SOFIANE & C.;02050260997;02050260997;30/12/2014;RI062;A;Evento Trasferimento Azienda;20/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;5696035;ORTOFRUTTICOLA TIGULLIO;02859970101;00196640999;30/12/2014;RI062;A;Evento Trasferimento Azienda;20/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;5696035;ORTOFRUTTICOLA TIGULLIO;02859970101;00196640999;30/12/2014;RI041;A;Variazione PEC;20/01/2015;30/12/2015

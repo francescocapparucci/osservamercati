@@ -1,0 +1,15 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT010;N;Nuovo protesto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1037713;COMBY SERVICE;01390780417;01390780417;12/11/2014;PT011;N;Nuovo effetto sull'azienda;12/12/2014;12/11/2015

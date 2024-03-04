@@ -1,0 +1,7 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;2168725;DI GASPARE DOMENICO & C.;00827840679;00827840679;10/11/2014;MC010;A;Nuova movimentazione su azienda;03/01/2015;10/11/2015
+Documento acquistato per valutazione CDS;2168725;DI GASPARE DOMENICO & C.;00827840679;00827840679;10/11/2014;MC010;A;Nuova movimentazione su azienda;03/01/2015;10/11/2015
+Documento acquistato per valutazione CDS;2168725;DI GASPARE DOMENICO & C.;00827840679;00827840679;12/11/2014;MC010;A;Nuova movimentazione su azienda;03/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;2168725;DI GASPARE DOMENICO & C.;00827840679;00827840679;12/11/2014;MC010;A;Nuova movimentazione su azienda;03/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;2168725;DI GASPARE DOMENICO & C.;00827840679;00827840679;29/12/2014;MC010;A;Nuova movimentazione su azienda;03/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;2168725;DI GASPARE DOMENICO & C.;00827840679;00827840679;29/12/2014;MC010;A;Nuova movimentazione su azienda;03/01/2015;29/12/2015

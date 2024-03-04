@@ -1,0 +1,47 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1299609;ORTOSESTU AGRICOLA;01587190925;01587190925;05/08/2014;PT042;N;Nuovo protesto su esponente;17/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;9944496;MAIORA;03220010924;03220010924;05/08/2014;PT043;N;Nuovo effetto su esponente;17/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;618836;SPESA INTELLIGENTE;02416840235;02416840235;10/10/2014;MC010;A;Nuova movimentazione su azienda;17/01/2015;10/10/2015
+Documento acquistato per valutazione CDS;362053413;AUTOTRASPORTI ALONZO DANIELE S. SEMPLIFICATA;02497370904;02497370904;10/10/2014;PT063;N;Nuovo effetto su esponente/socio;17/01/2015;10/10/2015
+Documento acquistato per valutazione CDS;362053413;AUTOTRASPORTI ALONZO DANIELE S. SEMPLIFICATA;02497370904;02497370904;10/10/2014;GL006;N;Variazione negativa del fido automatico 2;17/01/2015;10/10/2015
+Documento acquistato per valutazione CDS;1299609;ORTOSESTU AGRICOLA;01587190925;01587190925;15/10/2014;PT042;N;Nuovo protesto su esponente;17/01/2015;15/10/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;10/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;10/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;10/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;10/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;10/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;10/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;10/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;10/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT011;N;Nuovo effetto sull'azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT011;N;Nuovo effetto sull'azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT043;N;Nuovo effetto su esponente;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;2166986;LORENZINI PIERLUIGI;LRNPLG73P21E975G;02288080548;11/11/2014;PT043;N;Nuovo effetto su esponente;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;362006093;LA SPESA CHE VUOI TU;02677730596;02677730596;11/11/2014;PT062;N;Nuovo protesto su esponente/socio;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;11/11/2014;PC053;N;Nuovo pregiudizievole su socio azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;11/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;11/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;11/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;11/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;362295215;G.S.G. SEMPLIFICATA;01522470887;01522470887;11/11/2014;PT011;N;Nuovo effetto sull'azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;362295215;G.S.G. SEMPLIFICATA;01522470887;01522470887;11/11/2014;PT011;N;Nuovo effetto sull'azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT011;N;Nuovo effetto sull'azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT011;N;Nuovo effetto sull'azienda;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT043;N;Nuovo effetto su esponente;17/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;11949302;M. & G. DI GRATTA MARCO;10631481008;10631481008;12/11/2014;PT011;N;Nuovo effetto sull'azienda;17/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;2796472;COLANFRUTTA;00472250588;00901911008;12/11/2014;PT052;N;Nuovo protesto su socio;17/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;12/11/2014;PC053;N;Nuovo pregiudizievole su socio azienda;17/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;12/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;12/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;12/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;12/11/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;362295215;G.S.G. SEMPLIFICATA;01522470887;01522470887;12/11/2014;PT011;N;Nuovo effetto sull'azienda;17/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;362295215;G.S.G. SEMPLIFICATA;01522470887;01522470887;12/11/2014;PT011;N;Nuovo effetto sull'azienda;17/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;7757488;LOTTIERI VITTORIO;02831320987;02831320987;13/11/2014;MC010;A;Nuova movimentazione su azienda;17/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;6331131;BOSCOLO ROBERTO GIOACHINA;BSCRRT62L30C638B;03046290270;13/11/2014;PC040;N;Nuovo pregiudizievole su esponente;17/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;6331131;BOSCOLO ROBERTO GIOACHINA;BSCRRT62L30C638B;03046290270;13/11/2014;GL006;N;Variazione negativa del fido automatico 2;17/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;01/12/2014;PC053;N;Nuovo pregiudizievole su socio azienda;17/01/2015;01/12/2015
+Documento acquistato per valutazione CDS;293967;SUD ORTAGGI;00958710386;00958710386;29/12/2014;RI120;N;Inserimento Proposta Preconcordato;17/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;29/12/2014;PC053;N;Nuovo pregiudizievole su socio azienda;17/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;29/12/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;29/12/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;29/12/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;29/12/2014;PT010;N;Nuovo protesto sull'azienda;17/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;2661748;ORTO DEL PARCO UNIPERSONALE;01296370669;01296370669;29/12/2014;PT063;N;Nuovo effetto su esponente/socio;17/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;2475091;TERRA ORTI;03605110653;03605110653;30/12/2014;PT043;N;Nuovo effetto su esponente;17/01/2015;30/12/2015

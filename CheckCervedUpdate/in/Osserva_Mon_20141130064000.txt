@@ -1,0 +1,9 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;05/08/2014;RI062;A;Evento Trasferimento Azienda;30/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;05/08/2014;RI091;A;Dati Azienda Chisura Unita Locale;30/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;05/08/2014;RI061;A;Evento Procedura concorsuale;30/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;05/08/2014;SA003;N;Variazione stato azienda - cessazione;30/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;13/11/2014;RI062;A;Evento Trasferimento Azienda;30/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;13/11/2014;RI091;A;Dati Azienda Chisura Unita Locale;30/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;13/11/2014;RI061;A;Evento Procedura concorsuale;30/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;13/11/2014;SA003;N;Variazione stato azienda - cessazione;30/11/2014;13/11/2015

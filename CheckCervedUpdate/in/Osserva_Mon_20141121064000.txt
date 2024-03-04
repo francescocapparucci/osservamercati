@@ -1,0 +1,18 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;2681293;SORACE GIUSEPPE;SRCGPP56R28I294H;00581380920;05/08/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;7329955;IMPERA SERGIO;MPRSRG61T31I182X;01807320922;05/08/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;9944796;L'ORTOFRUTTA DI SALIS SALVATORE;SLSSVT76B23H856E;02996300923;05/08/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;12459301;BUSSU ANTONIO;BSSNTN78S20F208J;01133500957;10/10/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;362053413;AUTOTRASPORTI ALONZO DANIELE S. SEMPLIFICATA;02497370904;02497370904;10/10/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;21/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;364006784;CONCU MARIO;CNCMRA66T07B354N;03488750922;10/10/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;364860535;ARAGONI GIANCARLO;RGNGCR87T21B745J;03507220923;10/10/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;364863818;LADY FRUIT DI PABIS SILVIA E DESSI' SILVIA;03513240923;03513240923;10/10/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;7329955;IMPERA SERGIO;MPRSRG61T31I182X;01807320922;15/10/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;7329955;IMPERA SERGIO;MPRSRG61T31I182X;01807320922;15/10/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;9944796;L'ORTOFRUTTA DI SALIS SALVATORE;SLSSVT76B23H856E;02996300923;15/10/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;7338070;GANDINI FILIPPO;GNDFPP68P01B354C;03005340926;15/10/2014;GL001;P;Variazione positiva del fido automatico;21/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;2907075;DEI DI PICCININI GUERRINO & C.;00131480402;00131480402;11/11/2014;MC010;A;Nuova movimentazione su azienda;21/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;273992;GRUPPO NAPOLEON;00661740233;00661740233;12/11/2014;BL001;U;Nuovo Bilancio Aziendale;21/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;273992;GRUPPO NAPOLEON;00661740233;00661740233;12/11/2014;BL003;A;Nuova Relazione di Gestione;21/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;5657305;SCHIRRIPA FRUTTA;02701220796;02701220796;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;21/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;5657305;SCHIRRIPA FRUTTA;02701220796;02701220796;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;21/11/2014;13/11/2015

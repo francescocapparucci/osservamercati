@@ -1,0 +1,36 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;05/08/2014;RI010;A;Variazione ragione sociale ufficiale;24/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;05/08/2014;RI061;A;Evento Procedura concorsuale;24/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;05/08/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;05/08/2014;RI080;A;Nuovo esponente;24/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;311178;DETTORI MARKET;00881040901;00881040901;10/10/2014;MC010;A;Nuova movimentazione su azienda;24/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;906922;COBAL;01784490599;01784490599;11/11/2014;RI062;A;Evento Trasferimento Azienda;24/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;11/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;11/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;11/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;11/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;11/11/2014;RI080;A;Nuovo esponente;24/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;11/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;11/11/2014;RI080;A;Nuovo esponente;24/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;9809643;ORTOFRUTTA CALIGARI E BABBI;03762050403;03762050403;12/11/2014;RI082;A;Nuova carica per esponente;24/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;12/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;12/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;12/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;12/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;12/11/2014;RI080;A;Nuovo esponente;24/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;12/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;12/11/2014;RI080;A;Nuovo esponente;24/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;906922;COBAL;01784490599;01784490599;12/11/2014;RI062;A;Evento Trasferimento Azienda;24/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;7483641;AGROFRUIT;09423200014;09423200014;13/11/2014;SC001;A;Nuovo Elenco Soci;24/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;13/11/2014;RI010;A;Variazione ragione sociale ufficiale;24/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;13/11/2014;RI061;A;Evento Procedura concorsuale;24/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;13/11/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;12035529;SIFEN WOK;02443650904;02443650904;13/11/2014;RI080;A;Nuovo esponente;24/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;10692352;GRUPPO SECURITY & SAFETY;10924651002;10924651002;13/11/2014;RI050;A;Variazione capitale sociale;24/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;01/12/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;01/12/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;01/12/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;01/12/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;01/12/2014;RI080;A;Nuovo esponente;24/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;01/12/2014;RI081;A;Esponente rimosso dall'azienda;24/12/2014;01/12/2015
+Documento acquistato per valutazione CDS;9060810;REPARTO 7;01150260329;01150260329;01/12/2014;RI080;A;Nuovo esponente;24/12/2014;01/12/2015

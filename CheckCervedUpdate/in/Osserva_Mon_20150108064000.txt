@@ -1,0 +1,7 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;3762206;INTERFRUCHT DI STIMPFL WILLIAM EGON;02393210212;02393210212;11/11/2014;RI081;A;Esponente rimosso dall'azienda;08/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;3762206;INTERFRUCHT DI STIMPFL WILLIAM EGON;02393210212;02393210212;11/11/2014;RI081;A;Esponente rimosso dall'azienda;08/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;3762206;INTERFRUCHT DI STIMPFL WILLIAM EGON;02393210212;02393210212;12/11/2014;RI081;A;Esponente rimosso dall'azienda;08/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;1282976;ASSOCIAZIONE PRODUTTORI ORTOFRUTTICOLI VENETO FRIULANA AGRICOLA;02337900266;02337900266;29/12/2014;MC010;A;Nuova movimentazione su azienda;08/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;362041007;O.P.ORTO NATURA;03263700795;03263700795;30/12/2014;BL001;U;Nuovo Bilancio Aziendale;08/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;362041007;O.P.ORTO NATURA;03263700795;03263700795;30/12/2014;GL006;N;Variazione negativa del fido automatico 2;08/01/2015;30/12/2015

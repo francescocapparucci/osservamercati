@@ -1,0 +1,2 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;366240412;MERCHE SILVERIO;MRCSVR83C19D708R;02770020598;11/11/2014;GL001;P;Variazione positiva del fido automatico;22/12/2014;11/11/2015

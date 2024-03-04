@@ -1,0 +1,10 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;3536658;CORONA ANDREA;CRNNDR72L30I765U;02431840921;05/08/2014;GL002;C;Variazione cautelativa del fido automatico;30/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;964643;F.LLI PAOLIERI DI MARCO & STEFANO;00142310507;00142310507;10/11/2014;GL002;C;Variazione cautelativa del fido automatico;30/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;6566757;MARCHESE RAGONA MARIA CONCETTA;MRCMCN74A54B602X;02084690847;11/11/2014;RI062;A;Evento Trasferimento Azienda;30/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;1512631;MARINGELLI VITANTONIO;MRNVNT70H12G787V;04831220720;11/11/2014;GL001;P;Variazione positiva del fido automatico;30/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;964643;F.LLI PAOLIERI DI MARCO & STEFANO;00142310507;00142310507;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;30/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;10046544;LAZIO PRODUCE;02511500593;02511500593;12/11/2014;SC001;A;Nuovo Elenco Soci;30/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;8309840;OROVERDE;04507780650;04507780650;13/11/2014;MC010;A;Nuova movimentazione su azienda;30/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;1512631;MARINGELLI VITANTONIO;MRNVNT70H12G787V;04831220720;13/11/2014;GL001;P;Variazione positiva del fido automatico;30/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;964643;F.LLI PAOLIERI DI MARCO & STEFANO;00142310507;00142310507;22/12/2014;GL002;C;Variazione cautelativa del fido automatico;30/12/2014;22/12/2015

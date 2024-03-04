@@ -1,0 +1,10 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;9135605;SA BUTTEGA DEI LEDDAS DI PANI VINCENZO & C.;03101850927;03101850927;05/08/2014;RI081;A;Esponente rimosso dall'azienda;31/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;6003274;MINCIOTTI RUGGERO;MNCRGR67D16C773H;01320400565;10/11/2014;GL002;C;Variazione cautelativa del fido automatico;31/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;578191;BAJAMAR;00130460595;00130460595;11/11/2014;MC010;A;Nuova movimentazione su azienda;31/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;511631;EUROFRUT;00796000370;00796000370;11/11/2014;RI081;A;Esponente rimosso dall'azienda;31/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;604503;CAGNA & BENELLI;01090050350;01090050350;11/11/2014;RI060;A;Evento Fusione Scissione;31/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;118827;ORTOFRUTTICOLA PESARESE;00159030410;00159030410;12/11/2014;SC001;A;Nuovo Elenco Soci;31/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;6003274;MINCIOTTI RUGGERO;MNCRGR67D16C773H;01320400565;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;31/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;2092441;C.O.S. COOPERATIVA ORTOFLOROFRUTTICOLA SABAUDIA ER ATIVA;00080700594;00080700594;22/12/2014;MC010;A;Nuova movimentazione su azienda;31/12/2014;22/12/2015
+Documento acquistato per valutazione CDS;1002332;PRODUTTORI AGRICOLI SAN ROCCO AGRICOLA;00992930362;00992930362;29/12/2014;MC010;A;Nuova movimentazione su azienda;31/12/2014;29/12/2015

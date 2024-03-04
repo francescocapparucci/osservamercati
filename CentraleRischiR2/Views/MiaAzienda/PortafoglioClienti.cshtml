@@ -1,0 +1,282 @@
+﻿@{
+    ViewBag.Title = "Portafoglio Clienti";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts {
+<script src="~/js/jquery-1.9.1.min.js"></script>
+<script src="~/js/knockout-2.2.1.js"></script>
+<script src="~/js/globalize.min.js"></script>
+<script src="~/js/dx.chartjs.js"></script>  
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>      
+<script type="text/javascript">
+    $(function () {
+        
+        /*
+        { valueField: "Vendite", name: "Vendite Mercato", color: "rgb(226,231,88)" },
+            { valueField: "Saldi", name: "Esposizione Mercato", color: "rgb(244,89,53)" },
+            { valueField: "Incassi", name: "Incassi Mercato", color: "rgb(59,172,77)" }
+            */
+
+        $.post("./GetReportFasceGiorni",
+        function (data) {
+            $("#pieGiorni").dxPieChart({
+                loadingIndicator: {
+                    text: "...in attesa..."
+                },                
+                palette: ['rgb(59,172,77)', 'rgb(226,231,88)', 'rgb(244,89,53)'],
+                dataSource: data.valueOf(),
+                title: {
+                    text: "Giorni Dilazione"
+                },
+                legend: {
+                    horizontalAlignment: "center",
+                    verticalAlignment: "bottom",
+                    margin: 0,
+                    font: {
+                        color: 'black',
+                        weight: 700                        
+                    }
+                },
+                pointClick: function (clickedPoint) {
+                    var rating = clickedPoint.originalArgument;
+                    switch (rating) {
+                        case "Sotto i 60 Giorni":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="giorni",valore ="60"}))';
+                            break;
+                        case "Tra i 60 e i 150 Giorni":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="giorni",valore ="150"}))';
+                            break;
+                        case "Oltre i 150 giorni":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="giorni",valore ="999"}))';
+                            break;
+                    }
+                    location.href = url;
+                },
+                tooltip: {
+                    enabled: true,
+                    percentPrecision: 2,
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText: function () {
+                        return this.argumentText + ' ' + this.valueText + " ( " + this.percentText + ")";
+                    }
+                }
+            ,
+                series: [{
+                    argumentField: "Fascia",
+                    valueField: "Companies",
+                    label: {
+                        visible: true,
+                        font: {
+                            size: 16,
+                            color: 'black'
+                        },
+                        connector: {
+                            visible: true,
+                            width: 0.5
+                        },
+                        position: "columns",
+                        customizeText: function (arg) {
+                            return arg.argumentText + ' ' + arg.valueText + " ( " + arg.percentText + ")";
+                        }
+                    }
+                }]
+            });
+        });
+
+
+        $.post("./GetReportFasceVendite",
+        function (data) {
+            $("#pieVendite").dxPieChart({
+                loadingIndicator: {
+                    text: "...in attesa..."
+                },
+                palette: ['rgb(59,172,77)', 'rgb(226,231,88)', 'orange', 'rgb(244,89,53)'],
+                dataSource: data.valueOf(),                
+                title: {
+                    text: "Clienti Vendite"
+                },                
+                legend: {
+                    horizontalAlignment: "center",
+                    verticalAlignment: "bottom",
+                    margin: 0,
+                    font: {
+                        color: 'black',
+                        weight: 700                        
+                    }
+                },
+                pointClick: function (clickedPoint) {
+                    var rating = clickedPoint.originalArgument;
+                    switch (rating) {
+                        case "Sotto i 20.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="vendite",valore ="20000"}))';
+                            break;
+                        case "Tra i 20.000 e i 100.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="vendite",valore ="100000"}))';
+                            break;
+                        case "Tra i 100.000 e i 400.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="vendite",valore ="400000"}))';
+                            break;
+                        case "Sopra i 400.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="vendite",valore ="999"}))';
+                            break;
+                    }
+                    location.href = url;
+                },
+                tooltip: {
+                    enabled: true,
+                    percentPrecision: 2,
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText: function () {
+                        return this.argumentText + ' ' + this.valueText + " ( " + this.percentText + ")";
+                    }
+                }
+        ,
+                series: [{
+                    commonPaneSettings: {
+                        backgroundColor: '#ffffff'
+                    },                    
+                    argumentField: "Fascia",
+                    valueField: "Companies",
+                    label: {
+                        visible: true,
+                        font: {
+                            size: 16,
+                            color:"black"                           
+                        },
+                        connector: {
+                            visible: true,
+                            width: 0.5
+                        },
+                        position: "columns",
+                        customizeText: function (arg) {
+                            return arg.argumentText + ' ' + arg.valueText + " ( " + arg.percentText + ")";
+                        }
+                    }
+                }]
+            });
+        });
+
+        
+
+
+        $.post("./GetReportFasceEsposizione",
+        function (data) {
+            $("#pieEsposizione").dxPieChart({
+                loadingIndicator: {
+                    text: "...in attesa...",
+                    backgroundColor: "#ffffff",                
+                },                     
+                palette: ['rgb(59,172,77)', 'rgb(226,231,88)', 'orange', 'rgb(244,89,53)','gray'],
+                dataSource: data.valueOf(),
+                title: {
+                    text: "Clienti Esposizione"
+                },
+                legend: {
+                    horizontalAlignment: "center",
+                    verticalAlignment: "bottom",
+                    margin: 0,
+                    font: {
+                        color: 'black',
+                        weight: 700                        
+                    }
+                },
+                pointClick: function (clickedPoint) {
+                    var rating = clickedPoint.originalArgument;
+                    switch (rating) {
+                        case "Sotto i 1.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="esposizione",valore ="1000"}))';
+                            break;
+                        case "Tra i 1.000 e i 5.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti", "MiaAzienda", new { chiave = "esposizione", valore = "5000" }))';
+                            break;
+                        case "Tra i 5.000 e i 25.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="esposizione",valore ="25000"}))';
+                            break;
+                        case "Tra i 25.000 e i 100.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="esposizione",valore ="100000"}))';
+                            break;
+                        case "Sopra i 100.000":
+                            url = '@Html.Raw(Url.Action("RecuperoCrediti","MiaAzienda",new{chiave="esposizione",valore ="999"}))';
+                            break;
+                    }
+                    location.href = url;
+                },
+                tooltip: {                    
+                    enabled: true,
+                    percentPrecision: 2,
+                    font: {
+                        color: 'black',
+                        weight: 700
+                    },
+                    customizeText: function () {
+                        return this.argumentText + ' ' + this.valueText + " ( " + this.percentText + ")";
+                    }
+                }
+        ,
+                series: [{
+                    argumentField: "Fascia",
+                    valueField: "Companies",                    
+                    label: {
+                        visible: true,                        
+                        font: {
+                            size: 16,
+                            color:"black"                           
+
+                        },
+                        connector: {
+                            visible: true,
+                            width: 0.5
+                        },
+                        position: "columns",
+                        customizeText: function (arg) {
+                            return arg.argumentText + ' ' + arg.valueText + " ( " + arg.percentText + ")";
+                        }
+                    }
+                }]
+            });
+        });
+        
+
+
+
+
+
+
+    });
+    
+</script>
+
+}
+@section additionalCss {
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/redmond/jquery-ui-1.8.2.custom.css" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/ui.jqgrid.css" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+}
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+@section searchForm {
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+@section breadCrumb {
+    @RenderPage("~/Views/Shared/_BreadCrumb.cshtml")
+}
+
+<a name="giorni">&nbsp;</a>
+<div id="pieGiorni" style="max-width:900px;height:400px;z-index:9999"></div>        
+<a name="vendite">&nbsp;</a>
+<div id="pieVendite" style="max-width:900px;height:400px;z-index:9999"></div>
+<a name="esposizione">&nbsp;</a>
+<div id="pieEsposizione" style="max-width:900px;height:400px;z-index:9999"></div>
+
+

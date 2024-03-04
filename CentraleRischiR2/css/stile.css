@@ -1,0 +1,164 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: url("/Content/images/Gertrude-Crompton-The-Vegetable-Market-Venice.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    display: block;
+}
+
+#legge {
+    padding: 30px;
+    text-align: center;
+    font-size: 22px;
+}
+.loginbox {
+    width: 450px;
+    height: 470px;
+    background: #000;
+    color: #fff;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%,10%);
+    box-sizing: border-box;
+    padding: 0px 30px;
+    border-radius: 30px 30px;
+    opacity: 0.75;
+    filter: alpha(opacity=60);
+
+}
+
+.spazio {
+    width: 150px;
+    height: 150px;
+}
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 80%;
+    position: absolute;
+    top: -5%;
+    right:170px;
+}
+
+h1 {
+    margin: 100px;
+    padding: 70px 0px 30px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p {
+    margin: -10px;
+    padding:  10px 0px 10px 10px;
+    font-weight: bold;
+    font-size : large;
+}
+
+#policy{
+    text-decoration: underline;
+    font-size : 10px;
+}
+
+.bigfield {
+    margin-right: 10px;
+    padding: 10px;
+    align-self:flex-start;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: solid;
+}
+
+.alert alert-danger {
+    color: black;
+    display: none;
+}
+.email {
+    margin-right: 10px;
+    padding: 10px;
+    align-self: flex-start;
+    font-size: 20px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: solid;
+}
+
+.loginbox input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+    .loginbox input[type="text"], input[type="password"] {
+        border:  double;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 30px;
+        margin-top: 5px;
+        width : 270px;
+        height: 30px;
+        margin-left :40px;
+    }
+
+    .loginbox  input[type="password"] {
+        border: double;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 30px;
+        margin-top: 5px;
+        width: 270px;
+        height: 30px;
+        margin-left: -10px;
+    }
+
+#show-pass {
+    text-align: center;
+    margin-top: 3%;
+    font-size: 10px;
+}
+    .loginbox input[type="submit"] {
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #fb2525;
+        font-size: 18px;
+        height: 40px;
+        width : 100px;
+        border-radius: 50px;
+        margin-top :30px;
+        margin-left:0px;;
+    }
+#policy {
+    float: left;
+    margin: 5px 0px;
+}
+    #accetto {
+        border: none;
+        outline: none;
+        color: #ffffff;
+        background: #0026ff;
+        margin-left: 0px;
+        font-size: 9px;
+        height: 20px;
+        width: 220px;
+        border-radius: 50px;
+        margin-top: 10px;
+        
+    }
+#legge {
+    text-decoration: double;
+    font-size: 8px;
+    text-align: left;
+    line-height: 10px;
+    color: darkgray;
+    margin-top: -20px;
+}
+.loginbox a {
+    text-decoration: double;
+    font-size: 15px;
+    text-align: right;
+    line-height: 20px;
+    color: darkgray;
+}

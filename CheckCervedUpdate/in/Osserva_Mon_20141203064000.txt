@@ -1,0 +1,10 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1735043;O.C.S. ORGANIZZAZIONE CENTRO SERVIZI;01970400923;01970400923;05/08/2014;RI062;A;Evento Trasferimento Azienda;03/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;1735043;O.C.S. ORGANIZZAZIONE CENTRO SERVIZI;01970400923;01970400923;05/08/2014;RI090;A;Dati Azienda Nuova Unita Locale;03/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;2354232;CE.DI. GROS;06564861000;06564861000;16/09/2014;RI050;A;Variazione capitale sociale;03/12/2014;16/09/2015
+Documento acquistato per valutazione CDS;1773582;OK FRUTTA DI TRONCI GABRIELE & C.;02253290924;02253290924;10/10/2014;RI041;A;Variazione PEC;03/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;6664602;CORO & BIO UN'ARMONIA DI SAPORI CON DENOMINAZIONE ABBREVIAT A CORO & BIO;03025760921;03025760921;15/10/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;03/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;10/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;03/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;11/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;03/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;884226;2C MD DI DI BIAGIO VIRGILIO & C.;01272810563;01272810563;12/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;03/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;6664602;CORO & BIO UN'ARMONIA DI SAPORI CON DENOMINAZIONE ABBREVIAT A CORO & BIO;03025760921;03025760921;13/11/2014;PL003;N;Variazione Negativa Grading Esperienze Pagamento;03/12/2014;13/11/2015

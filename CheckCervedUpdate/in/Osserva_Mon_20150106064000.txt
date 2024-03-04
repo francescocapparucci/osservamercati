@@ -1,0 +1,63 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;11762754;CARBONI ORTOFRUTTA DI DANIELE CARBONI & C.;02432760904;02432760904;05/08/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;05/08/2015
+Documento acquistato per valutazione CDS;2045401;FERRAU GIUSEPPE;FRRGPP64C19L924V;01487490920;10/10/2014;GL001;P;Variazione positiva del fido automatico;06/01/2015;10/10/2015
+Documento acquistato per valutazione CDS;11707812;PIGA SANDRO;PGISDR79H28B354A;02526400920;13/10/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;13/10/2015
+Documento acquistato per valutazione CDS;11762754;CARBONI ORTOFRUTTA DI DANIELE CARBONI & C.;02432760904;02432760904;15/10/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;15/10/2015
+Documento acquistato per valutazione CDS;8574314;MULTICASH;01679850675;01679850675;11/11/2014;MC010;A;Nuova movimentazione su azienda;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;11399041;ORTOFRUTTICOLA MEDITERRANEA;02419970906;02419970906;11/11/2014;SC001;A;Nuovo Elenco Soci;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;1512631;MARINGELLI VITANTONIO;MRNVNT70H12G787V;04831220720;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;11/11/2014;RI082;A;Nuova carica per esponente;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;11/11/2014;RI081;A;Esponente rimosso dall'azienda;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;11/11/2014;RI040;A;Variazione Oggetto Sociale impresa;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;11/11/2014;RI083;A;Esponente con carica recessa;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;11/11/2014;SC001;A;Nuovo Elenco Soci;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;11/11/2014;RI083;A;Esponente con carica recessa;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;11/11/2014;RI083;A;Esponente con carica recessa;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;11/11/2014;RI082;A;Nuova carica per esponente;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;11/11/2014;RI010;A;Variazione ragione sociale ufficiale;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;11/11/2014;RI082;A;Nuova carica per esponente;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;7549587;PLAY OFF ONE;03275520611;03275520611;11/11/2014;PT010;N;Nuovo protesto sull'azienda;06/01/2015;11/11/2015
+Documento acquistato per valutazione CDS;581317;AL.MA.;09934620155;09934620155;12/11/2014;MC010;A;Nuova movimentazione su azienda;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;11949302;M. & G. DI GRATTA MARCO;10631481008;10631481008;12/11/2014;PT011;N;Nuovo effetto sull'azienda;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;5527867;BERTOLUCCI DI BERTOLUCCI ERNESTO & C.;00506010453;00506010453;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;12/11/2014;RI082;A;Nuova carica per esponente;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;12/11/2014;RI081;A;Esponente rimosso dall'azienda;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;12/11/2014;RI040;A;Variazione Oggetto Sociale impresa;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;12/11/2014;RI083;A;Esponente con carica recessa;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;12/11/2014;SC001;A;Nuovo Elenco Soci;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;12/11/2014;RI083;A;Esponente con carica recessa;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;12/11/2014;RI083;A;Esponente con carica recessa;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;12/11/2014;RI082;A;Nuova carica per esponente;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;12/11/2014;RI010;A;Variazione ragione sociale ufficiale;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;12/11/2014;RI082;A;Nuova carica per esponente;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;2045401;FERRAU GIUSEPPE;FRRGPP64C19L924V;01487490920;12/11/2014;GL001;P;Variazione positiva del fido automatico;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;8574314;MULTICASH;01679850675;01679850675;12/11/2014;MC010;A;Nuova movimentazione su azienda;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;11399041;ORTOFRUTTICOLA MEDITERRANEA;02419970906;02419970906;12/11/2014;SC001;A;Nuovo Elenco Soci;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;11762754;CARBONI ORTOFRUTTA DI DANIELE CARBONI & C.;02432760904;02432760904;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;12/11/2015
+Documento acquistato per valutazione CDS;7045628;BARTOLINI MASSIMO;BRTMSM66R28H294R;03178330407;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;1512631;MARINGELLI VITANTONIO;MRNVNT70H12G787V;04831220720;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;11399041;ORTOFRUTTICOLA MEDITERRANEA;02419970906;02419970906;13/11/2014;SC001;A;Nuovo Elenco Soci;06/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;11762754;CARBONI ORTOFRUTTA DI DANIELE CARBONI & C.;02432760904;02432760904;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;13/11/2015
+Documento acquistato per valutazione CDS;5527867;BERTOLUCCI DI BERTOLUCCI ERNESTO & C.;00506010453;00506010453;29/12/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;29/12/2014;RI082;A;Nuova carica per esponente;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;29/12/2014;RI081;A;Esponente rimosso dall'azienda;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;29/12/2014;RI040;A;Variazione Oggetto Sociale impresa;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;29/12/2014;RI083;A;Esponente con carica recessa;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;29/12/2014;SC001;A;Nuovo Elenco Soci;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;29/12/2014;RI083;A;Esponente con carica recessa;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;29/12/2014;RI083;A;Esponente con carica recessa;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;29/12/2014;RI082;A;Nuova carica per esponente;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;29/12/2014;RI010;A;Variazione ragione sociale ufficiale;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;460605;ROVOLETTO GASTONE;00776880270;00776880270;29/12/2014;RI082;A;Nuova carica per esponente;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;361572135;LA BOUTIQUE DELLA FRUTTA SAN REMO;01558110084;01558110084;29/12/2014;GL006;N;Variazione negativa del fido automatico 2;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;8574314;MULTICASH;01679850675;01679850675;29/12/2014;MC010;A;Nuova movimentazione su azienda;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;10292751;S.B.;01940640509;01940640509;29/12/2014;GL006;N;Variazione negativa del fido automatico 2;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;11762754;CARBONI ORTOFRUTTA DI DANIELE CARBONI & C.;02432760904;02432760904;29/12/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;7045628;BARTOLINI MASSIMO;BRTMSM66R28H294R;03178330407;29/12/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;1512631;MARINGELLI VITANTONIO;MRNVNT70H12G787V;04831220720;29/12/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;11068102;MASTER METAL;01980440992;01980440992;30/12/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;366108399;FRUTTA E VERDURA SABRINA DI MERIALDI SABRINA;MRLSRN71S58L219O;02115210995;30/12/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;362697739;ORTOFRUTTA DI SANCI LUCIA;SNCLCU76B64D969Z;02166200994;30/12/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;363534108;J K FRUTTA E VERDURA DI NUR ALAM E MORSHAD ALAM;02188430991;02188430991;30/12/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;365637879;GENUIN FRUTTA DI CALAUTTI ROMINA;CLTRMN81P69I725M;02534020181;30/12/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;30/12/2015
+Documento acquistato per valutazione CDS;3402200;MARCHESE ALESSANDRA;MRCLSN66S57D969A;03391060104;30/12/2014;GL002;C;Variazione cautelativa del fido automatico;06/01/2015;30/12/2015

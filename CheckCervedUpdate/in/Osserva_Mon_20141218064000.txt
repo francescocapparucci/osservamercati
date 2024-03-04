@@ -1,0 +1,5 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;6430198;PICCADILLY DI AGAZZOTTI VALTER E C.;02254460369;02254460369;29/08/2014;FL033;N;Apertura Procedura Concorsuale su azienda connessa tramite esponente;18/12/2014;29/08/2015
+Documento acquistato per valutazione CDS;618836;SPESA INTELLIGENTE;02416840235;02416840235;10/10/2014;MC010;A;Nuova movimentazione su azienda;18/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;618836;SPESA INTELLIGENTE;02416840235;02416840235;10/10/2014;MC010;A;Nuova movimentazione su azienda;18/12/2014;10/10/2015
+Documento acquistato per valutazione CDS;11265689;MARIOTTI;01951310687;01951310687;12/11/2014;GL003;N;Variazione negativa del fido automatico;18/12/2014;12/11/2015

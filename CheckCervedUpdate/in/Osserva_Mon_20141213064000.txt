@@ -1,0 +1,25 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;3217580;SARDEGNA FRUTTA 2;01120040918;01120040918;05/08/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;13/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;549495;INDUSTRIA SERVIZI AGROALIMENTARI I.S.A.;01300830922;01300830922;05/08/2014;MC010;A;Nuova movimentazione su azienda;13/12/2014;05/08/2015
+Documento acquistato per valutazione CDS;3217580;SARDEGNA FRUTTA 2;01120040918;01120040918;15/10/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;13/12/2014;15/10/2015
+Documento acquistato per valutazione CDS;549495;INDUSTRIA SERVIZI AGROALIMENTARI I.S.A.;01300830922;01300830922;10/11/2014;MC010;A;Nuova movimentazione su azienda;13/12/2014;10/11/2015
+Documento acquistato per valutazione CDS;2976398;MAGNANTE FRANCESCO E FIGLI;01559020662;01559020662;11/11/2014;BL001;U;Nuovo Bilancio Aziendale;13/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;2976398;MAGNANTE FRANCESCO E FIGLI;01559020662;01559020662;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;13/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;1308376;M.O.F. PER LA GESTIONE DEL CENTRO AGRO ALIMENTARE ALL'INGROSSO DI FONDI;01704320595;01704320595;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;13/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;7753011;FRACASSI PIERLUIGI;FRCPLG79L23A515W;01706300660;11/11/2014;GL001;P;Variazione positiva del fido automatico;13/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;11524067;LOGISTICA3;01822410666;01822410666;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;13/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;7265882;CATTOLICA FRUTTA O IN FO RMA ABBREVIATA CATTOLICA FRUTTA;03507810400;03507810400;11/11/2014;GL002;C;Variazione cautelativa del fido automatico;13/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;549495;INDUSTRIA SERVIZI AGROALIMENTARI I.S.A.;01300830922;01300830922;11/11/2014;MC010;A;Nuova movimentazione su azienda;13/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;2983757;QUALITY FRUIT;02303160648;02303160648;11/11/2014;GL001;P;Variazione positiva del fido automatico;13/12/2014;11/11/2015
+Documento acquistato per valutazione CDS;1136191;MARROCCO & FABRIZIO;00284300597;00284300597;12/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;13/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;6978219;PARDATSCHER BRUNO & CO.;01192800215;01192800215;12/11/2014;GL001;P;Variazione positiva del fido automatico;13/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;549495;INDUSTRIA SERVIZI AGROALIMENTARI I.S.A.;01300830922;01300830922;12/11/2014;MC010;A;Nuova movimentazione su azienda;13/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;2976398;MAGNANTE FRANCESCO E FIGLI;01559020662;01559020662;12/11/2014;BL001;U;Nuovo Bilancio Aziendale;13/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;2976398;MAGNANTE FRANCESCO E FIGLI;01559020662;01559020662;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;13/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;1308376;M.O.F. PER LA GESTIONE DEL CENTRO AGRO ALIMENTARE ALL'INGROSSO DI FONDI;01704320595;01704320595;12/11/2014;GL002;C;Variazione cautelativa del fido automatico;13/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;178472;CALANDRINI FRUTTA;01733680407;01733680407;12/11/2014;BL001;U;Nuovo Bilancio Aziendale;13/12/2014;12/11/2015
+Documento acquistato per valutazione CDS;7265882;CATTOLICA FRUTTA O IN FO RMA ABBREVIATA CATTOLICA FRUTTA;03507810400;03507810400;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;13/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;2363444;TRE STELLE DI SALVATORE ANASTASI;03876600879;03876600879;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;13/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;12060197;FRUTTA 3 EFFE;04895100875;04895100875;13/11/2014;GL002;C;Variazione cautelativa del fido automatico;13/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;3217580;SARDEGNA FRUTTA 2;01120040918;01120040918;13/11/2014;GL004;C;Variazione fido automatico da negativo a cautelativo ;13/12/2014;13/11/2015
+Documento acquistato per valutazione CDS;549495;INDUSTRIA SERVIZI AGROALIMENTARI I.S.A.;01300830922;01300830922;13/11/2014;MC010;A;Nuova movimentazione su azienda;13/12/2014;13/11/2015

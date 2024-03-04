@@ -1,0 +1,160 @@
+﻿@{
+    ViewBag.Title = "Reportistica";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts {
+<script src="~/scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="~/js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+<script src="~/js/i18n/grid.locale-it.js" type="text/javascript"></script>
+<script src="~/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="~/js/jquery.ui.datepicker-it.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#homeTabs").tabs();
+
+        $("#dataInizio,#dataFine").datepicker($.datepicker.regional['it']);
+        $("#dataInizio,#dataFine").datepicker('option', 'dateFormat', 'dd/mm/yy');
+
+
+        $('#pva').autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: './GetAnagraficaPivaOsservatorioAC',
+                    data: { query: request.term },
+                    dataType: 'json',
+                    type: 'POST',
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return {
+                                label: item.PartitaIva,
+                                value: item.RagioneSociale
+                            }
+                        }));
+                    }
+                })
+            },
+            select: function (event, ui) {
+                $('#pva').val(ui.item.label);
+                $('#ragsoc').val(ui.item.value);
+                return false;
+            },
+            minLength: 3
+        });
+
+        $('#ragsoc').autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: './GetAnagraficaRagSocOsservatorioAC',
+                    data: { query: request.term },
+                    dataType: 'json',
+                    type: 'POST',
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return {
+                                label: item.RagioneSociale,
+                                value: item.PartitaIva
+                            }
+                        }));
+                    }
+                })
+            },
+            select: function (event, ui) {
+                $('#pva').val(ui.item.value);
+                $('#ragsoc').val(ui.item.label);
+                return false;
+            },
+            minLength: 3
+        });
+
+        $('#pva').click(function () {
+            $('#ragsoc').val('');
+            $('#pva').val('');
+        }
+    );
+
+        $('#ragsoc').click(function () {
+            $('#ragsoc').val('');
+            $('#pva').val('');
+        }
+    );
+
+
+        $('#btnRichiesta1').click(function () {
+            //alert('premuto' + $('#pva').val());            
+            $.post("./InserisciRichiesteReportFornitore", { piva: $('#pva').val(), dataInizio: $('#dataInizio').val(), dataFine: $('#dataFine').val() },
+                                        function (data) {
+                                            if (data != '') {
+                                                $("div#dialog-report").dialog({
+                                                    open: function (event, ui) {
+                                                        $(".ui-dialog-titlebar-close").hide();
+                                                    },
+                                                    resizable: false,
+                                                    closeOnEscape: false,                                                    
+                                                    modal: true,
+                                                    buttons: {
+                                                        "Chiudi": function () {
+                                                            piva: $('#pva').val('');
+                                                            piva: $('#ragsoc').val('');
+                                                            $(this).dialog("close");
+
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        });
+        });
+
+
+    });
+        
+</script>
+}
+@section sectionTitle{
+<div id="title">
+    <h1>Reportistica</h1>	
+</div>
+}
+@section additionalCss {
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/redmond/jquery-ui-1.8.2.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/ui.jqgrid.css" />
+}
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+
+@section searchForm {
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+@section breadCrumb {
+    @RenderPage("~/Views/Shared/_BreadCrumb.cshtml")    
+}
+<div id="homeTabs">
+<ul>
+    <li><a href="#preferitiHomeContainer">Report Fornitore</a></li>
+    <li><a href="#recuperoCreditiContainer">Classifica Vendite Operatore</a></li>
+</ul>
+<div id="preferitiHomeContainer">
+    <h2>Report Fornitore</h2><br />
+    <form action="" method="post"" name="frmSearchRFornitore" id="frmSearchRFornitore">
+        <label for="pva">Partita Iva: </label>
+        <input id="pva" type="search" value="@ViewBag.PartitaIva" />
+        <label for="ragsoc">Ragione Sociale: </label>
+        <input id="ragsoc" type="search" value="@ViewBag.RagioneSociale" style="width:300px" /><br />   
+        <label for="dataInizio">Data Inizio: </label>
+        <input id="dataInizio" name="dataInizio" type="search" value='@ViewBag.DataInizio;' style="width:100px" />
+        <label for="dataFine">Data Fine: </label>
+        <input id="dataFine" name="dataFine" type="search" value='@ViewBag.DataFine;' style="width:100px" /><br />   
+        <input type="button" id="btnRichiesta1" value="Richiedi">  
+    </form>
+</div>
+<div id="recuperoCreditiContainer">
+    <h2>Classifica Vendite Operatore</h2>    
+</div>
+</div>
+<div id="dialog-report" style="display:none">
+    Il Report richiesto sarà elaborato e inviato alla vostra casella di posta elettronica.
+</div>
+<br />

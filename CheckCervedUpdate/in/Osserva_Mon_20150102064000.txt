@@ -1,0 +1,3 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;7324250;BUSINELLI ROSALBA & MARIA;01182210102;01182210102;29/12/2014;RI061;A;Evento Procedura concorsuale;02/01/2015;29/12/2015
+Documento acquistato per valutazione CDS;7324250;BUSINELLI ROSALBA & MARIA;01182210102;01182210102;29/12/2014;SA001;A;Variazione stato azienda;02/01/2015;29/12/2015

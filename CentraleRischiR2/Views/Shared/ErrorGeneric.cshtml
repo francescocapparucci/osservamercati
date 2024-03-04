@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "LoggedUser";
+
+}
+ 
+    <div @{if (ViewBag.Ambiente != "MONOAZIENDALE") { <text>
+         id='loggedUserPanel'
+         </text>  } else { <text>
+         id='loggedUserPanelMono'
+         </text>  } }>
+        Utente: <b>@ViewBag.Username</b><br />
+        Azienda:
+        <b>
+            @if (ViewBag.Demo == true)
+            {
+                <text>Azienda Demo</text>
+            }
+            else
+            {
+                @ViewBag.Azienda
+            }
+        </b>
+        <br />
+        @{if (ViewBag.Ambiente != "MONOAZIENDALE")
+            {
+                if (ViewBag.Ruolo == "SUPERADMIN")
+                {
+                    <text>Mercato:&nbsp;<select id="selezionaMercato"><option value="8">Bologna</option><option value="7">Fondi</option></select></text>
+                }
+                else
+                {
+                    <text>Mercato:&nbsp;</text>
+                    <b>
+                        @if (ViewBag.Demo == true)
+                        {
+                            <text>Mercato Demo</text>
+                        }
+                        else
+                        {
+                            @ViewBag.Mercato
+                        }
+                    </b>
+                    <br />
+                }
+                <text>
+                    <p>
+                        <a style="color:#FF0000">
+                            Report Richiesti:
+                            <b style="color:#FF0000">
+                                @ViewBag.ReportCount
+                            </b>
+                        </a>
+                    </p>
+                </text>
+                
+                <text><p><a style="color:#1A719F;cursor:pointer;position:relative;z-index:99" href="@Url.Action("Logout", "Home")">[Esci]</a></p></text>
+            }
+            else
+            {
+                <text><p><a style="color:#1A719F;cursor:pointer;position:relative;z-index:99;top:-14px" href="@Url.Action("Logout", "Home")">[Esci]</a></p></text>
+            }
+        }
+
+    </div>
+
+
+

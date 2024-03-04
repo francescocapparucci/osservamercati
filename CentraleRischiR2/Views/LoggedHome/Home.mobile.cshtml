@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sectionTitle{
+	<h1>Home</h1>	
+    <a href="index.html" data-icon="gear" class="ui-btn-left">Imposta</a>    
+    <a href="~/Home/Logout" data-icon="delete" class="ui-btn-right">Uscita</a>    
+}
+@section loggedUser {
+    @RenderPage("~/Views/Shared/_LoggedUser.cshtml")
+}
+@section navbar {
+    @RenderPage("~/Views/Shared/_NavBar.cshtml")
+}
+@section searchForm {
+
+    @RenderPage("~/Views/Shared/_SearchCerved.cshtml")
+}
+<div class="ui-grid-c">    
+    <div class="ui-block-a ui-bar-a"><small>P.Iva</small></div>    
+    <div class="ui-block-b ui-bar-a"><small>Rag.Soc.</small></div>        
+    <div class="ui-block-c ui-bar-a"><small>Valutaz.</small></div>            
+    <div class="ui-block-d ui-bar-a"><small>Variaz.</small></div>            
+    @foreach (var elementoPreferiti in ViewBag.Preferiti)
+    {            
+      <div class="ui-block-a">
+        <div class="ui-body ui-body-d">
+            <small>@elementoPreferiti.PartitaIva</small>
+        </div>
+      </div>      
+      <div class="ui-block-b ui-body-d">
+        <div class="ui-body ui-body-d">
+      <small>@elementoPreferiti.RagioneSociale</small>
+        </div>      
+      </div>
+      <div class="ui-block-c ui-body-d">
+        <div class="ui-body ui-body-d">
+            @{
+        if (elementoPreferiti.Rating == "0")
+        {            
+            <text>
+                <img src='../content/images/sfera_grigia.gif' alt='Grigia' title='Grigia' />
+            </text>
+        }
+        else
+        if (elementoPreferiti.Rating == "1")
+        {            
+            <text>
+                <img src='../content/images/sfera_verde.gif' alt='Verde 1' title='Verde 1' />
+            </text>
+        }
+        else
+        if (elementoPreferiti.Rating == "2")
+        {            
+            <text>
+                <img src='../content/images/sfera_verde.gif' alt='Verde 2' title='Verde 2' />
+            </text>
+        }
+        else
+        if (elementoPreferiti.Rating == "3")
+        {            
+            <text>
+                <img src='../content/images/sfera_verde.gif' alt='Verde 3' title='Verde 3' />
+            </text>
+        }
+        else
+        if (elementoPreferiti.Rating == "4")
+        {            
+            <text>
+                <img src='../content/images/sfera_gialla.gif' alt='Giallo' title='Giallo' />
+            </text>
+        }
+        else
+        if (elementoPreferiti.Rating == "5")
+        {            
+            <text>
+                <img src='../content/images/sfera_rossa.gif' alt='Rosso' title='Rosso' />
+            </text>
+        }        
+        else
+        if (elementoPreferiti.Rating == "")
+        {            
+            <text>
+                N.D.
+            </text>
+        }
+        else
+        if (Convert.ToInt32(elementoPreferiti.Rating) < 30 && Convert.ToInt32(elementoPreferiti.Rating) > 10)
+        {
+            <text><img src='../content/images/sfera_rossa.gif' alt='Rossa' title='Rossa' /></text>
+        }
+        else
+        if (Convert.ToInt32(elementoPreferiti.Rating) >= 30 && Convert.ToInt32(elementoPreferiti.Rating) < 60)
+        {
+            <text><img src='../content/images/sfera_gialla.gif' alt='Gialla' title='Gialla' /></text>
+        }
+        else
+        if (Convert.ToInt32(elementoPreferiti.Rating) >= 60)
+        {
+            <text><img src='../content/images/sfera_verde.gif' alt='Verde' title='Verde' /></text>
+        }            
+        
+        }
+      </div>   
+          </div>      
+          <div class="ui-block-d">
+        <div class="ui-body ui-body-d">
+            <small>@elementoPreferiti.DescrizioneVariazione</small>
+        </div>
+      </div>      
+      
+    }
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+Riferimento;ID_Soggetto;Rag_Soc;CF;P.IVA;Data Evasione;Codice Segnalazione;Tipo Segnalazione;Descr Segnalazione;Data Segnalazione;Data Scadenza MONIT
+Documento acquistato per valutazione CDS;1299609;ORTOSESTU AGRICOLA;01587190925;01587190925;05/08/2014;PT043;N;Nuovo effetto su esponente;20/11/2014;05/08/2015
+Documento acquistato per valutazione CDS;9847503;AGRICOLA CAMPIDANESE;01122780958;01122780958;10/10/2014;BL003;A;Nuova Relazione di Gestione;20/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;9847503;AGRICOLA CAMPIDANESE;01122780958;01122780958;10/10/2014;BL001;U;Nuovo Bilancio Aziendale;20/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;9847503;AGRICOLA CAMPIDANESE;01122780958;01122780958;10/10/2014;BL003;A;Nuova Relazione di Gestione;20/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;9847503;AGRICOLA CAMPIDANESE;01122780958;01122780958;10/10/2014;BL001;U;Nuovo Bilancio Aziendale;20/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;932036;SHOPPING CENTER DI DEIAS TULLIO & C.;02266060926;02266060926;10/10/2014;PT042;N;Nuovo protesto su esponente;20/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;932036;SHOPPING CENTER DI DEIAS TULLIO & C.;02266060926;02266060926;10/10/2014;GL002;C;Variazione cautelativa del fido automatico;20/11/2014;10/10/2015
+Documento acquistato per valutazione CDS;1299609;ORTOSESTU AGRICOLA;01587190925;01587190925;15/10/2014;PT043;N;Nuovo effetto su esponente;20/11/2014;15/10/2015
+Documento acquistato per valutazione CDS;763242;ORTOFRUTTICOLA PERUGIA DI BARTOLINI FERACIO E GAGLIARDI;00471490540;00471490540;10/11/2014;PT085;N;Nuovo protesto su azienda connessa (tramite esponente);20/11/2014;10/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT011;N;Nuovo effetto sull'azienda;20/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT011;N;Nuovo effetto sull'azienda;20/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT011;N;Nuovo effetto sull'azienda;20/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT011;N;Nuovo effetto sull'azienda;20/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT011;N;Nuovo effetto sull'azienda;20/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;871425;ORTOVERDE AGRICOLA;01637280593;01637280593;11/11/2014;PT011;N;Nuovo effetto sull'azienda;20/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;11524033;INFRUTTA;01682540933;01682540933;11/11/2014;GL006;N;Variazione negativa del fido automatico 2;20/11/2014;11/11/2015
+Documento acquistato per valutazione CDS;11949302;M. & G. DI GRATTA MARCO;10631481008;10631481008;12/11/2014;PT011;N;Nuovo effetto sull'azienda;20/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;763242;ORTOFRUTTICOLA PERUGIA DI BARTOLINI FERACIO E GAGLIARDI;00471490540;00471490540;12/11/2014;PT085;N;Nuovo protesto su azienda connessa (tramite esponente);20/11/2014;12/11/2015
+Documento acquistato per valutazione CDS;2507399;AGROITALIA;08262160016;08262160016;13/11/2014;MC010;A;Nuova movimentazione su azienda;20/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;9847503;AGRICOLA CAMPIDANESE;01122780958;01122780958;13/11/2014;BL003;A;Nuova Relazione di Gestione;20/11/2014;13/11/2015
+Documento acquistato per valutazione CDS;9847503;AGRICOLA CAMPIDANESE;01122780958;01122780958;13/11/2014;BL001;U;Nuovo Bilancio Aziendale;20/11/2014;13/11/2015
